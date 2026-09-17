@@ -8,6 +8,7 @@
 #include "ShootExpeditionLobbyComponent.generated.h"
 
 class APlayerController;
+class APlayerState;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FShootExpeditionLobbyChanged);
 
@@ -46,6 +47,24 @@ public:
 	UFUNCTION(BlueprintPure, Category="Expedition|Lobby")
 	bool ShouldFillEmptySlotsWithBots() const { return bFillEmptySlotsWithBots; }
 
+	/** GameMode 在 PostLogin 调用；首位进入等待大厅的 PlayerState 是 Listen Server 房主。 */
+	void RegisterLobbyPlayer(APlayerState* PlayerState);
+
+	/** GameMode 在 Logout 调用，清理离开成员的 Ready 引用。 */
+	void UnregisterLobbyPlayer(APlayerState* PlayerState);
+
+	/** 只允许服务器根据拥有客户端的 PlayerController RPC 更新。 */
+	void SetPlayerReady(APlayerState* PlayerState, bool bReady);
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Lobby")
+	bool IsPlayerReady(const APlayerState* PlayerState) const;
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Lobby")
+	bool AreAllPlayersReady() const;
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Lobby")
+	APlayerState* GetHostPlayerState() const { return HostPlayerState; }
+
 	/** 仅 Listen Server 房主的本地 Lobby UI 调用；远端客户端调用会被权威检查拒绝。 */
 	UFUNCTION(BlueprintCallable, Category="Expedition|Lobby")
 	bool StartSelectedExpedition(APlayerController* RequestingPlayer);
@@ -68,6 +87,14 @@ private:
 
 	UPROPERTY(ReplicatedUsing=OnRep_LobbyState)
 	bool bFillEmptySlotsWithBots = false;
+
+	/** PlayerState 指针由引擎 NetGUID 复制；Listen Server 不迁移房主，因此无需第二套平台身份表。 */
+	UPROPERTY(ReplicatedUsing=OnRep_LobbyState)
+	TObjectPtr<APlayerState> HostPlayerState;
+
+	/** 仅保存当前等待大厅的权威 Ready 集合；成员展示仍来自 GameState.PlayerArray。 */
+	UPROPERTY(ReplicatedUsing=OnRep_LobbyState)
+	TArray<TObjectPtr<APlayerState>> ReadyPlayers;
 
 	UFUNCTION()
 	void OnRep_LobbyState();

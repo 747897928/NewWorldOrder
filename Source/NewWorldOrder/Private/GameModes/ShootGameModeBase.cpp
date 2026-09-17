@@ -115,7 +115,27 @@ void AShootGameModeBase::PostLogin(APlayerController* NewPlayer)
 		ShootPlayerState->SetGenericTeamId(FGenericTeamId(DefaultPlayerTeamId));
 		// Experience 可能早于迟到玩家完成加载。此入口与 Manager 的批量授予互补，方法本身幂等。
 		ShootPlayerState->ApplyExperienceAbilitySets();
+		if (AShootGameStateBase* ShootGameState = GetGameState<AShootGameStateBase>())
+		{
+			if (UShootExpeditionLobbyComponent* Lobby = ShootGameState->GetExpeditionLobbyComponent())
+			{
+				Lobby->RegisterLobbyPlayer(ShootPlayerState);
+			}
+		}
 	}
+}
+
+void AShootGameModeBase::Logout(AController* Exiting)
+{
+	APlayerState* ExitingPlayerState = Exiting ? Exiting->GetPlayerState<APlayerState>() : nullptr;
+	if (AShootGameStateBase* ShootGameState = GetGameState<AShootGameStateBase>())
+	{
+		if (UShootExpeditionLobbyComponent* Lobby = ShootGameState->GetExpeditionLobbyComponent())
+		{
+			Lobby->UnregisterLobbyPlayer(ExitingPlayerState);
+		}
+	}
+	Super::Logout(Exiting);
 }
 
 ECharacterGender AShootGameModeBase::ResolveInitialCharacterGender_Implementation(

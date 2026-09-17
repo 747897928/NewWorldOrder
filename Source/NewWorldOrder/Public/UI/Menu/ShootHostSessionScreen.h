@@ -12,6 +12,8 @@
 class ULyraUserFacingExperienceDefinition;
 class UCommonActivatableWidget;
 class UCommonSession_SearchResult;
+class UDynamicEntryBox;
+class UShootObjectEntryButtonBase;
 class UShootSessionCoordinatorSubsystem;
 
 /**
@@ -30,8 +32,37 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Expedition|Selection")
 	void SelectExperience(ULyraUserFacingExperienceDefinition* Experience);
 
+	/**
+	 * 设置当前副本选择页模式并刷新目录条目。
+	 * ModeId 必须与模式 Tab 的稳定 Name ID 一致，例如 Expedition.Mode.Local。
+	 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Selection")
+	void SetExpeditionMode(FName ModeId);
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Selection")
+	FName GetExpeditionMode() const { return SelectedExpeditionMode; }
+
+	/**
+	 * 将现有 UserFacingExperience 目录填入蓝图指定的 DynamicEntryBox。
+	 * 容器和条目样式仍由 UMG 决定；C++ 只负责运行时创建、对象注入与选择回调，页面无需 BindWidget。
+	 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Selection")
+	void PopulateExperienceEntries(
+		UDynamicEntryBox* EntryBox,
+		TSubclassOf<UShootObjectEntryButtonBase> EntryWidgetClass);
+
 	UFUNCTION(BlueprintPure, Category="Expedition|Selection")
 	ULyraUserFacingExperienceDefinition* GetSelectedExperience() const { return SelectedDefinition; }
+
+	/** 蓝图刷新详情时使用安全值，避免目录尚未加载时从空 Experience 读取字段。 */
+	UFUNCTION(BlueprintPure, Category="Expedition|Selection")
+	FText GetSelectedExperienceTitle() const;
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Selection")
+	FText GetSelectedExperienceDescription() const;
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Selection")
+	int32 GetSelectedExperienceMaxPlayerCount() const;
 
 	UFUNCTION(BlueprintCallable, Category="Expedition|Options")
 	void SetOnlineMode(bool bOnline);
@@ -123,12 +154,20 @@ protected:
 
 private:
 	void RefreshExperienceCatalog();
+	void RefreshExperienceCatalogForSelectedMode();
 	void RefreshCoordinatorState();
 	void NotifyOptionsChanged();
+	void HandleExperienceEntryClicked(UShootObjectEntryButtonBase* Entry, UObject* EntryObject);
+	void HandleExperienceEntryHovered(UShootObjectEntryButtonBase* Entry, UObject* EntryObject);
+	void RefreshExperienceEntrySelection();
 	APlayerController* GetOwningSessionPlayer() const;
 
 	UPROPERTY(Transient)
 	TArray<TObjectPtr<ULyraUserFacingExperienceDefinition>> ExperienceCatalog;
+
+	/** UFE 是唯一目录源；ExperienceCatalog 是当前 Tab 的过滤视图，AllExperienceCatalog 保留完整目录。 */
+	UPROPERTY(Transient)
+	TArray<TObjectPtr<ULyraUserFacingExperienceDefinition>> AllExperienceCatalog;
 
 	UPROPERTY(Transient)
 	TObjectPtr<ULyraUserFacingExperienceDefinition> SelectedDefinition;
@@ -136,7 +175,12 @@ private:
 	UPROPERTY(Transient)
 	TObjectPtr<UShootSessionCoordinatorSubsystem> Coordinator;
 
+	/** 由 PopulateExperienceEntries 注入，页面可自由替换或移动容器，不形成固定 BindWidget 契约。 */
+	UPROPERTY(Transient)
+	TObjectPtr<UDynamicEntryBox> ExperienceEntryBox;
+
 	ECommonSessionOnlineMode SelectedOnlineMode = ECommonSessionOnlineMode::Offline;
+	FName SelectedExpeditionMode = TEXT("Expedition.Mode.Single");
 	int32 RequestedMaxPlayers = 4;
 	int32 LocalPlayerCount = 1;
 	bool bAllowJoinInProgress = true;

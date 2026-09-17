@@ -9,6 +9,8 @@
 #include "Equipment/ShootQuickBarComponent.h"
 #include "Feedback/NumberPops/ShootNumberPopComponent_NiagaraText.h"
 #include "GameFramework/GameplayMessageSubsystem.h"
+#include "GameModes/ShootExpeditionLobbyComponent.h"
+#include "GameState/ShootGameStateBase.h"
 #include "Interaction/LyraInteractionDurationMessage.h"
 #include "Messages/LyraVerbMessage.h"
 #include "Player/ShootPlayerState.h"
@@ -54,6 +56,29 @@ void AShootPlayerController::SetPreferredCameraPerspective(EShootCameraPerspecti
 {
 	PreferredCameraPerspective = NewPerspective;
 	bHasPreferredCameraPerspective = true;
+}
+
+void AShootPlayerController::SetExpeditionLobbyReady(bool bReady)
+{
+	if (IsLocalController())
+	{
+		ServerSetExpeditionLobbyReady(bReady);
+	}
+}
+
+void AShootPlayerController::ServerSetExpeditionLobbyReady_Implementation(bool bReady)
+{
+	AShootGameStateBase* ShootGameState = GetWorld()
+		? GetWorld()->GetGameState<AShootGameStateBase>()
+		: nullptr;
+	UShootExpeditionLobbyComponent* Lobby = ShootGameState
+		? ShootGameState->GetExpeditionLobbyComponent()
+		: nullptr;
+	if (Lobby)
+	{
+		// 身份来自这个拥有连接的 PlayerController，客户端不能替其他成员改 Ready。
+		Lobby->SetPlayerReady(PlayerState, bReady);
+	}
 }
 
 void AShootPlayerController::ApplyFirstPersonPitchLimits(float ViewPitchMin, float ViewPitchMax)

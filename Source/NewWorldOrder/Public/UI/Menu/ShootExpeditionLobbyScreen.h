@@ -5,12 +5,15 @@
 #include "CoreMinimal.h"
 #include "Online/ShootSessionCoordinatorSubsystem.h"
 #include "UI/LyraActivatableWidget.h"
+#include "UI/Menu/ShootExpeditionLobbyTypes.h"
 
 #include "ShootExpeditionLobbyScreen.generated.h"
 
 class UShootExpeditionLobbyComponent;
 class UShootSessionCoordinatorSubsystem;
 class UCommonButtonBase;
+class UDynamicEntryBox;
+class UShootSquadPlayerSlot;
 enum class ECommonMessagingResult : uint8;
 
 /** LobbyMap 的等待大厅页面后端；玩家列表来自 GameState，副本选择来自复制的 LobbyComponent。 */
@@ -37,6 +40,19 @@ public:
 	UFUNCTION(BlueprintPure, Category="Expedition|Lobby")
 	bool CanInviteFriends() const;
 
+	/** 当前拥有玩家切换自己的服务器权威 Ready 状态。 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Lobby")
+	void ToggleLocalPlayerReady();
+
+	UFUNCTION(BlueprintPure, Category="Expedition|Lobby")
+	bool IsLocalPlayerReady() const;
+
+	/** 蓝图选择成员容器和槽位类；C++ 只填真实成员与空槽，不规定槽位布局。 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Lobby")
+	void PopulatePlayerSlots(
+		UDynamicEntryBox* EntryBox,
+		TSubclassOf<UShootSquadPlayerSlot> SlotWidgetClass);
+
 protected:
 	virtual void NativeOnActivated() override;
 	virtual void NativeOnDeactivated() override;
@@ -47,7 +63,7 @@ protected:
 		FPrimaryAssetId SelectedExperience,
 		bool bAllowJoinInProgress,
 		bool bBotFillAvailable,
-		const TArray<FShootSessionPlayerInfo>& Players,
+		const TArray<FShootExpeditionLobbyPlayerInfo>& Players,
 		bool bCanStart);
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Expedition|Lobby", meta=(DisplayName="On Lobby Session State Changed"))
@@ -59,6 +75,9 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
 	TObjectPtr<UCommonButtonBase> InviteButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	TObjectPtr<UCommonButtonBase> ReadyButton;
 
 private:
 	void BindLobbyComponent();
@@ -73,6 +92,15 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UShootSessionCoordinatorSubsystem> Coordinator;
+
+	UPROPERTY(Transient)
+	TArray<FShootExpeditionLobbyPlayerInfo> CachedPlayers;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UDynamicEntryBox> PlayerEntryBox;
+
+	UPROPERTY(Transient)
+	TSubclassOf<UShootSquadPlayerSlot> PlayerSlotClass;
 
 	FTimerHandle LobbyRefreshTimerHandle;
 };

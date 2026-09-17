@@ -2,12 +2,38 @@
 task_id: SessionUI
 status: in_progress
 assigned_to: Codex
-progress: 98%
+progress: 35%
 started: 2026-07-18
-last_updated: 2026-09-01
+last_updated: 2026-09-16
 ---
 
 # 任务状态
+
+## 2026-09-16 副本模式过滤与小队条目收敛
+
+- 当前阶段：已接手并完成本轮副本选择页的模式过滤、正式小队搜索条目迁移和无引用临时资产清理；本地双人设备分配、在线大厅 Ready 与最终视觉调优仍待后续阶段。
+- `W_ExpeditionSelection` 的三个模式 Tab 现在通过 `SetExpeditionMode(FName)` 切换当前目录视图；UFE 的 `SupportedModes` 是唯一归属配置，同一副本可同时属于多个模式。当前三份 UFE 的标签配置已核对：DungeonTest 为 Single/Online，ExpeditionSandbox 为 Single/Local/Online，SplitScreenTest 为 Local。
+- `W_FindSquad` 的 `SquadEntries.EntryWidgetClass` 已改为 `/Game/UI/Menu/Expedition/W_SquadBrowserEntry`。`W_SquadBrowserEntry` 直接改为 `UShootSquadListItem` 子类，保留原有 `W_LyraSessionButton` 视觉，只迁移到 `BP_OnSquadResultChanged` 数据入口；选择和加入仍由外层搜索页负责，避免条目重复实现会话业务。
+- 已在确认无实时引用后删除 `W_SquadListItem`、`W_ExpeditionModeTab`、`W_ExpeditionListItem_ScratchBackup`，并移除失效的 `W_ExpeditionListItem` 重定向器。历史 `W_FindSquad_LegacyLayoutBackup` 也已清理；用资产加载确认的实时引用为空。
+- `W_ExpeditionSelection`、`W_FindSquad`、`W_SquadBrowserEntry` 的蓝图编译状态为 UpToDate，Widget hierarchy validation 均通过。编辑器重启后 PIE 可以启动，不再出现 `W_FindSquad_LegacyLayoutBackup` 未解析编译弹窗；本轮未重复冷编译，避免在 G 盘高活动期间增加无谓负载。
+- 本轮没有改动用户正在调整的 `W_ExpeditionButton`、`W_ExpeditionSelection` 配色和布局。模式点击后的完整视觉回归尚未代替结构验证记录，等待后续草图和本地/在线流程一起验收。
+- 下一步：继续按 `CurrentHandoff_当前重构交接.md` 补齐本地设备路由、在线大厅成员/Ready 状态，并在同阶段代码集中完成后只执行一次 Windows 编译和完整 PIE 验收。
+
+## 2026-09-14 副本 UI 重构
+
+- 当前阶段：按用户要求暂停。需求和依赖审计已完成，两个基础 UMG 控件与目录条目桥接已开始；主页面、业务迁移、入口替换和旧实现清理尚未完成。完整恢复信息见 `CurrentHandoff_当前重构交接.md`。
+- 用户已确认在线每台一人、本地双人仅离线；本地页采用 Split Fiction / It Takes Two 式两设备独立左右选人和各自确认。打开页面的设备默认指向当前主角但不自动确认；同一角色只能被一套设备确认，双方确认不同角色后进入游戏。旧的 Join / Swap / 全局 Start 提案已否决，具体状态见 `LocalCoopSetup_设备分配交互.md`。
+- 已读取 TestMap_SplitScreen 实际 GameMode/CDO，确认既有 SplitProtagonists 分屏、Player02 创建、互斥主角与 LastActiveGender 隔离链可复用。本地页缺口是设备分配和 Ready，不是重写分屏玩法。
+- 新需求入口：`Requirements_需求（新）.md`；代码与蓝图证据、待清理边界、待对齐项见 `RefactorAudit_重构审计.md`。
+- 新目标是庭院副本门进入三模式选择与真实在线小队大厅，替换旧 GameMenu Online/Session 测试入口。下方 98% 是旧 POC 和设置任务的历史进度，不代表本次重构进度。
+- 已确认浏览器仍继承 `UShootSessionScreen`，删除旧类前必须迁出浏览器依赖；当前没有 Lobby Ready 或真实本地双人准备流程。
+- 已创建 `/Game/UI/Menu/Expedition/W_ExpeditionButton` 和 `W_ExpeditionListItem`。通用按钮使用内容 Desired Size、`ButtonStyle-Clear` 和真实箭头纹理；列表条目复用 `UShootObjectEntryButtonBase` 并读取 UFE 标题/副标题。
+- `UShootHostSessionScreen` 已加入由蓝图传入 DynamicEntryBox 与条目类的运行时填充接口，没有页面 BindWidget。UHT 已通过，完整 C++ 编译因 G 盘 100% 活动和用户要求中止，不能标记为编译通过。
+- 当前 Unreal Editor 和构建进程均已停止，未进行主页面 PIE、设备实操或联网验收。恢复时先集中完成同阶段 C++，再只做一次冷编译。
+- 下一步按 `CurrentHandoff_当前重构交接.md` 顺序完成主 UMG、真实门链路视觉验收、业务状态、入口替换和无引用清理。
+- 历史架构约束、设置页验收和网络问题记录继续保留；与新产品入口冲突的旧说明按新需求执行。
+
+## 历史 POC 与设置任务记录
 
 当前状态：in_progress
 负责人：Codex

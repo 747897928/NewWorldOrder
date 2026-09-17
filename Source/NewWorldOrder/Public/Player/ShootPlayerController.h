@@ -170,6 +170,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Character|Switch")
 	void RequestSwitchCharacter(ECharacterGender TargetGender, AActor* SourceActor);
 
+	/** 大厅页面的设备无关 Ready 入口；拥有客户端只提交布尔意图，服务器从本 Controller 解析身份。 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Lobby")
+	void SetExpeditionLobbyReady(bool bReady);
+
 	UFUNCTION(BlueprintCallable, Category="Character|Switch")
 	bool IsCharacterSwitchHoldVisible() const { return bCharacterSwitchHoldVisible || bCharacterSwitchHoldReturning; }
 
@@ -198,6 +202,9 @@ private:
 
 	UFUNCTION(Server, Reliable)
 	void ServerRequestPlayPoseByIndex(int32 PoseIndex);
+
+	UFUNCTION(Server, Reliable)
+	void ServerSetExpeditionLobbyReady(bool bReady);
 
 	/** 真正的服务器权威切换实现。外部不应直接依赖它，统一走 RequestSwitchCharacter。 */
 	void TrySwitchCharacter(ECharacterGender TargetGender, AActor* SourceActor);

@@ -5,6 +5,8 @@
 #include "Engine/AssetManager.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
+#include "GameFramework/PlayerState.h"
+#include "GameFramework/GameStateBase.h"
 #include "Net/UnrealNetwork.h"
 #include "Online/ShootSessionCoordinatorSubsystem.h"
 
@@ -26,6 +28,8 @@ void UShootExpeditionLobbyComponent::GetLifetimeReplicatedProps(TArray<FLifetime
 	DOREPLIFETIME(ThisClass, bWaitingLobby);
 	DOREPLIFETIME(ThisClass, bAllowJoinInProgress);
 	DOREPLIFETIME(ThisClass, bFillEmptySlotsWithBots);
+	DOREPLIFETIME(ThisClass, HostPlayerState);
+	DOREPLIFETIME(ThisClass, ReadyPlayers);
 }
 
 void UShootExpeditionLobbyComponent::ConfigureLobby(const FPrimaryAssetId& InMapId,
@@ -42,14 +46,89 @@ void UShootExpeditionLobbyComponent::ConfigureLobby(const FPrimaryAssetId& InMap
 	bWaitingLobby = SelectedMapId.IsValid() && SelectedExperienceId.IsValid();
 	bAllowJoinInProgress = bInAllowJoinInProgress;
 	bFillEmptySlotsWithBots = bInFillEmptySlotsWithBots;
+	HostPlayerState = nullptr;
+	ReadyPlayers.Reset();
 	OnLobbyChanged.Broadcast();
+}
+
+void UShootExpeditionLobbyComponent::RegisterLobbyPlayer(APlayerState* PlayerState)
+{
+	if (!GetOwner() || !GetOwner()->HasAuthority() || !bWaitingLobby || !PlayerState)
+	{
+		return;
+	}
+
+	if (!HostPlayerState)
+	{
+		HostPlayerState = PlayerState;
+	}
+	ReadyPlayers.Remove(PlayerState);
+	OnLobbyChanged.Broadcast();
+}
+
+void UShootExpeditionLobbyComponent::UnregisterLobbyPlayer(APlayerState* PlayerState)
+{
+	if (!GetOwner() || !GetOwner()->HasAuthority() || !PlayerState)
+	{
+		return;
+	}
+
+	ReadyPlayers.Remove(PlayerState);
+	OnLobbyChanged.Broadcast();
+}
+
+void UShootExpeditionLobbyComponent::SetPlayerReady(APlayerState* PlayerState, bool bReady)
+{
+	if (!GetOwner() || !GetOwner()->HasAuthority() || !bWaitingLobby || !PlayerState)
+	{
+		return;
+	}
+
+	const AGameStateBase* GameState = GetWorld() ? GetWorld()->GetGameState() : nullptr;
+	if (!GameState || !GameState->PlayerArray.Contains(PlayerState))
+	{
+		return;
+	}
+
+	if (bReady)
+	{
+		ReadyPlayers.AddUnique(PlayerState);
+	}
+	else
+	{
+		ReadyPlayers.Remove(PlayerState);
+	}
+	OnLobbyChanged.Broadcast();
+}
+
+bool UShootExpeditionLobbyComponent::IsPlayerReady(const APlayerState* PlayerState) const
+{
+	return PlayerState && ReadyPlayers.Contains(PlayerState);
+}
+
+bool UShootExpeditionLobbyComponent::AreAllPlayersReady() const
+{
+	const AGameStateBase* GameState = GetWorld() ? GetWorld()->GetGameState() : nullptr;
+	if (!bWaitingLobby || !GameState || GameState->PlayerArray.IsEmpty())
+	{
+		return false;
+	}
+
+	for (const APlayerState* PlayerState : GameState->PlayerArray)
+	{
+		if (PlayerState && !ReadyPlayers.Contains(PlayerState))
+		{
+			return false;
+		}
+	}
+	return true;
 }
 
 bool UShootExpeditionLobbyComponent::StartSelectedExpedition(APlayerController* RequestingPlayer)
 {
 	UWorld* World = GetWorld();
 	if (!World || !GetOwner() || !GetOwner()->HasAuthority() || !RequestingPlayer ||
-		!RequestingPlayer->IsLocalController() || !bWaitingLobby)
+		!RequestingPlayer->IsLocalController() || !bWaitingLobby || !AreAllPlayersReady())
 	{
 		return false;
 	}

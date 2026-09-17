@@ -4,6 +4,7 @@
 
 #include "Engine/DataAsset.h"
 #include "CommonSessionSubsystem.h"
+#include "GameplayTagContainer.h"
 
 #include "LyraUserFacingExperienceDefinition.generated.h"
 
@@ -64,6 +65,16 @@ public:
 	/** If true, this will show up in the experiences list in the front-end */
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience)
 	bool bShowInFrontEnd = true;
+
+	/**
+	 * 该副本出现在副本选择页哪些模式 Tab 中。
+	 *
+	 * 这是目录归属而不是运行时 Online/Local 能力：同一个 UFE 可以同时配置
+	 * Expedition.Mode.Single、Expedition.Mode.Local 和 Expedition.Mode.Online。
+	 * 选择页只从当前 UFE 目录按这个容器筛选，不复制第二套副本列表。
+	 */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience, meta=(Categories="Expedition.Mode"))
+	FGameplayTagContainer SupportedModes;
 
 	/**
 	 * 是否允许把该副本创建为 Listen Server。

@@ -3,10 +3,12 @@
 #include "UI/Menu/ShootHostSessionScreen.h"
 
 #include "Engine/AssetManager.h"
+#include "Components/DynamicEntryBox.h"
 #include "GameModes/LyraUserFacingExperienceDefinition.h"
 #include "NativeGameplayTags.h"
 #include "Online/ShootSessionCoordinatorSubsystem.h"
 #include "PrimaryGameLayout.h"
+#include "UI/Foundation/ShootObjectEntryButtonBase.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(ShootHostSessionScreen)
 
@@ -49,7 +51,7 @@ bool UShootHostSessionScreen::NativeOnHandleBackAction()
 
 void UShootHostSessionScreen::RefreshExperienceCatalog()
 {
-	ExperienceCatalog.Reset();
+	AllExperienceCatalog.Reset();
 	SelectedDefinition = nullptr;
 
 	TArray<FPrimaryAssetId> AssetIds;
@@ -66,10 +68,39 @@ void UShootHostSessionScreen::RefreshExperienceCatalog()
 			continue;
 		}
 
-		ExperienceCatalog.Add(Definition);
-		if (!SelectedDefinition || Definition->bIsDefaultExperience)
+		AllExperienceCatalog.Add(Definition);
+	}
+
+	RefreshExperienceCatalogForSelectedMode();
+}
+
+void UShootHostSessionScreen::RefreshExperienceCatalogForSelectedMode()
+{
+	ULyraUserFacingExperienceDefinition* PreviousSelection = SelectedDefinition;
+	ExperienceCatalog.Reset();
+
+	const FGameplayTag SelectedModeTag = FGameplayTag::RequestGameplayTag(SelectedExpeditionMode, false);
+	if (SelectedModeTag.IsValid())
+	{
+		for (ULyraUserFacingExperienceDefinition* Definition : AllExperienceCatalog)
 		{
-			SelectedDefinition = Definition;
+			if (Definition && Definition->SupportedModes.HasTag(SelectedModeTag))
+			{
+				ExperienceCatalog.Add(Definition);
+			}
+		}
+	}
+
+	// 当前选择仍属于新 Tab 时保留它；否则使用该 Tab 的默认项或首项，避免详情区继续读取旧 Tab 的副本。
+	SelectedDefinition = ExperienceCatalog.Contains(PreviousSelection) ? PreviousSelection : nullptr;
+	if (!SelectedDefinition)
+	{
+		for (ULyraUserFacingExperienceDefinition* Definition : ExperienceCatalog)
+		{
+			if (!SelectedDefinition || Definition->bIsDefaultExperience)
+			{
+				SelectedDefinition = Definition;
+			}
 		}
 	}
 
@@ -83,6 +114,17 @@ void UShootHostSessionScreen::RefreshExperienceCatalog()
 	NotifyOptionsChanged();
 }
 
+void UShootHostSessionScreen::SetExpeditionMode(FName ModeId)
+{
+	if (ModeId.IsNone() || SelectedExpeditionMode == ModeId)
+	{
+		return;
+	}
+
+	SelectedExpeditionMode = ModeId;
+	RefreshExperienceCatalogForSelectedMode();
+}
+
 void UShootHostSessionScreen::SelectExperience(ULyraUserFacingExperienceDefinition* Experience)
 {
 	if (Experience && ExperienceCatalog.Contains(Experience))
@@ -94,7 +136,102 @@ void UShootHostSessionScreen::SelectExperience(ULyraUserFacingExperienceDefiniti
 			SelectedOnlineMode = ECommonSessionOnlineMode::Offline;
 		}
 		RequestedMaxPlayers = FMath::Clamp(RequestedMaxPlayers, 1, Experience->MaxPlayerCount);
+		RefreshExperienceEntrySelection();
 		NotifyOptionsChanged();
+	}
+}
+
+FText UShootHostSessionScreen::GetSelectedExperienceTitle() const
+{
+	return SelectedDefinition ? SelectedDefinition->TileTitle : FText::GetEmpty();
+}
+
+FText UShootHostSessionScreen::GetSelectedExperienceDescription() const
+{
+	return SelectedDefinition ? SelectedDefinition->TileDescription : FText::GetEmpty();
+}
+
+int32 UShootHostSessionScreen::GetSelectedExperienceMaxPlayerCount() const
+{
+	return SelectedDefinition ? FMath::Max(1, SelectedDefinition->MaxPlayerCount) : 0;
+}
+
+void UShootHostSessionScreen::PopulateExperienceEntries(
+	UDynamicEntryBox* EntryBox,
+	TSubclassOf<UShootObjectEntryButtonBase> EntryWidgetClass)
+{
+	if (!EntryBox)
+	{
+		return;
+	}
+	TSubclassOf<UShootObjectEntryButtonBase> ResolvedEntryClass = EntryWidgetClass;
+	if (!ResolvedEntryClass)
+	{
+		UClass* ConfiguredEntryClass = EntryBox->GetEntryWidgetClass();
+		if (ConfiguredEntryClass && ConfiguredEntryClass->IsChildOf(UShootObjectEntryButtonBase::StaticClass()))
+		{
+			ResolvedEntryClass = ConfiguredEntryClass;
+		}
+	}
+	if (!ResolvedEntryClass)
+	{
+		return;
+	}
+
+	ExperienceEntryBox = EntryBox;
+	EntryBox->Reset(false);
+	for (ULyraUserFacingExperienceDefinition* Definition : ExperienceCatalog)
+	{
+		if (UShootObjectEntryButtonBase* Entry = EntryBox->CreateEntry<UShootObjectEntryButtonBase>(ResolvedEntryClass))
+		{
+			Entry->OnEntryClicked().RemoveAll(this);
+			Entry->OnEntryHovered().RemoveAll(this);
+			Entry->OnEntryClicked().AddUObject(this, &ThisClass::HandleExperienceEntryClicked);
+			Entry->OnEntryHovered().AddUObject(this, &ThisClass::HandleExperienceEntryHovered);
+			Entry->SetEntryObject(Definition);
+		}
+	}
+
+	RefreshExperienceEntrySelection();
+}
+
+void UShootHostSessionScreen::HandleExperienceEntryClicked(
+	UShootObjectEntryButtonBase*,
+	UObject* EntryObject)
+{
+	SelectExperience(Cast<ULyraUserFacingExperienceDefinition>(EntryObject));
+}
+
+void UShootHostSessionScreen::HandleExperienceEntryHovered(
+	UShootObjectEntryButtonBase*,
+	UObject* EntryObject)
+{
+	// CommonButton 的 Hovered 同时覆盖鼠标移入和键盘/手柄焦点导航，预览因此天然支持多输入设备。
+	SelectExperience(Cast<ULyraUserFacingExperienceDefinition>(EntryObject));
+}
+
+void UShootHostSessionScreen::RefreshExperienceEntrySelection()
+{
+	if (!ExperienceEntryBox)
+	{
+		return;
+	}
+
+	for (UUserWidget* Widget : ExperienceEntryBox->GetAllEntries())
+	{
+		if (UShootObjectEntryButtonBase* Entry = Cast<UShootObjectEntryButtonBase>(Widget))
+		{
+			if (Entry->GetEntryObject() == SelectedDefinition)
+			{
+				Entry->SetIsSelected(true);
+			}
+			else
+			{
+				// UCommonButtonBase::SetIsSelected(false) 在运行时不会可靠清除旧状态；
+				// 显式 ClearSelection，保证副本列表始终只有一个持续高亮项。
+				Entry->ClearSelection();
+			}
+		}
 	}
 }
 
