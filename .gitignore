@@ -81,15 +81,15 @@ DerivedDataCache/*
 .DS_Store
 
 # Unreal project lives under subfolder NewWorldOrder/
-NewWorldOrder/.vs/
-NewWorldOrder/.idea/
-NewWorldOrder/Binaries/*
-NewWorldOrder/Intermediate/*
-NewWorldOrder/Saved/*
-NewWorldOrder/DerivedDataCache/*
-NewWorldOrder/Plugins/**/Binaries/*
-NewWorldOrder/Plugins/**/Intermediate/*
-NewWorldOrder/temp.txt
+.vs/
+.idea/
+Binaries/*
+Intermediate/*
+Saved/*
+DerivedDataCache/*
+Plugins/**/Binaries/*
+Plugins/**/Intermediate/*
+temp.txt
 
 # Local archives / scratch assets (not part of source)
 *.rar
@@ -99,4 +99,4 @@ git.txt
 # VibeUE 插件发布包（本地归档，不提交）
 VibeUE-master.zip
 
-NewWorldOrder/.dshtmp/*
+.dshtmp/*
