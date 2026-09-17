@@ -1,0 +1,563 @@
+{
+  "HM_Living_Glass_350": {
+    "transform": {
+      "main": {
+        "loc": [
+          505.0,
+          0.0,
+          162.5
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.2619047619047619,
+          1.0,
+          1.0
+        ]
+      },
+      "backup": {
+        "loc": [
+          350.0,
+          0.0,
+          162.5
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/Hub/M_Architectural_Glass.M_Architectural_Glass"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 505.000000, y: 0.000000, z: 162.500000}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 0.261905, y: 1.000000, z: 1.000000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": false,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/Hub/M_Architectural_Glass.M_Architectural_Glass"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 350.000000, y: 0.000000, z: 162.500000}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.000000, y: 1.000000, z: 1.000000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": false,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Window_Chair": {
+    "transform": {
+      "main": {
+        "loc": [
+          51.147184752069506,
+          -408.8528152479305,
+          2.000004005432129
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          134.99999999999997
+        ],
+        "scale": [
+          1.05,
+          1.05,
+          1.05
+        ]
+      },
+      "backup": {
+        "loc": [
+          171.1471847520695,
+          -238.8528152479305,
+          2.000004005432129
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          134.99999999999997
+        ],
+        "scale": [
+          1.05,
+          1.05,
+          1.05
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/M_Kitchen_Decor_9_Wood.M_Kitchen_Decor_9_Wood",
+              "/Game/Environment/HomeMap/Materials/M_Armchair_seat.M_Armchair_seat",
+              "/Game/Environment/HomeMap/Materials/M_Pillow.M_Pillow"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 51.147185, y: -408.852815, z: 2.000004}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 135.000000, roll: -0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.050000, y: 1.050000, z: 1.050000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/M_Kitchen_Decor_9_Wood.M_Kitchen_Decor_9_Wood",
+              "/Game/Environment/HomeMap/Materials/M_Armchair_seat.M_Armchair_seat",
+              "/Game/Environment/HomeMap/Materials/M_Pillow.M_Pillow"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 171.147185, y: -238.852815, z: 2.000004}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 135.000000, roll: -0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.050000, y: 1.050000, z: 1.050000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Window_Chair_Collision": {
+    "transform": {
+      "main": {
+        "loc": [
+          50.0,
+          -410.0,
+          44.39126663208008
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          134.99999999999997
+        ],
+        "scale": [
+          0.6976199295043944,
+          0.8129319177246095,
+          0.8478253326416016
+        ]
+      },
+      "backup": {
+        "loc": [
+          170.0,
+          -240.0,
+          44.39126663208008
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          134.99999999999997
+        ],
+        "scale": [
+          0.6976199295043944,
+          0.8129319177246095,
+          0.8478253326416016
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Engine/BasicShapes/Cube.Cube",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/Hub/M_Rubber.M_Rubber"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 50.000000, y: -410.000000, z: 44.391267}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 135.000000, roll: -0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 0.697620, y: 0.812932, z: 0.847825}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Engine/BasicShapes/Cube.Cube",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/Hub/M_Rubber.M_Rubber"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 170.000000, y: -240.000000, z: 44.391267}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 135.000000, roll: -0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 0.697620, y: 0.812932, z: 0.847825}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Window_Ottoman": {
+    "transform": {
+      "main": {
+        "loc": [
+          100.0,
+          -470.0,
+          1.9594881057739257
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.1,
+          1.1,
+          1.1
+        ]
+      },
+      "backup": {
+        "loc": [
+          240.0,
+          -300.0,
+          1.9594881057739257
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.1,
+          1.1,
+          1.1
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Furniture/SM_Ottoman.SM_Ottoman",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/MI_Ottoman.MI_Ottoman"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 100.000000, y: -470.000000, z: 1.959488}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.100000, y: 1.100000, z: 1.100000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Furniture/SM_Ottoman.SM_Ottoman",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/MI_Ottoman.MI_Ottoman"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 240.000000, y: -300.000000, z: 1.959488}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.100000, y: 1.100000, z: 1.100000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Window_Ottoman_Collision": {
+    "transform": {
+      "main": {
+        "loc": [
+          100.0,
+          -470.0,
+          24.000004196166994
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5604328359985352,
+          0.5584294012451172,
+          0.4400000839233399
+        ]
+      },
+      "backup": {
+        "loc": [
+          240.0,
+          -300.0,
+          24.000004196166994
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5604328359985352,
+          0.5584294012451172,
+          0.4400000839233399
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Engine/BasicShapes/Cube.Cube",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/Hub/M_Rubber.M_Rubber"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 100.000000, y: -470.000000, z: 24.000004}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 0.560433, y: 0.558429, z: 0.440000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Engine/BasicShapes/Cube.Cube",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/Hub/M_Rubber.M_Rubber"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 240.000000, y: -300.000000, z: 24.000004}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 0.560433, y: 0.558429, z: 0.440000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Window_Table": {
+    "transform": {
+      "main": {
+        "loc": [
+          95.12194442749023,
+          -531.6943798065186,
+          1.9965763092041016
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "backup": {
+        "loc": [
+          235.12194442749023,
+          -121.69437980651855,
+          1.9965763092041016
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_3.SM_Coffe_Table_3",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/M_Metall_Black.M_Metall_Black",
+              "/Game/Environment/HomeMap/Materials/M_Wall_Marble.M_Wall_Marble"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 95.121944, y: -531.694380, z: 1.996576}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.000000, y: 1.000000, z: 1.000000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_3.SM_Coffe_Table_3",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/M_Metall_Black.M_Metall_Black",
+              "/Game/Environment/HomeMap/Materials/M_Wall_Marble.M_Wall_Marble"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 235.121944, y: -121.694380, z: 1.996576}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.000000, y: 1.000000, z: 1.000000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Window_Vase": {
+    "transform": {
+      "main": {
+        "loc": [
+          95.00010585784912,
+          -529.9978423118591,
+          56.99959754943848
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "backup": {
+        "loc": [
+          235.00010585784912,
+          -119.99784231185913,
+          56.99959754943848
+        ],
+        "rot": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "components": {
+      "main": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Props/SM_Vase_3.SM_Vase_3",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/M_Vase_3.M_Vase_3"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 95.000106, y: -529.997842, z: 56.999598}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.000000, y: 1.000000, z: 1.000000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ],
+      "backup": [
+        {
+          "class": "/Script/Engine.StaticMeshComponent",
+          "props": {
+            "static_mesh": "/Game/Environment/HomeMap/Props/SM_Vase_3.SM_Vase_3",
+            "override_materials": [
+              "/Game/Environment/HomeMap/Materials/M_Vase_3.M_Vase_3"
+            ],
+            "mobility": "<ComponentMobility.STATIC: 0>",
+            "relative_location": "<Struct 'Vector' {x: 235.000106, y: -119.997842, z: 56.999598}>",
+            "relative_rotation": "<Struct 'Rotator' {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+            "relative_scale3d": "<Struct 'Vector' {x: 1.000000, y: 1.000000, z: 1.000000}>",
+            "visible": true,
+            "hidden_in_game": false,
+            "cast_shadow": true,
+            "ld_max_draw_distance": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "HM_Living_Sliding_Glass_1": {
+    "new_art": true
+  },
+  "HM_Living_Sliding_Glass_2": {
+    "new_art": true
+  },
+  "HM_Living_Sliding_Glass_3": {
+    "new_art": true
+  }
+}

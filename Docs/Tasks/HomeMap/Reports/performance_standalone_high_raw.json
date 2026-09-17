@@ -1,0 +1,61 @@
+{
+	"success": true,
+	"source": "both",
+	"trace":
+	{
+		"success": false,
+		"error_code": "FILE_NOT_FOUND",
+		"error": "Trace file not found: G:/Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Saved/Profiling/HomeMap_Day_1080p_High.utrace"
+	},
+	"logs":
+	{
+		"log_file": "G:/Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Saved/Logs/HomeMap_Day_1080p_High_20260906_123158.log",
+		"total_lines": 2538,
+		"errors": 0,
+		"warnings": 0,
+		"pso_hitches": 2,
+		"notable_lines": [
+			"LogConfig: Display: Loading VulkanPC ini files took 0.23 seconds",
+			"LogConfig: Display: Loading Mac ini files took 0.23 seconds",
+			"LogConfig: Display: Loading IOS ini files took 0.24 seconds",
+			"LogConfig: Display: Loading Unix ini files took 0.25 seconds",
+			"LogPluginManager: Mounting Engine plugin KDevelopSourceCodeAccess",
+			"LogConfig: Display: Loading Android ini files took 0.25 seconds",
+			"LogConfig: Display: Loading Windows ini files took 0.29 seconds",
+			"LogConfig: Display: Loading Linux ini files took 0.29 seconds",
+			"LogConfig: Display: Loading TVOS ini files took 0.30 seconds",
+			"LogConfig: Display: Loading VisionOS ini files took 0.10 seconds",
+			"LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false",
+			"LogConfig: Set CVar [[r.PSOPrecache.GlobalShaders:1]]",
+			"[2026.09.06-04.32.01:206][  0]LogConfig: Set CVar [[r.PSOPrecache.KeepInMemoryForActiveMaterials:1]]",
+			"[2026.09.06-04.32.04:893][  0]LogD3D12RHI: Display: Not using pipeline state disk cache per r.D3D12.PSO.DiskCache=0",
+			"[2026.09.06-04.32.04:893][  0]LogD3D12RHI: Display: Not using driver-optimized pipeline state disk cache per r.D3D12.PSO.DriverOptimizedDiskCache=0",
+			"[2026.09.06-04.32.07:147][  0]LogDerivedDataCache: C:/Users/wizard/AppData/Local/UnrealEngine/Common/DerivedDataCache: Speed tests took 0.02 seconds.",
+			"[2026.09.06-04.32.07:156][  0]LogShaderCompilers: Guid format shader working directory is -22 characters bigger than the processId version (../../../../../../Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Intermediate/Shaders/WorkingDirectory/2752/).",
+			"[2026.09.06-04.32.07:156][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/wizard/AppData/Local/Temp/UnrealShaderWorkingDir/1B16C6764CDEB38A7A4DAB9AB1FD1286/'.",
+			"[2026.09.06-04.32.07:157][  0]LogShaderCompilers: Display: No distributed shader compiler controller found",
+			"[2026.09.06-04.32.07:157][  0]LogShaderCompilers: Display: Using 9 local workers for shader compilation",
+			"[2026.09.06-04.32.07:174][  0]LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../../Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush",
+			"[2026.09.06-04.32.07:174][  0]LogShaderCompilers: Display: Autogen file is unchanged, skipping write.",
+			"[2026.09.06-04.32.11:569][  0]LogAssetRegistry: FAssetRegistry took 0.0021 seconds to start up",
+			"[2026.09.06-04.32.14:668][  0]LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../../Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush",
+			"[2026.09.06-04.32.14:668][  0]LogShaderCompilers: Display: Autogen file is unchanged, skipping write.",
+			"[2026.09.06-04.32.14:803][  0]LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize took 4.410 ms",
+			"[2026.09.06-04.32.14:994][  0]LogFileCache: Scanning file cache for directory 'G:/Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Saved/Collections/' took 0.01s",
+			"[2026.09.06-04.32.14:994][  0]LogFileCache: Scanning file cache for directory 'G:/Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Content/Developers/wizard/Collections/' took 0.00s",
+			"[2026.09.06-04.32.14:994][  0]LogFileCache: Scanning file cache for directory 'G:/Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Content/Collections/' took 0.00s",
+			"[2026.09.06-04.32.18:688][  0]LogGameFeatures: Loading 311 BuiltIn GameFeaturePlugins. Not Amortized. [AudioInsights, AudioInsightsRuntime, AudioModulationInsights, BaseMaterial, ChaosCloth, ChaosInsights, ChaosVD, CmdLinkServer, Dataflow, DerivedDataBuildController, EnhancedInput, Fab, IoStoreInsights, MassInsights, MeshPainting, Mutable, PCG, RenderGraphInsights, RenderTraceInsights, TraceUtilities, UbaController, WorldMetrics, XGEController, OodleNetwork, AnimationSharing, CodeLiteSourceCodeAccess, DumpGPUServices, CLionSourceCodeAccess, GitSourceControl, N10XSourceCodeAccess, GPUReshape, KDevelopSourceCodeAccess, NamingTokens, NullSourceCodeAccess, PerforceSourceControl, PixWinPlugin, PlasticSourceControl, ProjectLauncher, PropertyAccessNode, PluginUtils, RiderSourceCodeAccess, SubversionSourceControl, UObjectPlugin, VisualStudioCodeSourceCodeAccess, RenderDocPlugin, VisualStudioSourceCodeAccess, XCodeSourceCodeAccess, DatasmithContent, VariantManager, GLTFExporter, VariantManagerContent, Cascade, Niagara, NiagaraInsights, NiagaraPreviewContent, InterchangeAssets, InterchangeEditor, Interchange, ActorSequence, NiagaraSimCaching, LevelSequenceEditor, SequencerScripting, SequenceValidator, NNEDenoiser, TemplateSequence, NNERuntimeORT, Takes, AlembicImporter, UdpMessaging, TcpMessaging, EOSShared, OnlineBase, OnlineFramework, OnlineFrameworkCommon, OnlineServices, OnlineServicesNull, OnlineServicesOSSAdapter, OnlineSubsystem, OnlineSubsystemNull, OnlineSubsystemSteam, OnlineSubsystemUtils, LauncherChunkInstaller, InterchangeTests, EnvironmentQueryEditor, AISupport, Paper2D, ACLPlugin, AnimationLocomotionLibrary, AnimationData, AnimationModifierLibrary, BlendSpaceMotionAnalysis, AnimationWarping, AnimatorKit, ControlRig, ControlRigModules, ControlRigSpline, DeformerGraph, EaseCurveTool, IKRig, GameplayInsights, PhysicsControl, RigLogic, TweeningUtils, SkeletalMeshModelingTools, CameraShakePreviewer, EngineCameras, GameplayCameras, CompositeCore, AssetReferenceRestrictions, BlueprintHeaderView, BlueprintMaterialTextureNodes, ColorGrading, AssetManagerEditor, ConsoleVariables, CryptoKeys, CurveEditorTools, EditorDebugTools, DataValidation, EditorScriptingUtilities, EngineAssetDefinitions, FacialAnimation, GameplayTagsEditor, GeometryMode, MacGraphicsSwitching, MaterialAnalyzer, MobileLauncherProfileWizard, MeshLODToolset, ModelingToolsEditorMode, MaterialAssetWizard, PluginBrowser, ProxyLODPlugin, SpeedTreeImporter, StylusInput, UMGWidgetPreview, AdvancedRenamer, AutomationUtils, UVEditor, WorldPartitionHLODUtilities, BackChannel, Buoyancy, ChangelistReview, ChaosCaching, SequencerAnimTools, ChaosEditor, ChaosNiagara, ChaosUserDataPT, CommonConversation, ControlRigPhysics, CharacterAI, EditorDataStorageFeatures, EditorPerformance, EditorTelemetry, EditorTRSGizmo, EditorDataStorage, ChaosSolverPlugin, FullBodyIK, Fracture, GeometryDataflow, GeometryCollectionPlugin, GeometryFlow, GlobalConfigurationData, HttpInsights, Landmass, MeshModelingToolsetExp, LowLevelNetTrace, ModelContextProtocol, LevelSequenceNavigatorBridge, LocalizableMessage, MovieSceneAnimMixer, MutableAssetUserData, NFORDenoise, GizmoFramework, PlatformCrypto, PythonScriptPlugin, RuntimeTelemetry, SemanticSearch, SequenceNavigator, SkeletalReduction, ToolPresets, ToolsetRegistry, Water, Workspace, PlanarCut, AndroidMedia, AvfMedia, MediaCompositing, MediaPlate, ImgMedia, MP4Utilities, TmvMedia, WmfMedia, MediaPlayerEditor, WebMMedia, MetaHumanSDK, AutomatedPerfTestTools, ActorLayerUtilities, AndroidFileServer, AndroidDeviceProfileSelector, AndroidPermission, AndroidMoviePlayer, AppleImageUtils, AppleMoviePlayer, AudioCapture, ArchVisCharacter, AudioModulation, AudioSynesthesia, AudioWidgets, AssetTags, CableComponent, ChunkDownloader, CustomMeshComponent, CommonUI, DataRegistry, ExampleDeviceProfileSelector, GameFeatures, ComputeFramework, GameplayAbilities, GeometryCache, GeometryProcessing, GeometryScripting, HairStrands, GoogleCloudMessaging, LinuxDeviceProfileSelector, IOSDeviceProfileSelector, InputDebugging, LocationServicesBPLibrary, MeshModelingToolset, Metasound, MobilePatchingUtils, ModelViewViewModel, ModularGameplay, MsQuic, PropertyAccessEditor, PropertyBindingUtils, ResonanceAudio, RigVM, SignificanceManager, ProceduralMeshComponent, SkeletalMerging, SoundFields, StateTree, GooglePAD, Synthesis, WebMMoviePlayer, WaveTable, WindowsDeviceProfileSelector, WindowsMoviePlayer, WorldConditions, ConcertMain, FileSandbox, BaseCharacterFXEditor, AllToolsets, AIModuleToolset, AutomationTestToolset, AnimationAssistantToolset, ConfigSettingsToolset, ConversationToolset, DataflowAgent, EditorToolset, DataRegistryToolset, GameplayTagsToolset, GASToolsets, LiveCodingToolset, GameFeaturesToolset, MCPClientToolset, MVVMToolset, NiagaraToolsets, PCGToolset, PluginToolset, PhysicsToolsets, SemanticSearchToolset, SequencerAnimMixerToolset, SlateInspectorToolset, StateTreeToolset, UMGToolSet, WorldConditionsToolset, InterchangeAxfAssets, SQLiteCore, LightMixer, ObjectMixer, OnlineSubsystemIOS, ContentBrowserAssetDataSource, ContentBrowserClassDataSource, ContentBrowserFileDataSource, PortableObjectFileDataSource, XInputDevice, HierarchyTable, HierarchyTableAnimation, Scribble, OnlineSubsystemGooglePlay, UAF, UAFAnimGraph, UAFMirroring, SteamShared, SteamSockets, ConcertSyncClient, ConcertSyncCore, ConcertSharedSlate, AnimationAssetFixer, BlueprintAutoLayout, CommonGame, CommonStartupLoadingScreen, CommonLoadingScreen, GameplayMessageRouter, GameSettings, KawaiiPhysics, CommonUser, ModularGameplayActors, UIExtension, GameSubtitles, VibeUE].",
+			"[2026.09.06-04.32.20:739][  0]LogRenderer: Requested compilation of Path Tracing RTPSOs (12 permutations).",
+			"[2026.09.06-04.32.21:758][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 1024.13 ms.",
+			"[2026.09.06-04.32.21:799][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 1057.18 ms.",
+			"[2026.09.06-04.32.23:105][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 2368.75 ms.",
+			"[2026.09.06-04.32.23:263][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 1464.05 ms.",
+			"[2026.09.06-04.32.23:445][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 1684.10 ms.",
+			"[2026.09.06-04.32.23:593][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 2847.44 ms.",
+			"[2026.09.06-04.32.23:870][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 3127.16 ms.",
+			"[2026.09.06-04.32.23:982][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 3246.25 ms.",
+			"[2026.09.06-04.32.24:128][  0]LogD3D12RHI: Compiled PathTracingMainRG for RTPSO in 3386.44 ms."
+		],
+		"success": true
+	}
+}

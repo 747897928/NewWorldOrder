@@ -1,0 +1,98 @@
+{
+  "map": "/Game/Environment/HomeMap/Maps/HomeMap_Courtyard.HomeMap_Courtyard",
+  "pie": false,
+  "tree_instances": 72,
+  "meshes": [
+    {
+      "actor": "HM_EstateBackdrop",
+      "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_EstateBackdrop.SM_HM_EstateBackdrop",
+      "materials": [
+        "/Game/Environment/HomeMap/Materials/Hub/M_EstateTerrain.M_EstateTerrain"
+      ],
+      "mobility": "<ComponentMobility.STATIC: 0>",
+      "collision": "NoCollision",
+      "bounds_origin": [
+        0.0,
+        0.0,
+        9745.874633789062
+      ],
+      "bounds_extent": [
+        245000.0,
+        245000.0,
+        12757.004272460938
+      ]
+    },
+    {
+      "actor": "HM_RooftopLounge",
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_RooftopLounge.SM_HM_RooftopLounge",
+      "materials": [
+        "/Game/Environment/HomeMap/Materials/M_Metall_Black.M_Metall_Black",
+        "/Game/Environment/HomeMap/Materials/M_Wall_Wood.M_Wall_Wood",
+        "/Game/Environment/HomeMap/Materials/Hub/MI_Suite_Linen.MI_Suite_Linen",
+        "/Game/Environment/HomeMap/Materials/Hub/M_Limestone.M_Limestone"
+      ],
+      "mobility": "<ComponentMobility.STATIC: 0>",
+      "collision": "BlockAll",
+      "bounds_origin": [
+        -214.99998092651367,
+        -758.2501525878906,
+        795.4998474121094
+      ],
+      "bounds_extent": [
+        252.00001907348633,
+        140.24996948242188,
+        53.499969482421875
+      ]
+    },
+    {
+      "actor": "HM_RooftopFinish",
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_RooftopFinish.SM_HM_RooftopFinish",
+      "materials": [
+        "/Game/Environment/HomeMap/Materials/M_Metall_Black.M_Metall_Black",
+        "/Game/Environment/HomeMap/Materials/Hub/M_Limestone.M_Limestone"
+      ],
+      "mobility": "<ComponentMobility.STATIC: 0>",
+      "collision": "BlockAll",
+      "bounds_origin": [
+        -10.0,
+        -492.0001401901245,
+        769.9998474121094
+      ],
+      "bounds_extent": [
+        530.0,
+        468.090069770813,
+        28.000030517578125
+      ]
+    },
+    {
+      "actor": "HM_RooftopLantern",
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_RooftopLantern.SM_HM_RooftopLantern",
+      "materials": [
+        "/Game/Environment/HomeMap/Materials/M_Metall_Black.M_Metall_Black",
+        "/Game/Environment/HomeMap/Materials/Hub/M_Warm_Light.M_Warm_Light",
+        "/Game/Environment/HomeMap/Materials/Hub/M_Bronze.M_Bronze"
+      ],
+      "mobility": "<ComponentMobility.STATIC: 0>",
+      "collision": "NoCollision",
+      "bounds_origin": [
+        -286.99998474121094,
+        -666.0001220703125,
+        796.27490234375
+      ],
+      "bounds_extent": [
+        7.9999847412109375,
+        8.0,
+        18.2750244140625
+      ]
+    }
+  ],
+  "default_day": "<ShootEnvironmentTimeOfDay.DAY: 0>",
+  "light": {
+    "mobility": "<ComponentMobility.STATIONARY: 1>",
+    "intensity_units": "<LightUnits.LUMENS: 2>",
+    "intensity": "240.0",
+    "attenuation_radius": "600.0",
+    "cast_shadows": "False",
+    "temperature": "3000.0"
+  }
+}

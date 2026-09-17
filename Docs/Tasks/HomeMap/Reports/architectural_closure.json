@@ -1,0 +1,41 @@
+{
+  "removed_environment_instances": [],
+  "entry_clear_width_cm": 252,
+  "doors": {
+    "HM_EntryDoor_Left": {
+      "hinge_cm": [
+        -126,
+        -1008,
+        1
+      ],
+      "closed_yaw": 0,
+      "open_yaw": -100
+    },
+    "HM_EntryDoor_Right": {
+      "hinge_cm": [
+        126,
+        -1008,
+        1
+      ],
+      "closed_yaw": 180,
+      "open_yaw": 280
+    }
+  },
+  "stair_approach_open_x_cm": [
+    140,
+    550
+  ],
+  "gallery_west_walk_original_width_cm": 200,
+  "gallery_window_sill_projection_cm": 18,
+  "retired_environment_instances": [
+    "HM_Living_Glass_350",
+    "HM_Living_Sliding_Glass_1",
+    "HM_Living_Sliding_Glass_2",
+    "HM_Living_Sliding_Glass_3",
+    "HM_LivingSlidingDoorDetail",
+    "HM_Clerestory_South",
+    "HM_Clerestory_Side_-550",
+    "HM_Terrace_Chair_1",
+    "HM_Terrace_Chair_1_Collision"
+  ]
+}

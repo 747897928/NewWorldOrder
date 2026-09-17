@@ -1,0 +1,12 @@
+{
+  "input_action": "/Game/Blueprints/Input/Actions/IA_Interact",
+  "tested_frames": [
+    60,
+    120,
+    0,
+    60
+  ],
+  "interaction_actor": "HM_DayNight_Control",
+  "result": "passed",
+  "initial_state_to_change": "Day per latest user request"
+}

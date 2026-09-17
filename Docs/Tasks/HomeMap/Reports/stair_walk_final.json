@@ -1,0 +1,152 @@
+{
+  "capsule_radius": 34.0,
+  "capsule_half_height": 88.0,
+  "start": [
+    360,
+    170,
+    90
+  ],
+  "samples": [
+    {
+      "time": 0.203,
+      "position": [
+        360.0,
+        154.50066737320003,
+        90.25000238418579
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 0.406,
+      "position": [
+        360.0,
+        97.61138890539198,
+        90.25000238418579
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 0.609,
+      "position": [
+        360.0,
+        37.170118807301805,
+        90.25000238418579
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 0.828,
+      "position": [
+        360.0,
+        -25.915650694453756,
+        125.08124215376893
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 1.031,
+      "position": [
+        360.0,
+        -88.8287409820098,
+        160.46706618139092
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 1.234,
+      "position": [
+        360.0,
+        -149.1710710906688,
+        195.65558831516864
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 1.437,
+      "position": [
+        360.0,
+        -211.62771169182693,
+        233.23875471795213
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 1.656,
+      "position": [
+        360.0,
+        -274.3372207515562,
+        272.01790889977747
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 1.859,
+      "position": [
+        360.0,
+        -337.57389145053986,
+        310.4606440052653
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 2.062,
+      "position": [
+        360.0,
+        -396.0537313864387,
+        344.2549252703061
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 2.265,
+      "position": [
+        360.0,
+        -457.9344916538156,
+        381.17999108793947
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 2.468,
+      "position": [
+        360.0,
+        -521.8626310879177,
+        419.24150798680125
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 2.671,
+      "position": [
+        360.0,
+        -581.1816904963493,
+        442.04953159326806
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 2.89,
+      "position": [
+        360.0,
+        -643.9764313669443,
+        442.04953159326806
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "time": 3.109,
+      "position": [
+        360.0,
+        -710.2019712598562,
+        442.04953159326806
+      ],
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    }
+  ],
+  "passed": true,
+  "end": [
+    360.0,
+    -744.985891533041,
+    442.04953159326806
+  ]
+}

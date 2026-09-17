@@ -1,0 +1,60 @@
+[
+  {
+    "mesh": "SM_HM_PoolDeepShell",
+    "triangles": 28,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Pool_Mosaic"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_Pool_Base",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_SiteTerrain_DeepPool",
+    "triangles": 5000,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_HomeGardenSurface"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_Site_Ground",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+	"jsonrpc": "2.0",
+	"id": 2,
+	"result":
+	{
+		"content": [
+			{
+				"type": "text",
+				"text": "{\r\n\t\"success\": true,\r\n\t\"output\": \"BP: <Object '/Game/UI/Mutable/W_Cloth.W_Cloth' (0x000001B325381C00) Class 'WidgetBlueprint'>\\nCDO: <Object '/Game/UI/Mutable/W_Cloth.Default__W_Cloth_C' (0x000001B3253A4600) Class 'W_Cloth_C'>\\ninput_mapping = <Object '/Game/Blueprints/Input/IMC_WardrobeMenu.IMC_WardrobeMenu' (0x000001B319BBED80) Class 'InputMappingContext'>\\nis_focusable = False\\nREAD_W_CLOTH_OK\",\r\n\t\"result\": \"None\",\r\n\t\"execution_time_ms\": 758.7410888671875\r\n}"
+			}
+		]
+	}
+}

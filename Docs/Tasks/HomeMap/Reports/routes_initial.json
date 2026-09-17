@@ -1,0 +1,102 @@
+[
+  {
+    "route": "Entry_Living",
+    "reached": true,
+    "remaining_cm": 0.0,
+    "end": [
+      0.0,
+      -80.0,
+      91.0
+    ]
+  },
+  {
+    "route": "Living_Mission",
+    "reached": true,
+    "remaining_cm": 0.0,
+    "end": [
+      -1050.0,
+      -400.0,
+      91.0
+    ]
+  },
+  {
+    "route": "Living_Kitchen",
+    "reached": true,
+    "remaining_cm": 0.0,
+    "end": [
+      800.0,
+      -400.0,
+      91.0
+    ]
+  },
+  {
+    "route": "Mission_Bedroom",
+    "reached": false,
+    "remaining_cm": 36.3,
+    "end": [
+      -800.0,
+      413.67502212524414,
+      91.0
+    ]
+  },
+  {
+    "route": "Bedroom_Wardrobe",
+    "reached": false,
+    "remaining_cm": 450.0,
+    "end": [
+      -800.0,
+      450.0,
+      91.0
+    ]
+  },
+  {
+    "route": "Wardrobe_Bath",
+    "reached": false,
+    "remaining_cm": 155.3,
+    "end": [
+      -800.0,
+      1044.735762476921,
+      91.0
+    ]
+  },
+  {
+    "route": "Kitchen_Gym",
+    "reached": false,
+    "remaining_cm": 749.2,
+    "end": [
+      820.0,
+      -149.23268109560013,
+      91.0
+    ]
+  },
+  {
+    "route": "Gym_Yoga",
+    "reached": false,
+    "remaining_cm": 482.9,
+    "end": [
+      820.0,
+      767.1142354607582,
+      91.0
+    ]
+  },
+  {
+    "route": "Pool_West_Walk",
+    "reached": true,
+    "remaining_cm": 0.0,
+    "end": [
+      -580.0,
+      1390.0,
+      91.0
+    ]
+  },
+  {
+    "route": "Pool_East_Walk",
+    "reached": true,
+    "remaining_cm": 0.0,
+    "end": [
+      580.0,
+      1390.0,
+      91.0
+    ]
+  }
+]

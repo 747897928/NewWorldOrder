@@ -1,0 +1,64 @@
+{
+	"trace_file": "G:/Documents/Unreal Projects/MyFirstGame/NewWorldOrder/Saved/Profiling/HomeMap_Baseline.utrace",
+	"duration_seconds": 2886.5705138999997,
+	"frame_count": 1824,
+	"avg_frame_ms": 22.73,
+	"avg_fps": 44,
+	"max_frame_ms": 523.37,
+	"max_frame_index": 496,
+	"max_frame_timestamp": 2856.058164,
+	"p95_frame_ms": 25.780000000000001,
+	"worst_frames": [
+		{
+			"frame": 496,
+			"ms": 523.37,
+			"timestamp": 2856.058164
+		},
+		{
+			"frame": 907,
+			"ms": 79.219999999999999,
+			"timestamp": 2866.0366980999997
+		},
+		{
+			"frame": 498,
+			"ms": 59.329999999999998,
+			"timestamp": 2856.6228059
+		},
+		{
+			"frame": 499,
+			"ms": 45.270000000000003,
+			"timestamp": 2856.6821461
+		},
+		{
+			"frame": 497,
+			"ms": 41.240000000000002,
+			"timestamp": 2856.5815422999999
+		},
+		{
+			"frame": 500,
+			"ms": 36.789999999999999,
+			"timestamp": 2856.727429
+		},
+		{
+			"frame": 521,
+			"ms": 36.280000000000001,
+			"timestamp": 2857.3620222
+		},
+		{
+			"frame": 1734,
+			"ms": 36.109999999999999,
+			"timestamp": 2884.483905
+		},
+		{
+			"frame": 519,
+			"ms": 35.270000000000003,
+			"timestamp": 2857.2943052000001
+		},
+		{
+			"frame": 525,
+			"ms": 34.479999999999997,
+			"timestamp": 2857.4897530999997
+		}
+	],
+	"success": true
+}

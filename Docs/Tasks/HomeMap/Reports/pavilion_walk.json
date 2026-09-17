@@ -1,0 +1,499 @@
+{
+  "map": "/Game/Environment/HomeMap/Maps/UEDPIE_0_HomeMap_Courtyard.HomeMap_Courtyard",
+  "targets": [
+    [
+      0,
+      -200
+    ],
+    [
+      -175,
+      -230
+    ],
+    [
+      -170,
+      -403
+    ],
+    [
+      -300,
+      -403
+    ],
+    [
+      -170,
+      -403
+    ],
+    [
+      -170,
+      -185
+    ],
+    [
+      0,
+      -160
+    ],
+    [
+      360,
+      170
+    ],
+    [
+      360,
+      -745
+    ],
+    [
+      65,
+      -730
+    ],
+    [
+      -260,
+      -700
+    ]
+  ],
+  "samples": [
+    {
+      "t": 0.281,
+      "position": [
+        0.0,
+        137.9443726922066,
+        90.25000333786011
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 0.562,
+      "position": [
+        0.0,
+        52.527598551949936,
+        90.25000333786011
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 0.828,
+      "position": [
+        0.0,
+        -25.796701126256508,
+        90.25000333786011
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 1.093,
+      "position": [
+        0.0,
+        -107.1607818086534,
+        90.25000333786011
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 1.359,
+      "position": [
+        0.0,
+        -186.083410496929,
+        90.25000333786011
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 1.625,
+      "position": [
+        -52.22923404430303,
+        -209.67616983251068,
+        90.25000333786011
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 1.906,
+      "position": [
+        -137.8931620460377,
+        -224.44033292178574,
+        90.25000333786011
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 2.171,
+      "position": [
+        -177.07607470214285,
+        -258.5147995448008,
+        90.25000333786011
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 2.453,
+      "position": [
+        -175.13303175620223,
+        -340.35027340910847,
+        90.25000333786011
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 2.734,
+      "position": [
+        -186.01176456676845,
+        -398.7580952029146,
+        90.25000333786011
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 3.0,
+      "position": [
+        -261.8611405676958,
+        -404.1917452248596,
+        90.25000333786011
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 3.265,
+      "position": [
+        -280.6231329150451,
+        -403.3297332220679,
+        90.25000333786011
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 3.531,
+      "position": [
+        -211.55611697972955,
+        -403.0715797335675,
+        90.25000333786011
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 3.812,
+      "position": [
+        -174.5474813863719,
+        -374.11256257942495,
+        90.25000333786011
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 4.093,
+      "position": [
+        -170.98582239994556,
+        -292.77550168140533,
+        90.25000333786011
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 4.359,
+      "position": [
+        -170.18516806130367,
+        -211.29571821381847,
+        90.25000333786011
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 4.625,
+      "position": [
+        -126.79378963235354,
+        -179.34006274900037,
+        90.25000333786011
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 4.89,
+      "position": [
+        -51.24080409227723,
+        -166.83359903303062,
+        90.25000333786011
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 5.171,
+      "position": [
+        15.537716364800229,
+        -145.5585172393346,
+        90.25000333786011
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 5.437,
+      "position": [
+        76.59963359664245,
+        -91.49674219914822,
+        90.25000333786011
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 5.703,
+      "position": [
+        134.55592275982656,
+        -39.182746126347304,
+        90.25000187235887
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 5.968,
+      "position": [
+        197.60320055505815,
+        -6.632154302834352,
+        90.25000093678227
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 6.234,
+      "position": [
+        252.34746075866107,
+        51.275520497525434,
+        90.25000093678227
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 6.5,
+      "position": [
+        310.372177668988,
+        94.43727912647249,
+        90.24999993499955
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 6.765,
+      "position": [
+        353.6325685728082,
+        158.14978767070738,
+        90.24999993499955
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 7.046,
+      "position": [
+        360.49930554768497,
+        121.38101222301255,
+        90.24999993499955
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 7.328,
+      "position": [
+        360.8878843920961,
+        37.628913578113554,
+        90.24999993499955
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 7.593,
+      "position": [
+        360.8109053130621,
+        -42.49288816680263,
+        138.06295731024534
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 7.859,
+      "position": [
+        360.716980494614,
+        -124.31096332741252,
+        183.97231702020622
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 8.125,
+      "position": [
+        360.62712007868913,
+        -202.1190611913476,
+        229.94354415249677
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 8.39,
+      "position": [
+        360.5339909158981,
+        -282.7391470447783,
+        278.98905637205394
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 8.656,
+      "position": [
+        360.44228265436556,
+        -362.12842444469925,
+        321.99088571029006
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 8.937,
+      "position": [
+        360.35299502011287,
+        -439.4222032832481,
+        369.9846427994016
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 9.203,
+      "position": [
+        360.2489530256602,
+        -529.4884128150383,
+        422.8074077957742
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 9.468,
+      "position": [
+        360.1599493201241,
+        -606.5364012653084,
+        442.0497997952996
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 9.75,
+      "position": [
+        360.06767964351235,
+        -686.4116484237501,
+        442.0497997952996
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 10.015,
+      "position": [
+        344.01543845598064,
+        -743.3674377291511,
+        442.0497997952996
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 10.281,
+      "position": [
+        264.9878287622387,
+        -744.2614568436313,
+        442.0497997952996
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 10.546,
+      "position": [
+        189.47246868287942,
+        -739.0849907958462,
+        442.0497997952996
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 10.828,
+      "position": [
+        104.32364223698269,
+        -732.8793990263329,
+        442.0497997952996
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 11.109,
+      "position": [
+        31.121674982762883,
+        -726.8444168295996,
+        442.0497997952996
+      ],
+      "target": 10,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 11.375,
+      "position": [
+        -50.7125636455528,
+        -719.32579901443,
+        442.0497997952996
+      ],
+      "target": 10,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 11.64,
+      "position": [
+        -129.3692300720642,
+        -712.0636626481141,
+        442.0497997952996
+      ],
+      "target": 10,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "t": 11.906,
+      "position": [
+        -205.57090537016458,
+        -705.026539946574,
+        442.0497997952996
+      ],
+      "target": 10,
+      "mode": "<MovementMode.MOVE_WALKING: 1>"
+    }
+  ],
+  "reached": 11,
+  "passed": true,
+  "end": [
+    -249.59720029218886,
+    -700.960705243017,
+    442.0497997952996
+  ],
+  "final_mode": "<MovementMode.MOVE_WALKING: 1>"
+}

@@ -1,0 +1,21 @@
+{
+  "map": "HomeMap_Courtyard",
+  "source": "HomeMap_Master.blend",
+  "woodland": [
+    {
+      "foliage_type": "/Game/Environment/HomeMap/Landscape/FT_HM_Woodland_0",
+      "count": 170,
+      "mesh_triangles": 5244,
+      "bounds": "<Struct 'BoxSphereBounds' (0x0000020C28745FC0) {origin: {x: 11.667328, y: 12.102859, z: 502.035035}, box_extent: {x: 448.685760, y: 448.909927, z: 502.701537}, sphere_radius: 595.260237}>",
+      "cast_shadow": false
+    },
+    {
+      "foliage_type": "/Game/Environment/HomeMap/Landscape/FT_HM_Woodland_1",
+      "count": 170,
+      "mesh_triangles": 5244,
+      "bounds": "<Struct 'BoxSphereBounds' (0x0000020C28748EC0) {origin: {x: -5.817444, y: -3.481339, z: 501.094453}, box_extent: {x: 441.967560, y: 445.001053, z: 501.760955}, sphere_radius: 605.846675}>",
+      "cast_shadow": false
+    }
+  ],
+  "note": "Geometry and saved-state verification only; screenshots and performance reviewed separately"
+}

@@ -1,0 +1,13 @@
+{
+  "triangles": 32304,
+  "leaf_count": 4608,
+  "materials": [
+    "island_tree_01",
+    "island_tree_01_leaves"
+  ],
+  "new_textures": 0,
+  "method": "Connected fine shoots with smaller leaves; existing 2k leaf atlas; built-in FBX local root pivot",
+  "nanite": false,
+  "actual_ue_triangles_lod0": 32304,
+  "fallback_note": "Rebuilt via StaticMeshEditorSubsystem.set_nanite_settings(apply_changes=True); ordinary mesh avoids inflated sparse foliage."
+}

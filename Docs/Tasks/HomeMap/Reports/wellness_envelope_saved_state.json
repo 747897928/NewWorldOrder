@@ -1,0 +1,34 @@
+{
+  "map": "/Game/Environment/HomeMap/Maps/HomeMap_Courtyard.HomeMap_Courtyard",
+  "default_day": "<ShootEnvironmentTimeOfDay.DAY: 0>",
+  "lights": {
+    "HM_Gym_Light": {
+      "intensity": "1750.0",
+      "temperature": "4200.0",
+      "specular_scale": "0.0",
+      "attenuation_radius": "580.0",
+      "cast_shadows": "True"
+    },
+    "HM_Yoga_Light": {
+      "intensity": "850.0",
+      "temperature": "4200.0",
+      "specular_scale": "1.0",
+      "attenuation_radius": "600.0",
+      "cast_shadows": "False"
+    },
+    "HM_Yoga_FeatureWash": {
+      "intensity": "200.0",
+      "temperature": "3800.0",
+      "specular_scale": "1.0",
+      "attenuation_radius": "225.0",
+      "cast_shadows": "False"
+    },
+    "HM_Gym_Mirror_Wash": {
+      "intensity": "450.0",
+      "temperature": "3500.0",
+      "specular_scale": "0.0",
+      "attenuation_radius": "450.0",
+      "cast_shadows": "False"
+    }
+  }
+}

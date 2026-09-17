@@ -1,0 +1,156 @@
+[
+  {
+    "label": "HM_Review_Courtyard",
+    "name": "CameraActor_0",
+    "location": [
+      0.0,
+      1700.0,
+      220.0
+    ],
+    "rotation": [
+      6.000000000000002,
+      -89.99999999999999,
+      -0.0
+    ]
+  },
+  {
+    "label": "HM_Review_Living",
+    "name": "CameraActor_1",
+    "location": [
+      100.0,
+      -30.0,
+      205.0
+    ],
+    "rotation": [
+      9.999999999999996,
+      -119.99999999999997,
+      -0.0
+    ]
+  },
+  {
+    "label": "HM_Review_Gallery",
+    "name": "CameraActor_2",
+    "location": [
+      230.0,
+      -650.0,
+      520.0
+    ],
+    "rotation": [
+      -6.000000000000001,
+      -140.0,
+      -0.0
+    ]
+  },
+  {
+    "label": "HM_Review_Kitchen",
+    "name": "CameraActor_3",
+    "location": [
+      705.0,
+      -205.0,
+      172.0
+    ],
+    "rotation": [
+      -2.000000000000001,
+      -31.00000000000001,
+      -0.0
+    ]
+  },
+  {
+    "label": "HM_Review_Garden",
+    "name": "CameraActor_4",
+    "location": [
+      750.0,
+      1720.0,
+      170.0
+    ],
+    "rotation": [
+      -2.000000000000001,
+      5.0000000000000036,
+      -0.0
+    ]
+  },
+  {
+    "label": "HM_Review_Bedroom",
+    "name": "CameraActor_5",
+    "location": [
+      -720,
+      300,
+      170
+    ],
+    "rotation": [
+      -3,
+      170,
+      0
+    ]
+  },
+  {
+    "label": "HM_Review_Dressing",
+    "name": "CameraActor_6",
+    "location": [
+      -990,
+      610,
+      165
+    ],
+    "rotation": [
+      -4,
+      120,
+      0
+    ]
+  },
+  {
+    "label": "HM_Review_Expedition",
+    "name": "CameraActor_7",
+    "location": [
+      -690,
+      -430,
+      165
+    ],
+    "rotation": [
+      -4,
+      -135,
+      0
+    ]
+  },
+  {
+    "name": "CameraActor_8",
+    "label": "HM_Review_Rooftop",
+    "location": [
+      -430,
+      -870,
+      910
+    ],
+    "rotation": [
+      -10,
+      55,
+      0
+    ]
+  },
+  {
+    "label": "HM_Review_Gym",
+    "name": "CameraActor_9",
+    "location": [
+      780,
+      80,
+      165
+    ],
+    "rotation": [
+      -5,
+      40,
+      0
+    ]
+  },
+  {
+    "label": "HM_Review_Yoga",
+    "name": "CameraActor_10",
+    "location": [
+      790,
+      760,
+      165
+    ],
+    "rotation": [
+      -3,
+      47,
+      0
+    ]
+  }
+]

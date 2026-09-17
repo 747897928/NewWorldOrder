@@ -1,0 +1,82 @@
+{
+  "map": "/Game/Environment/HomeMap/Maps/HomeMap_Courtyard",
+  "experience": "/Game/GameFramework/Experiences/DA_Experience_Home",
+  "water_volume": {
+    "label": "HM_Pool_SwimmingVolume_Deep",
+    "class": "/Script/Engine.PhysicsVolume",
+    "min": { "x": -425.0, "y": 640.0, "z": -270.0 },
+    "max": { "x": 425.0, "y": 1890.0, "z": -18.0 },
+    "water_volume": true,
+    "fluid_friction": 0.25,
+    "priority": 10
+  },
+  "experience_gate": {
+    "home_allow_swimming": true,
+    "other_current_experiences_default_allow_swimming": false,
+    "disabled_home_entered_volume_mode": "MOVE_Walking",
+    "disabled_home_played_montage": false
+  },
+  "runtime_checks": [
+    {
+      "case": "shallow_stairs",
+      "location": { "x": 0.0, "y": 570.31, "z": -93.40 },
+      "movement_mode": "MOVE_Walking",
+      "water_volume": false
+    },
+    {
+      "case": "deep_water_entry",
+      "location": { "x": 0.0, "y": 650.0, "z": -142.0 },
+      "movement_mode": "MOVE_Swimming",
+      "entry_animation": "/Game/Characters/Heroes/CC/MF/Animations/Swimming/Swimming_Crawl_Fwd_Start",
+      "slot": "FullBody"
+    },
+    {
+      "case": "deep_water_idle",
+      "movement_mode": "MOVE_Swimming",
+      "loop_animation": "/Game/Characters/Heroes/CC/MF/Animations/Swimming/Swimming_Idle",
+      "loop_count": 1000,
+      "slot": "FullBody"
+    },
+    {
+      "case": "fall_from_gallery_to_deep_water",
+      "start_location": { "x": 0.0, "y": 1090.0, "z": 700.0 },
+      "movement_mode_before_water": "MOVE_Falling",
+      "movement_mode_after_water_entry": "MOVE_Swimming",
+      "dive_start_configured": "/Game/Characters/Heroes/CC/MF/Animations/Swimming/Swimming_Diving_Start",
+      "dive_loop_configured": "/Game/Characters/Heroes/CC/MF/Animations/Swimming/Swimming_Diving_Loop",
+      "animation_playback_verified": false,
+      "note": "临时无控制器角色验证了高处坠落穿过水体后的移动模式切换；该角色未初始化正式 CC Mesh，因此不把本次测试记为动画播放验证。"
+    },
+    {
+      "case": "pre_dive_before_water_entry",
+      "behavior": "falling_trajectory_uses_dive_start_then_dive_loop_before_water_entry",
+      "dive_start": "/Game/Characters/Heroes/CC/MF/Animations/Swimming/Swimming_Diving_Start",
+      "dive_loop": "/Game/Characters/Heroes/CC/MF/Animations/Swimming/Swimming_Diving_Loop",
+      "obstacle_check": "capsule_sweep",
+      "manual_acceptance": "用户在 HomeMap PIE 验收确认角色在接触水面前已保持 Diving_Loop 俯冲姿势并以该姿势入水。"
+    },
+    {
+      "case": "swim_to_near_steps",
+      "start_y": 900.0,
+      "drive_ticks": 180,
+      "end_y": -194.01,
+      "movement_mode": "MOVE_Walking",
+      "water_volume": false,
+      "remaining_swim_montage": false
+    },
+    {
+      "case": "leave_water",
+      "movement_mode_immediately_after_exit": "MOVE_Falling",
+      "movement_mode_after_500ms": "MOVE_Walking",
+      "exit_full_body_swim_montage": false,
+      "normal_locomotion_immediate": true
+    }
+  ],
+  "build": {
+    "script": "Scripts/Build_Windows.ps1",
+    "target": "NewWorldOrderEditor",
+    "configuration": "Development",
+    "platform": "Win64",
+    "result": "Succeeded"
+  }
+}

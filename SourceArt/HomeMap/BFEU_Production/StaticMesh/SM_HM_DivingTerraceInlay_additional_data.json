@@ -1,0 +1,9 @@
+{
+  "exporter": "Blender built-in FBX",
+  "reason": "Installed BFEU missing fbxio/io_scene_fbx_4_4",
+  "axis_forward": "-Z",
+  "axis_up": "Y",
+  "units": "meters",
+  "actor_transform": "identity",
+  "triangles": 2052
+}

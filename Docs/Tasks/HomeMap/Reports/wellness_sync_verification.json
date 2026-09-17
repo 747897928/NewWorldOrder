@@ -1,0 +1,37 @@
+{
+  "actors_before": 478,
+  "actors_after": 478,
+  "duplicate_instances": false,
+  "second_sync": [
+    {
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_TreadmillSuite",
+      "imported": false,
+      "instances": 2
+    },
+    {
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_DumbbellRack",
+      "imported": false,
+      "instances": 1
+    },
+    {
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_TrainingBench",
+      "imported": false,
+      "instances": 1
+    },
+    {
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_YogaPracticeSet",
+      "imported": false,
+      "instances": 2
+    },
+    {
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_WellnessStorage",
+      "imported": false,
+      "instances": 1
+    },
+    {
+      "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_GymFinish",
+      "imported": false,
+      "instances": 1
+    }
+  ]
+}

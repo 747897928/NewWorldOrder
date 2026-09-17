@@ -1,0 +1,210 @@
+﻿# 会话记录 2026-01-30
+
+日期：2026-01-30
+状态：可用
+
+## 结论
+- 正史需求以 Docs/SystemDesign/GameDesign/游戏设计完整文档 v7.0 Final.md 为准（文件内容为 v7.2）。
+- Docs/Tasks 可能包含旧设定，需要盘点并与 Source/NewWorldOrder 对齐。
+- 代码现状以 Source/NewWorldOrder 为准，若与正史冲突需记录缺口。
+- 文档要求干净、最新，旧逻辑不与新逻辑并存，过期文档归档到 Docs/Archives。
+- Docs/GASDocumentation_Chinese 与 Docs/ExampleProjectCode 为只读参考，不做修改。
+
+## 本次行动
+- 盘点 Source/NewWorldOrder：InventoryManager、CombatComponent、SaveGameSubsystem、ResourceInventory、WeaponInstance
+- 复查 Lyra 示例：InventoryManager、QuickBar、EquipmentManager、GameplayMessageSubsystem
+- 更新 GAS 与 Lyra 整合现状盘点，记录当前差异与缺口
+- 建立 TaskAudit 任务包用于盘点现有任务与代码状态
+- 归档过期或重复文档，保持主文档干净
+- InventorySystem：补齐 ResourceInventory 存档、部分消耗、StackRules/QuickbarSlotRules 基础设施；安全区判断优先 WorldSettings Tags
+- 编译：Windows 下使用 Build.bat 编译通过（EngineAssociation=5.7），注意 VS 工具链非首选版本警告
+- 文档：新增编译指南 Docs/Engineering/Build_编译指南.md 并更新 AGENTS.md 索引
+- 编译：Build_编译指南改为不写死盘符，支持 UE_ENGINE_DIR + 注册表 + 常见路径扫描
+- 编译：新增 Scripts/Build_Windows.ps1 脚本，自动定位引擎并编译
+- 角色切换：新增 GameState 安全区标记入口；快照支持持续型 GE 的剩余时间/层数/等级；首次进入性别默认 QuickBar 自动填充
+- 编译：更新角色切换代码后编译通过（仅工具链版本警告）
+- CombatSystem：新增 Stun/Slow 通用 GE 与 Status.Stunned/Status.Slowed 标签；震撼手雷默认使用 Stun 控制；补齐 Knockback 方案记录
+- 编译：新增控制效果后编译通过（仅工具链版本与插件依赖警告）
+- 修复：GameplayEffect 构造中使用 FindOrAddComponent 导致 NewObject 空名崩溃，改为 ObjectInitializer.CreateDefaultSubobject 并手动加入 GEComponents
+- CharacterSwitching：新增安全区 Volume（AShootSafeAreaVolume），PlayerState 通过重叠计数维护安全区状态，移除 MapName 兜底判断
+- CharacterSwitching：快照保存/恢复 SetByCaller 标签数值，保证切换后动态 Buff 数值一致
+- CombatSystem：AShootCharacter 消费 MoveSpeedMultiplier，同步跑步/行走移速与 Buff
+- CombatSystem：ShootSkillExplosionActor 增加 KnockbackStrength，爆炸对角色/物理组件应用击退
+- CombatSystem：对照正史文档补齐男主技能缺口清单（见 DesignSpec_设计规格.md）
+- CombatSystem：对照正史文档补齐女主技能缺口清单（见 DesignSpec_设计规格.md）
+- CombatSystem：补齐通用/专属被动缺口清单（见 DesignSpec_设计规格.md）
+- CombatSystem：医疗专精被动接入 SetByCaller 倍率、医疗站范围加成与免疫致死
+- CombatSystem：RescueCloak 采用 SetByCaller 移速并接入攻击破隐；RapidCharge 支持等级移速/换弹倍率与击杀延长
+- CombatSystem：TacticalScan 已落地尸潮红利持续翻倍与弱点标记伤害+10%（弱点高亮仍缺）
+- CombatSystem：MarkedHunter 击杀回血按等级规则落地（普通击杀回血仅 Lv3 解锁）
+- CombatSystem：MarkedHunter Lv3 标记传播落地（半径+50%可配置）
+- CombatSystem：RescueCloak 接入救起后治疗与保护回调
+- CombatSystem：RescueCloak 接入救援速度倍率（交互事件倍率）
+- CombatSystem：新增救援交互能力，读取救援速度倍率并发送救起完成事件
+- CombatSystem：新增救援交互组件（需倒地时启用）
+- CombatSystem：AShootCharacter 监听 Health 变化启用/关闭救援交互组件（倒地表现仍缺）
+- CombatSystem：ShieldWall 使用 SetByCaller 注入护盾/减伤数值并提供默认 GE
+- CombatSystem：MedicalStation HealEffect 为空时回退到通用即时治疗 GE
+- CombatSystem：救援交互能力广播 Duration 消息，UI 可订阅显示进度
+- CombatSystem：统一阵营判断入口（TeamId + Faction Tag 回退），TacticalScan/MarkHunter 已接入
+- CombatSystem：被动能力授予即激活统一由 GrantAbilitiesWithKit(bActivatePassives=true) 处理
+- CombatSystem：PlayerController 监听救援 Duration 消息并广播蓝图委托
+- CombatSystem：RapidCharge/MarkHunter 统一接入 IsKillAttributedToActor（覆盖 Killer/Instigator/Controller/Pawn 链路）
+- Online：会话搜索 Presence 兼容同时写入 SEARCH_PRESENCE 与 PRESENCESEARCH
+- 编译：UE5.7 移除 SEARCH_PRESENCE 宏，改为显式 FName 双 Key 后编译通过（仅工具链版本警告）
+- CharacterSwitching：新增 AShootCharacterSwitchStation（宿舍切换站交互入口）与旧的世界入口桥接能力原型（后续已收口为 `UShootGA_WorldCharacterSwitchRequest`）
+- CharacterSwitching：AShootPlayerController 新增角色切换确认链路（客户端确认弹窗事件、服务器提交校验、切换后立即落盘）
+- CharacterSwitching：补充蓝图接线手册 `Docs/Tasks/CharacterSwitching/BlueprintIntegration_蓝图接线指南.md`
+- CharacterSwitching：切换站相关 C++ 注释改为直接中文行级说明，便于按流程排查
+- CharacterSwitching：新增 `UShootCharacterSwitchWidgetBase`，蓝图可继承并直接复用确认/结果事件绑定逻辑
+- CharacterSwitching：新增蓝图节点连线流程图 `Docs/Tasks/CharacterSwitching/BlueprintNodeFlow_蓝图节点流程图.md`
+- CharacterSwitching：默认主角调整为男主；切换时性别状态由 PlayerState 统一维护，外观组件不再直接改 CharacterGender
+- CharacterSwitching：`LoadCharacterFromSnapshot` 统一走 `ServerSetAppearanceTags`，并在 `OnRep_CharacterGender` 主动广播当前性别外观标签，修复切换后外观同步边界问题
+- CharacterSwitching：新增验收清单 `Docs/Tasks/CharacterSwitching/Checklist_检查清单.md`，覆盖切换流程、男女主独立换装、QuickBar独立、存档恢复与失败路径
+- CharacterSwitching：2026-03-13 复核任务包与代码后，重写 `Overview_总览.md`，明确当前职责边界为“GameMode 决策 Hub 标记，GameState 复制结果，PlayerState 统一读取”
+- CharacterSwitching：同日修正文档覆盖失误，将 `Overview_总览.md` 中仍然有效的“当前项目架构（必须遵守）”与“相关必读”约束恢复并并入新版总览
+- CharacterSwitching：2026-03-13 根据用户补充的《刺客信条：枭雄 / 影》参考图，重新明确最终 UX：Hub 内“靠近另一主角切换”是正统入口，CommonUI / ESC 菜单切换是第二入口；当前 `AShootCharacterSwitchStation` 仅为占位实现
+- CharacterSwitching：2026-03-13 将世界内角色切换从“确认弹窗”收敛为“长按读条”，由 `UShootGA_Interact` 负责长按门禁，`AShootPlayerController` 负责进度广播、松手回落与结果提示
+- CharacterSwitching：同日补充 `Docs/Tasks/CharacterSwitching/EnhancedInput_Hold_Notes.md`，记录官方 Enhanced Input / GAS 长按结论，并明确当前世界内实现不直接改 Interact 输入资产为 Hold Trigger
+- 编译：角色切换长按方案已通过 Windows `Build.bat` 编译（Succeeded，仅保留工具链/插件依赖警告）
+- CharacterSwitching：补充 `Docs/Tasks/CharacterSwitching/TransitionScene_过渡切换方案.md`，明确《刺客信条：影》式黑屏+小型过渡空间属于“过渡层”，不是角色切换逻辑本体
+- CharacterSwitching：2026-03-14 删除世界内旧确认框 C++ 主线（PlayerController 确认请求/提交与 Widget 确认按钮接口），统一收口到长按读条链路
+- CharacterSwitching：2026-03-14 新增 `Docs/Tasks/CharacterSwitching/CodeAudit_代码审计.md` 与 `Docs/Tasks/CharacterSwitching/CallFlow_调用链路.md`，明确主线/暂留/候删边界，降低后续误删风险
+- 编译：修复 `Scripts/Build_Windows.ps1` 在 `EngineAssociation=5.7` 且 `StrictMode` 下的注册表读取问题，现已可直接定位引擎并完成编译
+- CharacterSwitching：2026-03-17 收紧任务文档边界，`Overview_总览.md` 与 `STATUS.md` 明确标出“人类先看哪三份”，避免继续让任务文档散成一堆
+- CharacterSwitching：2026-03-17 新增 `Docs/Tasks/CharacterSwitching/LyraInteraction_研究笔记.md`，记录官方 Lyra Interaction 资料、本地代码对应关系、世界内交互与 ESC / CommonUI 菜单入口的分层
+- CharacterSwitching：2026-03-17 对交互能力来源做专项审计，确认 `BP_ShootCharacter` 当前可见启动能力证据为 `GA_Skill1~4`、`GA_Hero_Jump`、`GA_ListenForEvent`，尚未从文本证据证明交互主能力已通过启动链授予
+- CharacterSwitching：同日确认旧蓝图 `GA_Interact` 资产仍然存在，且保留 `LookForInteractables / InteractPressScan / WaitInputPress / WaitInputRelease` 等旧交互图表逻辑；当前不能宣称它已经完全退休
+- CharacterSwitching：同日核对 `IMC_Default`、`IA_Interact`、`DA_ShootInputConfig` 与官方 Enhanced Input 文档，确认 `IA_Interact` 资产当前可见触发器为 Pressed/Released，未见 Hold Trigger；现阶段继续采用“输入资产保持 Press/Release，角色切换分支在 Ability 内做 WaitDelay + WaitInputRelease 长按门禁”的方案
+- CharacterSwitching：同日补充文档结论：C++ 交互主线已实现，但玩家最终生效的交互主能力授予链与 `DA_ShootInputConfig` 中的 Interact 输入映射仍需进编辑器确认
+- CharacterSwitching：2026-03-17 用户已在编辑器确认并补齐 `DA_ShootInputConfig` 的 `IA_Interact -> InputTag.Ability.Interact` 映射，交互输入总线缺口关闭
+- CharacterSwitching：同日明确后续方向为“交互主逻辑尽量收口到 C++，蓝图只保留最少配置和 UI 表现”；旧 `GA_Interact` 推荐备份后改造成继承 `UShootGA_Interact` 的薄包装，或仅保留历史参考
+- CharacterSwitching：同日对任务文档做收口清理，删除并合并 `DesignSpec_设计规格.md`、`BlueprintNodeFlow_蓝图节点流程图.md`、`EnhancedInput_Hold_Notes.md`、`CodeAudit_代码审计.md`、`TransitionScene_过渡切换方案.md`，把有效信息分别并入 `Implementation_实现指南.md`、`BlueprintIntegration_蓝图接线指南.md`、`CallFlow_调用链路.md`、`LyraInteraction_研究笔记.md`
+- CharacterSwitching：2026-03-17 继续审 `BP_ShootCharacter` 与交互授予链后，确认当前更合理的架构不是“交互物临时授予整个主交互能力”，而是“玩家预设常驻 `UShootGA_Interact` + 交互物仅提供选项与事件数据 + 少量特殊执行能力可选动态授予”
+- CharacterSwitching：同日把这条结论回写到 `Overview_总览.md`、`CallFlow_调用链路.md`、`LyraInteraction_研究笔记.md`、`Implementation_实现指南.md` 与 `InteractionSystem_Rules_交互系统规则.md`
+- CharacterSwitching：同日进一步收紧下一步：优先补齐 `UShootGA_Interact` 的真实启动授予链，再决定旧 `GA_Interact` 退休还是薄包装，以及 `Collect / Revive / CharacterSwitch` 执行能力是否统一走玩家交互 Kit 预授予
+- CharacterSwitching：2026-03-18 根据用户进一步澄清，确认前一轮关于角色切换入口的收口仍然不够准确：菜单入口明确为 CommonUI 长按，且需支持手柄，因此角色切换后端不能依赖世界交互样例类
+- CharacterSwitching：同日把任务文档重新纠偏为“世界入口 + CommonUI 长按入口 + 共享后端”模型，并明确 `UShootGA_Interact` 只是交互样例 / 通用交互参考，不应继续承载角色切换专属长按主逻辑
+- CharacterSwitching：同日把 `UShootGA_WorldCharacterSwitchRequest` 标记为当前原型中的桥接类，后续需要重命名或拆分职责，避免继续误导为“角色切换业务天然属于 Interaction 层”
+- CharacterSwitching：同日继续补查 CommonUI + Enhanced Input 官方文档与 UE 5.7 CommonUI 源码，确认菜单层长按可直接在 C++ Widget 中通过 `RegisterUIActionBinding(FBindUIActionArgs)` 或 `UCommonButtonBase` 完成，且支持增强输入与手柄，不需要经过角色 `InputTag -> ASC` 输入链
+- CharacterSwitching：同日核对现有代码后发现一个关键缺口：菜单 Widget 在本地客户端无法直接调用仅服务器可执行的 `AShootPlayerController::TrySwitchCharacter`，因此补上了 `RequestSwitchCharacter / ServerRequestSwitchCharacter` 作为共享请求入口，后续 CommonUI 菜单长按与世界入口都应先走这层再进入服务器权威切换
+- CharacterSwitching：2026-03-18 继续补查 CommonUI 与 Enhanced Input 的输入上下文切换，确认 `UCommonActivatableWidget::InputMapping / InputMappingPriority` 会在 Widget 激活时自动 `AddMappingContext`，反激活时自动 `RemoveMappingContext`；角色切换菜单应优先复用这套机制，而不是第一版就自己手写 Controller 侧切换逻辑
+- CharacterSwitching：同日确认角色切换菜单的推荐输入方案为“`IMC_FrontEnd` 保持基础前端导航 + 面板激活时叠加 `IMC_Confirm_Select_Character`”，从而把菜单确认输入与世界玩法输入隔离开
+- CharacterSwitching：同日确认菜单长按第一版不建议在 `IA_Confirm` 或专用切换输入动作上叠 `Hold / Hold And Release` Trigger；更稳的方案是保持普通确认语义，把长按进度和完成交给 CommonUI 的 hold 机制，避免一边走 CommonUI、一边再叠一层 Enhanced Input Hold 造成语义重复
+- CharacterSwitching：同日核对 `UIActionRouterTypes.cpp`，确认非 Generic 的增强输入动作在 CommonUI 中会优先注入 Enhanced Input，而不是直接执行 Widget 绑定委托；若菜单角色切换准备走 `RegisterUIActionBinding(FBindUIActionArgs)` 这条 Widget 级 C++ 路线，确认动作更适合作为 UI Generic Action
+- CharacterSwitching：2026-03-18 用户继续补充前端资产后，确认 `IA_Confirm` 已映射手柄 A，且 `DT_PMM_InputAction` 已配置跨设备图标；这意味着菜单角色切换第一版完全可以复用现有“通用确认输入 + 图标表”体系，不必先为长按确认发明第二套前端输入标准
+- CharacterSwitching：同日进一步澄清 `RegisterUIActionBinding(FBindUIActionArgs)` 和输入资产的关系：它只是 CommonUI Widget 监听动作的接口，不替代 `UInputAction`、`Input Mapping Context` 或输入图标数据表；若后续确认菜单角色切换要使用独立键位，例如手柄 X、键盘 E，则正确做法是新增 `IA_SwitchCharacterMenu` 与菜单专用 IMC，再继续通过 Widget 级绑定去接这个动作
+- CharacterSwitching：2026-03-18 用户最终选定菜单独立切换键方案，明确后续主菜单相关输入都走 `IMC_CharacterSwitchMenu`；因此角色切换菜单的资产方向正式收口为 `IA_SwitchCharacterMenu + IMC_CharacterSwitchMenu + DT_PMM_InputAction/Input_SwitchCharacterMenu`
+- CharacterSwitching：同日继续核对 UE 5.7 CommonUI 源码，确认 `RegisterUIActionBinding` 不是全局监听，而是绑定到具体 Widget，并且在 `UInputAction` 路径下会通过 `QueryKeysMappedToAction` 查询当前激活 IMC 的键位；因此切换 IMC 会直接影响菜单 Widget 是否收到该动作
+- CharacterSwitching：同日进一步确认 CommonUI 的 hold/rollback 机制不应想当然地认为会从纯 `UInputAction` 绑定自动完整生效；当前更稳的路线是让 `DT_PMM_InputAction` 的 `Input_SwitchCharacterMenu` 行承载 HoldTime / HoldRollbackTime，再由 Widget 在 C++ 中接 CommonUI 的回调
+- CharacterSwitching：2026-03-18 用户纠正项目约定后，确认 `DT_PMM_InputAction` 在当前项目里只给 `UCommonActionWidget` 提供跨设备图标与提示，不承担角色切换长按逻辑；因此需要把前一轮关于“由 `DT_PMM_InputAction` 承载 hold/rollback”的结论撤回
+- CharacterSwitching：同日把菜单独立切换键方案进一步收口为：
+  - 动作名改为 `IA_SwitchCharacter`
+  - 菜单输入上下文继续用 `IMC_CharacterSwitchMenu`
+  - `DT_PMM_InputAction` 仅新增 `Input_SwitchCharacter` 用于图标显示
+  - `IA_SwitchCharacter` 自身改用 `Hold` Trigger，`HoldTimeThreshold` 初始值建议 0.6 秒
+  - 松手回落不交给输入资产，而由 C++ 自己控制，初始值建议 0.25 秒
+- CharacterSwitching：同日新增 `RegisterUIActionBinding_学习笔记.md`，明确它是什么、它不是什么、它为什么不是当前菜单独立切换键长按的唯一答案
+- CharacterSwitching：2026-03-18 继续核对 UE5.7 `InputTriggers.h / InputTriggers.cpp` 与官方 API 后，进一步确认：
+  - 菜单角色切换第一版应使用 `UInputTriggerHold`
+  - 当前不建议使用 `UInputTriggerHoldAndRelease`
+  - 原因是我们要“读条满立即切换”，不是“读条满后松手再切换”
+  - `IA_SwitchCharacter` 当前资产配置已调整为：`HoldTimeThreshold=3.0`、`bIsOneShot=true`、`bAffectedByTimeDilation=false`
+  - `Canceled` 负责接松手回落，`Completed` 只作为可选收尾事件，不作为主逻辑入口
+- CharacterSwitching：2026-03-18 在 `UShootCharacterSwitchWidgetBase` 落地菜单长按输入骨架：
+  - 新增 `SwitchCharacterInputAction` C++ 属性，供蓝图子类设置 `IA_SwitchCharacter`
+  - `UShootCharacterSwitchWidgetBase -> ULyraActivatableWidget -> UCommonActivatableWidget` 继承链继续复用 `UCommonActivatableWidget::InputMapping` 来挂 `IMC_CharacterSwitchMenu`
+  - 代码注释里已明确写出：蓝图子类需要同时设置 `UCommonActivatableWidget::InputMapping=IMC_CharacterSwitchMenu` 与 `UShootCharacterSwitchWidgetBase::SwitchCharacterInputAction=IA_SwitchCharacter`
+  - 新增 `SetMenuSwitchTargetGender`，让蓝图在卡片焦点切换时告诉 C++ 当前目标角色
+  - C++ 现在也会根据当前主角自动推导默认目标角色，减少蓝图里重复写“男<->女”判断
+  - Widget 自己创建并注册输入组件，绑定 `Started / Ongoing / Triggered / Canceled / Completed`
+  - `Triggered` 时调用 `AShootPlayerController::RequestSwitchCharacter`
+  - `Canceled` 时走本地 0.25 秒回落
+  - 额外补了纯 C++ Widget 的兜底：如果 `CreateInputComponent` 没生成输入组件，就手动创建 `UEnhancedInputComponent`
+- 编译：本轮构建被 UE Live Coding 阻塞，UBT 要求先关闭编辑器或按 `Ctrl+Alt+F11`，因此尚未拿到完整编译结果
+- 编译：关闭 Live Coding 阻塞后重新执行 `Scripts/Build_Windows.ps1`，菜单长按骨架代码编译通过（Result: Succeeded）
+- CharacterSwitching：2026-03-19 继续收口世界入口职责：
+  - `UShootGA_Interact` 已删除角色切换专属长按门禁、目标锁定、松手取消与延时读条逻辑
+  - `UShootGA_Interact` 现在只保留通用交互扫描、聚焦与触发职责
+  - `UShootGA_WorldCharacterSwitchRequest` 当前明确视为世界入口桥接类
+  - `AShootCharacterSwitchStation` 默认提示改成普通交互文案，不再误导为“长按切换”
+  - 当前世界入口先退回 `PressToInteract` 占位方案，后续若恢复世界内长按，必须放在入口层自己实现
+- CharacterSwitching：同日新增 `IShootCharacterSwitchEntry` 接口，当前由 `AShootCharacterSwitchStation` 实现；后续若改成“另一位主角 NPC 可交互”，只要实现同一个接口，就能继续复用 `UShootGA_WorldCharacterSwitchRequest` 这条世界入口桥接链
+- CharacterSwitching：同日新增 `AShootCharacterSwitchEntryActorBase`，把世界入口 Actor 的交互提示、触发过滤、事件数据包装从 `AShootCharacterSwitchStation` 抽到可复用骨架；站点类只保留组件与目标性别解析
+- CharacterSwitching：同日同步更新 `Overview_总览.md`、`Implementation_实现指南.md`、`CallFlow_调用链路.md`、`STATUS.md`，把“世界入口占位链”和“菜单长按主线”重新写清楚，避免继续把 `UShootGA_Interact` 误写成角色切换长按宿主
+- 编译：2026-03-19 再次执行 `Scripts/Build_Windows.ps1`，新增 `IShootCharacterSwitchEntry`、`AShootCharacterSwitchEntryActorBase` 与世界入口收口改动编译通过（Result: Succeeded）
+- CharacterSwitching：2026-03-20 完成世界入口桥接类改名收口：
+  - 旧 `UShootGA_Interaction_CharacterSwitch` 已正式重命名为 `UShootGA_WorldCharacterSwitchRequest`
+  - 源文件同步调整为 `ShootGA_WorldCharacterSwitchRequest.h/.cpp`
+  - 代码与文档统一改成“世界入口请求桥接类”表述，后续不再把这项工作描述成“修正错误命名”
+  - 同日重新执行 `Scripts/Build_Windows.ps1`，改名与引用修正编译通过（Result: Succeeded）
+- CharacterSwitching：2026-03-20 同日补齐“另一位主角 NPC”入口的 C++ 骨架：
+  - 新增 `AShootCharacterSwitchNPCBase`
+  - 该基类直接实现 `IInteractableTarget` 与 `IShootCharacterSwitchEntry`
+  - 蓝图子类只需要设置 `RepresentedGender`、外观和待机表现，就能复用当前世界入口桥接链
+  - 同日重新执行 `Scripts/Build_Windows.ps1`，新增 NPC 入口骨架编译通过（Result: Succeeded）
+- CharacterSwitching：2026-03-20 同日补齐玩家交互能力的 C++ 显式授予链：
+  - `AShootCharacter` 新增 `CoreInteractionAbilities`
+  - 默认兜底授予 `UShootGA_Interact`、`UShootGA_Interaction_Collect`、`UShootGA_Interaction_Revive`、`UShootGA_WorldCharacterSwitchRequest`
+  - `AShootCharacter::GrantCoreInteractionAbilitiesIfNeeded` 会在服务器 `PossessedBy -> LoadProgress` 之后统一执行
+  - `UShootAbilitySystemComponent::AddCharacterAbilitiesIfMissing` 负责查重，避免 PlayerState ASC 在重复附身时叠加重复 AbilitySpec
+  - `UShootGA_Interact` 构造函数已补 `StartupInputTag = InputTag.Ability.Interact`
+  - 同日重新执行 `Scripts/Build_Windows.ps1`，交互授予链改造编译通过（Result: Succeeded）
+- CharacterSwitching：2026-03-20 同日继续把需求文档收口：
+  - 菜单入口明确按《刺客信条：影》的“当前操控角色切换”理解，属于单选型操控权切换
+  - 世界入口明确按《刺客信条：枭雄》的安全屋 / 火车切换理解，属于上下文交互切换
+  - 明确记录未来扩展：另一位主角 NPC 后续应升级成“同伴交互对象”，切换角色只是其中一个交互选项
+  - 当前阶段仍按方案一执行，先把双主角切换做成品，不把亲密度、跳舞、送礼、约会等需求混进当前实现
+- CharacterSwitching：2026-03-21 用户进一步收紧本轮需求，新增 `DecisionDraft_角色切换需求临时对齐.md` 作为临时对齐文档，避免在正式确认前直接覆盖权威需求文档
+- CharacterSwitching：当前临时结论改为：
+  - 主入口：主菜单长按切换
+  - 次入口：世界里的切换点 / 交互物，点击交互后直接切换
+  - 当前不采用“靠近另一位主角 NPC 直接切换”作为主线方案
+  - 暂时移除“仅 Hub 可切换”的硬限制，战斗限制留待后续真实问题收口
+  - 未来仍预留“另一位主角 NPC -> 同伴交互对象”扩展，但不进入本轮实现
+- CharacterSwitching：同日补充临时文档生命周期规则：
+  - 在最终需求未确认前继续保留 `DecisionDraft_角色切换需求临时对齐.md`
+  - 等正式回写到 `Requirements_需求.md`、`Overview_总览.md` 与 `游戏设计完整文档 v7.0 Final.md` 后删除该临时文件
+- CharacterSwitching：同日把临时对齐结论同步写入 `STATUS.md`，避免后续会话只看到旧正史限制、忽略当前开发阶段的临时执行口径
+- CharacterSwitching：同日同步修改当前 C++ 切换门禁：
+  - 移除 `AShootPlayerController::TrySwitchCharacter` 里的 Hub/安全区硬限制
+  - 移除 `AShootPlayerState::CanSwitchCharacter` 里的 Hub/安全区硬限制
+  - 保留中文注释与 TODO，后续改为战斗状态 / 剧情状态 / 特殊任务状态门禁
+- WardrobeSystem：2026-06-13 继续修正 HomeMap 玩家验收路径：
+  - `AShootInventoryGrantActor`、`AShootResourcePickup`、`AShootWeaponPickupActor` 的根碰撞改为 `Interactable_OverlapDynamic`
+  - 旧 HomeMap 领取物实例仍保存 `OverlapAllDynamic`，已用新实例替换为 `ShootInventoryGrantActor_1`
+  - 新实例 Label 为 `Debug_WardrobeGrant_GetAllClothes`，Folder 为 `Debug/Wardrobe`，Tag 为 `WardrobeDebugGrant`
+  - `ShootInventoryGrantActor_1.Collision` 已确认 `Lyra_TraceChannel_Interaction=ECR_Overlap`
+- WardrobeSystem：同日扩展开发期服装目录：
+  - 女主样例覆盖 `Camisole`、`TShirts`、`EveningDress`、`Hotpants`、`Pants`、`Heels`、`HighHeels`、`Sneakers` 与 6 个女主发型
+  - 男主样例覆盖 `TShirtMale`、`JeansMale`、`Sneakers`、`EdgeCutHair`
+  - 样例服装继续用 `AppearanceTagNames` 延迟解析 GameplayTag，并复用 `/Game/Blueprints/Mutable` 下已有 `T_UI_*` 缩略图
+- WardrobeSystem：同日通过 MCP 更新 `/Game/UI/Mutable/W_Cloth`：
+  - 隐藏旧 `TopSettingsTabs`
+  - 新增顶层按钮 `全部 / 套装 / 部件 / 发型 / 配饰 / 预设`
+  - 新增子类按钮 `头部 / 上身 / 下身 / 脚部`
+  - 新增 `DetailIconImage`，详情区显示当前选中服装缩略图
+- 编译：2026-06-13 `Build.bat NewWorldOrderEditor Win64 Development` 编译通过；第二轮因 UBA local executor 一度卡在 `All processes queued`，临时在 `Saved/UnrealBuildTool/BuildConfiguration.xml` 设置 `bAllowUBAExecutor=false` 后完成编译，随后已恢复该临时配置为空
+- 验证：2026-06-13 使用 MCP 截图确认 `W_Cloth` 设计器显示功能按钮、服装网格、详情缩略图；使用 SlateInspector 触发 `Alt+P` 成功打开 `NewWorldOrder Preview [NetMode: Standalone 0]`，但完整领取服装、打开衣柜、装备、保存流程仍等待用户按真实输入验收
+- WardrobeSystem：2026-06-13 根据用户实测反馈继续修正“拾取服装卡在交互”：
+  - `UShootAbilitySystemComponent::AbilityInputTagPressed` 只对 `InputTag.Ability.Interact` 增加 Started 阶段兜底激活，保证轻点 E 能进入交互能力
+  - `UShootGA_Interact` 激活后使用 `WaitInputPress(bTestAlreadyPressed=true)` 接住本次按键
+  - `UAbilityTask_WaitForInteractableTargets_SingleLineTrace` 激活时先立即扫描一次，再进入定时轮询，避免第一次 E 只启动扫描
+  - 新增 `AShootInventoryGrantSpawner`，可定时生成单件服装领取物，并在下一轮刷新前销毁旧领取物
+  - HomeMap 新增 `Debug_WardrobeSpawner_PressToInteract` 与 `Debug_WardrobeSpawner_AutoOverlap`，分别覆盖按 E 领取和触碰自动领取
+- 编译：2026-06-13 交互修正与服装生成器新增后再次执行 `Build.bat NewWorldOrderEditor Win64 Development`，编译通过（Result: Succeeded）
+- 验证：2026-06-13 交互修正与服装生成器新增后再次启动 HomeMap PIE，日志确认 `/Game/Maps/UEDPIE_0_HomeMap.HomeMap` up for play，未见新生成器 BeginPlay 崩溃；Slate Stop 按钮点击后 PIE 已停止
+- WardrobeSystem：2026-06-13 根据用户二次验收反馈继续补齐“玩家捡衣服 -> 打开衣柜 -> 装备 -> 关闭重开仍显示当前穿着”链路：
+  - `UShootGA_Interact` 在按 E 时如果没有有效准星聚焦选项，会用 `InteractionScanRange` 做近距离 Overlap 兜底，解决小领取物不容易被线扫命中的问题
+  - `AShootInventoryGrantActor` 授予资源或 Persistent 物品成功后，会调用 `USaveGameSubsystem::CapturePlayerInventoryState` 与 `AsyncPlayerSaveGame` 保存当前槽位；RuntimeOnly 调试物不触发账号存档
+  - `USaveGameSubsystem` 的 PIE 特殊处理改为仅在 `_PIE` 槽位不存在时创建新存档，避免新 PIE 会话把上一轮已获得服装覆盖为空
+  - `UShootWardrobeWidgetBase` 的 `TryOnButton` 改为调用 `ServerPreviewWardrobeItem`，只预览不落盘
+  - `EquipButton` 在所选服装已装备时改为调用 `ServerUnequipWardrobeItem`，移除该服装写入的 Mutable 外观标签并保存
+  - 文档同步补充 Debug 服装样例与 HomeMap 调试生成器的生产去留：当前保留为开发脚手架，生产前迁移到正式 DataAsset/DataTable 或从正式地图移除
+- 编译：2026-06-13 本轮试穿、卸下、拾取保存、PIE 存档防覆盖修正后执行 `Build.bat NewWorldOrderEditor Win64 Development`，UE 5.8 编译通过（Result: Succeeded）
+
+## 下一步
+- 清理 InventorySystem 任务状态文档，归档旧版并写入当前状态
+- 审核 Docs/Tasks 下任务包状态与缺口
+- 更新索引与提交推送
+- CombatSystem 对照正史数值补齐缺口清单与实现顺序

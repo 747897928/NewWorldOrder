@@ -1,0 +1,13 @@
+{
+  "source": "https://polyhaven.com/a/island_tree_01",
+  "license": "CC0",
+  "resolution": "2K",
+  "source_triangles": 1599403,
+  "export_triangles": 18000,
+  "slots": [
+    "island_tree_01",
+    "island_tree_01_leaves",
+    "island_tree_01_branches"
+  ],
+  "intermediate_triangles": 180000
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "mesh": "SM_HM_WingRoofFinish",
+    "triangles": 5616,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_RoofAggregate",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_WingRoofFinish",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

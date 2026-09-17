@@ -1,0 +1,12 @@
+{
+  "path_x": 525,
+  "start_y": 1160,
+  "end": [
+    525.0,
+    567.0107289071673,
+    90.25000381469727
+  ],
+  "passed": true,
+  "mode": "<MovementMode.MOVE_WALKING: 1>",
+  "clear_width_cm": 109
+}

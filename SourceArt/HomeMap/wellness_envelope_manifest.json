@@ -1,0 +1,69 @@
+[
+  {
+    "mesh": "SM_HM_YogaFeatureWall",
+    "triangles": 3784,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_WellnessDiffuser"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_YogaFeatureWall",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_WellnessCeilingDetail",
+    "triangles": 2464,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_WellnessDiffuser"
+    ],
+    "nanite": false,
+    "collision": false,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_WellnessCeilingDetail",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,683 @@
+{
+  "source": "Saved\\Profiling\\CSV\\Profile(20260906_123239).csv",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "quality": "High / scalability 2",
+  "hardware": "RTX 5060 Ti",
+  "total_frames": 7421,
+  "duration_seconds": 128.17,
+  "warmup_excluded_seconds": 15,
+  "stable_frames": 6907,
+  "metrics": {
+    "FrameTime": {
+      "mean": 16.386,
+      "p50": 15.483,
+      "p95": 23.722,
+      "max": 67.663
+    },
+    "LevelStreaming/NumLevelsPendingPurge": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "LevelStreaming/NumActorsPendingPurge": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DynamicResolutionVSMNanite": {
+      "mean": -100.0,
+      "p50": -100.0,
+      "p95": -100.0,
+      "max": -100.0
+    },
+    "DynamicNaniteScalingShadow": {
+      "mean": -100.0,
+      "p50": -100.0,
+      "p95": -100.0,
+      "max": -100.0
+    },
+    "DynamicNaniteScalingPrimary": {
+      "mean": -100.0,
+      "p50": -100.0,
+      "p95": -100.0,
+      "max": -100.0
+    },
+    "Exclusive/RenderThread/UpdateGPUScene": {
+      "mean": 0.076,
+      "p50": 0.07,
+      "p95": 0.097,
+      "max": 2.229
+    },
+    "Exclusive/RenderThread/GPUSort": {
+      "mean": 0.015,
+      "p50": 0.014,
+      "p95": 0.018,
+      "max": 2.145
+    },
+    "GPUSceneInstanceCount": {
+      "mean": 443.0,
+      "p50": 443.0,
+      "p95": 443.0,
+      "max": 443.0
+    },
+    "NaniteStreaming/RootAllocationMB": {
+      "mean": 16.0,
+      "p50": 16.0,
+      "p95": 16.0,
+      "max": 16.0
+    },
+    "NaniteStreaming/RootDataSizeMB": {
+      "mean": 0.188,
+      "p50": 0.188,
+      "p95": 0.188,
+      "max": 0.188
+    },
+    "TextureStreaming/StreamingPool": {
+      "mean": 34.725,
+      "p50": 34.746,
+      "p95": 34.746,
+      "max": 34.746
+    },
+    "TextureStreaming/SafetyPool": {
+      "mean": 5.0,
+      "p50": 5.0,
+      "p95": 5.0,
+      "max": 5.0
+    },
+    "TextureStreaming/TemporaryPool": {
+      "mean": 50.0,
+      "p50": 50.0,
+      "p95": 50.0,
+      "max": 50.0
+    },
+    "TextureStreaming/CachedMips": {
+      "mean": 0.373,
+      "p50": 0.352,
+      "p95": 0.445,
+      "max": 0.445
+    },
+    "TextureStreaming/WantedMips": {
+      "mean": 34.725,
+      "p50": 34.746,
+      "p95": 34.746,
+      "max": 34.746
+    },
+    "TextureStreaming/ResidentMeshMem": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "TextureStreaming/StreamedMeshMem": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "TextureStreaming/NonStreamingMips": {
+      "mean": 146.356,
+      "p50": 146.356,
+      "p95": 146.356,
+      "max": 146.356
+    },
+    "TextureStreaming/PendingStreamInData": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "TextureStreaming/DesiredDataLoadedPercent": {
+      "mean": 100.0,
+      "p50": 100.0,
+      "p95": 100.0,
+      "max": 100.0
+    },
+    "RenderThreadTime": {
+      "mean": 16.022,
+      "p50": 15.363,
+      "p95": 22.217,
+      "max": 74.479
+    },
+    "GameThreadTime": {
+      "mean": 13.824,
+      "p50": 12.985,
+      "p95": 20.617,
+      "max": 56.179
+    },
+    "GPUTime": {
+      "mean": 10.025,
+      "p50": 9.681,
+      "p95": 15.418,
+      "max": 23.776
+    },
+    "RenderThreadTime_CriticalPath": {
+      "mean": 16.026,
+      "p50": 15.364,
+      "p95": 22.228,
+      "max": 74.479
+    },
+    "GameThreadTime_CriticalPath": {
+      "mean": 13.828,
+      "p50": 12.989,
+      "p95": 20.617,
+      "max": 56.179
+    },
+    "RHIThreadTime": {
+      "mean": 5.297,
+      "p50": 5.148,
+      "p95": 6.942,
+      "max": 18.434
+    },
+    "MaxFrameTime": {
+      "mean": 33.333,
+      "p50": 33.333,
+      "p95": 33.333,
+      "max": 33.333
+    },
+    "Exclusive/AllWorkers/UpdateGPUScene": {
+      "mean": 0.013,
+      "p50": 0.009,
+      "p95": 0.015,
+      "max": 3.462
+    },
+    "RenderThreadIdle/GPUQuery": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "Exclusive/AllWorkers/FPrimitiveSceneInfo_CacheNaniteMaterialBins": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "GPU/GPUSceneUpdate": {
+      "mean": 0.007,
+      "p50": 0.006,
+      "p95": 0.007,
+      "max": 0.169
+    },
+    "GPU/RayTracingGeometry": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.002
+    },
+    "GPU/DistanceFields": {
+      "mean": 0.02,
+      "p50": 0.019,
+      "p95": 0.023,
+      "max": 0.185
+    },
+    "GPU/AllocateRendertargets": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.001
+    },
+    "GPU/VisibilityCommands": {
+      "mean": 0.002,
+      "p50": 0.002,
+      "p95": 0.003,
+      "max": 0.555
+    },
+    "GPU/UpdateLumenSceneBuffers": {
+      "mean": 0.002,
+      "p50": 0.002,
+      "p95": 0.002,
+      "max": 0.175
+    },
+    "GPU/NaniteStreaming": {
+      "mean": 0.001,
+      "p50": 0.0,
+      "p95": 0.001,
+      "max": 0.021
+    },
+    "GPU/FXSystemPreRender": {
+      "mean": 0.006,
+      "p50": 0.006,
+      "p95": 0.009,
+      "max": 0.138
+    },
+    "GPU/BuildRenderingCommandsDeferred": {
+      "mean": 0.02,
+      "p50": 0.018,
+      "p95": 0.031,
+      "max": 0.62
+    },
+    "GPU/Prepass": {
+      "mean": 0.266,
+      "p50": 0.191,
+      "p95": 0.434,
+      "max": 7.335
+    },
+    "GPU/RenderVelocities": {
+      "mean": 0.022,
+      "p50": 0.021,
+      "p95": 0.026,
+      "max": 0.578
+    },
+    "GPU/NaniteVisBuffer": {
+      "mean": 0.354,
+      "p50": 0.3,
+      "p95": 0.484,
+      "max": 6.937
+    },
+    "GPU/NaniteBasePass": {
+      "mean": 0.238,
+      "p50": 0.179,
+      "p95": 0.42,
+      "max": 7.399
+    },
+    "GPU/HZB": {
+      "mean": 0.028,
+      "p50": 0.027,
+      "p95": 0.029,
+      "max": 0.59
+    },
+    "GPU/BeginOcclusionTests": {
+      "mean": 0.013,
+      "p50": 0.011,
+      "p95": 0.018,
+      "max": 7.054
+    },
+    "GPU/LightGrid": {
+      "mean": 0.03,
+      "p50": 0.023,
+      "p95": 0.028,
+      "max": 5.572
+    },
+    "GPU/LightFunctionAtlasGeneration": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.001
+    },
+    "GPU/SkyAtmosphereLUTs": {
+      "mean": 0.071,
+      "p50": 0.062,
+      "p95": 0.076,
+      "max": 2.933
+    },
+    "GPU/CaptureConvolveSkyEnvMap": {
+      "mean": 0.066,
+      "p50": 0.017,
+      "p95": 0.307,
+      "max": 6.588
+    },
+    "GPU/LumenSceneUpdate": {
+      "mean": 0.115,
+      "p50": 0.06,
+      "p95": 0.221,
+      "max": 6.981
+    },
+    "GPU/BuildRenderingCommands": {
+      "mean": 0.006,
+      "p50": 0.006,
+      "p95": 0.006,
+      "max": 0.556
+    },
+    "GPU/RayTracingScene": {
+      "mean": 0.136,
+      "p50": 0.113,
+      "p95": 0.264,
+      "max": 6.924
+    },
+    "GPU/LumenSceneLighting": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "GPU/LumenScreenProbeGather": {
+      "mean": 0.017,
+      "p50": 0.017,
+      "p95": 0.02,
+      "max": 0.286
+    },
+    "GPU/Basepass": {
+      "mean": 0.374,
+      "p50": 0.318,
+      "p95": 0.593,
+      "max": 7.833
+    },
+    "GPU/RenderDeferredLighting": {
+      "mean": 0.447,
+      "p50": 0.366,
+      "p95": 0.655,
+      "max": 8.399
+    },
+    "GPU/ShadowDepths": {
+      "mean": 0.783,
+      "p50": 0.649,
+      "p95": 1.216,
+      "max": 8.696
+    },
+    "GPU/LumenReflections": {
+      "mean": 0.464,
+      "p50": 0.368,
+      "p95": 0.775,
+      "max": 7.231
+    },
+    "GPU/TranslucentLighting": {
+      "mean": 0.054,
+      "p50": 0.032,
+      "p95": 0.179,
+      "max": 7.917
+    },
+    "GPU/Lights": {
+      "mean": 1.822,
+      "p50": 1.63,
+      "p95": 2.502,
+      "max": 9.963
+    },
+    "GPU/ShadowProjection": {
+      "mean": 0.437,
+      "p50": 0.395,
+      "p95": 0.691,
+      "max": 9.593
+    },
+    "GPU/DistanceFieldShadows": {
+      "mean": 0.073,
+      "p50": 0.058,
+      "p95": 0.208,
+      "max": 8.176
+    },
+    "GPU/TemporalSuperResolution": {
+      "mean": 1.508,
+      "p50": 1.313,
+      "p95": 2.136,
+      "max": 11.75
+    },
+    "GPU/SkyAtmosphere": {
+      "mean": 0.005,
+      "p50": 0.005,
+      "p95": 0.005,
+      "max": 0.188
+    },
+    "GPU/Fog": {
+      "mean": 0.007,
+      "p50": 0.006,
+      "p95": 0.006,
+      "max": 6.078
+    },
+    "GPU/PostRenderOpsFX": {
+      "mean": 0.003,
+      "p50": 0.003,
+      "p95": 0.004,
+      "max": 0.303
+    },
+    "GPU/FXSystemPostRenderOpaque": {
+      "mean": 0.002,
+      "p50": 0.001,
+      "p95": 0.002,
+      "max": 0.218
+    },
+    "GPU/Translucency": {
+      "mean": 0.234,
+      "p50": 0.16,
+      "p95": 0.413,
+      "max": 8.332
+    },
+    "GPU/Distortion": {
+      "mean": 0.003,
+      "p50": 0.0,
+      "p95": 0.011,
+      "max": 0.293
+    },
+    "GPU/Postprocessing": {
+      "mean": 0.314,
+      "p50": 0.233,
+      "p95": 0.468,
+      "max": 8.174
+    },
+    "GPU/SlateUI": {
+      "mean": 0.025,
+      "p50": 0.018,
+      "p95": 0.021,
+      "max": 0.751
+    },
+    "GPU/Unaccounted": {
+      "mean": 0.777,
+      "p50": 0.565,
+      "p95": 1.216,
+      "max": 10.045
+    },
+    "RHI/DrawCalls": {
+      "mean": 942.634,
+      "p50": 941.0,
+      "p95": 999.0,
+      "max": 1072.0
+    },
+    "RHI/PrimitivesDrawn": {
+      "mean": 2766170.792,
+      "p50": 2599711.5,
+      "p95": 3750740.0,
+      "max": 4633634.0
+    },
+    "GPU/NaniteReadback": {
+      "mean": 0.138,
+      "p50": 0.134,
+      "p95": 0.16,
+      "max": 1.528
+    },
+    "DrawCall/SlateUI": {
+      "mean": 7.797,
+      "p50": 8.0,
+      "p95": 16.0,
+      "max": 24.0
+    },
+    "DrawCall/Basepass": {
+      "mean": 107.391,
+      "p50": 107.0,
+      "p95": 226.0,
+      "max": 348.0
+    },
+    "DrawCall/CustomDepth": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DrawCall/Prepass": {
+      "mean": 88.057,
+      "p50": 88.0,
+      "p95": 184.0,
+      "max": 283.0
+    },
+    "DrawCall/Distortion": {
+      "mean": 0.612,
+      "p50": 0.0,
+      "p95": 3.0,
+      "max": 6.0
+    },
+    "DrawCall/Fog": {
+      "mean": 0.975,
+      "p50": 1.0,
+      "p95": 2.0,
+      "max": 3.0
+    },
+    "DrawCall/FrontLayerTranslucencyGBuffer": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DrawCall/Lights": {
+      "mean": 25.341,
+      "p50": 26.0,
+      "p95": 52.0,
+      "max": 78.0
+    },
+    "DrawCall/BeginOcclusionTests": {
+      "mean": 34.918,
+      "p50": 33.0,
+      "p95": 75.0,
+      "max": 117.0
+    },
+    "DrawCall/ScreenSpaceReflections": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DrawCall/ShadowDepths": {
+      "mean": 506.823,
+      "p50": 520.0,
+      "p95": 1040.0,
+      "max": 1560.0
+    },
+    "DrawCall/DistanceFieldShadows": {
+      "mean": 2.924,
+      "p50": 3.0,
+      "p95": 6.0,
+      "max": 9.0
+    },
+    "DrawCall/SingleLayerWaterDepthPrepass": {
+      "mean": 2.924,
+      "p50": 3.0,
+      "p95": 6.0,
+      "max": 9.0
+    },
+    "DrawCall/SingleLayerWater": {
+      "mean": 3.899,
+      "p50": 4.0,
+      "p95": 8.0,
+      "max": 12.0
+    },
+    "DrawCall/Translucency": {
+      "mean": 23.775,
+      "p50": 24.0,
+      "p95": 49.0,
+      "max": 75.0
+    },
+    "DrawCall/RenderVelocities": {
+      "mean": 13.645,
+      "p50": 14.0,
+      "p95": 28.0,
+      "max": 42.0
+    },
+    "DrawCall/WaterInfoTexture": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DrawCall/FXSystemPreInitViews": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DrawCall/FXSystemPreRender": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "DrawCall/FXSystemPostRenderOpaque": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "GPUMem/LocalBudgetMB": {
+      "mean": 15222.032,
+      "p50": 15284.0,
+      "p95": 15284.0,
+      "max": 15284.0
+    },
+    "GPUMem/LocalUsedMB": {
+      "mean": 2913.989,
+      "p50": 2926.031,
+      "p95": 2926.281,
+      "max": 2928.406
+    },
+    "GPUMem/SystemBudgetMB": {
+      "mean": 23669.514,
+      "p50": 23765.871,
+      "p95": 23765.871,
+      "max": 23765.871
+    },
+    "GPUMem/SystemUsedMB": {
+      "mean": 217.021,
+      "p50": 220.32,
+      "p95": 225.008,
+      "max": 225.008
+    },
+    "GPU/SingleLayerWaterDepthPrepass": {
+      "mean": 0.124,
+      "p50": 0.095,
+      "p95": 0.264,
+      "max": 7.476
+    },
+    "GPU/RenderAnisotropyPass": {
+      "mean": 0.005,
+      "p50": 0.0,
+      "p95": 0.016,
+      "max": 5.44
+    },
+    "GPU/SingleLayerWater": {
+      "mean": 0.118,
+      "p50": 0.089,
+      "p95": 0.254,
+      "max": 6.016
+    },
+    "TextureStreaming/RenderAssetStreamingUpdate": {
+      "mean": 0.088,
+      "p50": 0.0,
+      "p95": 0.119,
+      "max": 42.762
+    },
+    "GPU/VolumetricCloud": {
+      "mean": 0.246,
+      "p50": 0.214,
+      "p95": 0.448,
+      "max": 8.41
+    },
+    "GPU/VolCloudReconstruction": {
+      "mean": 0.033,
+      "p50": 0.031,
+      "p95": 0.036,
+      "max": 0.832
+    },
+    "GPU/VolCloudComposeOverScene": {
+      "mean": 0.066,
+      "p50": 0.054,
+      "p95": 0.059,
+      "max": 5.711
+    }
+  },
+  "view": {
+    "View/PosX": {
+      "mean": -50.0,
+      "p50": -50.0,
+      "p95": -50.0,
+      "max": -50.0
+    },
+    "View/PosY": {
+      "mean": -1040.0,
+      "p50": -1040.0,
+      "p95": -1040.0,
+      "max": -1040.0
+    },
+    "View/PosZ": {
+      "mean": 150.25,
+      "p50": 150.25,
+      "p95": 150.25,
+      "max": 150.25
+    }
+  },
+  "limitations": [
+    "Standalone editor executable, not packaged shipping build",
+    "Default spawn camera; not a complete traversal benchmark",
+    "Target GPU models have not been tested",
+    "Trace file was not produced by the tracing service; CSV and log are retained"
+  ]
+}

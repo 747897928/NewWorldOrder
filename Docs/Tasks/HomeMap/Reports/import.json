@@ -1,0 +1,2252 @@
+[
+  {
+    "name": "HM_Floor_Public",
+    "dimensions": [
+      2800.0,
+      1000.000244140625,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Floor_Private",
+    "dimensions": [
+      700.0001220703125,
+      1400.0001220703125,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Floor_Wellness",
+    "dimensions": [
+      700.0001220703125,
+      1400.0001220703125,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Deck_Living",
+    "dimensions": [
+      1400.0,
+      250.0001220703125,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Deck_Side_-570",
+    "dimensions": [
+      260.0000915527344,
+      1150.0,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Deck_Side_570",
+    "dimensions": [
+      260.0000915527344,
+      1150.0,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Deck_North",
+    "dimensions": [
+      1400.0,
+      180.0001220703125,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Platform",
+    "dimensions": [
+      1200.0,
+      560.0001220703125,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Site_Ground",
+    "dimensions": [
+      10000.0009765625,
+      10000.0009765625,
+      419.4860534667969
+    ],
+    "collision_count": 0
+  },
+  {
+    "name": "HM_South_Wall_-770",
+    "dimensions": [
+      1260.0,
+      20.000110626220703,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_South_Wall_770",
+    "dimensions": [
+      1260.0,
+      20.000110626220703,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Entry_Header",
+    "dimensions": [
+      280.0,
+      20.000024795532227,
+      70.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Outer_Wall_-1400",
+    "dimensions": [
+      20.00020980834961,
+      2400.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Outer_Wall_1400",
+    "dimensions": [
+      20.00020980834961,
+      2400.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_North_Wing_Wall_-1050",
+    "dimensions": [
+      700.0,
+      20.00006103515625,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_North_Wing_Wall_1050",
+    "dimensions": [
+      700.0,
+      20.00006103515625,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Roof_Wing_-1050",
+    "dimensions": [
+      740.000244140625,
+      2440.0,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Roof_Wing_1050",
+    "dimensions": [
+      740.000244140625,
+      2440.0,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Roof_Living",
+    "dimensions": [
+      1200.0001220703125,
+      1080.0001220703125,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Clerestory_South",
+    "dimensions": [
+      1100.0,
+      6.000095844268799,
+      360.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Clerestory_Side_-550",
+    "dimensions": [
+      6.000087261199951,
+      1000.0,
+      360.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Clerestory_Side_550",
+    "dimensions": [
+      6.000087261199951,
+      1000.0,
+      360.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Canopy",
+    "dimensions": [
+      480.00006103515625,
+      400.0000305175781,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-920",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-890",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-860",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-830",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-800",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-770",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-740",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-710",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-680",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-650",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-620",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_-255_-590",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-920",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-890",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-860",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-830",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-800",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-770",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-740",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-710",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-680",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-650",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-620",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foyer_Slat_255_-590",
+    "dimensions": [
+      9.000000953674316,
+      9.000000953674316,
+      300.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Partition_-560",
+    "dimensions": [
+      20.000036239624023,
+      419.9999694824219,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Pier_-560",
+    "dimensions": [
+      20.000017166137695,
+      200.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Header_-560",
+    "dimensions": [
+      20.00003433227539,
+      400.0,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Partition_560",
+    "dimensions": [
+      20.000036239624023,
+      419.9999694824219,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Pier_560",
+    "dimensions": [
+      20.000017166137695,
+      200.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Header_560",
+    "dimensions": [
+      20.00003433227539,
+      400.0,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Glass_-350",
+    "dimensions": [
+      419.9999694824219,
+      4.000036716461182,
+      325.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Glass_350",
+    "dimensions": [
+      419.9999694824219,
+      4.000036716461182,
+      325.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Mullion_-570",
+    "dimensions": [
+      7.000000953674316,
+      10.000000953674316,
+      690.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Mullion_-140",
+    "dimensions": [
+      7.000000953674316,
+      10.000000953674316,
+      690.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Mullion_140",
+    "dimensions": [
+      7.000000953674316,
+      10.000000953674316,
+      690.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Mullion_570",
+    "dimensions": [
+      7.000000953674316,
+      10.000000953674316,
+      690.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Facade_Beam",
+    "dimensions": [
+      1160.0,
+      22.00010108947754,
+      28.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Canopy",
+    "dimensions": [
+      1160.0,
+      180.00009155273438,
+      24.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_-700_75",
+    "dimensions": [
+      4.0000128746032715,
+      150.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_-700_525",
+    "dimensions": [
+      4.000033855438232,
+      390.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_-700_1000",
+    "dimensions": [
+      4.000027656555176,
+      320.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_-700_1350",
+    "dimensions": [
+      4.000008583068848,
+      100.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_0",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_150",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_330",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_720",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_840",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_1160",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_1300",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_-700_1400",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Beam_-700",
+    "dimensions": [
+      18.0001220703125,
+      1400.0,
+      20.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_700_75",
+    "dimensions": [
+      4.0000128746032715,
+      150.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_700_525",
+    "dimensions": [
+      4.000033855438232,
+      390.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_700_1000",
+    "dimensions": [
+      4.000027656555176,
+      320.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Glass_700_1350",
+    "dimensions": [
+      4.000008583068848,
+      100.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_0",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_150",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_330",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_720",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_840",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_1160",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_1300",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Mullion_700_1400",
+    "dimensions": [
+      10.000000953674316,
+      7.000000953674316,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Beam_700",
+    "dimensions": [
+      18.0001220703125,
+      1400.0,
+      20.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Private_Partition_600",
+    "dimensions": [
+      480.0000305175781,
+      18.000041961669922,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Private_Header_600",
+    "dimensions": [
+      220.0,
+      18.000019073486328,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Private_Partition_1000",
+    "dimensions": [
+      480.0000305175781,
+      18.000041961669922,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Private_Header_1000",
+    "dimensions": [
+      220.0,
+      18.000019073486328,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wellness_Partition",
+    "dimensions": [
+      440.0,
+      18.000038146972656,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wellness_Header",
+    "dimensions": [
+      260.0,
+      18.000022888183594,
+      40.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Base",
+    "dimensions": [
+      880.0001220703125,
+      1020.0000610351562,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Side_-440",
+    "dimensions": [
+      20.000089645385742,
+      1020.0,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Side_440",
+    "dimensions": [
+      20.000089645385742,
+      1020.0,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_End_280",
+    "dimensions": [
+      900.0,
+      20.000078201293945,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_End_1300",
+    "dimensions": [
+      900.0,
+      20.000078201293945,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Coping_-451",
+    "dimensions": [
+      42.00008773803711,
+      1040.0,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Coping_451",
+    "dimensions": [
+      42.00008773803711,
+      1040.0,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Coping_270",
+    "dimensions": [
+      939.9999389648438,
+      42.00008010864258,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Coping_1310",
+    "dimensions": [
+      939.9999389648438,
+      42.00008010864258,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_0",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      104.99999237060547
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_1",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      90.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_2",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      75.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_3",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      60.000003814697266
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_4",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      45.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_5",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pool_Step_6",
+    "dimensions": [
+      400.0,
+      30.000036239624023,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Mission_Feature_Wall",
+    "dimensions": [
+      35.000057220458984,
+      650.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gate_Jamb_-630",
+    "dimensions": [
+      35.0,
+      16.000001907348633,
+      260.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gate_Jamb_-370",
+    "dimensions": [
+      35.0,
+      16.000001907348633,
+      260.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gate_Header",
+    "dimensions": [
+      35.000022888183594,
+      280.0,
+      16.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gate_Light_-620",
+    "dimensions": [
+      2.000000238418579,
+      3.0,
+      230.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gate_Light_-380",
+    "dimensions": [
+      2.000000238418579,
+      3.0,
+      230.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Mission_Worktop",
+    "dimensions": [
+      300.0,
+      70.0000228881836,
+      8.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Mission_Cabinet_-1060",
+    "dimensions": [
+      70.00000762939453,
+      65.0,
+      86.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Mission_Cabinet_-840",
+    "dimensions": [
+      70.00000762939453,
+      65.0,
+      86.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Kitchen_Island",
+    "dimensions": [
+      300.0,
+      105.0000228881836,
+      94.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Kitchen_Island_Top",
+    "dimensions": [
+      310.0,
+      115.0000228881836,
+      7.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wardrobe_Cabinet_730",
+    "dimensions": [
+      90.00000762939453,
+      145.00001525878906,
+      270.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wardrobe_Front_730",
+    "dimensions": [
+      5.000011920928955,
+      135.0,
+      260.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wardrobe_Cabinet_890",
+    "dimensions": [
+      90.00000762939453,
+      145.00001525878906,
+      270.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wardrobe_Front_890",
+    "dimensions": [
+      5.000011920928955,
+      135.0,
+      260.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Bath_Vanity",
+    "dimensions": [
+      270.0,
+      75.0000228881836,
+      84.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Bath_Counter",
+    "dimensions": [
+      280.0,
+      80.0000228881836,
+      6.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Bath_Mirror",
+    "dimensions": [
+      260.0,
+      3.0000226497650146,
+      125.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Shower_Base",
+    "dimensions": [
+      230.00001525878906,
+      280.0,
+      6.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Shower_Glass",
+    "dimensions": [
+      3.0000154972076416,
+      180.0,
+      240.00001525878906
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Cove_-520",
+    "dimensions": [
+      3.000082015991211,
+      939.9999389648438,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Living_Cove_520",
+    "dimensions": [
+      3.000082015991211,
+      939.9999389648438,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Cove_-1360",
+    "dimensions": [
+      3.00019907951355,
+      2280.0,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Cove_1360",
+    "dimensions": [
+      3.00019907951355,
+      2280.0,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Cove_-1050",
+    "dimensions": [
+      630.0,
+      3.0000548362731934,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Public_Cove_1050",
+    "dimensions": [
+      630.0,
+      3.0000548362731934,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Wall_-1730",
+    "dimensions": [
+      25.000261306762695,
+      3000.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Wall_1730",
+    "dimensions": [
+      25.000261306762695,
+      3000.0,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_North_Wall",
+    "dimensions": [
+      3480.0,
+      25.000303268432617,
+      350.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Planter_North_-1050",
+    "dimensions": [
+      700.0,
+      150.00006103515625,
+      44.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Planter_Soil_-1050",
+    "dimensions": [
+      670.0,
+      120.00006103515625,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Planter_North_1050",
+    "dimensions": [
+      700.0,
+      150.00006103515625,
+      44.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Planter_Soil_1050",
+    "dimensions": [
+      670.0,
+      120.00006103515625,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Rear_Floor",
+    "dimensions": [
+      1100.0,
+      380.0000915527344,
+      24.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_West_Walk",
+    "dimensions": [
+      200.00006103515625,
+      620.0,
+      24.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_High_Canopy",
+    "dimensions": [
+      1200.0,
+      190.00010681152344,
+      20.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Frame_-585",
+    "dimensions": [
+      40.00000762939453,
+      65.0,
+      700.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Reveal_-585",
+    "dimensions": [
+      3.0,
+      3.0,
+      680.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Frame_585",
+    "dimensions": [
+      40.00000762939453,
+      65.0,
+      700.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Reveal_585",
+    "dimensions": [
+      3.0,
+      3.0,
+      680.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Crown",
+    "dimensions": [
+      1210.0,
+      70.00010681152344,
+      45.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Crown_Reveal",
+    "dimensions": [
+      1160.0,
+      3.000101327896118,
+      3.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Upper_Living_Glass",
+    "dimensions": [
+      860.0000610351562,
+      4.000074863433838,
+      330.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Rear_Guard",
+    "dimensions": [
+      660.0,
+      3.0000574588775635,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Rear_Guard_Cap",
+    "dimensions": [
+      660.0,
+      3.0000574588775635,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_West_Guard",
+    "dimensions": [
+      3.0000522136688232,
+      600.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_West_Guard_Cap",
+    "dimensions": [
+      3.0000522136688232,
+      600.0,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_Front_Guard",
+    "dimensions": [
+      1130.0,
+      3.000098705291748,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_Front_Guard_Cap",
+    "dimensions": [
+      1130.0,
+      3.000098705291748,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_West_Guard",
+    "dimensions": [
+      3.0000154972076416,
+      180.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_West_Guard_Cap",
+    "dimensions": [
+      3.0000154972076416,
+      180.0,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_East_Guard",
+    "dimensions": [
+      3.0000154972076416,
+      180.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_East_Guard_Cap",
+    "dimensions": [
+      3.0000154972076416,
+      180.0,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Guard_Post_-320",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Guard_Post_0",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Guard_Post_320",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Gallery_Stair",
+    "dimensions": [
+      180.0000457763672,
+      600.0,
+      352.0000305175781
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_0",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_2",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_4",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_6",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_8",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_10",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_12",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_14",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_16",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_18",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_330_20",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Rail_330",
+    "dimensions": [
+      5.000060558319092,
+      695.8499755859375,
+      5.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_0",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_2",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_4",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_6",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_8",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_10",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_12",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_14",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_16",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_18",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Post_530_20",
+    "dimensions": [
+      4.0,
+      4.0,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Stair_Rail_530",
+    "dimensions": [
+      5.000060558319092,
+      695.8499755859375,
+      5.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_0",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_1",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_2",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_3",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_4",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_5",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_6",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_7",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_8",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Arrival_Step_9",
+    "dimensions": [
+      900.0,
+      35.00007629394531,
+      15.000000953674316
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Post_-500",
+    "dimensions": [
+      14.000000953674316,
+      14.000000953674316,
+      290.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Post_500",
+    "dimensions": [
+      14.000000953674316,
+      14.000000953674316,
+      290.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Beam_1510",
+    "dimensions": [
+      1040.0,
+      12.000090599060059,
+      18.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Beam_1720",
+    "dimensions": [
+      1040.0,
+      12.000090599060059,
+      18.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-500",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-460",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-420",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-380",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-340",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-300",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-260",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-220",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-180",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-140",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-100",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-60",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_-20",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_20",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_60",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_100",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_140",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_180",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_220",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_260",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_300",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_340",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_380",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_420",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_460",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Pergola_Slat_500",
+    "dimensions": [
+      12.000020980834961,
+      240.00001525878906,
+      12.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Garden_Bench",
+    "dimensions": [
+      800.0,
+      80.00006866455078,
+      56.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Eave_-1",
+    "dimensions": [
+      140.00021362304688,
+      2440.0,
+      20.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Eave_Soffit_-1",
+    "dimensions": [
+      138.00021362304688,
+      2430.0,
+      6.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Eave_ShadowGap_-1",
+    "dimensions": [
+      3.000213146209717,
+      2440.0,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Eave_1",
+    "dimensions": [
+      140.00021362304688,
+      2440.0,
+      20.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Eave_Soffit_1",
+    "dimensions": [
+      138.00021362304688,
+      2430.0,
+      6.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Wing_Eave_ShadowGap_1",
+    "dimensions": [
+      3.000213146209717,
+      2440.0,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Pavilion_Ceiling_Soffit",
+    "dimensions": [
+      1090.0,
+      1000.0001220703125,
+      8.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_Front_Edge",
+    "dimensions": [
+      1170.0,
+      12.000102043151855,
+      28.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Balcony_ShadowGap",
+    "dimensions": [
+      1150.0,
+      3.0001003742218018,
+      4.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_Public",
+    "dimensions": [
+      2800.0,
+      1000.000244140625,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_Private",
+    "dimensions": [
+      700.0001220703125,
+      1400.0001220703125,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_Wellness",
+    "dimensions": [
+      700.0001220703125,
+      1400.0001220703125,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_DeckLiving",
+    "dimensions": [
+      1400.0,
+      250.0001220703125,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_DeckWest",
+    "dimensions": [
+      260.0000915527344,
+      1150.0,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_DeckEast",
+    "dimensions": [
+      260.0000915527344,
+      1150.0,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_DeckNorth",
+    "dimensions": [
+      1400.0,
+      180.0001220703125,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_Arrival",
+    "dimensions": [
+      1200.0,
+      560.0001220703125,
+      110.0
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_Foundation_RearGarden",
+    "dimensions": [
+      3450.0,
+      270.00030517578125,
+      120.00000762939453
+    ],
+    "collision_count": 1
+  },
+  {
+    "name": "HM_RearGarden_Terrace",
+    "dimensions": [
+      3450.0,
+      270.00030517578125,
+      30.000001907348633
+    ],
+    "collision_count": 1
+  }
+]

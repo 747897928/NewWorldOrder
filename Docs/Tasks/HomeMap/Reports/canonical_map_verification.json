@@ -1,0 +1,39 @@
+{
+  "maps": [
+    {
+      "name": "HomeMap_Courtyard",
+      "class": "World"
+    },
+    {
+      "name": "HomeMap_Courtyard_demise",
+      "class": "World"
+    },
+    {
+      "name": "Interior",
+      "class": "World"
+    },
+    {
+      "name": "InteriorHomeMap",
+      "class": "World"
+    },
+    {
+      "name": "Overview",
+      "class": "World"
+    }
+  ],
+  "actor_count": 506,
+  "water_location": [
+    0.0,
+    1090.0,
+    -18.0
+  ],
+  "water_scale": [
+    8.5,
+    16.0,
+    0.01
+  ],
+  "default": "<ShootEnvironmentTimeOfDay.DAY: 0>",
+  "field_notes_present": true,
+  "bedroom_present": true,
+  "swimming_gameplay_implemented": false
+}

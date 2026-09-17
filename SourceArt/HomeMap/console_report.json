@@ -1,0 +1,20 @@
+{
+  "triangles": 4649,
+  "material_slots": [
+    "Console_Obsidian",
+    "Console_Brass",
+    "Console_Wood",
+    "Console_Engraving"
+  ],
+  "blender_location": [
+    1.7000000476837158,
+    6.900000095367432,
+    0.0
+  ],
+  "ue_location": [
+    170,
+    -690,
+    0
+  ],
+  "export": "BFEU Rotate To Zero, local geometry"
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "label": "HM_TreadmillSuite",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -109.0,
+        -48.0,
+        -6.5982876549242064e-06
+      ],
+      "max": [
+        109.0,
+        47.999996185302734,
+        141.05548095703125
+      ]
+    }
+  },
+  {
+    "label": "HM_TreadmillSuite_Second",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -109.0,
+        -48.0,
+        -6.5982876549242064e-06
+      ],
+      "max": [
+        109.0,
+        47.999996185302734,
+        141.05548095703125
+      ]
+    }
+  },
+  {
+    "label": "HM_DumbbellRack",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -145.0,
+        -40.86989212036133,
+        -4.6571364402771
+      ],
+      "max": [
+        145.0,
+        31.301589965820312,
+        105.94276428222656
+      ]
+    }
+  },
+  {
+    "label": "HM_TrainingBench",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -67.0,
+        -28.0,
+        -4.317398179409793e-06
+      ],
+      "max": [
+        76.5,
+        28.0,
+        55.000003814697266
+      ]
+    }
+  },
+  {
+    "label": "HM_YogaPracticeSet",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -96.0,
+        -36.0,
+        -5.759246050729416e-06
+      ],
+      "max": [
+        96.0,
+        56.0,
+        20.5
+      ]
+    }
+  },
+  {
+    "label": "HM_YogaPracticeSet_Second",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -96.0,
+        -36.0,
+        -5.759246050729416e-06
+      ],
+      "max": [
+        96.0,
+        56.0,
+        20.5
+      ]
+    }
+  },
+  {
+    "label": "HM_WellnessStorage",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        -40.0,
+        -112.00003814697266,
+        -1.8002734577748924e-05
+      ],
+      "max": [
+        11.0,
+        111.99998474121094,
+        270.0000305175781
+      ]
+    }
+  },
+  {
+    "label": "HM_GymFinish",
+    "location_error_cm": 0.0,
+    "local_bounds_cm": {
+      "min": [
+        834.0,
+        40.499996185302734,
+        6.622727141802898e-06
+      ],
+      "max": [
+        1386.0,
+        661.9999389648438,
+        277.0000915527344
+      ]
+    }
+  }
+]

@@ -1,0 +1,6 @@
+HTTP/1.1 200
+content-type: application/json;charset=utf-8
+Mcp-Session-Id: be1bf78345c2275bba968191902b0eb4
+keep-alive: timeout=15.000000
+content-length: 279
+

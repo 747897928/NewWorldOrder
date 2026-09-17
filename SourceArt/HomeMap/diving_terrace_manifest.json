@@ -1,0 +1,97 @@
+[
+  {
+    "mesh": "SM_HM_DivingTerrace",
+    "triangles": 648,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_DivingTerrace",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "rebuild_material_slots": true
+  },
+  {
+    "mesh": "SM_HM_DivingTerraceGuard",
+    "triangles": 3912,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Architectural_Glass",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_DivingTerraceGuard",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "rebuild_material_slots": true
+  },
+  {
+    "mesh": "SM_HM_DivingTerraceInlay",
+    "triangles": 2052,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": false,
+    "instances": [
+      {
+        "label": "HM_DivingTerraceInlay",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "rebuild_material_slots": true
+  }
+]

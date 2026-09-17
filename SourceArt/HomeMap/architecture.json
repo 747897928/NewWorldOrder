@@ -1,0 +1,5025 @@
+[
+  {
+    "name": "Floor_Public",
+    "mesh": "SM_HM_2800_1000_30",
+    "loc": [
+      0,
+      -500,
+      -15
+    ],
+    "dims": [
+      2800,
+      1000,
+      30
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Floor_Private",
+    "mesh": "SM_HM_700_1400_30",
+    "loc": [
+      -1050,
+      700,
+      -15
+    ],
+    "dims": [
+      700,
+      1400,
+      30
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Floor_Wellness",
+    "mesh": "SM_HM_700_1400_30",
+    "loc": [
+      1050,
+      700,
+      -15
+    ],
+    "dims": [
+      700,
+      1400,
+      30
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Deck_Living",
+    "mesh": "SM_HM_1400_250_30",
+    "loc": [
+      0,
+      125,
+      -15
+    ],
+    "dims": [
+      1400,
+      250,
+      30
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Deck_Side_-570",
+    "mesh": "SM_HM_260_1150_30",
+    "loc": [
+      -570,
+      1125,
+      -15
+    ],
+    "dims": [
+      260,
+      1150,
+      30
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true,
+    "scale": [
+      1,
+      1.5217391304347827,
+      1
+    ]
+  },
+  {
+    "name": "Deck_Side_570",
+    "mesh": "SM_HM_260_1150_30",
+    "loc": [
+      570,
+      1125,
+      -15
+    ],
+    "dims": [
+      260,
+      1150,
+      30
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true,
+    "scale": [
+      1,
+      1.5217391304347827,
+      1
+    ]
+  },
+  {
+    "name": "Deck_North",
+    "mesh": "SM_HM_1400_180_30",
+    "loc": [
+      0,
+      1990,
+      -15
+    ],
+    "dims": [
+      1400,
+      180,
+      30
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Arrival_Platform",
+    "mesh": "SM_HM_1200_560_40",
+    "loc": [
+      0,
+      -1280,
+      -20
+    ],
+    "dims": [
+      1200,
+      560,
+      40
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Site_Ground",
+    "mesh": "SM_HM_SiteTerrain_DeepPool",
+    "loc": [
+      0,
+      0,
+      0
+    ],
+    "dims": [
+      10000,
+      10000,
+      450
+    ],
+    "mat": "Garden",
+    "folder": "Landscape",
+    "collision": true,
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_SiteTerrain_DeepPool"
+  },
+  {
+    "name": "South_Wall_-770",
+    "mesh": "SM_HM_1260_20_330",
+    "loc": [
+      -770,
+      -1000,
+      165
+    ],
+    "dims": [
+      1260,
+      20,
+      330
+    ],
+    "mat": "Plaster",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "South_Wall_770",
+    "mesh": "SM_HM_1260_20_330",
+    "loc": [
+      770,
+      -1000,
+      165
+    ],
+    "dims": [
+      1260,
+      20,
+      330
+    ],
+    "mat": "Plaster",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Entry_Header",
+    "mesh": "SM_HM_280_20_70",
+    "loc": [
+      0,
+      -1000,
+      295
+    ],
+    "dims": [
+      280,
+      20,
+      70
+    ],
+    "mat": "Stone",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Outer_Wall_-1400",
+    "mesh": "SM_HM_20_2400_330",
+    "loc": [
+      -1400,
+      200,
+      165
+    ],
+    "dims": [
+      20,
+      2400,
+      330
+    ],
+    "mat": "Plaster",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Outer_Wall_1400",
+    "mesh": "SM_HM_20_2400_330",
+    "loc": [
+      1400,
+      200,
+      165
+    ],
+    "dims": [
+      20,
+      2400,
+      330
+    ],
+    "mat": "Plaster",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "North_Wing_Wall_-1050",
+    "mesh": "SM_HM_700_20_330",
+    "loc": [
+      -1050,
+      1400,
+      165
+    ],
+    "dims": [
+      700,
+      20,
+      330
+    ],
+    "mat": "Plaster",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "North_Wing_Wall_1050",
+    "mesh": "SM_HM_700_20_330",
+    "loc": [
+      1050,
+      1400,
+      165
+    ],
+    "dims": [
+      700,
+      20,
+      330
+    ],
+    "mat": "Plaster",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Roof_Wing_-1050",
+    "mesh": "SM_HM_740_2440_40",
+    "loc": [
+      -1050,
+      200,
+      350
+    ],
+    "dims": [
+      740,
+      2440,
+      40
+    ],
+    "mat": "Plaster",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Roof_Wing_1050",
+    "mesh": "SM_HM_740_2440_40",
+    "loc": [
+      1050,
+      200,
+      350
+    ],
+    "dims": [
+      740,
+      2440,
+      40
+    ],
+    "mat": "Plaster",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Roof_Living",
+    "mesh": "SM_HM_1200_1080_40",
+    "loc": [
+      0,
+      -500,
+      710
+    ],
+    "dims": [
+      1200,
+      1080,
+      40
+    ],
+    "mat": "Plaster",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Canopy",
+    "mesh": "SM_HM_480_400_30",
+    "loc": [
+      0,
+      -790,
+      315
+    ],
+    "dims": [
+      480,
+      400,
+      30
+    ],
+    "mat": "Oak",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-920",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -920,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-890",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -890,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-860",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -860,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-830",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -830,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-800",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -800,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-770",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -770,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-740",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -740,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-710",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -710,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-680",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -680,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-650",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -650,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-620",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -620,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_-255_-590",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      -255,
+      -590,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-920",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -920,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-890",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -890,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-860",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -860,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-830",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -830,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-800",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -800,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-770",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -770,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-740",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -740,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-710",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -710,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-680",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -680,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-650",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -650,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-620",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -620,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Foyer_Slat_255_-590",
+    "mesh": "SM_HM_9_9_300",
+    "loc": [
+      255,
+      -590,
+      150
+    ],
+    "dims": [
+      9,
+      9,
+      300
+    ],
+    "mat": "Oak",
+    "folder": "Screens",
+    "collision": true
+  },
+  {
+    "name": "Public_Partition_-560",
+    "mesh": "SM_HM_20_420_330",
+    "loc": [
+      -560,
+      -790,
+      165
+    ],
+    "dims": [
+      20,
+      420,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Public_Pier_-560",
+    "mesh": "SM_HM_20_200_330",
+    "loc": [
+      -560,
+      -100,
+      165
+    ],
+    "dims": [
+      20,
+      200,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Public_Header_-560",
+    "mesh": "SM_HM_20_400_40",
+    "loc": [
+      -560,
+      -400,
+      310
+    ],
+    "dims": [
+      20,
+      400,
+      40
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Public_Partition_560",
+    "mesh": "SM_HM_20_420_330",
+    "loc": [
+      560,
+      -790,
+      165
+    ],
+    "dims": [
+      20,
+      420,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Public_Pier_560",
+    "mesh": "SM_HM_20_200_330",
+    "loc": [
+      560,
+      -100,
+      165
+    ],
+    "dims": [
+      20,
+      200,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Public_Header_560",
+    "mesh": "SM_HM_20_400_40",
+    "loc": [
+      560,
+      -400,
+      310
+    ],
+    "dims": [
+      20,
+      400,
+      40
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Living_Glass_-350",
+    "mesh": "SM_HM_420_4_325",
+    "loc": [
+      -350,
+      0,
+      162.5
+    ],
+    "dims": [
+      420,
+      4,
+      325
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Living_Mullion_-570",
+    "mesh": "SM_HM_7_10_690",
+    "loc": [
+      -570,
+      0,
+      345
+    ],
+    "dims": [
+      7,
+      10,
+      690
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Living_Mullion_-140",
+    "mesh": "SM_HM_7_10_690",
+    "loc": [
+      -140,
+      0,
+      345
+    ],
+    "dims": [
+      7,
+      10,
+      690
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Living_Mullion_140",
+    "mesh": "SM_HM_7_10_690",
+    "loc": [
+      140,
+      0,
+      521
+    ],
+    "dims": [
+      7,
+      10,
+      338
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Living_Mullion_570",
+    "mesh": "SM_HM_7_10_690",
+    "loc": [
+      570,
+      0,
+      521
+    ],
+    "dims": [
+      7,
+      10,
+      338
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Living_Facade_Beam",
+    "mesh": "SM_HM_1160_22_28",
+    "loc": [
+      0,
+      0,
+      340
+    ],
+    "dims": [
+      1160,
+      22,
+      28
+    ],
+    "mat": "Metal",
+    "folder": "Pavilion",
+    "collision": true
+  },
+  {
+    "name": "Living_Canopy",
+    "mesh": "SM_HM_1160_180_24",
+    "loc": [
+      0,
+      90,
+      340
+    ],
+    "dims": [
+      1160,
+      180,
+      24
+    ],
+    "mat": "Stone",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_-700_75",
+    "mesh": "SM_HM_4_150_330",
+    "loc": [
+      -700,
+      75,
+      165
+    ],
+    "dims": [
+      4,
+      150,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_-700_525",
+    "mesh": "SM_HM_4_390_330",
+    "loc": [
+      -700,
+      525,
+      165
+    ],
+    "dims": [
+      4,
+      390,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_-700_1000",
+    "mesh": "SM_HM_4_320_330",
+    "loc": [
+      -700,
+      1000,
+      165
+    ],
+    "dims": [
+      4,
+      320,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_-700_1350",
+    "mesh": "SM_HM_4_100_330",
+    "loc": [
+      -700,
+      1350,
+      165
+    ],
+    "dims": [
+      4,
+      100,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_0",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      0,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_150",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      150,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_330",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      330,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_720",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      720,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_840",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      840,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_1160",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      1160,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_1300",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      1300,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_-700_1400",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      -700,
+      1400,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Beam_-700",
+    "mesh": "SM_HM_18_1400_20",
+    "loc": [
+      -700,
+      700,
+      325
+    ],
+    "dims": [
+      18,
+      1400,
+      20
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_700_75",
+    "mesh": "SM_HM_4_150_330",
+    "loc": [
+      700,
+      75,
+      165
+    ],
+    "dims": [
+      4,
+      150,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_700_525",
+    "mesh": "SM_HM_4_390_330",
+    "loc": [
+      700,
+      525,
+      165
+    ],
+    "dims": [
+      4,
+      390,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_700_1000",
+    "mesh": "SM_HM_4_320_330",
+    "loc": [
+      700,
+      1000,
+      165
+    ],
+    "dims": [
+      4,
+      320,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Glass_700_1350",
+    "mesh": "SM_HM_4_100_330",
+    "loc": [
+      700,
+      1350,
+      165
+    ],
+    "dims": [
+      4,
+      100,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_0",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      0,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_150",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      150,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_330",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      330,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_720",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      720,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_840",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      840,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_1160",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      1160,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_1300",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      1300,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Mullion_700_1400",
+    "mesh": "SM_HM_10_7_330",
+    "loc": [
+      700,
+      1400,
+      165
+    ],
+    "dims": [
+      10,
+      7,
+      330
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Wing_Beam_700",
+    "mesh": "SM_HM_18_1400_20",
+    "loc": [
+      700,
+      700,
+      325
+    ],
+    "dims": [
+      18,
+      1400,
+      20
+    ],
+    "mat": "Metal",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Private_Partition_600",
+    "mesh": "SM_HM_480_18_330",
+    "loc": [
+      -1160,
+      600,
+      165
+    ],
+    "dims": [
+      480,
+      18,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Private_Header_600",
+    "mesh": "SM_HM_220_18_40",
+    "loc": [
+      -810,
+      600,
+      310
+    ],
+    "dims": [
+      220,
+      18,
+      40
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Private_Partition_1000",
+    "mesh": "SM_HM_480_18_330",
+    "loc": [
+      -1160,
+      1000,
+      165
+    ],
+    "dims": [
+      480,
+      18,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Private_Header_1000",
+    "mesh": "SM_HM_220_18_40",
+    "loc": [
+      -810,
+      1000,
+      310
+    ],
+    "dims": [
+      220,
+      18,
+      40
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Wellness_Partition",
+    "mesh": "SM_HM_440_18_330",
+    "loc": [
+      1180,
+      700,
+      165
+    ],
+    "dims": [
+      440,
+      18,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Wellness_Header",
+    "mesh": "SM_HM_260_18_40",
+    "loc": [
+      830,
+      700,
+      310
+    ],
+    "dims": [
+      260,
+      18,
+      40
+    ],
+    "mat": "Oak",
+    "folder": "Architecture",
+    "collision": true
+  },
+  {
+    "name": "Pool_Base",
+    "mesh": "SM_HM_PoolDeepShell",
+    "loc": [
+      0,
+      0,
+      0
+    ],
+    "dims": [
+      880,
+      1020,
+      30
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_PoolDeepShell"
+  },
+  {
+    "name": "Pool_Side_-440",
+    "mesh": "SM_HM_20_1020_120",
+    "loc": [
+      -440,
+      1090,
+      -259
+    ],
+    "dims": [
+      20,
+      1020,
+      120
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1.588235294117647,
+      4.316666666666666
+    ]
+  },
+  {
+    "name": "Pool_Side_440",
+    "mesh": "SM_HM_20_1020_120",
+    "loc": [
+      440,
+      1090,
+      -259
+    ],
+    "dims": [
+      20,
+      1020,
+      120
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1.588235294117647,
+      4.316666666666666
+    ]
+  },
+  {
+    "name": "Pool_End_280",
+    "mesh": "SM_HM_900_20_120",
+    "loc": [
+      0,
+      280,
+      -259
+    ],
+    "dims": [
+      900,
+      20,
+      120
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      4.316666666666666
+    ]
+  },
+  {
+    "name": "Pool_End_1300",
+    "mesh": "SM_HM_900_20_120",
+    "loc": [
+      0,
+      1900,
+      -259
+    ],
+    "dims": [
+      900,
+      20,
+      120
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      4.316666666666666
+    ]
+  },
+  {
+    "name": "Pool_Coping_-451",
+    "mesh": "SM_HM_42_1040_12",
+    "loc": [
+      -451,
+      1090,
+      0
+    ],
+    "dims": [
+      42,
+      1040,
+      12
+    ],
+    "mat": "Stone",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1.5769230769230769,
+      1
+    ]
+  },
+  {
+    "name": "Pool_Coping_451",
+    "mesh": "SM_HM_42_1040_12",
+    "loc": [
+      451,
+      1090,
+      0
+    ],
+    "dims": [
+      42,
+      1040,
+      12
+    ],
+    "mat": "Stone",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1.5769230769230769,
+      1
+    ]
+  },
+  {
+    "name": "Pool_Coping_270",
+    "mesh": "SM_HM_940_42_12",
+    "loc": [
+      0,
+      270,
+      0
+    ],
+    "dims": [
+      940,
+      42,
+      12
+    ],
+    "mat": "Stone",
+    "folder": "Pool",
+    "collision": true
+  },
+  {
+    "name": "Pool_Coping_1310",
+    "mesh": "SM_HM_940_42_12",
+    "loc": [
+      0,
+      1910,
+      0
+    ],
+    "dims": [
+      940,
+      42,
+      12
+    ],
+    "mat": "Stone",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Pool_Step_0",
+    "mesh": "SM_HM_400_30_105",
+    "loc": [
+      0,
+      300,
+      -125.0
+    ],
+    "dims": [
+      400,
+      30,
+      105
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      2.0
+    ]
+  },
+  {
+    "name": "Pool_Step_1",
+    "mesh": "SM_HM_400_30_90",
+    "loc": [
+      0,
+      330,
+      -135.0
+    ],
+    "dims": [
+      400,
+      30,
+      90
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      2.111111111111111
+    ]
+  },
+  {
+    "name": "Pool_Step_2",
+    "mesh": "SM_HM_400_30_75",
+    "loc": [
+      0,
+      360,
+      -145.0
+    ],
+    "dims": [
+      400,
+      30,
+      75
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      2.2666666666666666
+    ]
+  },
+  {
+    "name": "Pool_Step_3",
+    "mesh": "SM_HM_400_30_60",
+    "loc": [
+      0,
+      390,
+      -155.0
+    ],
+    "dims": [
+      400,
+      30,
+      60
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      2.5
+    ]
+  },
+  {
+    "name": "Pool_Step_4",
+    "mesh": "SM_HM_400_30_45",
+    "loc": [
+      0,
+      420,
+      -165.0
+    ],
+    "dims": [
+      400,
+      30,
+      45
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      2.888888888888889
+    ]
+  },
+  {
+    "name": "Pool_Step_5",
+    "mesh": "SM_HM_400_30_30",
+    "loc": [
+      0,
+      450,
+      -175.0
+    ],
+    "dims": [
+      400,
+      30,
+      30
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      3.6666666666666665
+    ]
+  },
+  {
+    "name": "Pool_Step_6",
+    "mesh": "SM_HM_400_30_15",
+    "loc": [
+      0,
+      480,
+      -185.0
+    ],
+    "dims": [
+      400,
+      30,
+      15
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      6.0
+    ]
+  },
+  {
+    "name": "Mission_Feature_Wall",
+    "mesh": "SM_HM_35_650_330",
+    "loc": [
+      -1280,
+      -500,
+      165
+    ],
+    "dims": [
+      35,
+      650,
+      330
+    ],
+    "mat": "Oak",
+    "folder": "Mission",
+    "collision": true
+  },
+  {
+    "name": "Gate_Jamb_-630",
+    "mesh": "SM_HM_35_16_260",
+    "loc": [
+      -1250,
+      -630,
+      130
+    ],
+    "dims": [
+      35,
+      16,
+      260
+    ],
+    "mat": "Metal",
+    "folder": "Mission",
+    "collision": true
+  },
+  {
+    "name": "Gate_Jamb_-370",
+    "mesh": "SM_HM_35_16_260",
+    "loc": [
+      -1250,
+      -370,
+      130
+    ],
+    "dims": [
+      35,
+      16,
+      260
+    ],
+    "mat": "Metal",
+    "folder": "Mission",
+    "collision": true
+  },
+  {
+    "name": "Gate_Header",
+    "mesh": "SM_HM_35_280_16",
+    "loc": [
+      -1250,
+      -500,
+      265
+    ],
+    "dims": [
+      35,
+      280,
+      16
+    ],
+    "mat": "Metal",
+    "folder": "Mission",
+    "collision": true
+  },
+  {
+    "name": "Gate_Light_-620",
+    "mesh": "SM_HM_2_3_230",
+    "loc": [
+      -1229,
+      -620,
+      130
+    ],
+    "dims": [
+      2,
+      3,
+      230
+    ],
+    "mat": "Glow",
+    "folder": "Mission",
+    "collision": false
+  },
+  {
+    "name": "Gate_Light_-380",
+    "mesh": "SM_HM_2_3_230",
+    "loc": [
+      -1229,
+      -380,
+      130
+    ],
+    "dims": [
+      2,
+      3,
+      230
+    ],
+    "mat": "Glow",
+    "folder": "Mission",
+    "collision": false
+  },
+  {
+    "name": "Mission_Worktop",
+    "mesh": "SM_HM_300_70_8",
+    "loc": [
+      -950,
+      -890,
+      90
+    ],
+    "dims": [
+      300,
+      70,
+      8
+    ],
+    "mat": "Stone",
+    "folder": "Mission",
+    "collision": true
+  },
+  {
+    "name": "Kitchen_Island",
+    "mesh": "SM_HM_300_105_94",
+    "loc": [
+      990,
+      -430,
+      47
+    ],
+    "dims": [
+      300,
+      105,
+      94
+    ],
+    "mat": "Oak",
+    "folder": "Kitchen",
+    "collision": true
+  },
+  {
+    "name": "Kitchen_Island_Top",
+    "mesh": "SM_HM_310_115_7",
+    "loc": [
+      990,
+      -430,
+      97
+    ],
+    "dims": [
+      310,
+      115,
+      7
+    ],
+    "mat": "Stone",
+    "folder": "Kitchen",
+    "collision": true
+  },
+  {
+    "name": "Bath_Mirror",
+    "mesh": "SM_HM_260_3_125",
+    "loc": [
+      -1240,
+      1375,
+      180
+    ],
+    "dims": [
+      260,
+      3,
+      125
+    ],
+    "mat": "Metal",
+    "folder": "Private",
+    "collision": false
+  },
+  {
+    "name": "Shower_Base",
+    "mesh": "SM_HM_230_280_6",
+    "loc": [
+      -860,
+      1200,
+      3
+    ],
+    "dims": [
+      230,
+      280,
+      6
+    ],
+    "mat": "Stone",
+    "folder": "Private",
+    "collision": true
+  },
+  {
+    "name": "Shower_Glass",
+    "mesh": "SM_HM_3_180_240",
+    "loc": [
+      -980,
+      1260,
+      120
+    ],
+    "dims": [
+      3,
+      180,
+      240
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Living_Cove_-520",
+    "mesh": "SM_HM_3_940_3",
+    "loc": [
+      -520,
+      -490,
+      447
+    ],
+    "dims": [
+      3,
+      940,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Living_Cove_520",
+    "mesh": "SM_HM_3_940_3",
+    "loc": [
+      520,
+      -490,
+      447
+    ],
+    "dims": [
+      3,
+      940,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Wing_Cove_-1360",
+    "mesh": "SM_HM_3_2280_3",
+    "loc": [
+      -1360,
+      180,
+      320
+    ],
+    "dims": [
+      3,
+      2280,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Wing_Cove_1360",
+    "mesh": "SM_HM_3_2280_3",
+    "loc": [
+      1360,
+      180,
+      320
+    ],
+    "dims": [
+      3,
+      2280,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Public_Cove_-1050",
+    "mesh": "SM_HM_630_3_3",
+    "loc": [
+      -1050,
+      -950,
+      320
+    ],
+    "dims": [
+      630,
+      3,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Public_Cove_1050",
+    "mesh": "SM_HM_630_3_3",
+    "loc": [
+      1050,
+      -950,
+      320
+    ],
+    "dims": [
+      630,
+      3,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Garden_Wall_-1730",
+    "mesh": "SM_HM_25_3000_330",
+    "loc": [
+      -1730,
+      600,
+      15
+    ],
+    "dims": [
+      25,
+      3000,
+      330
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1.2,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Wall_1730",
+    "mesh": "SM_HM_25_3000_330",
+    "loc": [
+      1730,
+      600,
+      15
+    ],
+    "dims": [
+      25,
+      3000,
+      330
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1.2,
+      1
+    ]
+  },
+  {
+    "name": "Garden_North_Wall",
+    "mesh": "SM_HM_3480_25_350",
+    "loc": [
+      0,
+      2350,
+      25
+    ],
+    "dims": [
+      3480,
+      25,
+      350
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Planter_North_-1050",
+    "mesh": "SM_HM_700_150_44",
+    "loc": [
+      -1050,
+      2170,
+      22
+    ],
+    "dims": [
+      700,
+      150,
+      44
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Planter_Soil_-1050",
+    "mesh": "SM_HM_670_120_4",
+    "loc": [
+      -1050,
+      2170,
+      46
+    ],
+    "dims": [
+      670,
+      120,
+      4
+    ],
+    "mat": "Garden",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Planter_North_1050",
+    "mesh": "SM_HM_700_150_44",
+    "loc": [
+      1050,
+      2170,
+      22
+    ],
+    "dims": [
+      700,
+      150,
+      44
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Planter_Soil_1050",
+    "mesh": "SM_HM_670_120_4",
+    "loc": [
+      1050,
+      2170,
+      46
+    ],
+    "dims": [
+      670,
+      120,
+      4
+    ],
+    "mat": "Garden",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Gallery_Rear_Floor",
+    "mesh": "SM_HM_1100_380_24",
+    "loc": [
+      0,
+      -810,
+      340
+    ],
+    "dims": [
+      1100,
+      380,
+      24
+    ],
+    "mat": "Oak",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Gallery_West_Walk",
+    "mesh": "SM_HM_200_620_24",
+    "loc": [
+      -450,
+      -310,
+      340
+    ],
+    "dims": [
+      200,
+      620,
+      24
+    ],
+    "mat": "Oak",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Pavilion_High_Canopy",
+    "mesh": "SM_HM_1200_190_20",
+    "loc": [
+      0,
+      95,
+      705
+    ],
+    "dims": [
+      1200,
+      190,
+      20
+    ],
+    "mat": "Oak",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Pavilion_Frame_-585",
+    "mesh": "SM_HM_40_65_700",
+    "loc": [
+      -585,
+      5,
+      350
+    ],
+    "dims": [
+      40,
+      65,
+      700
+    ],
+    "mat": "Stone",
+    "folder": "Pavilion",
+    "collision": true
+  },
+  {
+    "name": "Pavilion_Reveal_-585",
+    "mesh": "SM_HM_3_3_680",
+    "loc": [
+      -573,
+      -31,
+      350
+    ],
+    "dims": [
+      3,
+      3,
+      680
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Pavilion_Frame_585",
+    "mesh": "SM_HM_40_65_700",
+    "loc": [
+      585,
+      5,
+      350
+    ],
+    "dims": [
+      40,
+      65,
+      700
+    ],
+    "mat": "Stone",
+    "folder": "Pavilion",
+    "collision": true
+  },
+  {
+    "name": "Pavilion_Reveal_585",
+    "mesh": "SM_HM_3_3_680",
+    "loc": [
+      573,
+      -31,
+      350
+    ],
+    "dims": [
+      3,
+      3,
+      680
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Pavilion_Crown",
+    "mesh": "SM_HM_1210_70_45",
+    "loc": [
+      0,
+      5,
+      697
+    ],
+    "dims": [
+      1210,
+      70,
+      45
+    ],
+    "mat": "Stone",
+    "folder": "Pavilion",
+    "collision": true
+  },
+  {
+    "name": "Pavilion_Crown_Reveal",
+    "mesh": "SM_HM_1160_3_3",
+    "loc": [
+      0,
+      -33,
+      674
+    ],
+    "dims": [
+      1160,
+      3,
+      3
+    ],
+    "mat": "Glow",
+    "folder": "Lighting",
+    "collision": false
+  },
+  {
+    "name": "Upper_Living_Glass",
+    "mesh": "SM_HM_860_4_330",
+    "loc": [
+      110,
+      0,
+      525
+    ],
+    "dims": [
+      860,
+      4,
+      330
+    ],
+    "mat": "Glass",
+    "folder": "Glazing",
+    "collision": true
+  },
+  {
+    "name": "Gallery_Rear_Guard",
+    "mesh": "SM_HM_660_3_110",
+    "loc": [
+      -80.0,
+      -612.0,
+      407.0
+    ],
+    "dims": [
+      660,
+      3,
+      110
+    ],
+    "mat": "Glass",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_660_3_110.SM_HM_660_3_110"
+  },
+  {
+    "name": "Gallery_Rear_Guard_Cap",
+    "mesh": "SM_HM_660_3_4",
+    "loc": [
+      -80.0,
+      -612.0,
+      465.0
+    ],
+    "dims": [
+      660,
+      3,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_660_3_4.SM_HM_660_3_4"
+  },
+  {
+    "name": "Gallery_West_Guard",
+    "mesh": "SM_HM_3_600_110",
+    "loc": [
+      -348,
+      -310,
+      407
+    ],
+    "dims": [
+      3,
+      600,
+      110
+    ],
+    "mat": "Glass",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Gallery_West_Guard_Cap",
+    "mesh": "SM_HM_3_600_4",
+    "loc": [
+      -348,
+      -310,
+      465
+    ],
+    "dims": [
+      3,
+      600,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Balcony_Front_Guard",
+    "mesh": "SM_HM_1130_3_110",
+    "loc": [
+      -467.5,
+      178,
+      407
+    ],
+    "dims": [
+      1130,
+      3,
+      110
+    ],
+    "mat": "Glass",
+    "folder": "Gallery",
+    "collision": true,
+    "scale": [
+      0.17256637168141592,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Balcony_Front_Guard_Cap",
+    "mesh": "SM_HM_1130_3_4",
+    "loc": [
+      -467.5,
+      178,
+      465
+    ],
+    "dims": [
+      1130,
+      3,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "scale": [
+      0.17256637168141592,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Balcony_West_Guard",
+    "mesh": "SM_HM_3_180_110",
+    "loc": [
+      -570,
+      90,
+      407
+    ],
+    "dims": [
+      3,
+      180,
+      110
+    ],
+    "mat": "Glass",
+    "folder": "Gallery",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Balcony_West_Guard_Cap",
+    "mesh": "SM_HM_3_180_4",
+    "loc": [
+      -570,
+      90,
+      465
+    ],
+    "dims": [
+      3,
+      180,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Balcony_East_Guard",
+    "mesh": "SM_HM_3_180_110",
+    "loc": [
+      570,
+      90,
+      407
+    ],
+    "dims": [
+      3,
+      180,
+      110
+    ],
+    "mat": "Glass",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Balcony_East_Guard_Cap",
+    "mesh": "SM_HM_3_180_4",
+    "loc": [
+      570,
+      90,
+      465
+    ],
+    "dims": [
+      3,
+      180,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Gallery_Guard_Post_-320",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      -390.0,
+      -612.0,
+      407.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Gallery_Guard_Post_0",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      -70.0,
+      -612.0,
+      407.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Gallery_Guard_Post_320",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      250.0,
+      -612.0,
+      407.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Gallery_Stair",
+    "mesh": "SM_HM_GalleryStair",
+    "loc": [
+      360.0,
+      -300.0,
+      176.0
+    ],
+    "dims": [
+      180,
+      600,
+      352
+    ],
+    "mat": "Oak",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair.SM_Gallery_Stair"
+  },
+  {
+    "name": "Stair_Post_330_0",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      0.0,
+      70.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_2",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -60.0,
+      105.2
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_4",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -120.0,
+      140.4
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_6",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_8",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -240.0,
+      210.8
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_10",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -300.0,
+      246.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_12",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_14",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_16",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -480.0,
+      351.6
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_18",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -540.0,
+      386.8
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_330_20",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      260.0,
+      -600.0,
+      422.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Rail_330",
+    "mesh": "SM_HM_5_695p85_5",
+    "loc": [
+      260.0,
+      -300.0,
+      296.0
+    ],
+    "dims": [
+      5,
+      695.85,
+      5
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      30.38599967956544
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_330.SM_Stair_Rail_330"
+  },
+  {
+    "name": "Stair_Post_530_0",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      0.0,
+      70.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_2",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -60.0,
+      105.2
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_4",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -120.0,
+      140.4
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_6",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_8",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -240.0,
+      210.8
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_10",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -300.0,
+      246.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_12",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_14",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_16",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -480.0,
+      351.6
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_18",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -540.0,
+      386.8
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Post_530_20",
+    "mesh": "SM_HM_4_4_110",
+    "loc": [
+      460.0,
+      -600.0,
+      422.0
+    ],
+    "dims": [
+      4,
+      4,
+      110
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "name": "Stair_Rail_530",
+    "mesh": "SM_HM_5_695p85_5",
+    "loc": [
+      460.0,
+      -300.0,
+      296.0
+    ],
+    "dims": [
+      5,
+      695.85,
+      5
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "rotation": [
+      0.0,
+      0.0,
+      30.38599967956544
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_530.SM_Stair_Rail_530"
+  },
+  {
+    "name": "Arrival_Step_0",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1570,
+      -7.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_1",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1605,
+      -22.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_2",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1640,
+      -37.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_3",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1675,
+      -52.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_4",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1710,
+      -67.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_5",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1745,
+      -82.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_6",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1780,
+      -97.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_7",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1815,
+      -112.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_8",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1850,
+      -127.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Arrival_Step_9",
+    "mesh": "SM_HM_900_35_15",
+    "loc": [
+      0,
+      -1885,
+      -142.5
+    ],
+    "dims": [
+      900,
+      35,
+      15
+    ],
+    "mat": "Stone",
+    "folder": "Courtyard",
+    "collision": true
+  },
+  {
+    "name": "Garden_Pergola_Post_-500",
+    "mesh": "SM_HM_14_14_290",
+    "loc": [
+      -500,
+      2240,
+      145
+    ],
+    "dims": [
+      14,
+      14,
+      290
+    ],
+    "mat": "Metal",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Post_500",
+    "mesh": "SM_HM_14_14_290",
+    "loc": [
+      500,
+      2240,
+      145
+    ],
+    "dims": [
+      14,
+      14,
+      290
+    ],
+    "mat": "Metal",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Beam_1510",
+    "mesh": "SM_HM_1040_12_18",
+    "loc": [
+      0,
+      2110,
+      290
+    ],
+    "dims": [
+      1040,
+      12,
+      18
+    ],
+    "mat": "Metal",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Beam_1720",
+    "mesh": "SM_HM_1040_12_18",
+    "loc": [
+      0,
+      2320,
+      290
+    ],
+    "dims": [
+      1040,
+      12,
+      18
+    ],
+    "mat": "Metal",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-500",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -500,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-460",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -460,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-420",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -420,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-380",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -380,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-340",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -340,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-300",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -300,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-260",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -260,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-220",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -220,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-180",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -180,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-140",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -140,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-100",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -100,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-60",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -60,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_-20",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      -20,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_20",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      20,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_60",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      60,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_100",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      100,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_140",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      140,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_180",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      180,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_220",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      220,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_260",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      260,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_300",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      300,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_340",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      340,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_380",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      380,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_420",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      420,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_460",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      460,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Pergola_Slat_500",
+    "mesh": "SM_HM_12_240_12",
+    "loc": [
+      500,
+      2215,
+      301
+    ],
+    "dims": [
+      12,
+      240,
+      12
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Bench",
+    "mesh": "SM_HM_800_80_56",
+    "loc": [
+      0,
+      2240,
+      28
+    ],
+    "dims": [
+      800,
+      80,
+      56
+    ],
+    "mat": "Oak",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Wing_Eave_-1",
+    "mesh": "SM_HM_140_2440_20",
+    "loc": [
+      -650,
+      200,
+      338
+    ],
+    "dims": [
+      140,
+      2440,
+      20
+    ],
+    "mat": "Plaster",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Wing_Eave_Soffit_-1",
+    "mesh": "SM_HM_138_2430_6",
+    "loc": [
+      -650,
+      200,
+      324
+    ],
+    "dims": [
+      138,
+      2430,
+      6
+    ],
+    "mat": "Oak",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Wing_Eave_ShadowGap_-1",
+    "mesh": "SM_HM_3_2440_4",
+    "loc": [
+      -581,
+      200,
+      321
+    ],
+    "dims": [
+      3,
+      2440,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Roof",
+    "collision": false
+  },
+  {
+    "name": "Wing_Eave_1",
+    "mesh": "SM_HM_140_2440_20",
+    "loc": [
+      650,
+      200,
+      338
+    ],
+    "dims": [
+      140,
+      2440,
+      20
+    ],
+    "mat": "Plaster",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Wing_Eave_Soffit_1",
+    "mesh": "SM_HM_138_2430_6",
+    "loc": [
+      650,
+      200,
+      324
+    ],
+    "dims": [
+      138,
+      2430,
+      6
+    ],
+    "mat": "Oak",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Wing_Eave_ShadowGap_1",
+    "mesh": "SM_HM_3_2440_4",
+    "loc": [
+      581,
+      200,
+      321
+    ],
+    "dims": [
+      3,
+      2440,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Roof",
+    "collision": false
+  },
+  {
+    "name": "Pavilion_Ceiling_Soffit",
+    "mesh": "SM_HM_1090_1000_8",
+    "loc": [
+      0,
+      -490,
+      684
+    ],
+    "dims": [
+      1090,
+      1000,
+      8
+    ],
+    "mat": "Oak",
+    "folder": "Roof",
+    "collision": true
+  },
+  {
+    "name": "Balcony_Front_Edge",
+    "mesh": "SM_HM_1170_12_28",
+    "loc": [
+      0,
+      188,
+      340
+    ],
+    "dims": [
+      1170,
+      12,
+      28
+    ],
+    "mat": "Plaster",
+    "folder": "Gallery",
+    "collision": true
+  },
+  {
+    "name": "Balcony_ShadowGap",
+    "mesh": "SM_HM_1150_3_4",
+    "loc": [
+      0,
+      184,
+      321
+    ],
+    "dims": [
+      1150,
+      3,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": false
+  },
+  {
+    "name": "Foundation_Public",
+    "mesh": "SM_HM_2800_1000_120",
+    "loc": [
+      0,
+      -500,
+      -90
+    ],
+    "dims": [
+      2800,
+      1000,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true
+  },
+  {
+    "name": "Foundation_Private",
+    "mesh": "SM_HM_700_1400_120",
+    "loc": [
+      -1050,
+      700,
+      -90
+    ],
+    "dims": [
+      700,
+      1400,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true
+  },
+  {
+    "name": "Foundation_Wellness",
+    "mesh": "SM_HM_700_1400_120",
+    "loc": [
+      1050,
+      700,
+      -90
+    ],
+    "dims": [
+      700,
+      1400,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true
+  },
+  {
+    "name": "Foundation_DeckLiving",
+    "mesh": "SM_HM_1400_250_120",
+    "loc": [
+      0,
+      125,
+      -90
+    ],
+    "dims": [
+      1400,
+      250,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true
+  },
+  {
+    "name": "Foundation_DeckWest",
+    "mesh": "SM_HM_260_1150_120",
+    "loc": [
+      -570,
+      1125,
+      -90
+    ],
+    "dims": [
+      260,
+      1150,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1.5217391304347827,
+      1
+    ]
+  },
+  {
+    "name": "Foundation_DeckEast",
+    "mesh": "SM_HM_260_1150_120",
+    "loc": [
+      570,
+      1125,
+      -90
+    ],
+    "dims": [
+      260,
+      1150,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1.5217391304347827,
+      1
+    ]
+  },
+  {
+    "name": "Foundation_DeckNorth",
+    "mesh": "SM_HM_1400_180_120",
+    "loc": [
+      0,
+      1990,
+      -90
+    ],
+    "dims": [
+      1400,
+      180,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Foundation_Arrival",
+    "mesh": "SM_HM_1200_560_110",
+    "loc": [
+      0,
+      -1280,
+      -95
+    ],
+    "dims": [
+      1200,
+      560,
+      110
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true
+  },
+  {
+    "name": "Foundation_RearGarden",
+    "mesh": "SM_HM_3450_270_120",
+    "loc": [
+      0,
+      2215,
+      -90
+    ],
+    "dims": [
+      3450,
+      270,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "RearGarden_Terrace",
+    "mesh": "SM_HM_3450_270_30",
+    "loc": [
+      0,
+      2215,
+      -15
+    ],
+    "dims": [
+      3450,
+      270,
+      30
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Pool_Step_7",
+    "mesh": "SM_HM_400_30_15",
+    "loc": [
+      0,
+      510,
+      -195.0
+    ],
+    "dims": [
+      400,
+      30,
+      15
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      4.666666666666667
+    ]
+  },
+  {
+    "name": "Pool_Step_8",
+    "mesh": "SM_HM_400_30_15",
+    "loc": [
+      0,
+      540,
+      -205.0
+    ],
+    "dims": [
+      400,
+      30,
+      15
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      3.3333333333333335
+    ]
+  },
+  {
+    "name": "Pool_Step_9",
+    "mesh": "SM_HM_400_30_15",
+    "loc": [
+      0,
+      570,
+      -215.0
+    ],
+    "dims": [
+      400,
+      30,
+      15
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      2.0
+    ]
+  },
+  {
+    "name": "Pool_Step_10",
+    "mesh": "SM_HM_400_30_15",
+    "loc": [
+      0,
+      600,
+      -225.0
+    ],
+    "dims": [
+      400,
+      30,
+      15
+    ],
+    "mat": "Pool",
+    "folder": "Pool",
+    "collision": true,
+    "scale": [
+      1,
+      1,
+      0.6666666666666666
+    ]
+  },
+  {
+    "name": "BedroomHeadwall",
+    "blender_object": "HM_BedroomHeadwall",
+    "mesh": "SM_HM_BedroomHeadwall",
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomHeadwall.SM_HM_BedroomHeadwall",
+    "loc": [
+      -1373.0,
+      300.0,
+      0.0
+    ],
+    "dims": [
+      18.500000953674316,
+      550.0000610351562,
+      315.00010577317516
+    ],
+    "mat": "Suite",
+    "folder": "PrivateSuite",
+    "collision": true,
+    "pipeline": "BFEU local mesh + actor transform"
+  },
+  {
+    "name": "BedroomCurtain",
+    "blender_object": "HM_BedroomCurtain",
+    "mesh": "SM_HM_BedroomCurtain",
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomCurtain.SM_HM_BedroomCurtain",
+    "loc": [
+      -731.0,
+      65.0,
+      0.0
+    ],
+    "dims": [
+      10.350000381469727,
+      79.00000381469727,
+      308.85037088394165
+    ],
+    "mat": "Suite",
+    "folder": "PrivateSuite",
+    "collision": false,
+    "pipeline": "BFEU local mesh + actor transform"
+  },
+  {
+    "name": "BedroomCurtain_Return",
+    "blender_object": "HM_BedroomCurtain_Return",
+    "mesh": "SM_HM_BedroomCurtain",
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomCurtain.SM_HM_BedroomCurtain",
+    "loc": [
+      -731.0,
+      535.0,
+      0.0
+    ],
+    "dims": [
+      10.350000381469727,
+      79.00000381469727,
+      308.85037088394165
+    ],
+    "mat": "Suite",
+    "folder": "PrivateSuite",
+    "collision": false,
+    "pipeline": "BFEU local mesh + actor transform"
+  },
+  {
+    "name": "BathVanitySuite",
+    "blender_object": "HM_BathVanitySuite",
+    "mesh": "SM_HM_BathVanitySuite",
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BathVanitySuite.SM_HM_BathVanitySuite",
+    "loc": [
+      -1240.0,
+      1280.0,
+      0.0
+    ],
+    "dims": [
+      650.0000305175781,
+      379.99999237060547,
+      309.00004397228986
+    ],
+    "mat": "Suite",
+    "folder": "PrivateSuite",
+    "collision": true,
+    "pipeline": "BFEU local mesh + actor transform"
+  },
+  {
+    "name": "SpaTowelStation",
+    "blender_object": "HM_SpaTowelStation",
+    "mesh": "SM_HM_SpaTowelStation",
+    "asset_path": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_SpaTowelStation.SM_HM_SpaTowelStation",
+    "loc": [
+      -1365.0,
+      1115.0,
+      0.0
+    ],
+    "dims": [
+      47.0,
+      83.99999618530273,
+      158.2500058488522
+    ],
+    "mat": "Suite",
+    "folder": "PrivateSuite",
+    "collision": true,
+    "pipeline": "BFEU local mesh + actor transform"
+  },
+  {
+    "name": "Garden_Lawn_-1220",
+    "mesh": "SM_HM_3450_270_30",
+    "loc": [
+      -1220,
+      1740,
+      -17
+    ],
+    "dims": [
+      3450,
+      270,
+      30
+    ],
+    "mat": "Garden",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1
+    ]
+  },
+  {
+    "name": "Foundation_Lawn_-1220",
+    "mesh": "SM_HM_3450_270_120",
+    "loc": [
+      -1220,
+      1740,
+      -92
+    ],
+    "dims": [
+      3450,
+      270,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1
+    ]
+  },
+  {
+    "name": "Garden_Lawn_1220",
+    "mesh": "SM_HM_3450_270_30",
+    "loc": [
+      1220,
+      1740,
+      -17
+    ],
+    "dims": [
+      3450,
+      270,
+      30
+    ],
+    "mat": "Garden",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1
+    ]
+  },
+  {
+    "name": "Foundation_Lawn_1220",
+    "mesh": "SM_HM_3450_270_120",
+    "loc": [
+      1220,
+      1740,
+      -92
+    ],
+    "dims": [
+      3450,
+      270,
+      120
+    ],
+    "mat": "Stone",
+    "folder": "Landscape",
+    "collision": true,
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1
+    ]
+  },
+  {
+    "name": "Balcony_Front_Guard_Right",
+    "mesh": "SM_HM_1130_3_110",
+    "loc": [
+      187.5,
+      178,
+      407
+    ],
+    "dims": [
+      1130,
+      3,
+      110
+    ],
+    "mat": "Glass",
+    "folder": "Gallery",
+    "collision": true,
+    "scale": [
+      0.668141592920354,
+      1,
+      1
+    ]
+  },
+  {
+    "name": "Balcony_Front_Guard_Right_Cap",
+    "mesh": "SM_HM_1130_3_4",
+    "loc": [
+      187.5,
+      178,
+      465
+    ],
+    "dims": [
+      1130,
+      3,
+      4
+    ],
+    "mat": "Metal",
+    "folder": "Gallery",
+    "collision": true,
+    "scale": [
+      0.668141592920354,
+      1,
+      1
+    ]
+  }
+]

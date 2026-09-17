@@ -1,0 +1,47 @@
+[
+  {
+    "name": "SM_HM_BedroomHeadwall",
+    "location_cm": [
+      -1373,
+      300,
+      0
+    ],
+    "triangles": 7332,
+    "materials": [
+      "Suite_Dark",
+      "Suite_Fabric",
+      "Suite_Wood",
+      "Suite_Brass",
+      "Suite_Glow"
+    ]
+  },
+  {
+    "name": "SM_HM_BedroomCurtain",
+    "location_cm": [
+      -731,
+      65,
+      0
+    ],
+    "triangles": 2732,
+    "materials": [
+      "Suite_Fabric",
+      "Suite_Dark"
+    ]
+  },
+  {
+    "name": "SM_HM_BathVanitySuite",
+    "location_cm": [
+      -1240,
+      1280,
+      0
+    ],
+    "triangles": 6144,
+    "materials": [
+      "Suite_Wood",
+      "Suite_Brass",
+      "Suite_Stone",
+      "Suite_Glow",
+      "Suite_Ceramic"
+    ]
+  }
+]

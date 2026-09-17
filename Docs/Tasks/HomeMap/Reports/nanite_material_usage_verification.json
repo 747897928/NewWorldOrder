@@ -1,0 +1,84 @@
+{
+  "map": "HomeMap_Courtyard",
+  "nanite_mesh_count": 8,
+  "materials": [
+    {
+      "material": "/Game/Environment/HomeMap/Materials/M_Wall_Wood.M_Wall_Wood",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/M_Metall_Black.M_Metall_Black",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Landscape/Materials/M_island_tree_01.M_island_tree_01",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Landscape/Materials/M_island_tree_01_leaves.M_island_tree_01_leaves",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/M_Fabric.M_Fabric",
+      "flag_before": false,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/Hub/M_Bronze.M_Bronze",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/Hub/M_Warm_Light.M_Warm_Light",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/Hub/M_Courtyard_Stone.M_Courtyard_Stone",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/M_Kitchen_Ceramic.M_Kitchen_Ceramic",
+      "flag_before": true,
+      "flag_after": true,
+      "save_succeeded": true
+    },
+    {
+      "material": "/Game/Environment/HomeMap/Materials/Hub/M_HomeMap_ImportedSurface",
+      "flag_after": true,
+      "save_succeeded": true
+    }
+  ],
+  "external_parent_handling": "Interchange M_Default usage flag restored to original false; HomeMap-only copy and four instance overrides used. Original shared dressing table materials unchanged.",
+  "vanity_visual_overrides": [
+    {
+      "slot": 0,
+      "material": "/Game/Environment/HomeMap/Materials/Hub/MI_HomeMapVanity_Polished_wood_1"
+    },
+    {
+      "slot": 1,
+      "material": "/Game/Environment/HomeMap/Materials/Hub/MI_HomeMapVanity_Glass"
+    },
+    {
+      "slot": 2,
+      "material": "/Game/Environment/HomeMap/Materials/Hub/MI_HomeMapVanity_Stainless_Steel"
+    },
+    {
+      "slot": 3,
+      "material": "/Game/Environment/HomeMap/Materials/Hub/MI_HomeMapVanity_Mirror"
+    }
+  ]
+}

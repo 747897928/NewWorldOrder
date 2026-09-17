@@ -1,0 +1,177 @@
+[
+  {
+    "mesh": "SM_HM_GalleryEnvelope",
+    "triangles": 4428,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_GalleryEnvelope",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_GalleryWindowGlass",
+    "triangles": 60,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Architectural_Glass"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_GalleryWindowGlass",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_StairApproachHeader",
+    "triangles": 216,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood"
+    ],
+    "nanite": false,
+    "collision": false,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_StairApproachHeader",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_EntryPortal",
+    "triangles": 1080,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Warm_Light"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_EntryPortal",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_EntryDoorLeaf",
+    "triangles": 2376,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_EntryDoor_Left",
+        "location_cm": [
+          -126,
+          -1008,
+          1
+        ],
+        "rotation": [
+          0,
+          -100,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "label": "HM_EntryDoor_Right",
+        "location_cm": [
+          126,
+          -1008,
+          1
+        ],
+        "rotation": [
+          0,
+          280,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

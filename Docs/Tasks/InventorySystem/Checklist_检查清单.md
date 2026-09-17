@@ -1,0 +1,12 @@
+# 完成检查清单
+- [ ] Phase 0：ShootInventory 基础类（Manager/List/ItemInstance/TagStack）完成并通过复制验证（挂 PlayerState）
+- [ ] Phase 1：材料/货币 MVP（资源仓库组件/Tag 定义/拾取/背包 UI 消息）上线
+- [ ] Phase 2：武器 ItemDef 与 UCombatComponent 对接完成，弹药预测保持稳定
+- [ ] Phase 3：Hub 制作界面、资源扣减与产出流程实装
+- [ ] Phase 4：持久化与“已拾取不重置”逻辑接入
+- [ ] UShootInventoryItemInstance 支持 EShootItemLifetime，并由 InventoryManager 提供 AddPersistentItem/AddRuntimeItem；SaveGame 与 QuickBar 仅存 Persistent 数据
+- [ ] ResourceInventoryComponent 仅存堆叠资源；武器拾取与 QuickBar 改动全部走 InventoryManager，副本 RuntimeOnly 物品退出副本即清空
+- [ ] 库存/武器相关 C++ 代码补充中文注释，明确 ResourceInventory=数量型仓库、InventoryManager=有身份背包、QuickBar/Equipment 只引用 InventoryManager
+- [ ] 新增 GameplayTag/消息登记在 `ShootGameplayTags.*` 与 `Docs/Engineering/Notes/GameplayTagInitialization.md`
+- [ ] Related Docs（GameDesign/Notes/QuickReference）同步更新
+- [ ] STATUS.md 标记进度并附最新 commit

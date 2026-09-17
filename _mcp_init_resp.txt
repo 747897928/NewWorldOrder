@@ -1,0 +1,30 @@
+HTTP/1.1 200
+content-type: application/json;charset=utf-8
+Mcp-Session-Id: 4afa4cac4f66e0797aff32bb8333dc42
+keep-alive: timeout=15.000000
+content-length: 279
+
+{
+	"jsonrpc": "2.0",
+	"id": 1,
+	"result":
+	{
+		"protocolVersion": "2024-11-05",
+		"capabilities":
+		{
+			"resources":
+			{
+			},
+			"tools":
+			{
+				"listChanged": true
+			}
+		},
+		"serverInfo":
+		{
+			"name": "",
+			"title": "",
+			"version": ""
+		}
+	}
+}

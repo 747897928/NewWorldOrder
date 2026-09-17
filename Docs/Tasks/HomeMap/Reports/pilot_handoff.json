@@ -1,0 +1,904 @@
+[
+  {
+    "label": "HM_Gallery_Stair",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      360.0,
+      -300.0,
+      176.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 360.000000, y: -300.000000, z: 176.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair.SM_Gallery_Stair",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 360.000000, y: -300.000000, z: 176.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_0",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      0.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: 0.000000, z: 70.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: 0.000000, z: 70.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_2",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -60.0,
+      105.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -60.000000, z: 105.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -60.000000, z: 105.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_4",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -120.0,
+      140.4
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -120.000000, z: 140.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -120.000000, z: 140.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_6",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -180.000000, z: 175.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -180.000000, z: 175.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_8",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -240.0,
+      210.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -240.000000, z: 210.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -240.000000, z: 210.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_10",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -300.0,
+      246.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -300.000000, z: 246.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -300.000000, z: 246.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_12",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -360.000000, z: 281.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -360.000000, z: 281.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_14",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -420.000000, z: 316.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -420.000000, z: 316.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_16",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -480.0,
+      351.6
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -480.000000, z: 351.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -480.000000, z: 351.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_18",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -540.0,
+      386.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -540.000000, z: 386.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -540.000000, z: 386.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_330_20",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -600.0,
+      422.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -600.000000, z: 422.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 260.000000, y: -600.000000, z: 422.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Rail_330",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      260.0,
+      -300.0,
+      296.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 30.38599967956544
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: -0.262071, y: -0.000000, z: 0.000000, w: 0.965049}, translation: {x: 260.000000, y: -300.000000, z: 296.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_330.SM_Stair_Rail_330",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: -0.262071, y: -0.000000, z: 0.000000, w: 0.965049}, translation: {x: 260.000000, y: -300.000000, z: 296.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_0",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      0.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: 0.000000, z: 70.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: 0.000000, z: 70.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_2",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -60.0,
+      105.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -60.000000, z: 105.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -60.000000, z: 105.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_4",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -120.0,
+      140.4
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -120.000000, z: 140.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -120.000000, z: 140.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_6",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -180.000000, z: 175.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -180.000000, z: 175.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_8",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -240.0,
+      210.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -240.000000, z: 210.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -240.000000, z: 210.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_10",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -300.0,
+      246.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -300.000000, z: 246.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -300.000000, z: 246.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_12",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -360.000000, z: 281.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -360.000000, z: 281.200000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_14",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -420.000000, z: 316.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -420.000000, z: 316.400000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_16",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -480.0,
+      351.6
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -480.000000, z: 351.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -480.000000, z: 351.600000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_18",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -540.0,
+      386.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -540.000000, z: 386.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -540.000000, z: 386.800000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Post_530_20",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -600.0,
+      422.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -600.000000, z: 422.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 460.000000, y: -600.000000, z: 422.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Rail_530",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      460.0,
+      -300.0,
+      296.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 30.38599967956544
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: -0.262071, y: -0.000000, z: 0.000000, w: 0.965049}, translation: {x: 460.000000, y: -300.000000, z: 296.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_530.SM_Stair_Rail_530",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: -0.262071, y: -0.000000, z: 0.000000, w: 0.965049}, translation: {x: 460.000000, y: -300.000000, z: 296.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Gallery_Stair_Landing",
+    "class": "/Script/Engine.StaticMeshActor",
+    "location": [
+      360.0,
+      -610.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "StaticMeshComponent0",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 360.000000, y: -610.000000, z: 340.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair_Landing.SM_Gallery_Stair_Landing",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 360.000000, y: -610.000000, z: 340.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_Stair_Warm",
+    "class": "/Script/Engine.RectLight",
+    "location": [
+      420.0,
+      -270.0,
+      660.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "LightComponent0",
+        "class": "RectLightComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: -0.000000, y: 0.707107, z: 0.000000, w: 0.707107}, translation: {x: 420.000000, y: -270.000000, z: 660.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      },
+      {
+        "name": "BillboardComponent_0",
+        "class": "BillboardComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 0.500000, y: 0.500000, z: 0.500000}}>"
+      }
+    ]
+  },
+  {
+    "label": "HM_DayNight_Control",
+    "class": "/Game/Environment/HomeMap/Blueprints/BP_HomeMap_EnvironmentControl.BP_HomeMap_EnvironmentControl_C",
+    "location": [
+      650.0,
+      -450.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "InteractionCollision",
+        "class": "SphereComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 650.000000, y: -450.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "radius": 160.0
+      },
+      {
+        "name": "Visual",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 80.000000}, scale3d: {x: 0.350000, y: 0.150000, z: 0.800000}}>",
+        "mesh": "/Engine/BasicShapes/Cube.Cube",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 80.000000}, scale3d: {x: 0.350000, y: 0.150000, z: 0.800000}}>"
+      },
+      {
+        "name": "InteractionPrompt",
+        "class": "ShootLocalInteractionPrompt",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 180.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "widget": "<Object '/Game/UI/FrontEnd/W_Icon_Interact.W_Icon_Interact_C' (0x000001399B243800) Class 'WidgetBlueprintGeneratedClass'>",
+        "distance": 160.0
+      }
+    ]
+  },
+  {
+    "label": "HM_Vanity_Interactive",
+    "class": "/Game/Environment/HomeMap/Blueprints/BP_HomeMap_Dressing_Table_Set.BP_HomeMap_Dressing_Table_Set_C",
+    "location": [
+      -1050.0,
+      910.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "DefaultSceneRoot",
+        "class": "SceneComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: -0.000000, z: 1.000000, w: 0.000000}, translation: {x: -1050.000000, y: 910.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      },
+      {
+        "name": "BillboardComponent_1",
+        "class": "BillboardComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 0.500000, y: 0.500000, z: 0.500000}}>"
+      },
+      {
+        "name": "Dressing_Table_Set",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "mesh": "/Game/Environment/Props/Gameplay/Dressing_Table_Set/StaticMeshes/Dressing_Table_Set.Dressing_Table_Set",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      },
+      {
+        "name": "InputActionWidget",
+        "class": "WidgetComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 80.000000, z: 190.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      },
+      {
+        "name": "Sphere",
+        "class": "SphereComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 100.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "radius": 256.0
+      },
+      {
+        "name": "Box",
+        "class": "BoxComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 100.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+      },
+      {
+        "name": "LocalInteractionPrompt",
+        "class": "ShootLocalInteractionPrompt",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 180.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "widget": "<Object '/Game/UI/FrontEnd/W_Icon_Interact.W_Icon_Interact_C' (0x000001399B243800) Class 'WidgetBlueprintGeneratedClass'>",
+        "distance": 256.0
+      }
+    ]
+  },
+  {
+    "label": "HM_Expedition_Gate",
+    "class": "/Game/Blueprints/Interaction/BP_ExpeditionTerminal.BP_ExpeditionTerminal_C",
+    "location": [
+      -1230.0,
+      -500.0,
+      125.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "components": [
+      {
+        "name": "Collision",
+        "class": "SphereComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: -1230.000000, y: -500.000000, z: 125.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "radius": 256.0
+      },
+      {
+        "name": "Visual",
+        "class": "StaticMeshComponent",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: -125.000000}, scale3d: {x: 1.800000, y: 2.200000, z: 1.200000}}>",
+        "mesh": "/Game/Environment/HomeMap/Architecture/SM_Door_Enter.SM_Door_Enter",
+        "scale": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: -125.000000}, scale3d: {x: 1.800000, y: 2.200000, z: 1.200000}}>"
+      },
+      {
+        "name": "InteractionPrompt",
+        "class": "ShootLocalInteractionPrompt",
+        "location": "<Struct 'Transform' (0x000001360B9D2B20) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 90.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+        "widget": "<Object '/Game/UI/FrontEnd/W_Icon_Interact.W_Icon_Interact_C' (0x000001399B243800) Class 'WidgetBlueprintGeneratedClass'>",
+        "distance": 256.0
+      }
+    ]
+  }
+]

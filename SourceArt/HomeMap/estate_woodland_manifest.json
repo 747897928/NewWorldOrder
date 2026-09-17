@@ -1,0 +1,28 @@
+[
+  {
+    "mesh": "SM_HM_EstateWoodland_0",
+    "triangles": 5244,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_EstateWoodlandBark",
+      "/Game/Environment/HomeMap/Materials/Hub/M_EstateWoodlandLeaf"
+    ],
+    "nanite": false,
+    "collision": false,
+    "rebuild_material_slots": true,
+    "destination": "/Game/Environment/HomeMap/Landscape/Meshes",
+    "instances": []
+  },
+  {
+    "mesh": "SM_HM_EstateWoodland_1",
+    "triangles": 5244,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_EstateWoodlandBark",
+      "/Game/Environment/HomeMap/Materials/Hub/M_EstateWoodlandLeaf"
+    ],
+    "nanite": false,
+    "collision": false,
+    "rebuild_material_slots": true,
+    "destination": "/Game/Environment/HomeMap/Landscape/Meshes",
+    "instances": []
+  }
+]

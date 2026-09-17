@@ -1,0 +1,61 @@
+[
+  {
+    "name": "SM_HM_ExpeditionSign",
+    "location": [
+      -1225,
+      -500,
+      299
+    ],
+    "triangles": 1528,
+    "materials": [
+      "Hub_Dark",
+      "Hub_Brass",
+      "Hub_Letter"
+    ]
+  },
+  {
+    "name": "SM_HM_FieldNotesBoard",
+    "location": [
+      -950,
+      -979,
+      205
+    ],
+    "triangles": 6152,
+    "materials": [
+      "Hub_Wood",
+      "Hub_Map",
+      "Hub_Brass",
+      "Hub_Letter",
+      "Hub_Linen"
+    ]
+  },
+  {
+    "name": "SM_HM_ArchiveCabinet",
+    "location": [
+      -1030,
+      -60,
+      0
+    ],
+    "triangles": 3760,
+    "materials": [
+      "Hub_Dark",
+      "Hub_Wood",
+      "Hub_Brass",
+      "Hub_Letter"
+    ]
+  },
+  {
+    "name": "SM_HM_GalleryWritingDesk",
+    "location": [
+      260,
+      -960,
+      353
+    ],
+    "triangles": 1692,
+    "materials": [
+      "Hub_Wood",
+      "Hub_Dark",
+      "Hub_Brass"
+    ]
+  }
+]

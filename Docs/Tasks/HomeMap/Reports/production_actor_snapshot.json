@@ -1,0 +1,9528 @@
+[
+  {
+    "label": "HM_Floor_Public",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -500.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_2800_1000_30.SM_HM_2800_1000_30"
+  },
+  {
+    "label": "HM_Floor_Private",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      700.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_1400_30.SM_HM_700_1400_30"
+  },
+  {
+    "label": "HM_Floor_Wellness",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      700.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_1400_30.SM_HM_700_1400_30"
+  },
+  {
+    "label": "HM_Deck_Living",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      125.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1400_250_30.SM_HM_1400_250_30"
+  },
+  {
+    "label": "HM_Deck_Side_-570",
+    "class": "StaticMeshActor",
+    "location": [
+      -570.0,
+      1125.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.5217391304347827,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_260_1150_30.SM_HM_260_1150_30"
+  },
+  {
+    "label": "HM_Deck_Side_570",
+    "class": "StaticMeshActor",
+    "location": [
+      570.0,
+      1125.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.5217391304347827,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_260_1150_30.SM_HM_260_1150_30"
+  },
+  {
+    "label": "HM_Deck_North",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      1990.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1400_180_30.SM_HM_1400_180_30"
+  },
+  {
+    "label": "HM_Arrival_Platform",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1280.0,
+      -20.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1200_560_40.SM_HM_1200_560_40"
+  },
+  {
+    "label": "HM_Site_Ground",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_SiteTerrain_DeepPool.SM_HM_SiteTerrain_DeepPool"
+  },
+  {
+    "label": "HM_South_Wall_-770",
+    "class": "StaticMeshActor",
+    "location": [
+      -770.0,
+      -1000.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1260_20_330.SM_HM_1260_20_330"
+  },
+  {
+    "label": "HM_South_Wall_770",
+    "class": "StaticMeshActor",
+    "location": [
+      770.0,
+      -1000.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1260_20_330.SM_HM_1260_20_330"
+  },
+  {
+    "label": "HM_Entry_Header",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1000.0,
+      295.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_280_20_70.SM_HM_280_20_70"
+  },
+  {
+    "label": "HM_Outer_Wall_-1400",
+    "class": "StaticMeshActor",
+    "location": [
+      -1400.0,
+      200.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_2400_330.SM_HM_20_2400_330"
+  },
+  {
+    "label": "HM_Outer_Wall_1400",
+    "class": "StaticMeshActor",
+    "location": [
+      1400.0,
+      200.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_2400_330.SM_HM_20_2400_330"
+  },
+  {
+    "label": "HM_North_Wing_Wall_-1050",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      1400.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_20_330.SM_HM_700_20_330"
+  },
+  {
+    "label": "HM_North_Wing_Wall_1050",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      1400.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_20_330.SM_HM_700_20_330"
+  },
+  {
+    "label": "HM_Roof_Wing_-1050",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      200.0,
+      350.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_740_2440_40.SM_HM_740_2440_40"
+  },
+  {
+    "label": "HM_Roof_Wing_1050",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      200.0,
+      350.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_740_2440_40.SM_HM_740_2440_40"
+  },
+  {
+    "label": "HM_Roof_Living",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -500.0,
+      710.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1200_1080_40.SM_HM_1200_1080_40"
+  },
+  {
+    "label": "HM_Clerestory_South",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1000.0,
+      510.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1100_6_360.SM_HM_1100_6_360"
+  },
+  {
+    "label": "HM_Clerestory_Side_-550",
+    "class": "StaticMeshActor",
+    "location": [
+      -550.0,
+      -500.0,
+      510.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_6_1000_360.SM_HM_6_1000_360"
+  },
+  {
+    "label": "HM_Clerestory_Side_550",
+    "class": "StaticMeshActor",
+    "location": [
+      550.0,
+      -500.0,
+      510.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_6_1000_360.SM_HM_6_1000_360"
+  },
+  {
+    "label": "HM_Foyer_Canopy",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -790.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_480_400_30.SM_HM_480_400_30"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-920",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -920.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-890",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -890.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-860",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -860.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-830",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -830.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-800",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -800.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-770",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -770.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-740",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -740.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-710",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -710.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-680",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -680.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-650",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -650.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-620",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -620.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_-255_-590",
+    "class": "StaticMeshActor",
+    "location": [
+      -255.0,
+      -590.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-920",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -920.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-890",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -890.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-860",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -860.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-830",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -830.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-800",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -800.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-770",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -770.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-740",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -740.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-710",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -710.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-680",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -680.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-650",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -650.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-620",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -620.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Foyer_Slat_255_-590",
+    "class": "StaticMeshActor",
+    "location": [
+      255.0,
+      -590.0,
+      150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_9_9_300.SM_HM_9_9_300"
+  },
+  {
+    "label": "HM_Public_Partition_-560",
+    "class": "StaticMeshActor",
+    "location": [
+      -560.0,
+      -790.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_420_330.SM_HM_20_420_330"
+  },
+  {
+    "label": "HM_Public_Pier_-560",
+    "class": "StaticMeshActor",
+    "location": [
+      -560.0,
+      -100.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_200_330.SM_HM_20_200_330"
+  },
+  {
+    "label": "HM_Public_Header_-560",
+    "class": "StaticMeshActor",
+    "location": [
+      -560.0,
+      -400.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_400_40.SM_HM_20_400_40"
+  },
+  {
+    "label": "HM_Public_Partition_560",
+    "class": "StaticMeshActor",
+    "location": [
+      560.0,
+      -790.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_420_330.SM_HM_20_420_330"
+  },
+  {
+    "label": "HM_Public_Pier_560",
+    "class": "StaticMeshActor",
+    "location": [
+      560.0,
+      -100.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_200_330.SM_HM_20_200_330"
+  },
+  {
+    "label": "HM_Public_Header_560",
+    "class": "StaticMeshActor",
+    "location": [
+      560.0,
+      -400.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_400_40.SM_HM_20_400_40"
+  },
+  {
+    "label": "HM_Living_Glass_-350",
+    "class": "StaticMeshActor",
+    "location": [
+      -350.0,
+      0.0,
+      162.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325"
+  },
+  {
+    "label": "HM_Living_Glass_350",
+    "class": "StaticMeshActor",
+    "location": [
+      505.0,
+      0.0,
+      162.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.2619047619047619,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325"
+  },
+  {
+    "label": "HM_Living_Mullion_-570",
+    "class": "StaticMeshActor",
+    "location": [
+      -570.0,
+      0.0,
+      345.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_7_10_690.SM_HM_7_10_690"
+  },
+  {
+    "label": "HM_Living_Mullion_-140",
+    "class": "StaticMeshActor",
+    "location": [
+      -140.0,
+      0.0,
+      345.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_7_10_690.SM_HM_7_10_690"
+  },
+  {
+    "label": "HM_Living_Mullion_140",
+    "class": "StaticMeshActor",
+    "location": [
+      140.0,
+      0.0,
+      345.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_7_10_690.SM_HM_7_10_690"
+  },
+  {
+    "label": "HM_Living_Mullion_570",
+    "class": "StaticMeshActor",
+    "location": [
+      570.0,
+      0.0,
+      345.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_7_10_690.SM_HM_7_10_690"
+  },
+  {
+    "label": "HM_Living_Facade_Beam",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      0.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1160_22_28.SM_HM_1160_22_28"
+  },
+  {
+    "label": "HM_Living_Canopy",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      90.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1160_180_24.SM_HM_1160_180_24"
+  },
+  {
+    "label": "HM_Wing_Glass_-700_75",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      75.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_150_330.SM_HM_4_150_330"
+  },
+  {
+    "label": "HM_Wing_Glass_-700_525",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      525.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_390_330.SM_HM_4_390_330"
+  },
+  {
+    "label": "HM_Wing_Glass_-700_1000",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      1000.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_320_330.SM_HM_4_320_330"
+  },
+  {
+    "label": "HM_Wing_Glass_-700_1350",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      1350.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_100_330.SM_HM_4_100_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      0.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_150",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      150.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_330",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      330.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_720",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      720.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_840",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      840.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_1160",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      1160.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_1300",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      1300.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_-700_1400",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      1400.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Beam_-700",
+    "class": "StaticMeshActor",
+    "location": [
+      -700.0,
+      700.0,
+      325.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_18_1400_20.SM_HM_18_1400_20"
+  },
+  {
+    "label": "HM_Wing_Glass_700_75",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      75.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_150_330.SM_HM_4_150_330"
+  },
+  {
+    "label": "HM_Wing_Glass_700_525",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      525.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_390_330.SM_HM_4_390_330"
+  },
+  {
+    "label": "HM_Wing_Glass_700_1000",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      1000.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_320_330.SM_HM_4_320_330"
+  },
+  {
+    "label": "HM_Wing_Glass_700_1350",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      1350.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_100_330.SM_HM_4_100_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_0",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      0.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_150",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      150.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_330",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      330.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_720",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      720.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_840",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      840.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_1160",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      1160.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_1300",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      1300.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Mullion_700_1400",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      1400.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_10_7_330.SM_HM_10_7_330"
+  },
+  {
+    "label": "HM_Wing_Beam_700",
+    "class": "StaticMeshActor",
+    "location": [
+      700.0,
+      700.0,
+      325.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_18_1400_20.SM_HM_18_1400_20"
+  },
+  {
+    "label": "HM_Private_Partition_600",
+    "class": "StaticMeshActor",
+    "location": [
+      -1160.0,
+      600.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_480_18_330.SM_HM_480_18_330"
+  },
+  {
+    "label": "HM_Private_Header_600",
+    "class": "StaticMeshActor",
+    "location": [
+      -810.0,
+      600.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_220_18_40.SM_HM_220_18_40"
+  },
+  {
+    "label": "HM_Private_Partition_1000",
+    "class": "StaticMeshActor",
+    "location": [
+      -1160.0,
+      1000.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_480_18_330.SM_HM_480_18_330"
+  },
+  {
+    "label": "HM_Private_Header_1000",
+    "class": "StaticMeshActor",
+    "location": [
+      -810.0,
+      1000.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_220_18_40.SM_HM_220_18_40"
+  },
+  {
+    "label": "HM_Wellness_Partition",
+    "class": "StaticMeshActor",
+    "location": [
+      1180.0,
+      700.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_440_18_330.SM_HM_440_18_330"
+  },
+  {
+    "label": "HM_Wellness_Header",
+    "class": "StaticMeshActor",
+    "location": [
+      830.0,
+      700.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_260_18_40.SM_HM_260_18_40"
+  },
+  {
+    "label": "HM_Pool_Base",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      1090.0,
+      -245.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.588235294117647,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_880_1020_30.SM_HM_880_1020_30"
+  },
+  {
+    "label": "HM_Pool_Side_-440",
+    "class": "StaticMeshActor",
+    "location": [
+      -440.0,
+      1090.0,
+      -115.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.588235294117647,
+      1.9166666666666667
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_1020_120.SM_HM_20_1020_120"
+  },
+  {
+    "label": "HM_Pool_Side_440",
+    "class": "StaticMeshActor",
+    "location": [
+      440.0,
+      1090.0,
+      -115.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.588235294117647,
+      1.9166666666666667
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_20_1020_120.SM_HM_20_1020_120"
+  },
+  {
+    "label": "HM_Pool_End_280",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      280.0,
+      -115.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.9166666666666667
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_20_120.SM_HM_900_20_120"
+  },
+  {
+    "label": "HM_Pool_End_1300",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      1900.0,
+      -115.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.9166666666666667
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_20_120.SM_HM_900_20_120"
+  },
+  {
+    "label": "HM_Pool_Coping_-451",
+    "class": "StaticMeshActor",
+    "location": [
+      -451.0,
+      1090.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.5769230769230769,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_42_1040_12.SM_HM_42_1040_12"
+  },
+  {
+    "label": "HM_Pool_Coping_451",
+    "class": "StaticMeshActor",
+    "location": [
+      451.0,
+      1090.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.5769230769230769,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_42_1040_12.SM_HM_42_1040_12"
+  },
+  {
+    "label": "HM_Pool_Coping_270",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      270.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_940_42_12.SM_HM_940_42_12"
+  },
+  {
+    "label": "HM_Pool_Coping_1310",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      1910.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_940_42_12.SM_HM_940_42_12"
+  },
+  {
+    "label": "HM_Pool_Step_0",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      300.0,
+      -125.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      2.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_105.SM_HM_400_30_105"
+  },
+  {
+    "label": "HM_Pool_Step_1",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      330.0,
+      -135.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      2.111111111111111
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_90.SM_HM_400_30_90"
+  },
+  {
+    "label": "HM_Pool_Step_2",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      360.0,
+      -145.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      2.2666666666666666
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_75.SM_HM_400_30_75"
+  },
+  {
+    "label": "HM_Pool_Step_3",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      390.0,
+      -155.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      2.5
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_60.SM_HM_400_30_60"
+  },
+  {
+    "label": "HM_Pool_Step_4",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      420.0,
+      -165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      2.888888888888889
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_45.SM_HM_400_30_45"
+  },
+  {
+    "label": "HM_Pool_Step_5",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      450.0,
+      -175.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      3.6666666666666665
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_30.SM_HM_400_30_30"
+  },
+  {
+    "label": "HM_Pool_Step_6",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      480.0,
+      -185.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      6.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_15.SM_HM_400_30_15"
+  },
+  {
+    "label": "HM_Mission_Feature_Wall",
+    "class": "StaticMeshActor",
+    "location": [
+      -1280.0,
+      -500.0,
+      165.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_35_650_330.SM_HM_35_650_330"
+  },
+  {
+    "label": "HM_Gate_Jamb_-630",
+    "class": "StaticMeshActor",
+    "location": [
+      -1250.0,
+      -630.0,
+      130.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_35_16_260.SM_HM_35_16_260"
+  },
+  {
+    "label": "HM_Gate_Jamb_-370",
+    "class": "StaticMeshActor",
+    "location": [
+      -1250.0,
+      -370.0,
+      130.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_35_16_260.SM_HM_35_16_260"
+  },
+  {
+    "label": "HM_Gate_Header",
+    "class": "StaticMeshActor",
+    "location": [
+      -1250.0,
+      -500.0,
+      265.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_35_280_16.SM_HM_35_280_16"
+  },
+  {
+    "label": "HM_Gate_Light_-620",
+    "class": "StaticMeshActor",
+    "location": [
+      -1229.0,
+      -620.0,
+      130.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_2_3_230.SM_HM_2_3_230"
+  },
+  {
+    "label": "HM_Gate_Light_-380",
+    "class": "StaticMeshActor",
+    "location": [
+      -1229.0,
+      -380.0,
+      130.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_2_3_230.SM_HM_2_3_230"
+  },
+  {
+    "label": "HM_Mission_Worktop",
+    "class": "StaticMeshActor",
+    "location": [
+      -950.0,
+      -890.0,
+      90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_300_70_8.SM_HM_300_70_8"
+  },
+  {
+    "label": "HM_Mission_Cabinet_-1060",
+    "class": "StaticMeshActor",
+    "location": [
+      -1060.0,
+      -890.0,
+      43.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_70_65_86.SM_HM_70_65_86"
+  },
+  {
+    "label": "HM_Mission_Cabinet_-840",
+    "class": "StaticMeshActor",
+    "location": [
+      -840.0,
+      -890.0,
+      43.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_70_65_86.SM_HM_70_65_86"
+  },
+  {
+    "label": "HM_Kitchen_Island",
+    "class": "StaticMeshActor",
+    "location": [
+      990.0,
+      -430.0,
+      47.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_300_105_94.SM_HM_300_105_94"
+  },
+  {
+    "label": "HM_Kitchen_Island_Top",
+    "class": "StaticMeshActor",
+    "location": [
+      990.0,
+      -430.0,
+      97.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_310_115_7.SM_HM_310_115_7"
+  },
+  {
+    "label": "HM_Wardrobe_Cabinet_730",
+    "class": "StaticMeshActor",
+    "location": [
+      -1345.0,
+      730.0,
+      135.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_90_145_270.SM_HM_90_145_270"
+  },
+  {
+    "label": "HM_Wardrobe_Front_730",
+    "class": "StaticMeshActor",
+    "location": [
+      -1295.0,
+      730.0,
+      135.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_5_135_260.SM_HM_5_135_260"
+  },
+  {
+    "label": "HM_Wardrobe_Cabinet_890",
+    "class": "StaticMeshActor",
+    "location": [
+      -1345.0,
+      890.0,
+      135.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_90_145_270.SM_HM_90_145_270"
+  },
+  {
+    "label": "HM_Wardrobe_Front_890",
+    "class": "StaticMeshActor",
+    "location": [
+      -1295.0,
+      890.0,
+      135.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_5_135_260.SM_HM_5_135_260"
+  },
+  {
+    "label": "HM_Bath_Mirror",
+    "class": "StaticMeshActor",
+    "location": [
+      -1240.0,
+      1375.0,
+      180.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_260_3_125.SM_HM_260_3_125"
+  },
+  {
+    "label": "HM_Shower_Base",
+    "class": "StaticMeshActor",
+    "location": [
+      -860.0,
+      1200.0,
+      3.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_230_280_6.SM_HM_230_280_6"
+  },
+  {
+    "label": "HM_Shower_Glass",
+    "class": "StaticMeshActor",
+    "location": [
+      -980.0,
+      1260.0,
+      120.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_180_240.SM_HM_3_180_240"
+  },
+  {
+    "label": "HM_Living_Cove_-520",
+    "class": "StaticMeshActor",
+    "location": [
+      -520.0,
+      -490.0,
+      680.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_940_3.SM_HM_3_940_3"
+  },
+  {
+    "label": "HM_Living_Cove_520",
+    "class": "StaticMeshActor",
+    "location": [
+      520.0,
+      -490.0,
+      680.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_940_3.SM_HM_3_940_3"
+  },
+  {
+    "label": "HM_Wing_Cove_-1360",
+    "class": "StaticMeshActor",
+    "location": [
+      -1360.0,
+      180.0,
+      320.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_2280_3.SM_HM_3_2280_3"
+  },
+  {
+    "label": "HM_Wing_Cove_1360",
+    "class": "StaticMeshActor",
+    "location": [
+      1360.0,
+      180.0,
+      320.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_2280_3.SM_HM_3_2280_3"
+  },
+  {
+    "label": "HM_Public_Cove_-1050",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      -950.0,
+      320.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_630_3_3.SM_HM_630_3_3"
+  },
+  {
+    "label": "HM_Public_Cove_1050",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      -950.0,
+      320.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_630_3_3.SM_HM_630_3_3"
+  },
+  {
+    "label": "HM_Garden_Wall_-1730",
+    "class": "StaticMeshActor",
+    "location": [
+      -1730.0,
+      600.0,
+      15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.2,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_25_3000_330.SM_HM_25_3000_330"
+  },
+  {
+    "label": "HM_Garden_Wall_1730",
+    "class": "StaticMeshActor",
+    "location": [
+      1730.0,
+      600.0,
+      15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.2,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_25_3000_330.SM_HM_25_3000_330"
+  },
+  {
+    "label": "HM_Garden_North_Wall",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      2350.0,
+      25.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3480_25_350.SM_HM_3480_25_350"
+  },
+  {
+    "label": "HM_Planter_North_-1050",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      2170.0,
+      22.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_150_44.SM_HM_700_150_44"
+  },
+  {
+    "label": "HM_Planter_Soil_-1050",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      2170.0,
+      46.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_670_120_4.SM_HM_670_120_4"
+  },
+  {
+    "label": "HM_Planter_North_1050",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      2170.0,
+      22.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_150_44.SM_HM_700_150_44"
+  },
+  {
+    "label": "HM_Planter_Soil_1050",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      2170.0,
+      46.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_670_120_4.SM_HM_670_120_4"
+  },
+  {
+    "label": "HM_PlayerStart",
+    "class": "PlayerStart",
+    "location": [
+      0.0,
+      -740.0,
+      100.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 89.99999999999999,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Sun",
+    "class": "DirectionalLight",
+    "location": [
+      0.0,
+      0.0,
+      1500.0
+    ],
+    "rotation": {
+      "pitch": -30.000000000000004,
+      "yaw": -62.000000000000014,
+      "roll": -0.0
+    },
+    "scale": [
+      2.5,
+      2.5,
+      2.5
+    ]
+  },
+  {
+    "label": "HM_Sky",
+    "class": "SkyLight",
+    "location": [
+      0.0,
+      0.0,
+      1600.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Atmosphere",
+    "class": "SkyAtmosphere",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Living_Rug",
+    "class": "StaticMeshActor",
+    "location": [
+      -265.1359619140625,
+      -335.3284545898438,
+      1.4440593719482422
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.6,
+      1.6,
+      1.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Carpet.SM_Carpet"
+  },
+  {
+    "label": "HM_Living_Sofa",
+    "class": "StaticMeshActor",
+    "location": [
+      -297.01739807128905,
+      -473.20581741333007,
+      1.8347129821777344
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Sofa.SM_Sofa"
+  },
+  {
+    "label": "HM_Living_Sofa_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -300.0,
+      -510.0,
+      44.74237098693848
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      2.5238405102539065,
+      0.9681341162109376,
+      0.8548474197387697
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Living_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      -294.9999523162842,
+      -290.00003242492676,
+      2.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_1.SM_Coffe_Table_1"
+  },
+  {
+    "label": "HM_Living_Table_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -295.0,
+      -290.0,
+      26.163354873657227
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.4319974395751953,
+      0.4320229858398437,
+      0.48326709747314456
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Living_Side_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      -440.00000762939453,
+      -169.99999809265137,
+      1.9942893981933594
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_2.SM_Coffe_Table_2"
+  },
+  {
+    "label": "HM_Living_Armchair",
+    "class": "StaticMeshActor",
+    "location": [
+      -300.0,
+      -118.30038032531738,
+      2.000004196166992
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair"
+  },
+  {
+    "label": "HM_Living_Armchair_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -300.0,
+      -120.0,
+      46.409898376464845
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.730839926147461,
+      0.8516429614257812,
+      0.8881979675292969
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Window_Chair",
+    "class": "StaticMeshActor",
+    "location": [
+      51.147184752069506,
+      -408.8528152479305,
+      2.000004005432129
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 134.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.05,
+      1.05,
+      1.05
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair"
+  },
+  {
+    "label": "HM_Window_Chair_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      50.0,
+      -410.0,
+      44.39126663208008
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 134.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6976199295043944,
+      0.8129319177246095,
+      0.8478253326416016
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Window_Ottoman",
+    "class": "StaticMeshActor",
+    "location": [
+      100.0,
+      -470.0,
+      1.9594881057739257
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Ottoman.SM_Ottoman"
+  },
+  {
+    "label": "HM_Window_Ottoman_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      100.0,
+      -470.0,
+      24.000004196166994
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.5604328359985352,
+      0.5584294012451172,
+      0.4400000839233399
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Window_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      95.12194442749023,
+      -531.6943798065186,
+      1.9965763092041016
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_3.SM_Coffe_Table_3"
+  },
+  {
+    "label": "HM_Living_Lamp",
+    "class": "StaticMeshActor",
+    "location": [
+      -465.6285858154297,
+      -550.0,
+      2.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Floor_Lamp.SM_Floor_Lamp"
+  },
+  {
+    "label": "HM_Living_Books",
+    "class": "StaticMeshActor",
+    "location": [
+      -315.1919362831806,
+      -289.01754931661696,
+      43.000004053115845
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 20.00000000000001,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Stack_of_Books_1.SM_Stack_of_Books_1"
+  },
+  {
+    "label": "HM_Living_Cup",
+    "class": "StaticMeshActor",
+    "location": [
+      -265.00000286102295,
+      -285.00000524520874,
+      42.98441696166992
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Cup.SM_Cup"
+  },
+  {
+    "label": "HM_Window_Vase",
+    "class": "StaticMeshActor",
+    "location": [
+      95.00010585784912,
+      -529.9978423118591,
+      56.99959754943848
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Vase_3.SM_Vase_3"
+  },
+  {
+    "label": "HM_Kitchen_Fitted",
+    "class": "StaticMeshActor",
+    "location": [
+      1032.0991516113281,
+      -502.8133544921875,
+      3.0517578125e-05
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/SM_Kitchen.SM_Kitchen"
+  },
+  {
+    "label": "HM_Dining_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      1032.0743026733398,
+      -124.99995422363281,
+      -3.814697265625e-06
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Table.SM_Table"
+  },
+  {
+    "label": "HM_Dining_Table_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1060.0,
+      -120.0,
+      44.07500457763672
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      2.063668078613281,
+      0.968,
+      0.8815000915527343
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Chair_0",
+    "class": "StaticMeshActor",
+    "location": [
+      1045.4387073516846,
+      -234.7073040008545,
+      0.054943084716796875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair.SM_Chair"
+  },
+  {
+    "label": "HM_Dining_Chair_0_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1045.0,
+      -235.0,
+      45.53493118286133
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.408969580078125,
+      0.433878564453125,
+      0.9106986236572265
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Chair_1",
+    "class": "StaticMeshActor",
+    "location": [
+      1185.4387073516846,
+      -234.7073040008545,
+      0.054943084716796875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair.SM_Chair"
+  },
+  {
+    "label": "HM_Dining_Chair_1_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1185.0,
+      -235.0,
+      45.53493118286133
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.408969580078125,
+      0.433878564453125,
+      0.9106986236572265
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Chair_2",
+    "class": "StaticMeshActor",
+    "location": [
+      1044.5612926483154,
+      -10.292695999145508,
+      0.054943084716796875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair.SM_Chair"
+  },
+  {
+    "label": "HM_Dining_Chair_2_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1045.0,
+      -10.0,
+      45.53493118286133
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.408969580078125,
+      0.433878564453125,
+      0.9106986236572265
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Chair_3",
+    "class": "StaticMeshActor",
+    "location": [
+      1184.5612926483154,
+      -10.292695999145508,
+      0.054943084716796875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair.SM_Chair"
+  },
+  {
+    "label": "HM_Dining_Chair_3_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1185.0,
+      -10.0,
+      45.53493118286133
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.408969580078125,
+      0.433878564453125,
+      0.9106986236572265
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Chair_4",
+    "class": "StaticMeshActor",
+    "location": [
+      935.2926959991455,
+      -120.43870735168457,
+      0.054943084716796875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -90.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair.SM_Chair"
+  },
+  {
+    "label": "HM_Dining_Chair_4_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      935.0,
+      -120.0,
+      45.53493118286133
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -90.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      0.408969580078125,
+      0.433878564453125,
+      0.9106986236572265
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Chair_5",
+    "class": "StaticMeshActor",
+    "location": [
+      1304.7073040008545,
+      -119.56129264831543,
+      0.054943084716796875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 89.99999999999999,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair.SM_Chair"
+  },
+  {
+    "label": "HM_Dining_Chair_5_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1305.0,
+      -120.0,
+      45.53493118286133
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 89.99999999999999,
+      "roll": -0.0
+    },
+    "scale": [
+      0.408969580078125,
+      0.433878564453125,
+      0.9106986236572265
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Dining_Centerpiece",
+    "class": "StaticMeshActor",
+    "location": [
+      1064.9967651367188,
+      -119.98152446746826,
+      88.0000057220459
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Kitchen_Table_Decor.SM_Kitchen_Table_Decor"
+  },
+  {
+    "label": "HM_Island_Fruit",
+    "class": "StaticMeshActor",
+    "location": [
+      919.6457977294922,
+      -430.3107976913452,
+      101.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Bowl_with_Oranges.SM_Bowl_with_Oranges"
+  },
+  {
+    "label": "HM_Island_Decor",
+    "class": "StaticMeshActor",
+    "location": [
+      1089.926308631897,
+      -430.17640495300293,
+      101.00000095367432
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Kitchen_Decor_12.SM_Kitchen_Decor_12"
+  },
+  {
+    "label": "HM_Dining_Pendant",
+    "class": "StaticMeshActor",
+    "location": [
+      1049.7081861495972,
+      -119.99999904632568,
+      315.1405258178711
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/SM_Ceiling_Lamp_2.SM_Ceiling_Lamp_2"
+  },
+  {
+    "label": "HM_Bedroom_Rug",
+    "class": "StaticMeshActor",
+    "location": [
+      -1130.1274642944336,
+      299.6920738220215,
+      1.416305661201477
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Carpet.SM_Carpet"
+  },
+  {
+    "label": "HM_Master_Bed",
+    "class": "StaticMeshActor",
+    "location": [
+      -1242.4372211456298,
+      298.6343078613281,
+      1.9494874954223633
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.05,
+      1.05,
+      1.05
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Bed.SM_Bed"
+  },
+  {
+    "label": "HM_Master_Bed_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -1220.0,
+      300.0,
+      49.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      2.19692124206543,
+      2.0767557019042973,
+      0.95
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Bedside_70",
+    "class": "StaticMeshActor",
+    "location": [
+      -1304.6521663665771,
+      109.43945693969727,
+      2.0020065307617188
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Bed_Table.SM_Bed_Table"
+  },
+  {
+    "label": "HM_Bedside_70_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -1305.0,
+      110.0,
+      27.50387954711914
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.34317489013671876,
+      0.3518298706054688,
+      0.5100775909423828
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Bed_Lamp_70",
+    "class": "StaticMeshActor",
+    "location": [
+      -1315.0,
+      117.99999833106995,
+      68.59340000152588
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Point_Lamp_1.SM_Point_Lamp_1"
+  },
+  {
+    "label": "HM_Bedside_410",
+    "class": "StaticMeshActor",
+    "location": [
+      -1304.6521663665771,
+      489.43945693969727,
+      2.0020065307617188
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Bed_Table.SM_Bed_Table"
+  },
+  {
+    "label": "HM_Bedside_410_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -1305.0,
+      490.0,
+      27.50387954711914
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.34317489013671876,
+      0.3518298706054688,
+      0.5100775909423828
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Bed_Lamp_410",
+    "class": "StaticMeshActor",
+    "location": [
+      -1305.0,
+      489.99999833106995,
+      68.59340000152588
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Point_Lamp_1.SM_Point_Lamp_1"
+  },
+  {
+    "label": "HM_Bedroom_Chair",
+    "class": "StaticMeshActor",
+    "location": [
+      -955.772554397583,
+      481.3381034682245,
+      2.0000038146972656
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -150.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair"
+  },
+  {
+    "label": "HM_Bedroom_Chair_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -955.0,
+      480.0,
+      42.37263488769531
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -150.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6643999328613281,
+      0.7742208740234375,
+      0.8074526977539063
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Wardrobe_Seat",
+    "class": "StaticMeshActor",
+    "location": [
+      -1100.0,
+      720.0,
+      -0.03682899475097656
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Ottoman.SM_Ottoman"
+  },
+  {
+    "label": "HM_Wardrobe_Seat_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -1100.0,
+      720.0,
+      20.000003814697266
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.5094843963623047,
+      0.5076630920410156,
+      0.4000000762939453
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Wardrobe_Bag",
+    "class": "StaticMeshActor",
+    "location": [
+      -1340.2326335906982,
+      730.173357963562,
+      272.9845733642578
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Bag_1.SM_Bag_1"
+  },
+  {
+    "label": "HM_Bath_Vase",
+    "class": "StaticMeshActor",
+    "location": [
+      -1350.0039501190186,
+      1279.9960479736328,
+      91.00000095367432
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Vase_5.SM_Vase_5"
+  },
+  {
+    "label": "HM_Shower_Head",
+    "class": "StaticMeshActor",
+    "location": [
+      -835.0,
+      1370.0,
+      225.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.3,
+      0.25,
+      0.03
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Shower_Riser",
+    "class": "StaticMeshActor",
+    "location": [
+      -835.0,
+      1380.0,
+      135.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.03,
+      0.03,
+      1.8
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Gym_Mirror",
+    "class": "StaticMeshActor",
+    "location": [
+      1385.0,
+      360.0,
+      170.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.03,
+      5.8,
+      1.9
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Wellness_Rest",
+    "class": "StaticMeshActor",
+    "location": [
+      1239.0068232108497,
+      818.8163779934488,
+      3.814697265625e-06
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -40.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair"
+  },
+  {
+    "label": "HM_Wellness_Rest_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      1240.0,
+      820.0,
+      40.37263488769531
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -40.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6643999328613281,
+      0.7742208740234375,
+      0.8074526977539063
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Wellness_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      1330.1219444274902,
+      968.3056201934814,
+      -0.0034236907958984375
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_3.SM_Coffe_Table_3"
+  },
+  {
+    "label": "HM_Wellness_Vase",
+    "class": "StaticMeshActor",
+    "location": [
+      1329.9999639987946,
+      970.000732421875,
+      40.99825096130371
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Vase_7.SM_Vase_7"
+  },
+  {
+    "label": "HM_Mission_Chair",
+    "class": "StaticMeshActor",
+    "location": [
+      -939.9991912841797,
+      -760.0000019073486,
+      0.000835418701171875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair_2.SM_Chair_2"
+  },
+  {
+    "label": "HM_Mission_Chair_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -940.0,
+      -760.0,
+      39.151283264160156
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.50806357421875,
+      0.4748149932861328,
+      0.7830256652832032
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Mission_Book",
+    "class": "StaticMeshActor",
+    "location": [
+      -949.9964218139648,
+      -889.9999322891235,
+      93.90587878227234
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Opened_Book.SM_Opened_Book"
+  },
+  {
+    "label": "HM_Mission_Bag",
+    "class": "StaticMeshActor",
+    "location": [
+      -840.0524663925171,
+      -869.9923162460327,
+      93.98785781860352
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Bag_3.SM_Bag_3"
+  },
+  {
+    "label": "HM_Trophy_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -1129.5161101818085,
+      -60.60118532180786,
+      92.20000286102295
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_2.SM_Decor_2"
+  },
+  {
+    "label": "HM_Trophy_1",
+    "class": "StaticMeshActor",
+    "location": [
+      -1030.000001483036,
+      -60.00000205521557,
+      92.19995374679566
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 13.000000000000002,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_3.SM_Decor_3"
+  },
+  {
+    "label": "HM_Trophy_2",
+    "class": "StaticMeshActor",
+    "location": [
+      -929.9999971570425,
+      -60.000003653431484,
+      92.20000381469727
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 26.000000000000014,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_4.SM_Decor_4"
+  },
+  {
+    "label": "HM_Trophy_3",
+    "class": "StaticMeshActor",
+    "location": [
+      -1130.1884294097242,
+      -60.175684536197494,
+      162.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 39.000000000000014,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_9.SM_Decor_9"
+  },
+  {
+    "label": "HM_Trophy_4",
+    "class": "StaticMeshActor",
+    "location": [
+      -1030.0,
+      -60.0,
+      162.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 52.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Vase_10.SM_Vase_10"
+  },
+  {
+    "label": "HM_Trophy_5",
+    "class": "StaticMeshActor",
+    "location": [
+      -929.8833911589294,
+      -60.048272469140684,
+      162.20001287460326
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 64.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Stack_of_Books_2.SM_Stack_of_Books_2"
+  },
+  {
+    "label": "HM_Plant_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -482.26658897399903,
+      -830.4889503479004,
+      -0.03184661865234375
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.8,
+      1.8,
+      1.8
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_1",
+    "class": "StaticMeshActor",
+    "location": [
+      464.89708729876753,
+      -841.7036635832728,
+      -0.0253692626953125
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 43.00000000000002,
+      "roll": -0.0
+    },
+    "scale": [
+      1.7,
+      1.7,
+      1.7
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Plant_2",
+    "class": "StaticMeshActor",
+    "location": [
+      -1359.194271293214,
+      -160.2873341283904,
+      -0.02830810546875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 86.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.6,
+      1.6,
+      1.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_3",
+    "class": "StaticMeshActor",
+    "location": [
+      1351.2645198574567,
+      -704.9028930130627,
+      -0.023876953125000003
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 128.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.6,
+      1.6,
+      1.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Plant_4",
+    "class": "StaticMeshActor",
+    "location": [
+      -770.9803924167827,
+      50.72861000299679,
+      -0.026538848876953125
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 172.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_5",
+    "class": "StaticMeshActor",
+    "location": [
+      -1118.3673976327377,
+      536.5713515283577,
+      -0.01790771484375
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 139.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.2,
+      1.2,
+      1.2
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Plant_6",
+    "class": "StaticMeshActor",
+    "location": [
+      -741.4390828070246,
+      957.2374438929616,
+      -0.023000335693359377
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -102.00000000000009,
+      "roll": 0.0
+    },
+    "scale": [
+      1.3,
+      1.3,
+      1.3
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_7",
+    "class": "StaticMeshActor",
+    "location": [
+      1349.3945207613729,
+      855.3456133916475,
+      -0.0253692626953125
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -58.99999999999999,
+      "roll": 0.0
+    },
+    "scale": [
+      1.7,
+      1.7,
+      1.7
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Plant_8",
+    "class": "StaticMeshActor",
+    "location": [
+      1342.3584987138536,
+      1330.4364482236815,
+      -0.026538848876953125
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -16.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_9",
+    "class": "StaticMeshActor",
+    "location": [
+      745.2575048446704,
+      1309.7960766046185,
+      -0.0223846435546875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 27.000000000000018,
+      "roll": -0.0
+    },
+    "scale": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Plant_10",
+    "class": "StaticMeshActor",
+    "location": [
+      -610.2144650945638,
+      203.56478132986177,
+      -0.02476959228515625
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 69.99999999999996,
+      "roll": -0.0
+    },
+    "scale": [
+      1.4,
+      1.4,
+      1.4
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_11",
+    "class": "StaticMeshActor",
+    "location": [
+      599.8810997821582,
+      205.5711768577003,
+      -0.020892333984374997
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 113.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.4,
+      1.4,
+      1.4
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Plant_12",
+    "class": "StaticMeshActor",
+    "location": [
+      -594.2929822652885,
+      1949.361518666828,
+      -0.02476959228515625
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 156.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.4,
+      1.4,
+      1.4
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Plant_13",
+    "class": "StaticMeshActor",
+    "location": [
+      604.4097406917929,
+      1959.5724503318697,
+      -0.020892333984374997
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -161.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.4,
+      1.4,
+      1.4
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Garden_Plant_-1_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -782.9480661392212,
+      2180.0394412994383,
+      48.96638412475586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Garden_Plant_-1_1",
+    "class": "StaticMeshActor",
+    "location": [
+      -909.5746799103064,
+      2166.098077169465,
+      48.97164611816406
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 64.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Garden_Plant_-1_2",
+    "class": "StaticMeshActor",
+    "location": [
+      -1039.3678017357608,
+      2153.6279774094583,
+      48.96638412475586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 129.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Garden_Plant_-1_3",
+    "class": "StaticMeshActor",
+    "location": [
+      -1169.0704061335625,
+      2169.003699525083,
+      48.97164611816406
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -165.00000000000003,
+      "roll": 0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Garden_Plant_-1_4",
+    "class": "StaticMeshActor",
+    "location": [
+      -1297.8646722830154,
+      2181.0080252339785,
+      48.96638412475586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -100.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Garden_Plant_1_0",
+    "class": "StaticMeshActor",
+    "location": [
+      757.0519338607788,
+      2180.0394412994383,
+      48.96638412475586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Garden_Plant_1_1",
+    "class": "StaticMeshActor",
+    "location": [
+      900.4253200896936,
+      2166.098077169465,
+      48.97164611816406
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 64.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Garden_Plant_1_2",
+    "class": "StaticMeshActor",
+    "location": [
+      1040.6321982642392,
+      2153.6279774094583,
+      48.96638412475586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 129.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Garden_Plant_1_3",
+    "class": "StaticMeshActor",
+    "location": [
+      1180.9295938664375,
+      2169.003699525083,
+      48.97164611816406
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -165.00000000000003,
+      "roll": 0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Garden_Plant_1_4",
+    "class": "StaticMeshActor",
+    "location": [
+      1322.1353277169846,
+      2181.0080252339785,
+      48.96638412475586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -100.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      1.9,
+      1.9,
+      1.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Terrace_Chair_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -230.0,
+      146.69961967468262,
+      4.1961669921875e-06
+    ],
+    "rotation": {
+      "pitch": 4.841188319472532e-17,
+      "yaw": 1.1368683772161597e-13,
+      "roll": 1.2639060322074976e-14
+    },
+    "scale": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair"
+  },
+  {
+    "label": "HM_Terrace_Chair_0_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -230.0,
+      145.0,
+      44.409898376464845
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.730839926147461,
+      0.8516429614257812,
+      0.8881979675292969
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Terrace_Chair_1",
+    "class": "StaticMeshActor",
+    "location": [
+      230.0,
+      146.69961967468262,
+      4.1961669921875e-06
+    ],
+    "rotation": {
+      "pitch": 4.841188319472753e-17,
+      "yaw": 2.2737367544323198e-13,
+      "roll": 1.3637754059188101e-14
+    },
+    "scale": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Armchair.SM_Armchair"
+  },
+  {
+    "label": "HM_Terrace_Chair_1_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      230.0,
+      145.0,
+      44.409898376464845
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.730839926147461,
+      0.8516429614257812,
+      0.8881979675292969
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Terrace_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      -370.00000762939453,
+      145.00000190734863,
+      -0.005710601806640625
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_2.SM_Coffe_Table_2"
+  },
+  {
+    "label": "HM_Look",
+    "class": "PostProcessVolume",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Living_Key",
+    "class": "RectLight",
+    "location": [
+      -200.0,
+      -300.0,
+      655.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Living_Window",
+    "class": "RectLight",
+    "location": [
+      -200.0,
+      -790.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Foyer_Light",
+    "class": "RectLight",
+    "location": [
+      0.0,
+      -770.0,
+      295.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Kitchen_Light",
+    "class": "RectLight",
+    "location": [
+      990.0,
+      -650.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Dining_Light",
+    "class": "RectLight",
+    "location": [
+      1050.0,
+      -120.0,
+      310.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Mission_Light",
+    "class": "RectLight",
+    "location": [
+      -1000.0,
+      -530.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Bedroom_Light",
+    "class": "RectLight",
+    "location": [
+      -1110.0,
+      260.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Wardrobe_Light",
+    "class": "RectLight",
+    "location": [
+      -1030.0,
+      820.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Bathroom_Light",
+    "class": "RectLight",
+    "location": [
+      -1170.0,
+      1190.0,
+      285.0
+    ],
+    "rotation": {
+      "pitch": -55.000000000000014,
+      "yaw": 90.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Gym_Light",
+    "class": "RectLight",
+    "location": [
+      1080.0,
+      300.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Yoga_Light",
+    "class": "RectLight",
+    "location": [
+      1080.0,
+      1080.0,
+      315.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Practical_0",
+    "class": "PointLight",
+    "location": [
+      -1250.0,
+      70.0,
+      100.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Practical_1",
+    "class": "PointLight",
+    "location": [
+      -1250.0,
+      410.0,
+      100.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Practical_2",
+    "class": "PointLight",
+    "location": [
+      -475.0,
+      -550.0,
+      160.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Pool_Water",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      1090.0,
+      -18.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      8.5,
+      16.0,
+      0.01
+    ],
+    "mesh": "/Engine/BasicShapes/Plane.Plane"
+  },
+  {
+    "label": "HM_Gallery_Rear_Floor",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -810.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1100_380_24.SM_HM_1100_380_24"
+  },
+  {
+    "label": "HM_Gallery_West_Walk",
+    "class": "StaticMeshActor",
+    "location": [
+      -450.0,
+      -310.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_200_620_24.SM_HM_200_620_24"
+  },
+  {
+    "label": "HM_Pavilion_High_Canopy",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      95.0,
+      705.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1200_190_20.SM_HM_1200_190_20"
+  },
+  {
+    "label": "HM_Pavilion_Frame_-585",
+    "class": "StaticMeshActor",
+    "location": [
+      -585.0,
+      5.0,
+      350.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_40_65_700.SM_HM_40_65_700"
+  },
+  {
+    "label": "HM_Pavilion_Reveal_-585",
+    "class": "StaticMeshActor",
+    "location": [
+      -573.0,
+      -31.0,
+      350.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_3_680.SM_HM_3_3_680"
+  },
+  {
+    "label": "HM_Pavilion_Frame_585",
+    "class": "StaticMeshActor",
+    "location": [
+      585.0,
+      5.0,
+      350.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_40_65_700.SM_HM_40_65_700"
+  },
+  {
+    "label": "HM_Pavilion_Reveal_585",
+    "class": "StaticMeshActor",
+    "location": [
+      573.0,
+      -31.0,
+      350.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_3_680.SM_HM_3_3_680"
+  },
+  {
+    "label": "HM_Pavilion_Crown",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      5.0,
+      697.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1210_70_45.SM_HM_1210_70_45"
+  },
+  {
+    "label": "HM_Pavilion_Crown_Reveal",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -33.0,
+      674.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1160_3_3.SM_HM_1160_3_3"
+  },
+  {
+    "label": "HM_Upper_Living_Glass",
+    "class": "StaticMeshActor",
+    "location": [
+      110.0,
+      0.0,
+      525.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_860_4_330.SM_HM_860_4_330"
+  },
+  {
+    "label": "HM_Gallery_Rear_Guard",
+    "class": "StaticMeshActor",
+    "location": [
+      -80.0,
+      -612.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_660_3_110.SM_HM_660_3_110"
+  },
+  {
+    "label": "HM_Gallery_Rear_Guard_Cap",
+    "class": "StaticMeshActor",
+    "location": [
+      -80.0,
+      -612.0,
+      465.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_660_3_4.SM_HM_660_3_4"
+  },
+  {
+    "label": "HM_Gallery_West_Guard",
+    "class": "StaticMeshActor",
+    "location": [
+      -348.0,
+      -310.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_600_110.SM_HM_3_600_110"
+  },
+  {
+    "label": "HM_Gallery_West_Guard_Cap",
+    "class": "StaticMeshActor",
+    "location": [
+      -348.0,
+      -310.0,
+      465.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_600_4.SM_HM_3_600_4"
+  },
+  {
+    "label": "HM_Balcony_Front_Guard",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      178.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1130_3_110.SM_HM_1130_3_110"
+  },
+  {
+    "label": "HM_Balcony_Front_Guard_Cap",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      178.0,
+      465.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1130_3_4.SM_HM_1130_3_4"
+  },
+  {
+    "label": "HM_Balcony_West_Guard",
+    "class": "StaticMeshActor",
+    "location": [
+      -570.0,
+      90.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_180_110.SM_HM_3_180_110"
+  },
+  {
+    "label": "HM_Balcony_West_Guard_Cap",
+    "class": "StaticMeshActor",
+    "location": [
+      -570.0,
+      90.0,
+      465.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_180_4.SM_HM_3_180_4"
+  },
+  {
+    "label": "HM_Balcony_East_Guard",
+    "class": "StaticMeshActor",
+    "location": [
+      570.0,
+      90.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_180_110.SM_HM_3_180_110"
+  },
+  {
+    "label": "HM_Balcony_East_Guard_Cap",
+    "class": "StaticMeshActor",
+    "location": [
+      570.0,
+      90.0,
+      465.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_180_4.SM_HM_3_180_4"
+  },
+  {
+    "label": "HM_Gallery_Guard_Post_-320",
+    "class": "StaticMeshActor",
+    "location": [
+      -390.0,
+      -612.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Gallery_Guard_Post_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -70.0,
+      -612.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Gallery_Guard_Post_320",
+    "class": "StaticMeshActor",
+    "location": [
+      250.0,
+      -612.0,
+      407.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Gallery_Stair",
+    "class": "StaticMeshActor",
+    "location": [
+      360.0,
+      -300.0,
+      176.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair.SM_Gallery_Stair"
+  },
+  {
+    "label": "HM_Stair_Post_330_0",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      0.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_2",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -60.0,
+      105.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_4",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -120.0,
+      140.4
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_6",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_8",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -240.0,
+      210.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_10",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -300.0,
+      246.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_12",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_14",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_16",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -480.0,
+      351.6
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_18",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -540.0,
+      386.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_20",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -600.0,
+      422.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Rail_330",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -300.0,
+      296.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 30.38599967956544
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_330.SM_Stair_Rail_330"
+  },
+  {
+    "label": "HM_Stair_Post_530_0",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      0.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_2",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -60.0,
+      105.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_4",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -120.0,
+      140.4
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_6",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_8",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -240.0,
+      210.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_10",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -300.0,
+      246.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_12",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_14",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_16",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -480.0,
+      351.6
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_18",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -540.0,
+      386.8
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_20",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -600.0,
+      422.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Rail_530",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      -300.0,
+      296.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 30.38599967956544
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_530.SM_Stair_Rail_530"
+  },
+  {
+    "label": "HM_Arrival_Step_0",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1570.0,
+      -7.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_1",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1605.0,
+      -22.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_2",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1640.0,
+      -37.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_3",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1675.0,
+      -52.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_4",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1710.0,
+      -67.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_5",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1745.0,
+      -82.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_6",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1780.0,
+      -97.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_7",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1815.0,
+      -112.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_8",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1850.0,
+      -127.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Arrival_Step_9",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1885.0,
+      -142.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_900_35_15.SM_HM_900_35_15"
+  },
+  {
+    "label": "HM_Garden_Pergola_Post_-500",
+    "class": "StaticMeshActor",
+    "location": [
+      -500.0,
+      2240.0,
+      145.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_14_14_290.SM_HM_14_14_290"
+  },
+  {
+    "label": "HM_Garden_Pergola_Post_500",
+    "class": "StaticMeshActor",
+    "location": [
+      500.0,
+      2240.0,
+      145.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_14_14_290.SM_HM_14_14_290"
+  },
+  {
+    "label": "HM_Garden_Pergola_Beam_1510",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      2110.0,
+      290.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1040_12_18.SM_HM_1040_12_18"
+  },
+  {
+    "label": "HM_Garden_Pergola_Beam_1720",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      2320.0,
+      290.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1040_12_18.SM_HM_1040_12_18"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-500",
+    "class": "StaticMeshActor",
+    "location": [
+      -500.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-460",
+    "class": "StaticMeshActor",
+    "location": [
+      -460.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-420",
+    "class": "StaticMeshActor",
+    "location": [
+      -420.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-380",
+    "class": "StaticMeshActor",
+    "location": [
+      -380.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-340",
+    "class": "StaticMeshActor",
+    "location": [
+      -340.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-300",
+    "class": "StaticMeshActor",
+    "location": [
+      -300.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-260",
+    "class": "StaticMeshActor",
+    "location": [
+      -260.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-220",
+    "class": "StaticMeshActor",
+    "location": [
+      -220.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-180",
+    "class": "StaticMeshActor",
+    "location": [
+      -180.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-140",
+    "class": "StaticMeshActor",
+    "location": [
+      -140.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-100",
+    "class": "StaticMeshActor",
+    "location": [
+      -100.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-60",
+    "class": "StaticMeshActor",
+    "location": [
+      -60.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_-20",
+    "class": "StaticMeshActor",
+    "location": [
+      -20.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_20",
+    "class": "StaticMeshActor",
+    "location": [
+      20.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_60",
+    "class": "StaticMeshActor",
+    "location": [
+      60.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_100",
+    "class": "StaticMeshActor",
+    "location": [
+      100.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_140",
+    "class": "StaticMeshActor",
+    "location": [
+      140.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_180",
+    "class": "StaticMeshActor",
+    "location": [
+      180.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_220",
+    "class": "StaticMeshActor",
+    "location": [
+      220.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_260",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_300",
+    "class": "StaticMeshActor",
+    "location": [
+      300.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_340",
+    "class": "StaticMeshActor",
+    "location": [
+      340.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_380",
+    "class": "StaticMeshActor",
+    "location": [
+      380.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_420",
+    "class": "StaticMeshActor",
+    "location": [
+      420.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_460",
+    "class": "StaticMeshActor",
+    "location": [
+      460.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Pergola_Slat_500",
+    "class": "StaticMeshActor",
+    "location": [
+      500.0,
+      2215.0,
+      301.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_12_240_12.SM_HM_12_240_12"
+  },
+  {
+    "label": "HM_Garden_Bench",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      2240.0,
+      28.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_800_80_56.SM_HM_800_80_56"
+  },
+  {
+    "label": "HM_Landscape_Fog",
+    "class": "ExponentialHeightFog",
+    "location": [
+      0.0,
+      0.0,
+      -150.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Clouds",
+    "class": "VolumetricCloud",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Gallery_Stair_Landing",
+    "class": "StaticMeshActor",
+    "location": [
+      360.0,
+      -610.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair_Landing.SM_Gallery_Stair_Landing"
+  },
+  {
+    "label": "HM_Gallery_Warm",
+    "class": "RectLight",
+    "location": [
+      -100.0,
+      -810.0,
+      670.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Balcony_Warm",
+    "class": "RectLight",
+    "location": [
+      0.0,
+      160.0,
+      665.0
+    ],
+    "rotation": {
+      "pitch": -59.99999999999997,
+      "yaw": -90.0,
+      "roll": 1.9083328088781097e-14
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Stair_Warm",
+    "class": "RectLight",
+    "location": [
+      420.0,
+      -270.0,
+      660.0
+    ],
+    "rotation": {
+      "pitch": -90.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Gallery_Pendant_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -399.70818614959717,
+      -900.0000009536743,
+      688.5770263671875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/SM_Ceiling_Lamp_3.SM_Ceiling_Lamp_3"
+  },
+  {
+    "label": "HM_Gallery_Pendant_1",
+    "class": "StaticMeshActor",
+    "location": [
+      0.29181385040283203,
+      -900.0000009536743,
+      688.5770263671875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/SM_Ceiling_Lamp_3.SM_Ceiling_Lamp_3"
+  },
+  {
+    "label": "HM_Gallery_Pendant_2",
+    "class": "StaticMeshActor",
+    "location": [
+      400.29181385040283,
+      -900.0000009536743,
+      688.5770263671875
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/SM_Ceiling_Lamp_3.SM_Ceiling_Lamp_3"
+  },
+  {
+    "label": "HM_Courtyard_Warm_-500_100",
+    "class": "PointLight",
+    "location": [
+      -500.0,
+      100.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Courtyard_Lantern_-500_100",
+    "class": "StaticMeshActor",
+    "location": [
+      -500.0,
+      100.0,
+      30.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.16,
+      0.16,
+      0.6
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Lantern_Glow_-500_100",
+    "class": "StaticMeshActor",
+    "location": [
+      -500.0,
+      100.0,
+      57.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.12,
+      0.12,
+      0.05
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Warm_-500_1370",
+    "class": "PointLight",
+    "location": [
+      -500.0,
+      1970.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Courtyard_Lantern_-500_1370",
+    "class": "StaticMeshActor",
+    "location": [
+      -500.0,
+      1970.0,
+      30.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.16,
+      0.16,
+      0.6
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Lantern_Glow_-500_1370",
+    "class": "StaticMeshActor",
+    "location": [
+      -500.0,
+      1970.0,
+      57.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.12,
+      0.12,
+      0.05
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Warm_500_100",
+    "class": "PointLight",
+    "location": [
+      500.0,
+      100.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Courtyard_Lantern_500_100",
+    "class": "StaticMeshActor",
+    "location": [
+      500.0,
+      100.0,
+      30.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.16,
+      0.16,
+      0.6
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Lantern_Glow_500_100",
+    "class": "StaticMeshActor",
+    "location": [
+      500.0,
+      100.0,
+      57.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.12,
+      0.12,
+      0.05
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Warm_500_1370",
+    "class": "PointLight",
+    "location": [
+      500.0,
+      1970.0,
+      70.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Courtyard_Lantern_500_1370",
+    "class": "StaticMeshActor",
+    "location": [
+      500.0,
+      1970.0,
+      30.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.16,
+      0.16,
+      0.6
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Courtyard_Lantern_Glow_500_1370",
+    "class": "StaticMeshActor",
+    "location": [
+      500.0,
+      1970.0,
+      57.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.12,
+      0.12,
+      0.05
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Pool_Light_-420",
+    "class": "RectLight",
+    "location": [
+      -420.0,
+      1100.0,
+      -55.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Pool_Light_Strip_-420",
+    "class": "StaticMeshActor",
+    "location": [
+      -420.0,
+      1100.0,
+      -45.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.03,
+      8.0,
+      0.04
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Pool_Light_420",
+    "class": "RectLight",
+    "location": [
+      420.0,
+      1100.0,
+      -55.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Pool_Light_Strip_420",
+    "class": "StaticMeshActor",
+    "location": [
+      420.0,
+      1100.0,
+      -45.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.03,
+      8.0,
+      0.04
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Gallery_Rug",
+    "class": "StaticMeshActor",
+    "location": [
+      -120.09772262573242,
+      -825.2360767364502,
+      353.3191676735878
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.15,
+      1.15,
+      1.15
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Carpet.SM_Carpet"
+  },
+  {
+    "label": "HM_Gallery_Sofa",
+    "class": "StaticMeshActor",
+    "location": [
+      -137.5596893310547,
+      -902.8956687927246,
+      352.8647651672363
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.9,
+      0.9,
+      0.9
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Sofa.SM_Sofa"
+  },
+  {
+    "label": "HM_Gallery_Sofa_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -140.0,
+      -933.0,
+      387.97103080749514
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      2.064960417480469,
+      0.7921097314453125,
+      0.6994206161499024
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Gallery_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      -139.99996185302734,
+      -805.0000259399415,
+      353.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.8,
+      0.8,
+      0.8
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_1.SM_Coffe_Table_1"
+  },
+  {
+    "label": "HM_Gallery_Table_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      -140.0,
+      -805.0,
+      372.33068389892577
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.3455979516601563,
+      0.34561838867187505,
+      0.3866136779785157
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Gallery_Books",
+    "class": "StaticMeshActor",
+    "location": [
+      -154.99446868896484,
+      -810.1260843276978,
+      386.00001287460327
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Stack_of_Books_2.SM_Stack_of_Books_2"
+  },
+  {
+    "label": "HM_Gallery_Study_Chair",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0008087158203,
+      -840.0000019073486,
+      353.0008354187012
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Chair_2.SM_Chair_2"
+  },
+  {
+    "label": "HM_Gallery_Study_Chair_Collision",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -840.0,
+      392.15128326416016
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.50806357421875,
+      0.4748149932861328,
+      0.7830256652832032
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Gallery_Study_Book",
+    "class": "StaticMeshActor",
+    "location": [
+      240.00357818603516,
+      -959.9999322891235,
+      432.40587878227234
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Opened_Book.SM_Opened_Book"
+  },
+  {
+    "label": "HM_Gallery_Study_Vase",
+    "class": "StaticMeshActor",
+    "location": [
+      320.0142068862915,
+      -960.0200190544128,
+      435.9999752044678
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Vase_4.SM_Vase_4"
+  },
+  {
+    "label": "HM_Gallery_Plant",
+    "class": "StaticMeshActor",
+    "location": [
+      -491.49539510487614,
+      -946.3117446016649,
+      352.97523040771483
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 20.00000000000001,
+      "roll": -0.0
+    },
+    "scale": [
+      1.4,
+      1.4,
+      1.4
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Gallery_Collection_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -529.5161101818085,
+      -890.6011853218079,
+      445.20000286102294
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_2.SM_Decor_2"
+  },
+  {
+    "label": "HM_Gallery_Collection_1",
+    "class": "StaticMeshActor",
+    "location": [
+      -529.9999972212366,
+      -835.0000037024915,
+      515.2000038146973
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 25.000000000000014,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_4.SM_Decor_4"
+  },
+  {
+    "label": "HM_Gallery_Collection_2",
+    "class": "StaticMeshActor",
+    "location": [
+      -530.0000012007445,
+      -779.9999940127221,
+      445.20000381469725
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 50.00000000000002,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Vase_9.SM_Vase_9"
+  },
+  {
+    "label": "HM_Gallery_Collection_3",
+    "class": "StaticMeshActor",
+    "location": [
+      -530.0491778152742,
+      -725.2528878035668,
+      515.2
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 74.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Decor_9.SM_Decor_9"
+  },
+  {
+    "label": "HM_Court_Planter_-650",
+    "class": "StaticMeshActor",
+    "location": [
+      -680.0,
+      780.0,
+      20.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.4,
+      7.5,
+      0.4
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Court_Soil_-650",
+    "class": "StaticMeshActor",
+    "location": [
+      -680.0,
+      780.0,
+      42.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.3,
+      7.25,
+      0.04
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Court_Green_-650_470",
+    "class": "StaticMeshActor",
+    "location": [
+      -684.088862991333,
+      473.1703498840332,
+      24.989384460449216
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Court_Green_-650_630",
+    "class": "StaticMeshActor",
+    "location": [
+      -681.7283095559685,
+      629.2137422263218,
+      24.991046142578128
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 49.00000000000002,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Court_Green_-650_790",
+    "class": "StaticMeshActor",
+    "location": [
+      -682.5704365149919,
+      785.5097021177345,
+      24.989384460449216
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 98.00000000000006,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Court_Green_-650_950",
+    "class": "StaticMeshActor",
+    "location": [
+      -678.9808598326035,
+      948.3979361663403,
+      24.991046142578128
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 147.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Court_Green_-650_1110",
+    "class": "StaticMeshActor",
+    "location": [
+      -675.1956657674422,
+      1108.0795074769853,
+      24.989384460449216
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -164.00000000000003,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Court_Planter_650",
+    "class": "StaticMeshActor",
+    "location": [
+      680.0,
+      780.0,
+      20.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.4,
+      7.5,
+      0.4
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Court_Soil_650",
+    "class": "StaticMeshActor",
+    "location": [
+      680.0,
+      780.0,
+      42.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.3,
+      7.25,
+      0.04
+    ],
+    "mesh": "/Engine/BasicShapes/Cube.Cube"
+  },
+  {
+    "label": "HM_Court_Green_650_470",
+    "class": "StaticMeshActor",
+    "location": [
+      675.911137008667,
+      473.1703498840332,
+      24.989384460449216
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Court_Green_650_630",
+    "class": "StaticMeshActor",
+    "location": [
+      678.2716904440315,
+      629.2137422263218,
+      24.991046142578128
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 49.00000000000002,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Court_Green_650_790",
+    "class": "StaticMeshActor",
+    "location": [
+      677.4295634850081,
+      785.5097021177345,
+      24.989384460449216
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 98.00000000000006,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Court_Green_650_950",
+    "class": "StaticMeshActor",
+    "location": [
+      681.0191401673965,
+      948.3979361663403,
+      24.991046142578128
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 147.0,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_2.SM_Plant_2"
+  },
+  {
+    "label": "HM_Court_Green_650_1110",
+    "class": "StaticMeshActor",
+    "location": [
+      684.8043342325578,
+      1108.0795074769853,
+      24.989384460449216
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -164.00000000000003,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Plant_1.SM_Plant_1"
+  },
+  {
+    "label": "HM_Boundary_Tree_0",
+    "class": "StaticMeshActor",
+    "location": [
+      -2050.0,
+      -900.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.35,
+      1.35,
+      1.35
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_1",
+    "class": "StaticMeshActor",
+    "location": [
+      -2100.0,
+      100.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 70.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.4500000000000002,
+      1.4500000000000002,
+      1.4500000000000002
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_2",
+    "class": "StaticMeshActor",
+    "location": [
+      -2050.0,
+      1100.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 142.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.55,
+      1.55,
+      1.55
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_3",
+    "class": "StaticMeshActor",
+    "location": [
+      -1350.0,
+      2600.0,
+      -128.49789428710938
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -147.00000000000003,
+      "roll": 0.0
+    },
+    "scale": [
+      1.6500000000000001,
+      1.6500000000000001,
+      1.6500000000000001
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_4",
+    "class": "StaticMeshActor",
+    "location": [
+      -400.0,
+      2800.0,
+      -121.74768829345703
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -75.99999999999999,
+      "roll": 0.0
+    },
+    "scale": [
+      1.35,
+      1.35,
+      1.35
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_5",
+    "class": "StaticMeshActor",
+    "location": [
+      650.0,
+      2780.0,
+      -108.8708724975586
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -5.000000000000002,
+      "roll": 0.0
+    },
+    "scale": [
+      1.4500000000000002,
+      1.4500000000000002,
+      1.4500000000000002
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_6",
+    "class": "StaticMeshActor",
+    "location": [
+      1700.0,
+      2600.0,
+      -125.77142333984375
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 65.99999999999997,
+      "roll": -0.0
+    },
+    "scale": [
+      1.55,
+      1.55,
+      1.55
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_7",
+    "class": "StaticMeshActor",
+    "location": [
+      2150.0,
+      1000.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 137.00000000000003,
+      "roll": -0.0
+    },
+    "scale": [
+      1.6500000000000001,
+      1.6500000000000001,
+      1.6500000000000001
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_8",
+    "class": "StaticMeshActor",
+    "location": [
+      2200.0,
+      -200.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -152.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.35,
+      1.35,
+      1.35
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_9",
+    "class": "StaticMeshActor",
+    "location": [
+      2050.0,
+      -1200.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -81.00000000000001,
+      "roll": 0.0
+    },
+    "scale": [
+      1.4500000000000002,
+      1.4500000000000002,
+      1.4500000000000002
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_10",
+    "class": "StaticMeshActor",
+    "location": [
+      -1000.0,
+      -1600.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": -9.999999999999998,
+      "roll": 0.0
+    },
+    "scale": [
+      1.55,
+      1.55,
+      1.55
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Boundary_Tree_11",
+    "class": "StaticMeshActor",
+    "location": [
+      1000.0,
+      -1600.0,
+      -148.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 61.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.6500000000000001,
+      1.6500000000000001,
+      1.6500000000000001
+    ],
+    "mesh": "/Game/Environment/HomeMap/Landscape/Meshes/SM_HM_CourtyardCanopyTree.SM_HM_CourtyardCanopyTree"
+  },
+  {
+    "label": "HM_Moon",
+    "class": "DirectionalLight",
+    "location": [
+      0.0,
+      0.0,
+      900.0
+    ],
+    "rotation": {
+      "pitch": -32.00000000000001,
+      "yaw": 135.0,
+      "roll": -0.0
+    },
+    "scale": [
+      2.5,
+      2.5,
+      2.5
+    ]
+  },
+  {
+    "label": "HM_Wing_Eave_-1",
+    "class": "StaticMeshActor",
+    "location": [
+      -650.0,
+      200.0,
+      338.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_140_2440_20.SM_HM_140_2440_20"
+  },
+  {
+    "label": "HM_Wing_Eave_Soffit_-1",
+    "class": "StaticMeshActor",
+    "location": [
+      -650.0,
+      200.0,
+      324.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_138_2430_6.SM_HM_138_2430_6"
+  },
+  {
+    "label": "HM_Wing_Eave_ShadowGap_-1",
+    "class": "StaticMeshActor",
+    "location": [
+      -581.0,
+      200.0,
+      321.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_2440_4.SM_HM_3_2440_4"
+  },
+  {
+    "label": "HM_Wing_Eave_1",
+    "class": "StaticMeshActor",
+    "location": [
+      650.0,
+      200.0,
+      338.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_140_2440_20.SM_HM_140_2440_20"
+  },
+  {
+    "label": "HM_Wing_Eave_Soffit_1",
+    "class": "StaticMeshActor",
+    "location": [
+      650.0,
+      200.0,
+      324.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_138_2430_6.SM_HM_138_2430_6"
+  },
+  {
+    "label": "HM_Wing_Eave_ShadowGap_1",
+    "class": "StaticMeshActor",
+    "location": [
+      581.0,
+      200.0,
+      321.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3_2440_4.SM_HM_3_2440_4"
+  },
+  {
+    "label": "HM_Pavilion_Ceiling_Soffit",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -490.0,
+      684.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1090_1000_8.SM_HM_1090_1000_8"
+  },
+  {
+    "label": "HM_Balcony_Front_Edge",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      188.0,
+      340.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1170_12_28.SM_HM_1170_12_28"
+  },
+  {
+    "label": "HM_Balcony_ShadowGap",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      184.0,
+      321.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1150_3_4.SM_HM_1150_3_4"
+  },
+  {
+    "label": "HM_Foundation_Public",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -500.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_2800_1000_120.SM_HM_2800_1000_120"
+  },
+  {
+    "label": "HM_Foundation_Private",
+    "class": "StaticMeshActor",
+    "location": [
+      -1050.0,
+      700.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_1400_120.SM_HM_700_1400_120"
+  },
+  {
+    "label": "HM_Foundation_Wellness",
+    "class": "StaticMeshActor",
+    "location": [
+      1050.0,
+      700.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_700_1400_120.SM_HM_700_1400_120"
+  },
+  {
+    "label": "HM_Foundation_DeckLiving",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      125.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1400_250_120.SM_HM_1400_250_120"
+  },
+  {
+    "label": "HM_Foundation_DeckWest",
+    "class": "StaticMeshActor",
+    "location": [
+      -570.0,
+      1125.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.5217391304347827,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_260_1150_120.SM_HM_260_1150_120"
+  },
+  {
+    "label": "HM_Foundation_DeckEast",
+    "class": "StaticMeshActor",
+    "location": [
+      570.0,
+      1125.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.5217391304347827,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_260_1150_120.SM_HM_260_1150_120"
+  },
+  {
+    "label": "HM_Foundation_DeckNorth",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      1990.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1400_180_120.SM_HM_1400_180_120"
+  },
+  {
+    "label": "HM_Foundation_Arrival",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      -1280.0,
+      -95.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_1200_560_110.SM_HM_1200_560_110"
+  },
+  {
+    "label": "HM_Foundation_RearGarden",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      2215.0,
+      -90.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3450_270_120.SM_HM_3450_270_120"
+  },
+  {
+    "label": "HM_RearGarden_Terrace",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      2215.0,
+      -15.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3450_270_30.SM_HM_3450_270_30"
+  },
+  {
+    "label": "HM_DayNight_Control",
+    "class": "BP_HomeMap_EnvironmentControl_C",
+    "location": [
+      170.0,
+      -690.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/Hub/SM_HM_EnvironmentConsole.SM_HM_EnvironmentConsole"
+  },
+  {
+    "label": "HM_Vanity_Interactive",
+    "class": "BP_HomeMap_Dressing_Table_Set_C",
+    "location": [
+      -1050.0,
+      910.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/Props/Gameplay/Dressing_Table_Set/StaticMeshes/Dressing_Table_Set.Dressing_Table_Set"
+  },
+  {
+    "label": "HM_Living_Sliding_Glass_1",
+    "class": "StaticMeshActor",
+    "location": [
+      505.0,
+      -8.0,
+      162.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.2619047619047619,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325"
+  },
+  {
+    "label": "HM_Living_Sliding_Glass_2",
+    "class": "StaticMeshActor",
+    "location": [
+      505.0,
+      -16.0,
+      162.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.2619047619047619,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325"
+  },
+  {
+    "label": "HM_Living_Sliding_Glass_3",
+    "class": "StaticMeshActor",
+    "location": [
+      505.0,
+      -24.0,
+      162.5
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.2619047619047619,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_420_4_325.SM_HM_420_4_325"
+  },
+  {
+    "label": "HM_LivingSlidingDoorDetail",
+    "class": "StaticMeshActor",
+    "location": [
+      350.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_LivingSlidingDoorDetail.SM_HM_LivingSlidingDoorDetail"
+  },
+  {
+    "label": "HM_Pool_Lounger_-1",
+    "class": "StaticMeshActor",
+    "location": [
+      -617.0,
+      880.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/Hub/SM_HM_PoolLounger.SM_HM_PoolLounger"
+  },
+  {
+    "label": "HM_Pool_Lounger_1",
+    "class": "StaticMeshActor",
+    "location": [
+      617.0,
+      880.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/Hub/SM_HM_PoolLounger.SM_HM_PoolLounger"
+  },
+  {
+    "label": "HM_Pool_Step_7",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      510.0,
+      -195.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      4.666666666666667
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_15.SM_HM_400_30_15"
+  },
+  {
+    "label": "HM_Pool_Step_8",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      540.0,
+      -205.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      3.3333333333333335
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_15.SM_HM_400_30_15"
+  },
+  {
+    "label": "HM_Pool_Step_9",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      570.0,
+      -215.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      2.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_15.SM_HM_400_30_15"
+  },
+  {
+    "label": "HM_Pool_Step_10",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      600.0,
+      -225.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      0.6666666666666666
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_400_30_15.SM_HM_400_30_15"
+  },
+  {
+    "label": "HM_BedroomHeadwall",
+    "class": "StaticMeshActor",
+    "location": [
+      -1373.0,
+      300.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomHeadwall.SM_HM_BedroomHeadwall"
+  },
+  {
+    "label": "HM_BedroomCurtain",
+    "class": "StaticMeshActor",
+    "location": [
+      -731.0,
+      65.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomCurtain.SM_HM_BedroomCurtain"
+  },
+  {
+    "label": "HM_BathVanitySuite",
+    "class": "StaticMeshActor",
+    "location": [
+      -1240.0,
+      1280.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BathVanitySuite.SM_HM_BathVanitySuite"
+  },
+  {
+    "label": "HM_BedroomCurtain_Return",
+    "class": "StaticMeshActor",
+    "location": [
+      -731.0,
+      535.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomCurtain.SM_HM_BedroomCurtain"
+  },
+  {
+    "label": "HM_Bedside_Books",
+    "class": "StaticMeshActor",
+    "location": [
+      -1298.0110517413661,
+      101.60051266145015,
+      54.000002431869504
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 10.000000000000002,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Stack_of_Books_1.SM_Stack_of_Books_1"
+  },
+  {
+    "label": "HM_Bedroom_Reading_Table",
+    "class": "StaticMeshActor",
+    "location": [
+      -1049.9085416793823,
+      468.7292151451111,
+      -0.002567768096923828
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.75,
+      0.75,
+      0.75
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Coffe_Table_3.SM_Coffe_Table_3"
+  },
+  {
+    "label": "HM_Bedroom_Reading_Book",
+    "class": "StaticMeshActor",
+    "location": [
+      -1049.9981610332593,
+      470.00110863941404,
+      30.743527269363405
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 30.000000000000025,
+      "roll": -0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Opened_Book.SM_Opened_Book"
+  },
+  {
+    "label": "HM_Bedroom_FloorLamp",
+    "class": "StaticMeshActor",
+    "location": [
+      -895.6285858154297,
+      560.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Furniture/SM_Floor_Lamp.SM_Floor_Lamp"
+  },
+  {
+    "label": "HM_Bath_CeramicBottle",
+    "class": "StaticMeshActor",
+    "location": [
+      -1239.99999833107,
+      1299.999999165535,
+      90.00000066757202
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.7,
+      0.7,
+      0.7
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Kitchen_Decor_11_White.SM_Kitchen_Decor_11_White"
+  },
+  {
+    "label": "HM_Bath_DarkBottle",
+    "class": "StaticMeshActor",
+    "location": [
+      -1224.9999985694885,
+      1303.9999987125398,
+      90.00000057220458
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.6,
+      0.6,
+      0.6
+    ],
+    "mesh": "/Game/Environment/HomeMap/Props/SM_Kitchen_Decor_11_Black.SM_Kitchen_Decor_11_Black"
+  },
+  {
+    "label": "HM_Bedroom_Headwall_Wash",
+    "class": "RectLight",
+    "location": [
+      -1335.0,
+      300.0,
+      295.0
+    ],
+    "rotation": {
+      "pitch": -50.00000000000005,
+      "yaw": 0.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_SpaTowelStation",
+    "class": "StaticMeshActor",
+    "location": [
+      -1365.0,
+      1115.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_SpaTowelStation.SM_HM_SpaTowelStation"
+  },
+  {
+    "label": "HM_ExpeditionSign",
+    "class": "StaticMeshActor",
+    "location": [
+      -1225.0,
+      -500.0,
+      299.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_ExpeditionSign.SM_HM_ExpeditionSign"
+  },
+  {
+    "label": "HM_FieldNotesBoard",
+    "class": "StaticMeshActor",
+    "location": [
+      -950.0,
+      -979.0,
+      205.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_FieldNotesBoard.SM_HM_FieldNotesBoard"
+  },
+  {
+    "label": "HM_ArchiveCabinet",
+    "class": "StaticMeshActor",
+    "location": [
+      -1030.0,
+      -60.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_ArchiveCabinet.SM_HM_ArchiveCabinet"
+  },
+  {
+    "label": "HM_GalleryWritingDesk",
+    "class": "StaticMeshActor",
+    "location": [
+      260.0,
+      -960.0,
+      353.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_GalleryWritingDesk.SM_HM_GalleryWritingDesk"
+  },
+  {
+    "label": "HM_GalleryArchiveCabinet",
+    "class": "StaticMeshActor",
+    "location": [
+      -535.0,
+      -805.0,
+      353.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 89.99999999999999,
+      "roll": -0.0
+    },
+    "scale": [
+      0.8630952380952381,
+      0.55,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_ArchiveCabinet.SM_HM_ArchiveCabinet"
+  },
+  {
+    "label": "HM_Garden_Lawn_-1220",
+    "class": "StaticMeshActor",
+    "location": [
+      -1220.0,
+      1740.0,
+      -17.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3450_270_30.SM_HM_3450_270_30"
+  },
+  {
+    "label": "HM_Foundation_Lawn_-1220",
+    "class": "StaticMeshActor",
+    "location": [
+      -1220.0,
+      1740.0,
+      -92.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3450_270_120.SM_HM_3450_270_120"
+  },
+  {
+    "label": "HM_Garden_Lawn_1220",
+    "class": "StaticMeshActor",
+    "location": [
+      1220.0,
+      1740.0,
+      -17.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3450_270_30.SM_HM_3450_270_30"
+  },
+  {
+    "label": "HM_Foundation_Lawn_1220",
+    "class": "StaticMeshActor",
+    "location": [
+      1220.0,
+      1740.0,
+      -92.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      0.30144927536231886,
+      2.5185185185185186,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_3450_270_120.SM_HM_3450_270_120"
+  },
+  {
+    "label": "HM_TreadmillSuite",
+    "class": "StaticMeshActor",
+    "location": [
+      1200.0,
+      235.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_TreadmillSuite.SM_HM_TreadmillSuite"
+  },
+  {
+    "label": "HM_TreadmillSuite_Second",
+    "class": "StaticMeshActor",
+    "location": [
+      1200.0,
+      495.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_TreadmillSuite.SM_HM_TreadmillSuite"
+  },
+  {
+    "label": "HM_DumbbellRack",
+    "class": "StaticMeshActor",
+    "location": [
+      1170.0,
+      65.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_DumbbellRack.SM_HM_DumbbellRack"
+  },
+  {
+    "label": "HM_TrainingBench",
+    "class": "StaticMeshActor",
+    "location": [
+      1175.0,
+      625.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_TrainingBench.SM_HM_TrainingBench"
+  },
+  {
+    "label": "HM_YogaPracticeSet",
+    "class": "StaticMeshActor",
+    "location": [
+      1090.0,
+      950.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_YogaPracticeSet.SM_HM_YogaPracticeSet"
+  },
+  {
+    "label": "HM_YogaPracticeSet_Second",
+    "class": "StaticMeshActor",
+    "location": [
+      1090.0,
+      1240.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_YogaPracticeSet.SM_HM_YogaPracticeSet"
+  },
+  {
+    "label": "HM_WellnessStorage",
+    "class": "StaticMeshActor",
+    "location": [
+      1367.0,
+      1120.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_WellnessStorage.SM_HM_WellnessStorage"
+  },
+  {
+    "label": "HM_GymFinish",
+    "class": "StaticMeshActor",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_GymFinish.SM_HM_GymFinish"
+  },
+  {
+    "label": "HM_YogaCurtain_Entry",
+    "class": "StaticMeshActor",
+    "location": [
+      731.0,
+      805.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomCurtain.SM_HM_BedroomCurtain"
+  },
+  {
+    "label": "HM_YogaCurtain_End",
+    "class": "StaticMeshActor",
+    "location": [
+      731.0,
+      1290.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_BedroomCurtain.SM_HM_BedroomCurtain"
+  },
+  {
+    "label": "HM_Gym_Mirror_Wash",
+    "class": "RectLight",
+    "location": [
+      1360.0,
+      360.0,
+      269.0
+    ],
+    "rotation": {
+      "pitch": -47.99999999999997,
+      "yaw": 180.0,
+      "roll": -0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "HM_Expedition_Gate",
+    "class": "BP_ExpeditionTerminal_C",
+    "location": [
+      -1230.0,
+      -500.0,
+      125.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/SM_Door_Enter.SM_Door_Enter"
+  },
+  {
+    "label": "HM_DayNight",
+    "class": "LevelSequenceActor",
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 0.0
+    },
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  }
+]

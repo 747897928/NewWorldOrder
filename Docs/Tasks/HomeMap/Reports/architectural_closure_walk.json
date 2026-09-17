@@ -1,0 +1,3079 @@
+{
+  "map": "/Game/Environment/HomeMap/Maps/UEDPIE_0_HomeMap_Courtyard.HomeMap_Courtyard",
+  "targets": [
+    [
+      0,
+      -800
+    ],
+    [
+      0,
+      -320
+    ],
+    [
+      180,
+      100
+    ],
+    [
+      360,
+      170
+    ],
+    [
+      360,
+      -745
+    ],
+    [
+      -450,
+      -730
+    ],
+    [
+      -450,
+      90
+    ],
+    [
+      -280,
+      90
+    ],
+    [
+      -280,
+      835
+    ]
+  ],
+  "samples": [
+    {
+      "t": 0.094,
+      "position": [
+        0.0,
+        -1429.404261993681,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.187,
+      "position": [
+        0.0,
+        -1420.415466816369,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.281,
+      "position": [
+        0.0,
+        -1401.0775812759944,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.375,
+      "position": [
+        0.0,
+        -1375.9317803691342,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.469,
+      "position": [
+        0.0,
+        -1344.6066803793624,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.562,
+      "position": [
+        0.0,
+        -1318.686890930982,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.656,
+      "position": [
+        0.0,
+        -1291.6314206580832,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.75,
+      "position": [
+        0.0,
+        -1261.2932607094958,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.844,
+      "position": [
+        0.0,
+        -1233.7768706987813,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 0.937,
+      "position": [
+        0.0,
+        -1206.2979511480048,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.031,
+      "position": [
+        0.0,
+        -1178.2909102301314,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.125,
+      "position": [
+        0.0,
+        -1149.9072201113418,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.219,
+      "position": [
+        0.0,
+        -1122.8188704262689,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.312,
+      "position": [
+        0.0,
+        -1092.8598507802203,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.406,
+      "position": [
+        0.0,
+        -1076.851460666509,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.5,
+      "position": [
+        0.0,
+        -1038.3332907716945,
+        90.0
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.594,
+      "position": [
+        0.0,
+        -1008.4781910787538,
+        91.14223575592041
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.687,
+      "position": [
+        0.0,
+        -979.1175800870374,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.781,
+      "position": [
+        0.0,
+        -953.8571904908135,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.875,
+      "position": [
+        0.0,
+        -926.7057538495505,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 1.969,
+      "position": [
+        0.0,
+        -904.8972261003686,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.062,
+      "position": [
+        0.0,
+        -887.0798485441943,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.156,
+      "position": [
+        0.0,
+        -871.7963084773195,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.25,
+      "position": [
+        0.0,
+        -859.5722827938137,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.344,
+      "position": [
+        0.0,
+        -848.2371653660986,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.437,
+      "position": [
+        0.0,
+        -842.37304501812,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.531,
+      "position": [
+        0.0,
+        -833.2690887536451,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.625,
+      "position": [
+        0.0,
+        -827.6907437882512,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.719,
+      "position": [
+        0.0,
+        -822.4910884397991,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.812,
+      "position": [
+        0.0,
+        -818.7890143931697,
+        90.29761075973511
+      ],
+      "target": 0,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 2.906,
+      "position": [
+        0.0,
+        -815.8174900242151,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.0,
+      "position": [
+        0.0,
+        -805.3898018044748,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.094,
+      "position": [
+        0.0,
+        -784.6949216484404,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.187,
+      "position": [
+        0.0,
+        -753.3499963769498,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.281,
+      "position": [
+        0.0,
+        -729.0409963765921,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.375,
+      "position": [
+        0.0,
+        -696.1803462544265,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.469,
+      "position": [
+        0.0,
+        -669.0603465029778,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.562,
+      "position": [
+        0.0,
+        -640.2601964959683,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.656,
+      "position": [
+        0.0,
+        -613.032946381885,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.75,
+      "position": [
+        0.0,
+        -584.5318068006816,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.844,
+      "position": [
+        0.0,
+        -555.9160664865556,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 3.937,
+      "position": [
+        0.0,
+        -531.0182858446422,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.031,
+      "position": [
+        0.0,
+        -499.294456485826,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.125,
+      "position": [
+        0.0,
+        -470.82631589861535,
+        90.29761075973511
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.219,
+      "position": [
+        -11.234201871927429,
+        -454.37907740566055,
+        90.24999779335394
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.312,
+      "position": [
+        -25.184100327796045,
+        -440.4291775402958,
+        90.2499981854703
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.406,
+      "position": [
+        -35.91311945617961,
+        -424.2166418477928,
+        90.24999942171331
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.5,
+      "position": [
+        -39.667312135581625,
+        -404.7043986613066,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.594,
+      "position": [
+        -39.822469623962206,
+        -389.92072972003206,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.687,
+      "position": [
+        -37.77204065584769,
+        -375.60576037714145,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.781,
+      "position": [
+        -34.35001880666651,
+        -363.8631544926013,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.875,
+      "position": [
+        -30.727569184600817,
+        -355.2594217379218,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 4.969,
+      "position": [
+        -26.945765217436396,
+        -348.2196554626344,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.062,
+      "position": [
+        -23.27740197809441,
+        -342.5504506515151,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.156,
+      "position": [
+        -19.807192397990235,
+        -337.93207871514517,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.25,
+      "position": [
+        -16.856918503061745,
+        -334.4489758236055,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.344,
+      "position": [
+        -14.19411947015733,
+        -331.5991950674788,
+        90.24999849762895
+      ],
+      "target": 1,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.437,
+      "position": [
+        -12.687951371072534,
+        -328.64342732351275,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.531,
+      "position": [
+        -6.86200438143922,
+        -315.68333372517276,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.625,
+      "position": [
+        3.3263809944294374,
+        -293.0187903775979,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.719,
+      "position": [
+        14.588761809998795,
+        -267.9650935675075,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.812,
+      "position": [
+        25.37618108902023,
+        -243.96797107575992,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 5.906,
+      "position": [
+        37.01792555084671,
+        -218.0703619588726,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.0,
+      "position": [
+        49.50650468019703,
+        -190.28892922104305,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.094,
+      "position": [
+        60.66505889847011,
+        -165.4661995689706,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.187,
+      "position": [
+        72.19739289934238,
+        -139.81197917792105,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.281,
+      "position": [
+        83.81384868142037,
+        -113.97062592074259,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.375,
+      "position": [
+        94.85398842422435,
+        -89.41131484906725,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.469,
+      "position": [
+        106.00676174442522,
+        -64.60144507715364,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.562,
+      "position": [
+        117.55178980199487,
+        -38.91898615883385,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.672,
+      "position": [
+        129.41467993117791,
+        -12.52942808447939,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.766,
+      "position": [
+        138.85865614038278,
+        8.479141995128556,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.859,
+      "position": [
+        145.57463449118399,
+        23.419152294859767,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 6.953,
+      "position": [
+        151.71699239608026,
+        37.08311688355417,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.047,
+      "position": [
+        156.9949250798854,
+        48.82412683602567,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.141,
+      "position": [
+        160.88972900032732,
+        57.48830168106467,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.234,
+      "position": [
+        164.26213967496648,
+        64.9903881355308,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.328,
+      "position": [
+        166.74461695059946,
+        70.51277581005041,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.422,
+      "position": [
+        169.14345699275032,
+        75.84910851768424,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.516,
+      "position": [
+        171.16203493635754,
+        80.33953026907419,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.609,
+      "position": [
+        172.60508252760022,
+        83.54965763251289,
+        90.24999849762895
+      ],
+      "target": 2,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.703,
+      "position": [
+        174.99075398636487,
+        85.11546149255989,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.797,
+      "position": [
+        187.9468907171132,
+        91.05989784331292,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.891,
+      "position": [
+        207.80673679181075,
+        100.1718417337024,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 7.984,
+      "position": [
+        235.4761655168248,
+        112.8669190808866,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.078,
+      "position": [
+        257.9040684604092,
+        123.1571193388538,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.172,
+      "position": [
+        274.9984723970739,
+        131.00024405012687,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.266,
+      "position": [
+        289.35267959336664,
+        137.58613248409023,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.359,
+      "position": [
+        300.77671372921816,
+        142.82762114700566,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.453,
+      "position": [
+        311.1199431235547,
+        147.57322317897192,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.547,
+      "position": [
+        320.03447703336434,
+        151.66332198888398,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.641,
+      "position": [
+        327.1836390796269,
+        154.94344627503557,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.734,
+      "position": [
+        332.92904178399124,
+        157.57950835089204,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.828,
+      "position": [
+        337.73073613546586,
+        159.78258532061642,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 8.922,
+      "position": [
+        341.239384776358,
+        161.39239686833184,
+        90.24999849762895
+      ],
+      "target": 3,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.016,
+      "position": [
+        344.214202941197,
+        162.55302537510724,
+        90.24999849762895
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.109,
+      "position": [
+        345.04545975523524,
+        156.0998811862754,
+        90.24999849762895
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.203,
+      "position": [
+        345.72132589794785,
+        137.579315680182,
+        90.24999849762895
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.297,
+      "position": [
+        346.2743837689964,
+        112.37455859028088,
+        90.24999849762895
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.391,
+      "position": [
+        346.7962589544978,
+        83.30210922545405,
+        90.24999849762895
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.484,
+      "position": [
+        347.259384398514,
+        55.343125048096866,
+        90.24999849762895
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.578,
+      "position": [
+        347.72800919080527,
+        26.270211405489583,
+        95.2780743001984
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.672,
+      "position": [
+        348.1420364003132,
+        0.35714926729229735,
+        107.58730258613792
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.766,
+      "position": [
+        348.59001487323036,
+        -27.761612523004775,
+        125.25517092757678
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.859,
+      "position": [
+        349.0421926139874,
+        -56.17254433957331,
+        142.6885738561703
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 9.953,
+      "position": [
+        349.5111373581826,
+        -85.64690468813309,
+        160.21135579527783
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.047,
+      "position": [
+        349.9767569756088,
+        -114.91543133221326,
+        177.69483933158455
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.141,
+      "position": [
+        350.39147520432715,
+        -140.98519281195428,
+        194.45827427596151
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.234,
+      "position": [
+        350.8586113997022,
+        -170.35033727498373,
+        211.87594590994792
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.328,
+      "position": [
+        351.32464925962915,
+        -199.6465500016045,
+        229.25743267357717
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.422,
+      "position": [
+        351.7312685842813,
+        -225.20760646997442,
+        245.08512501896013
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.516,
+      "position": [
+        352.18538597109335,
+        -253.75451486985662,
+        261.9657375063362
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.609,
+      "position": [
+        352.65774511652836,
+        -283.44814817066623,
+        279.3928994238427
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.703,
+      "position": [
+        353.11020136886384,
+        -311.8906389769967,
+        296.08818077006305
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.797,
+      "position": [
+        353.5316700591217,
+        -338.3851773059049,
+        311.1482200569265
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.891,
+      "position": [
+        353.9918059177808,
+        -367.3104272331129,
+        327.8205610275525
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 10.984,
+      "position": [
+        354.40557828443144,
+        -393.3211562675083,
+        341.20252645007673
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.078,
+      "position": [
+        354.88308226879667,
+        -423.3382085369376,
+        358.7991136882677
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.172,
+      "position": [
+        355.3445508843077,
+        -452.34723884654164,
+        375.11024939092164
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.266,
+      "position": [
+        355.75720808755545,
+        -478.2878660417781,
+        389.24623093885344
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.359,
+      "position": [
+        356.2244457084339,
+        -507.65954994718084,
+        406.8032406536261
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.453,
+      "position": [
+        356.68374557405997,
+        -536.5322474103954,
+        424.2884705492473
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.547,
+      "position": [
+        357.08728735662925,
+        -561.899857274714,
+        441.0787421896005
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.641,
+      "position": [
+        357.55059165198793,
+        -591.0242828504425,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.734,
+      "position": [
+        357.9741781220811,
+        -617.6519501237782,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.828,
+      "position": [
+        358.3242045328403,
+        -639.6554546278903,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 11.922,
+      "position": [
+        358.6123567290317,
+        -657.769396753057,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.016,
+      "position": [
+        358.85010104919263,
+        -672.7145781985154,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.109,
+      "position": [
+        359.0523499682188,
+        -685.4284331076108,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.203,
+      "position": [
+        359.21283243495253,
+        -695.5167480777535,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.297,
+      "position": [
+        359.34759589562077,
+        -703.9883042879497,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.391,
+      "position": [
+        359.4606029856507,
+        -711.0922025597312,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.484,
+      "position": [
+        359.5523466053397,
+        -716.8594277947064,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.578,
+      "position": [
+        359.6378002306711,
+        -722.231248811831,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.672,
+      "position": [
+        359.69848907185946,
+        -726.0462957608306,
+        442.04351918239837
+      ],
+      "target": 4,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.766,
+      "position": [
+        357.9030320745553,
+        -727.8269637076544,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.859,
+      "position": [
+        345.5172235432636,
+        -728.3380497535356,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 12.953,
+      "position": [
+        324.85643483175426,
+        -728.5764453146555,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.047,
+      "position": [
+        298.04820819929586,
+        -728.7125717306338,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.141,
+      "position": [
+        267.2127096606931,
+        -728.798011001079,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.234,
+      "position": [
+        241.38834182460096,
+        -728.84992572387,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.328,
+      "position": [
+        212.7471166377297,
+        -728.9008463776091,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.422,
+      "position": [
+        183.87779817866252,
+        -728.949784453341,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.516,
+      "position": [
+        157.91004453642714,
+        -728.9931270885058,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.609,
+      "position": [
+        126.07066814516674,
+        -729.0459890923199,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.703,
+      "position": [
+        100.14347340933776,
+        -729.0889588587122,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.797,
+      "position": [
+        71.11491389661428,
+        -729.1370428417862,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.891,
+      "position": [
+        42.0013038726027,
+        -729.1852584803036,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 13.984,
+      "position": [
+        16.555008381203564,
+        -729.2273980883142,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.078,
+      "position": [
+        -12.669631539113745,
+        -729.2757937429813,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.172,
+      "position": [
+        -42.19187108287383,
+        -729.3246818587737,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.266,
+      "position": [
+        -69.26044371290406,
+        -729.3695066571929,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.359,
+      "position": [
+        -98.04189390549737,
+        -729.4171678967537,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.453,
+      "position": [
+        -123.6698696951518,
+        -729.4596070639068,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.547,
+      "position": [
+        -152.5290792556715,
+        -729.5073970539511,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.641,
+      "position": [
+        -181.54935971703932,
+        -729.5554537709769,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.734,
+      "position": [
+        -210.4374298069916,
+        -729.6032915510344,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.828,
+      "position": [
+        -239.37575101393801,
+        -729.6512125452529,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 14.922,
+      "position": [
+        -266.59282282496685,
+        -729.696283201904,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.016,
+      "position": [
+        -294.8033443774275,
+        -729.7429989815826,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.109,
+      "position": [
+        -321.6572904505669,
+        -729.7874683128458,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.203,
+      "position": [
+        -344.1791687737469,
+        -729.8247638695243,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.297,
+      "position": [
+        -361.2866611948777,
+        -729.8530933651392,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.391,
+      "position": [
+        -376.1735029535986,
+        -729.8777455296953,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.484,
+      "position": [
+        -389.0115730899019,
+        -729.8990049897408,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.578,
+      "position": [
+        -400.54567983924295,
+        -729.9181051254299,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.672,
+      "position": [
+        -408.92431771086126,
+        -729.9319798990653,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.766,
+      "position": [
+        -415.8552313202168,
+        -729.9434572846369,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.859,
+      "position": [
+        -421.7087753354406,
+        -729.9531505783949,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 15.953,
+      "position": [
+        -426.66334187678916,
+        -729.9613551923522,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.047,
+      "position": [
+        -430.4115885360015,
+        -729.9675621766764,
+        442.04351918239837
+      ],
+      "target": 5,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.141,
+      "position": [
+        -432.8632676294318,
+        -728.8089244721482,
+        442.04351918239837
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.234,
+      "position": [
+        -433.76624034027475,
+        -718.2754478362908,
+        442.04351918239837
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.328,
+      "position": [
+        -434.5436442977182,
+        -695.6104615369906,
+        442.04351918239837
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.422,
+      "position": [
+        -435.19389964996094,
+        -668.6509409061823,
+        442.04351918239837
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.516,
+      "position": [
+        -435.82907566950337,
+        -638.328646926135,
+        442.04351918239837
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.609,
+      "position": [
+        -445.74415757386237,
+        -616.3169151058744,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.703,
+      "position": [
+        -450.4386749924235,
+        -588.841933327798,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.797,
+      "position": [
+        -451.9076562548454,
+        -561.8809645638951,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.891,
+      "position": [
+        -452.34098108252596,
+        -533.906231115963,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 16.984,
+      "position": [
+        -452.4053826860182,
+        -503.4803690905833,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.078,
+      "position": [
+        -452.3464082017551,
+        -476.540979174215,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.172,
+      "position": [
+        -452.2444016534774,
+        -447.584618844234,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.266,
+      "position": [
+        -452.1384412768295,
+        -420.8975491710078,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.359,
+      "position": [
+        -452.0238002776995,
+        -393.0473449837522,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.453,
+      "position": [
+        -451.9127256469537,
+        -366.3846563046614,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.547,
+      "position": [
+        -451.7815395345366,
+        -335.02566160582546,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.641,
+      "position": [
+        -451.66624951565285,
+        -307.50489297553725,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.734,
+      "position": [
+        -451.54978341396736,
+        -279.71502646833625,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.828,
+      "position": [
+        -451.4379846162075,
+        -253.0425908996872,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 17.922,
+      "position": [
+        -451.31584786555214,
+        -223.90522692502734,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.016,
+      "position": [
+        -451.2034145458023,
+        -197.08321261078447,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.109,
+      "position": [
+        -451.0878522911256,
+        -169.51492490101717,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.203,
+      "position": [
+        -450.9612840966044,
+        -139.3211497903028,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.297,
+      "position": [
+        -450.8473851144004,
+        -112.14972941687483,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.391,
+      "position": [
+        -450.7216856304417,
+        -82.16322242248098,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.484,
+      "position": [
+        -450.61659309820794,
+        -57.092652859657534,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.578,
+      "position": [
+        -450.5045160920263,
+        -30.355888135163767,
+        442.2499992352073
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.672,
+      "position": [
+        -450.41301531389604,
+        -8.527728772885473,
+        444.12022657209087
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.766,
+      "position": [
+        -450.34319127385874,
+        8.129290891429346,
+        444.12022657209087
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.859,
+      "position": [
+        -450.2859469549405,
+        21.78532882749702,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 18.953,
+      "position": [
+        -450.2359222514954,
+        33.719076263932635,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.047,
+      "position": [
+        -450.195027356758,
+        43.474843100057775,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.141,
+      "position": [
+        -450.1604947547048,
+        51.71283991253753,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.234,
+      "position": [
+        -450.1350833975849,
+        57.77489912076812,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.328,
+      "position": [
+        -450.1100773733852,
+        63.7402632734509,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.422,
+      "position": [
+        -450.0910877555378,
+        68.27037107438954,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.516,
+      "position": [
+        -450.07486864017557,
+        72.13955588204237,
+        442.39403600507427
+      ],
+      "target": 6,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.609,
+      "position": [
+        -446.02489598091836,
+        73.35720759004927,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.703,
+      "position": [
+        -429.8738302694607,
+        75.39763200970577,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.797,
+      "position": [
+        -406.41790979402936,
+        77.86952284715724,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.891,
+      "position": [
+        -385.5480149175019,
+        79.99135799393876,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 19.984,
+      "position": [
+        -365.6887627396826,
+        81.96795375911887,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.078,
+      "position": [
+        -351.68764991068736,
+        83.33627801110714,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.172,
+      "position": [
+        -338.61735660131893,
+        84.59451116537672,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.266,
+      "position": [
+        -328.84208514420067,
+        85.5232869975168,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.359,
+      "position": [
+        -321.1126185058511,
+        86.25019857555401,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.453,
+      "position": [
+        -313.35421530297185,
+        86.97304125857673,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.547,
+      "position": [
+        -308.1284938167751,
+        87.45606405713517,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.641,
+      "position": [
+        -303.1552961712166,
+        87.91280373191154,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.734,
+      "position": [
+        -299.04335363573864,
+        88.2882515481154,
+        442.39403600507427
+      ],
+      "target": 7,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.828,
+      "position": [
+        -296.872464827602,
+        90.60134511302059,
+        442.39403600507427
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 20.922,
+      "position": [
+        -296.0361389852084,
+        102.62167725328253,
+        442.39403600507427
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.016,
+      "position": [
+        -295.29510193303196,
+        124.62863268771979,
+        442.39403600507427
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.109,
+      "position": [
+        -294.56049599509646,
+        153.58606070823822,
+        442.39403600507427
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.203,
+      "position": [
+        -293.96473901312277,
+        179.90428714880088,
+        444.1533596020286
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.297,
+      "position": [
+        -293.31125406496426,
+        209.96870483149235,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.391,
+      "position": [
+        -292.7055446520171,
+        238.23691700288632,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.484,
+      "position": [
+        -292.1525300739072,
+        264.15686726150085,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.578,
+      "position": [
+        -291.5453189876095,
+        292.6588004640222,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.672,
+      "position": [
+        -290.928462574936,
+        321.62881399667765,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.766,
+      "position": [
+        -290.3067860098946,
+        350.83025758926027,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.859,
+      "position": [
+        -289.7229631407182,
+        378.25514317905316,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 21.953,
+      "position": [
+        -289.13978262355016,
+        405.6503369552535,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.047,
+      "position": [
+        -288.541709870284,
+        433.74527236825355,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.141,
+      "position": [
+        -287.9951682472627,
+        459.4195451383927,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.234,
+      "position": [
+        -287.3824229550919,
+        488.20381418276514,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.328,
+      "position": [
+        -286.7326804489021,
+        518.7260693800985,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.422,
+      "position": [
+        -286.12600477591076,
+        547.2252227374197,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.516,
+      "position": [
+        -285.5340007620038,
+        575.0351620535498,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.609,
+      "position": [
+        -284.9364183530648,
+        603.1071519367147,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.703,
+      "position": [
+        -284.3254814834009,
+        631.8064801417707,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.797,
+      "position": [
+        -283.7828888237158,
+        657.2952754885833,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.891,
+      "position": [
+        -283.1884464505158,
+        685.2197594125337,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 22.984,
+      "position": [
+        -282.6295092698059,
+        711.4763538668125,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.078,
+      "position": [
+        -282.1704583437599,
+        733.0406985115159,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.172,
+      "position": [
+        -281.7875814016014,
+        751.0266993429276,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.266,
+      "position": [
+        -281.46329101044626,
+        766.2605423950604,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.359,
+      "position": [
+        -281.2086911826827,
+        778.2206063474111,
+        442.1500470142906
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.453,
+      "position": [
+        -281.0107561176937,
+        787.5187903113356,
+        442.41294688993145
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.547,
+      "position": [
+        -280.83349225599403,
+        795.8459252551032,
+        442.41294688993145
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.641,
+      "position": [
+        -280.68796863257137,
+        802.6820329543433,
+        442.41294688993145
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.734,
+      "position": [
+        -280.5786624708957,
+        807.8167916680117,
+        442.41294688993145
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.828,
+      "position": [
+        -280.47749865139,
+        812.5690562773988,
+        442.41294688993145
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 23.922,
+      "position": [
+        -280.3924100737063,
+        816.5661714354499,
+        442.41294688993145
+      ],
+      "target": 8,
+      "mode": "<MovementMode.MOVE_WALKING: 1>",
+      "montage": null
+    },
+    {
+      "t": 24.016,
+      "position": [
+        -280.3531387044462,
+        819.7369738509757,
+        483.9029857096645
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.109,
+      "position": [
+        -280.32453088877867,
+        826.521081872624,
+        540.739369328148
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.203,
+      "position": [
+        -280.29876305496714,
+        835.9427507089931,
+        584.2076801516764
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.297,
+      "position": [
+        -280.27018600309515,
+        850.0615053710484,
+        623.851745666569
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.391,
+      "position": [
+        -280.2421982152808,
+        867.6302094422826,
+        653.9491547674303
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.484,
+      "position": [
+        -280.21384590391864,
+        889.2024834820004,
+        675.6308172417722
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.578,
+      "position": [
+        -280.1846233365076,
+        915.4127853907198,
+        688.7009292825355
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.672,
+      "position": [
+        -280.1582655203652,
+        942.5543152319034,
+        692.4049837753855
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.766,
+      "position": [
+        -280.1338360210223,
+        971.1803056732568,
+        687.5665732131542
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": null
+    },
+    {
+      "t": 24.859,
+      "position": [
+        -280.11253701129544,
+        999.6642174974598,
+        673.8956212332284
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 24.953,
+      "position": [
+        -280.09624029996087,
+        1024.3150015292506,
+        654.9331913741887
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.047,
+      "position": [
+        -280.0795571189076,
+        1052.8470073337821,
+        624.7236954192482
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.141,
+      "position": [
+        -280.0638016533221,
+        1083.758972705036,
+        581.9899829339558
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.234,
+      "position": [
+        -280.05139897470565,
+        1111.6430997501195,
+        534.5160072022379
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.328,
+      "position": [
+        -280.0402341049141,
+        1140.247857588897,
+        477.0177146152206
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.422,
+      "position": [
+        -280.03080393876303,
+        1167.7602863701568,
+        413.30932034804744
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.516,
+      "position": [
+        -280.022019900716,
+        1196.9810646604576,
+        336.61929666159006
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.609,
+      "position": [
+        -280.014704870892,
+        1224.7465135770415,
+        255.1343272559535
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_14"
+    },
+    {
+      "t": 25.703,
+      "position": [
+        -280.0087567262233,
+        1250.290553906323,
+        172.75474591849908
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_15"
+    },
+    {
+      "t": 25.797,
+      "position": [
+        -280.0026253843167,
+        1280.2197825218402,
+        67.19366426708731
+      ],
+      "target": 9,
+      "mode": "<MovementMode.MOVE_FALLING: 3>",
+      "montage": "AnimMontage_15"
+    }
+  ],
+  "reached": 9,
+  "jump_requested": true,
+  "saw_falling": true,
+  "saw_swimming": true,
+  "passed": true,
+  "end": [
+    -279.9983857954225,
+    1303.639971831283,
+    -22.212465032649046
+  ],
+  "final_mode": "<MovementMode.MOVE_SWIMMING: 4>"
+}

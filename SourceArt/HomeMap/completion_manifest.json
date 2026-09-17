@@ -1,0 +1,163 @@
+[
+  {
+    "mesh": "SM_HM_KitchenJoineryFinish",
+    "triangles": 3684,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Warm_Light",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_KitchenJoineryFinish",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_DiningFinish",
+    "triangles": 3024,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Warm_Light",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": false,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_DiningFinish",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_GardenLoungePavilion",
+    "triangles": 4536,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_GardenLoungePavilion",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_WingFacadeFinish",
+    "triangles": 1080,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_WingFacadeFinish",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_GardenPavingFinish",
+    "triangles": 972,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_GardenPavingFinish",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

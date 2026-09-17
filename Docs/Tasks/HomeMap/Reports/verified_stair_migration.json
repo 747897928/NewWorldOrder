@@ -1,0 +1,610 @@
+[
+  {
+    "label": "HM_Gallery_Rear_Guard",
+    "loc": [
+      -80.0,
+      -612.0,
+      407.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_660_3_110.SM_HM_660_3_110"
+  },
+  {
+    "label": "HM_Gallery_Rear_Guard_Cap",
+    "loc": [
+      -80.0,
+      -612.0,
+      465.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_660_3_4.SM_HM_660_3_4"
+  },
+  {
+    "label": "HM_Gallery_Guard_Post_-320",
+    "loc": [
+      -390.0,
+      -612.0,
+      407.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Gallery_Guard_Post_0",
+    "loc": [
+      -70.0,
+      -612.0,
+      407.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Gallery_Guard_Post_320",
+    "loc": [
+      250.0,
+      -612.0,
+      407.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Gallery_Stair",
+    "loc": [
+      360.0,
+      -300.0,
+      176.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair.SM_Gallery_Stair"
+  },
+  {
+    "label": "HM_Stair_Post_330_0",
+    "loc": [
+      260.0,
+      0.0,
+      70.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_2",
+    "loc": [
+      260.0,
+      -60.0,
+      105.2
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_4",
+    "loc": [
+      260.0,
+      -120.0,
+      140.4
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_6",
+    "loc": [
+      260.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_8",
+    "loc": [
+      260.0,
+      -240.0,
+      210.8
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_10",
+    "loc": [
+      260.0,
+      -300.0,
+      246.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_12",
+    "loc": [
+      260.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_14",
+    "loc": [
+      260.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_16",
+    "loc": [
+      260.0,
+      -480.0,
+      351.6
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_18",
+    "loc": [
+      260.0,
+      -540.0,
+      386.8
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_330_20",
+    "loc": [
+      260.0,
+      -600.0,
+      422.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Rail_330",
+    "loc": [
+      260.0,
+      -300.0,
+      296.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      30.38599967956544
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_330.SM_Stair_Rail_330"
+  },
+  {
+    "label": "HM_Stair_Post_530_0",
+    "loc": [
+      460.0,
+      0.0,
+      70.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_2",
+    "loc": [
+      460.0,
+      -60.0,
+      105.2
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_4",
+    "loc": [
+      460.0,
+      -120.0,
+      140.4
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_6",
+    "loc": [
+      460.0,
+      -180.0,
+      175.60000000000002
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_8",
+    "loc": [
+      460.0,
+      -240.0,
+      210.8
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_10",
+    "loc": [
+      460.0,
+      -300.0,
+      246.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_12",
+    "loc": [
+      460.0,
+      -360.0,
+      281.20000000000005
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_14",
+    "loc": [
+      460.0,
+      -420.0,
+      316.40000000000003
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_16",
+    "loc": [
+      460.0,
+      -480.0,
+      351.6
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_18",
+    "loc": [
+      460.0,
+      -540.0,
+      386.8
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Post_530_20",
+    "loc": [
+      460.0,
+      -600.0,
+      422.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/SM_HM_4_4_110.SM_HM_4_4_110"
+  },
+  {
+    "label": "HM_Stair_Rail_530",
+    "loc": [
+      460.0,
+      -300.0,
+      296.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      30.38599967956544
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Stair_Rail_530.SM_Stair_Rail_530"
+  },
+  {
+    "label": "HM_Gallery_Stair_Landing",
+    "loc": [
+      360.0,
+      -610.0,
+      340.0
+    ],
+    "rot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": "/Game/Environment/HomeMap/Architecture/Hub/BFEU_Pilot_ActorTransform/SM_Gallery_Stair_Landing.SM_Gallery_Stair_Landing"
+  },
+  {
+    "label": "HM_Stair_Warm",
+    "loc": [
+      420.0,
+      -270.0,
+      660.0
+    ],
+    "rot": [
+      -90.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mesh": null
+  }
+]

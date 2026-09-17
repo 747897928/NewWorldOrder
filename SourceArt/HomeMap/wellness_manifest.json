@@ -1,0 +1,230 @@
+[
+  {
+    "mesh": "SM_HM_TreadmillSuite",
+    "triangles": 5288,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber",
+      "/Game/Environment/HomeMap/Materials/M_Metall",
+      "/Game/Environment/HomeMap/Materials/M_Plastic_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_TreadmillSuite",
+        "location_cm": [
+          1200,
+          235,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "label": "HM_TreadmillSuite_Second",
+        "location_cm": [
+          1200,
+          495,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_DumbbellRack",
+    "triangles": 1936,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber",
+      "/Game/Environment/HomeMap/Materials/M_Metall"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_DumbbellRack",
+        "location_cm": [
+          1170,
+          65,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_TrainingBench",
+    "triangles": 1740,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber",
+      "/Game/Environment/HomeMap/Materials/M_Metall",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_TrainingBench",
+        "location_cm": [
+          1175,
+          625,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_YogaPracticeSet",
+    "triangles": 1028,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/MI_Suite_Linen"
+    ],
+    "nanite": false,
+    "collision": false,
+    "instances": [
+      {
+        "label": "HM_YogaPracticeSet",
+        "location_cm": [
+          1090,
+          950,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "label": "HM_YogaPracticeSet_Second",
+        "location_cm": [
+          1090,
+          1240,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_WellnessStorage",
+    "triangles": 8576,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze",
+      "/Game/Environment/HomeMap/Materials/Hub/MI_Suite_Linen",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_WellnessStorage",
+        "location_cm": [
+          1367,
+          1120,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_GymFinish",
+    "triangles": 4104,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Rubber",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood"
+    ],
+    "nanite": false,
+    "collision": true,
+    "instances": [
+      {
+        "label": "HM_GymFinish",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,3143 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameplayAbilitySpec.h"
+#include "Abilities/GameplayAbility.h"
+#include "ShootAbilityCost.generated.h"
+
+class UShootGameplayAbility;
+
+/**
+ * UShootAbilityCost
+ *
+ * Base class for costs that a ShootGameplayAbility has (e.g., ammo or charges)
+ */
+UCLASS(MinimalAPI, DefaultToInstanced, EditInlineNew, Abstract)
+class UShootAbilityCost : public UObject
+{
+	GENERATED_BODY()
+
+public:
+	UShootAbilityCost()
+	{
+	}
+
+	/**
+	 * Checks if we can afford this cost.
+	 *
+	 * A failure reason tag can be added to OptionalRelevantTags (if non-null), which can be queried
+	 * elsewhere to determine how to provide user feedback (e.g., a clicking noise if a weapon is out of ammo)
+	 * 
+	 * Ability and ActorInfo are guaranteed to be non-null on entry, but OptionalRelevantTags can be nullptr.
+	 * 
+	 * @return true if we can pay for the ability, false otherwise.
+	 */
+	virtual bool CheckCost(const UShootGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle,
+	                       const FGameplayAbilityActorInfo* ActorInfo,
+	                       FGameplayTagContainer* OptionalRelevantTags) const
+	{
+		return true;
+	}
+
+	/**
+	 * Applies the ability's cost to the target
+	 *
+	 * Notes:
+	 * - Your implementation don't need to check ShouldOnlyApplyCostOnHit(), the caller does that for you.
+ 	 * - Ability and ActorInfo are guaranteed to be non-null on entry.
+	 */
+	virtual void ApplyCost(const UShootGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle,
+	                       const FGameplayAbilityActorInfo* ActorInfo,
+	                       const FGameplayAbilityActivationInfo ActivationInfo)
+	{
+	}
+
+	/** If true, this cost should only be applied if this ability hits successfully */
+	bool ShouldOnlyApplyCostOnHit() const { return bOnlyApplyCostOnHit; }
+
+protected:
+	/** If true, this cost should only be applied if this ability hits successfully */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Costs)
+	bool bOnlyApplyCostOnHit = false;
+};
+
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "ShootAbilityCost.h"
+#include "ShootAbilityCost_Ammo.generated.h"
+
+class ARangedWeaponInstance;
+class UShootAbilityCost;
+class UObject;
+
+struct FGameplayAbilityActivationInfo;
+struct FGameplayAbilitySpecHandle;
+struct FGameplayAbilityActorInfo;
+struct FGameplayTagContainer;
+
+/**
+ * UShootAbilityCost_Ammo
+ *
+ * - 作为 ShootGameplayAbility 的附加成本 (AdditionalCosts) 使用
+ * - CheckCost: 读取 WeaponInstance 或 PlayerState.Inventory，读取角色 AmmoCostMultiplier（若有），判断是否能支付
+ * - ApplyCost: 在服务器上执行实际扣弹（调用 InventoryComponent->ConsumeAmmoForWeapon_Internal）
+ *
+ * 说明：
+ * - CheckCost 可能在客户端和服务端被调用（客户端用于 UX，服务端最终核验）
+ * - ApplyCost 仅会在服务端真正执行（由 CommitAbility 调用）
+ */
+UCLASS()
+class UShootAbilityCost_Ammo : public UShootAbilityCost
+{
+	GENERATED_BODY()
+
+public:
+	UShootAbilityCost_Ammo();
+	
+	/** 检查是否有足够弹药（在 Ability 系统的 CheckCost 中被调用） */
+	virtual bool CheckCost(const UShootGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, FGameplayTagContainer* OptionalRelevantTags) const override;
+
+	/** 在 Commit / ApplyCost 阶段真正扣弹（仅在服务端） */
+	virtual void ApplyCost(const UShootGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) override;
+
+	ARangedWeaponInstance* GetWeaponInstance(const UShootGameplayAbility* Ability) const;
+};
+// Copyright ZhaoYiJie
+
+
+#include "AbilitySystem/Abilities/ShootAbilityCost_Ammo.h"
+#include "GameplayAbilitySpec.h"
+#include "GameplayAbilitySpecHandle.h"
+#include "AbilitySystem/Abilities/ShootGameplayAbility.h"
+#include "Weapons/RangedWeaponInstance.h"
+
+UShootAbilityCost_Ammo::UShootAbilityCost_Ammo()
+{
+}
+
+bool UShootAbilityCost_Ammo::CheckCost(const UShootGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle,
+                                       const FGameplayAbilityActorInfo* ActorInfo,
+                                       FGameplayTagContainer* OptionalRelevantTags) const
+{
+	if (!Super::CheckCost(Ability, Handle, ActorInfo, OptionalRelevantTags))
+	{
+		return false;
+	}
+
+	ARangedWeaponInstance* WeaponInstance = GetWeaponInstance(Ability);
+	if (WeaponInstance)
+	{
+		if ((WeaponInstance->GetCurrentAmmo() - WeaponInstance->GetAmmoPerShot()) >= 0)
+		{
+			return true;
+		}
+		else
+		{
+			// 弹药不足，添加失败标签
+			/*if (OptionalRelevantTags)
+			{
+				OptionalRelevantTags->AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Cost.Ammo")));
+			}*/
+			return false;
+		}
+	}
+	return false;
+}
+
+void UShootAbilityCost_Ammo::ApplyCost(const UShootGameplayAbility* Ability, const FGameplayAbilitySpecHandle Handle,
+                                       const FGameplayAbilityActorInfo* ActorInfo,
+                                       const FGameplayAbilityActivationInfo ActivationInfo)
+{
+	// 基类先走（例如可能有普通的 Mana cost）
+	Super::ApplyCost(Ability, Handle, ActorInfo, ActivationInfo);
+	ARangedWeaponInstance* WeaponInstance = GetWeaponInstance(Ability);
+	if (WeaponInstance)
+	{
+		WeaponInstance->ConsumeAmmo(WeaponInstance->GetAmmoPerShot());
+	}
+}
+
+ARangedWeaponInstance* UShootAbilityCost_Ammo::GetWeaponInstance(const UShootGameplayAbility* Ability) const
+{
+	FGameplayAbilitySpec* CurrentGameplayAbilitySpec = Ability->GetCurrentAbilitySpec();
+	if (CurrentGameplayAbilitySpec)
+	{
+		return Cast<ARangedWeaponInstance>(CurrentGameplayAbilitySpec->SourceObject.Get());
+	}
+	return nullptr;
+}
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "AbilitySystem/Abilities/ShootGameplayAbility_ReloadMagazine.h"
+#include "ShootGA_Reload_Rifle.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class UShootGA_Reload_Rifle : public UShootGameplayAbility_ReloadMagazine
+{
+	GENERATED_BODY()
+
+public:
+	UShootGA_Reload_Rifle();
+
+	virtual void PostInitProperties() override;
+};
+// Copyright ZhaoYiJie
+
+
+#include "AbilitySystem/Abilities/ShootGA_Reload_Rifle.h"
+
+UShootGA_Reload_Rifle::UShootGA_Reload_Rifle()
+{
+	
+}
+
+void UShootGA_Reload_Rifle::PostInitProperties()
+{
+	Super::PostInitProperties();
+
+	if (HasAnyFlags(RF_ClassDefaultObject))
+	{
+		//AbilityTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Type.Action.Reload")));
+		SetAssetTags(FGameplayTagContainer(
+			FGameplayTag::RequestGameplayTag(FName("Ability.Type.Action.Reload"))));
+		ActivationOwnedTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Event.Movement.Reload")));
+		StartupInputTag = FGameplayTag::RequestGameplayTag(FName("InputTag.R"));
+	}
+}
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "ShootGameplayAbility_Weapon_Fire.h"
+#include "ShootGA_Weapon_Fire_Rifle.generated.h"
+
+class UAnimMontage;
+
+/**
+ * UShootGameplayAbility_Weapon_Fire_Rifle
+ * 
+ * 步枪射击能力的完整实现（参考 Lyra 的 GA_Weapon_Fire_Rifle 蓝图）
+ * 
+ * 流程：
+ */
+UCLASS()
+class UShootGA_Weapon_Fire_Rifle : public UShootGameplayAbility_Weapon_Fire
+{
+	GENERATED_BODY()
+
+public:
+	UShootGA_Weapon_Fire_Rifle();
+
+protected:
+	//~UGameplayAbility interface
+	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
+	                             const FGameplayAbilityActivationInfo ActivationInfo,
+	                             const FGameplayEventData* TriggerEventData) override;
+	//~End of UGameplayAbility interface
+
+	/**
+	 * 当武器目标数据准备好时（重写父类的蓝图事件为 C++ 实现）
+	 * 
+	 * 在这里做：
+	 * 1. 应用伤害 GE 到所有命中目标
+	 * 2. 触发 GameplayCue.Weapon.Fire（枪口火光、音效、弹壳等）
+	 * 3. 为每个命中目标触发 GameplayCue.Impact（血花、弹孔等）
+	 */
+	virtual void OnRangedWeaponTargetDataReady_Implementation(const FGameplayAbilityTargetDataHandle& TargetData);
+
+	/**
+	 * 应用伤害到单个目标
+	 * 
+	 * 计算最终伤害 = 基础伤害 * 距离衰减 * 物理材质倍率（爆头等）
+	 * 然后通过 GE 应用到目标的 ASC
+	 */
+	void ApplyDamageToTarget(const FHitResult& Hit);
+
+	/**
+	 * 播放枪口特效
+	 * 
+	 * GameplayCue 会自动处理：
+	 * - 枪口火光（粒子系统）
+	 * - 开火音效（在所有客户端播放）
+	 * - 弹壳抛出（只在本地播放，通过 IsLocallyControlled 判断）
+	 * - 相机抖动（只在本地）
+	 */
+	void PlayFireEffects(const FGameplayAbilityTargetDataHandle& TargetData);
+
+	/**
+	 * 处理所有命中：播放特效 + 应用伤害
+	 * 
+	 * 一次循环解决所有事情：
+	 * - 播放命中特效（所有客户端）
+	 * - 生成命中 Actor（服务器，可选）
+	 * - 应用伤害 GE（服务器）
+	 */
+	void ProcessHits(const FGameplayAbilityTargetDataHandle& TargetData);
+
+public:
+	// ========== 配置属性 ==========
+
+	/** 角色开火动画蒙太奇 */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|Animation")
+	UAnimMontage* CharacterFireMontage;
+
+	UPROPERTY(EditAnywhere, Category="Weapon|Fire")
+	float AutoRate = 1.0f;
+
+	UPROPERTY(EditAnywhere, Category="Weapon|Fire")
+	float FireDelayTimeSecs = 0.12f;
+
+	/** 伤害 GameplayEffect 类 */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|Damage")
+	TSubclassOf<UGameplayEffect> DamageGameplayEffectClass;
+
+	/** 命中时生成的 Actor 类（可选） */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|Fire")
+	TSubclassOf<AActor> FieldActorToSpawnOnImpact;
+
+	/** 
+	 * 枪口特效的 GameplayCue Tag（例如 GameplayCue.Weapon.Rifle.Fire）
+	 * 
+	 * 这个 Cue 应该处理：
+	 * - 枪口火光
+	 * - 开火音效
+	 * - 弹壳抛出
+	 * - 镜头抖动
+	 */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|Effects")
+	FGameplayTag FireGameplayCueTag;
+
+	/**
+	 * 命中特效的 GameplayCue Tag（例如 GameplayCue.Weapon.Rifle.Impact）
+	 * 
+	 * 这个 Cue 应该处理：
+	 * - 血花特效（命中角色）
+	 * - 弹孔特效（命中墙壁）
+	 * - 命中音效
+	 */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|Effects")
+	FGameplayTag ImpactGameplayCueTag;
+
+private:
+	/** PlayMontageAndWait 任务的句柄（用于取消） */
+	UPROPERTY()
+	class UAbilityTask_PlayMontageAndWait* MontageTask;
+};
+// Copyright ZhaoYiJie
+
+#include "AbilitySystem/Abilities/ShootGA_Weapon_Fire_Rifle.h"
+#include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
+#include "AbilitySystemComponent.h"
+#include "AbilitySystemBlueprintLibrary.h"
+#include "GameplayCueFunctionLibrary.h"
+#include "GameplayEffect.h"
+#include "Weapons/RangedWeaponInstance.h"
+#include "Animation/AnimMontage.h"
+
+UShootGA_Weapon_Fire_Rifle::UShootGA_Weapon_Fire_Rifle()
+{
+	CharacterFireMontage = nullptr;
+	MontageTask = nullptr;
+	DamageGameplayEffectClass = nullptr;
+	FieldActorToSpawnOnImpact = nullptr;
+	AutoRate = 1.0f;
+	FireDelayTimeSecs = 0.1f;
+	
+	FireGameplayCueTag = FGameplayTag::RequestGameplayTag(FName("GameplayCue.Weapon.Rifle.Fire"));
+	ImpactGameplayCueTag = FGameplayTag::RequestGameplayTag(FName("GameplayCue.Weapon.Rifle.Impact"));
+
+	// 设置 AbilityTags（等价于 JSON 中 AbilityTags）
+	SetAssetTags(FGameplayTagContainer(
+		FGameplayTag::RequestGameplayTag(FName("Ability.Type.Action.WeaponFire"))));
+		
+	// 当 ability 激活时会把这些 tag 添加到拥有者 (ActivationOwnedTags)
+	ActivationOwnedTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Event.Movement.WeaponFire")));
+
+	// 激活所需标签 / 被阻挡的标签（ActivationRequiredTags / ActivationBlockedTags）
+	//ActivationRequiredTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Require.SomeTag"))); // 示例
+	//ActivationBlockedTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Blocked.SomeTag")));   // 示例
+
+	// 来源受阻挡（SourceBlockedTags），例如武器上标记“不允许开火”
+	SourceBlockedTags.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Weapon.NoFiring")));
+
+	// 取消或阻止其他 ability 的标签（CancelAbilitiesWithTag / BlockAbilitiesWithTag）
+	//CancelAbilitiesWithTag.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Type.Action.Reload"))); // 示例
+	//BlockAbilitiesWithTag.AddTag(FGameplayTag::RequestGameplayTag(FName("Ability.Type.Action.Other"))); // 示例
+	StartupInputTag = FGameplayTag::RequestGameplayTag(FName("InputTag.LMB"));
+}
+
+void UShootGA_Weapon_Fire_Rifle::ActivateAbility(
+	const FGameplayAbilitySpecHandle Handle,
+	const FGameplayAbilityActorInfo* ActorInfo,
+	const FGameplayAbilityActivationInfo ActivationInfo,
+	const FGameplayEventData* TriggerEventData)
+{
+	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+
+	// Lyra 的关键设计：立即开始射击检测（不等动画）
+	if (IsLocallyControlled())
+	{
+		StartRangedWeaponTargeting();
+	}
+
+	// 播放角色开火蒙太奇（武器动画由 AN_PlayWeaponMontage 处理）
+	if (CharacterFireMontage)
+	{
+		MontageTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(
+			this, NAME_None, CharacterFireMontage, AutoRate, NAME_None,
+			false, 1.0f, 0.0f, false
+		);
+
+		MontageTask->OnCompleted.AddDynamic(this, &UShootGA_Weapon_Fire_Rifle::K2_EndAbility);
+		MontageTask->OnInterrupted.AddDynamic(this, &UShootGA_Weapon_Fire_Rifle::K2_EndAbility);
+		MontageTask->OnCancelled.AddDynamic(this, &UShootGA_Weapon_Fire_Rifle::K2_EndAbility);
+		MontageTask->ReadyForActivation();
+	}
+
+	// 延迟结束 Ability（备用机制）
+	FTimerHandle TimerHandle;
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle,
+	                                       [this]() { if (IsActive()) K2_EndAbility(); },
+	                                       FireDelayTimeSecs, false);
+}
+
+// ========== 核心逻辑：处理命中数据 ==========
+
+void UShootGA_Weapon_Fire_Rifle::OnRangedWeaponTargetDataReady_Implementation(
+	const FGameplayAbilityTargetDataHandle& TargetData)
+{
+	PlayFireEffects(TargetData);
+	ProcessHits(TargetData);
+}
+
+void UShootGA_Weapon_Fire_Rifle::PlayFireEffects(const FGameplayAbilityTargetDataHandle& TargetData)
+{
+	if (!FireGameplayCueTag.IsValid()) return;
+
+	// 获取第一个命中结果（即使没命中也会有虚拟点）
+	const FHitResult& FirstHit = UAbilitySystemBlueprintLibrary::GetHitResultFromTargetData(TargetData, 0);
+
+	// 从命中结果生成 Cue 参数
+	FGameplayCueParameters GCParams = UGameplayCueFunctionLibrary::MakeGameplayCueParametersFromHitResult(FirstHit);
+
+	// 补充武器信息
+	if (ARangedWeaponInstance* Weapon = GetWeaponInstance())
+	{
+		GCParams.SourceObject = Weapon;
+		// 如果没命中任何东西，使用枪口位置和瞄准方向
+		if (!FirstHit.bBlockingHit)
+		{
+			GCParams.Location = Weapon->GetMuzzleLocation();
+			GCParams.Normal = GetAimDirection();
+		}
+	}
+
+	// 执行 GameplayCue（会在所有客户端播放）
+	K2_ExecuteGameplayCueWithParams(FireGameplayCueTag, GCParams);
+}
+
+void UShootGA_Weapon_Fire_Rifle::ProcessHits(const FGameplayAbilityTargetDataHandle& TargetData)
+{
+	const int32 HitCount = UAbilitySystemBlueprintLibrary::GetDataCountFromTargetData(TargetData);
+	const bool bIsAuthority = K2_HasAuthority();
+
+	// 一次循环处理所有命中
+	for (int32 i = 0; i < HitCount; ++i)
+	{
+		// 使用 const 引用避免拷贝
+		const FHitResult& Hit = UAbilitySystemBlueprintLibrary::GetHitResultFromTargetData(TargetData, i);
+
+		// 只处理真实命中（排除虚拟命中点）
+		if (!Hit.bBlockingHit) continue;
+
+		// 1. 播放命中特效（所有客户端）
+		if (ImpactGameplayCueTag.IsValid())
+		{
+			FGameplayCueParameters ImpactParams =
+				UGameplayCueFunctionLibrary::MakeGameplayCueParametersFromHitResult(Hit);
+			K2_ExecuteGameplayCueWithParams(ImpactGameplayCueTag, ImpactParams);
+		}
+
+		// 2. 服务器：生成命中 Actor（可选）
+		if (bIsAuthority && FieldActorToSpawnOnImpact)
+		{
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+			SpawnParams.Instigator = Cast<APawn>(GetAvatarActorFromActorInfo());
+
+			FTransform SpawnTransform(Hit.ImpactNormal.ToOrientationQuat(), Hit.ImpactPoint);
+			GetWorld()->SpawnActor<AActor>(FieldActorToSpawnOnImpact, SpawnTransform, SpawnParams);
+		}
+
+		// 3. 服务器：应用伤害
+		if (bIsAuthority)
+		{
+			ApplyDamageToTarget(Hit);
+		}
+	}
+}
+
+void UShootGA_Weapon_Fire_Rifle::ApplyDamageToTarget(const FHitResult& Hit)
+{
+	if (!DamageGameplayEffectClass) return;
+
+	AActor* TargetActor = Hit.GetActor();
+	if (!TargetActor) return;
+
+	// 获取 ASC
+	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
+	UAbilitySystemComponent* SourceASC = GetAbilitySystemComponentFromActorInfo();
+	if (!TargetASC || !SourceASC) return;
+
+	ARangedWeaponInstance* Weapon = GetWeaponInstance();
+	if (!Weapon) return;
+
+	// 创建 GE Context
+	FGameplayEffectContextHandle EffectContext = SourceASC->MakeEffectContext();
+	EffectContext.AddSourceObject(Weapon);
+	EffectContext.AddInstigator(GetAvatarActorFromActorInfo(), GetAvatarActorFromActorInfo());
+	EffectContext.AddHitResult(Hit);
+
+	// 创建 GE Spec
+	FGameplayEffectSpecHandle SpecHandle = SourceASC->MakeOutgoingSpec(
+		DamageGameplayEffectClass, GetAbilityLevel(), EffectContext
+	);
+
+	if (!SpecHandle.IsValid()) return;
+
+	// 计算最终伤害
+	float FinalDamage = Weapon->GetBaseDamage();
+	FinalDamage *= Weapon->GetDistanceAttenuation(FVector::Dist(Hit.TraceStart, Hit.ImpactPoint));
+	if (Hit.PhysMaterial.IsValid())
+	{
+		FinalDamage *= Weapon->GetPhysicalMaterialAttenuation(Hit.PhysMaterial.Get());
+	}
+
+	// 设置伤害值
+	SpecHandle.Data->SetSetByCallerMagnitude(
+		FGameplayTag::RequestGameplayTag(FName("SetByCaller.Damage")),
+		FinalDamage
+	);
+
+	// 应用到目标
+	SourceASC->ApplyGameplayEffectSpecToTarget(*SpecHandle.Data.Get(), TargetASC);
+}
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Abilities/GameplayAbility.h"
+#include "ShootGameplayAbility.generated.h"
+
+class UShootAbilityCost;
+class AShootCharacter;
+/**
+ * 
+ */
+UCLASS()
+class UShootGameplayAbility : public UGameplayAbility
+{
+	GENERATED_BODY()
+
+public:
+	// Additional costs that must be paid to activate this ability
+	UPROPERTY(EditDefaultsOnly, Instanced, Category = "Shoot|Costs")
+	TArray<TObjectPtr<UShootAbilityCost>> AdditionalCosts;
+
+	UPROPERTY(EditDefaultsOnly, Category="Shoot|Input")
+	FGameplayTag StartupInputTag;
+
+	UFUNCTION(BlueprintCallable, Category = "Shoot|Ability")
+	AShootCharacter* GetShootCharacterFromActorInfo() const;
+
+protected:
+
+	virtual bool CheckCost(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, FGameplayTagContainer* OptionalRelevantTags) const override;
+	virtual void ApplyCost(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) const override;
+	
+	float GetManaCost(float InLevel = 1.f) const;
+	float GetCooldown(float InLevel = 1.f) const;
+};
+// Copyright ZhaoYiJie
+
+
+#include "AbilitySystem/Abilities/ShootGameplayAbility.h"
+
+#include "AbilitySystemBlueprintLibrary.h"
+#include "AbilitySystem/ShootAbilitySystemComponent.h"
+#include "AbilitySystem/ShootAttributeSet.h"
+#include "AbilitySystem/Abilities/ShootAbilityCost.h"
+#include "Character/ShootCharacter.h"
+
+AShootCharacter* UShootGameplayAbility::GetShootCharacterFromActorInfo() const
+{
+	return (CurrentActorInfo ? Cast<AShootCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr);
+}
+
+bool UShootGameplayAbility::CheckCost(const FGameplayAbilitySpecHandle Handle,
+                                      const FGameplayAbilityActorInfo* ActorInfo,
+                                      FGameplayTagContainer* OptionalRelevantTags) const
+{
+	if (!Super::CheckCost(Handle, ActorInfo, OptionalRelevantTags) || !ActorInfo)
+	{
+		return false;
+	}
+
+	// Verify we can afford any additional costs
+	for (const TObjectPtr<UShootAbilityCost>& AdditionalCost : AdditionalCosts)
+	{
+		if (AdditionalCost != nullptr)
+		{
+			if (!AdditionalCost->CheckCost(this, Handle, ActorInfo, /*inout*/ OptionalRelevantTags))
+			{
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+void UShootGameplayAbility::ApplyCost(const FGameplayAbilitySpecHandle Handle,
+                                      const FGameplayAbilityActorInfo* ActorInfo,
+                                      const FGameplayAbilityActivationInfo ActivationInfo) const
+{
+	Super::ApplyCost(Handle, ActorInfo, ActivationInfo);
+
+	check(ActorInfo);
+
+	// Used to determine if the ability actually hit a target (as some costs are only spent on successful attempts)
+	auto DetermineIfAbilityHitTarget = [&]()
+	{
+		if (ActorInfo->IsNetAuthority())
+		{
+			if (UShootAbilitySystemComponent* ASC = Cast<UShootAbilitySystemComponent>(
+				ActorInfo->AbilitySystemComponent.Get()))
+			{
+				FGameplayAbilityTargetDataHandle TargetData;
+				ASC->GetAbilityTargetData(Handle, ActivationInfo, TargetData);
+				for (int32 TargetDataIdx = 0; TargetDataIdx < TargetData.Data.Num(); ++TargetDataIdx)
+				{
+					if (UAbilitySystemBlueprintLibrary::TargetDataHasHitResult(TargetData, TargetDataIdx))
+					{
+						return true;
+					}
+				}
+			}
+		}
+
+		return false;
+	};
+
+	// Pay any additional costs
+	bool bAbilityHitTarget = false;
+	bool bHasDeterminedIfAbilityHitTarget = false;
+	for (const TObjectPtr<UShootAbilityCost>& AdditionalCost : AdditionalCosts)
+	{
+		if (AdditionalCost != nullptr)
+		{
+			if (AdditionalCost->ShouldOnlyApplyCostOnHit())
+			{
+				if (!bHasDeterminedIfAbilityHitTarget)
+				{
+					bAbilityHitTarget = DetermineIfAbilityHitTarget();
+					bHasDeterminedIfAbilityHitTarget = true;
+				}
+
+				if (!bAbilityHitTarget)
+				{
+					continue;
+				}
+			}
+
+			AdditionalCost->ApplyCost(this, Handle, ActorInfo, ActivationInfo);
+		}
+	}
+}
+
+float UShootGameplayAbility::GetManaCost(float InLevel) const
+{
+	float ManaCost = 0.f;
+	if (const UGameplayEffect* CostEffect = GetCostGameplayEffect())
+	{
+		for (FGameplayModifierInfo Mod : CostEffect->Modifiers)
+		{
+			if (Mod.Attribute == UShootAttributeSet::GetManaAttribute())
+			{
+				Mod.ModifierMagnitude.GetStaticMagnitudeIfPossible(InLevel, ManaCost);
+				break;
+			}
+		}
+	}
+	return ManaCost;
+}
+
+float UShootGameplayAbility::GetCooldown(float InLevel) const
+{
+	float Cooldown = 0.f;
+	if (const UGameplayEffect* CooldownEffect = GetCooldownGameplayEffect())
+	{
+		CooldownEffect->DurationMagnitude.GetStaticMagnitudeIfPossible(InLevel, Cooldown);
+	}
+	return Cooldown;
+}
+// Copyright ZhaoYiJie
+
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "ShootGameplayAbility.h"
+#include "ShootGameplayAbility_ReloadMagazine.generated.h"
+
+class ARangedWeaponInstance;
+class UAnimMontage;
+
+/**
+ * UShootGameplayAbility_ReloadMagazine
+ * 
+ * 武器换弹 Ability（参考 Lyra 的 GA_Weapon_ReloadMagazine）
+ * 
+ */
+UCLASS()
+class UShootGameplayAbility_ReloadMagazine : public UShootGameplayAbility
+{
+	GENERATED_BODY()
+
+public:
+	UShootGameplayAbility_ReloadMagazine();
+
+protected:
+
+	virtual void PostInitProperties() override;
+	
+	//~UGameplayAbility interface
+	virtual bool CanActivateAbility(
+		const FGameplayAbilitySpecHandle Handle,
+		const FGameplayAbilityActorInfo* ActorInfo,
+		const FGameplayTagContainer* SourceTags = nullptr,
+		const FGameplayTagContainer* TargetTags = nullptr,
+		OUT FGameplayTagContainer* OptionalRelevantTags = nullptr) const override;
+
+	virtual void ActivateAbility(
+		const FGameplayAbilitySpecHandle Handle,
+		const FGameplayAbilityActorInfo* ActorInfo,
+		const FGameplayAbilityActivationInfo ActivationInfo,
+		const FGameplayEventData* TriggerEventData) override;
+
+	virtual void EndAbility(
+		const FGameplayAbilitySpecHandle Handle,
+		const FGameplayAbilityActorInfo* ActorInfo,
+		const FGameplayAbilityActivationInfo ActivationInfo,
+		bool bReplicateEndAbility,
+		bool bWasCancelled) override;
+	//~End of UGameplayAbility interface
+
+	/**
+	 * 当收到换弹事件时调用（由 AnimNotify_GameplayEvent 触发）
+	 * 
+	 * 这个函数执行实际的换弹逻辑：
+	 * 1. 计算需要填充的弹药数量
+	 * 2. 从备弹中扣除
+	 * 3. 填充到弹夹
+	 */
+	UFUNCTION()
+	void OnReloadEventReceived(FGameplayEventData Payload);
+
+	/**
+	 * 执行实际的换弹逻辑（在服务器）
+	 */
+	void ReloadAmmoIntoMagazine();
+
+	/**
+	 * 获取当前武器实例（从 AbilitySpec 的 SourceObject）
+	 */
+	UFUNCTION(BlueprintCallable, Category="Shoot|Ability")
+	ARangedWeaponInstance* GetWeaponInstance() const;
+
+public:
+	// ========== 配置属性 ==========
+
+	/** 角色换弹动画蒙太奇（武器动画由 AN_PlayWeaponMontage 处理） */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Reload|Animation")
+	TObjectPtr<UAnimMontage> CharacterReloadMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Reload")
+	bool DidBlockFiring = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Reload")
+	float PlayRate = 1.0f;
+
+	FGameplayTag Tag_AbilityWeaponNoFiring;
+	FGameplayTag Tag_AbilityActivateFail_MagazineFull;
+	FGameplayTag Tag_AbilityActivateFail_NoSpareAmmo;
+	FGameplayTag Tag_GameplayEvent_ReloadDone;
+private:
+	/** PlayMontageAndWait 任务句柄 */
+	UPROPERTY()
+	TObjectPtr<class UAbilityTask_PlayMontageAndWait> MontageTask;
+
+	/** WaitGameplayEvent 任务句柄（监听换弹事件） */
+	UPROPERTY()
+	TObjectPtr<class UAbilityTask_WaitGameplayEvent> WaitEventTask;
+};
+// Copyright ZhaoYiJie
+
+
+#include "AbilitySystem/Abilities/ShootGameplayAbility_ReloadMagazine.h"
+
+#include "AbilitySystemBlueprintLibrary.h"
+#include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
+#include "Abilities/Tasks/AbilityTask_WaitGameplayEvent.h"
+#include "AbilitySystemComponent.h"
+#include "BlueprintGameplayTagLibrary.h"
+#include "Weapons/RangedWeaponInstance.h"
+#include "Animation/AnimMontage.h"
+
+UShootGameplayAbility_ReloadMagazine::UShootGameplayAbility_ReloadMagazine()
+{
+	CharacterReloadMontage = nullptr;
+	// 设置实例化策略
+	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
+	ReplicationPolicy = EGameplayAbilityReplicationPolicy::ReplicateYes;
+	bServerRespectsRemoteAbilityCancellation = true;
+	bRetriggerInstancedAbility = false;
+	NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::LocalPredicted;
+	NetSecurityPolicy = EGameplayAbilityNetSecurityPolicy::ClientOrServer;
+}
+
+// 在 CDO 初始化后安全地填充 tags
+void UShootGameplayAbility_ReloadMagazine::PostInitProperties()
+{
+	Super::PostInitProperties();
+
+	// 只在 CDO 上初始化一次（避免重复且保证对蓝图类生效）
+	if (HasAnyFlags(RF_ClassDefaultObject))
+	{
+		// 使用 ErrorIfNotFound = false 避免触发 ensure（调试日志会告诉你是否为空）
+		Tag_AbilityWeaponNoFiring = FGameplayTag::RequestGameplayTag(FName("Ability.Weapon.NoFiring"), false);
+		Tag_AbilityActivateFail_MagazineFull = FGameplayTag::RequestGameplayTag(
+			FName("Ability.ActivateFail.MagazineFull"), false);
+		Tag_AbilityActivateFail_NoSpareAmmo = FGameplayTag::RequestGameplayTag(
+			FName("Ability.ActivateFail.NoSpareAmmo"), false);
+		Tag_GameplayEvent_ReloadDone = FGameplayTag::RequestGameplayTag(FName("GameplayEvent.ReloadDone"), false);
+
+		// 可选调试日志：打印未找到的 tag（把注释打开以便定位问题）
+#if WITH_EDITOR
+		if (!Tag_AbilityWeaponNoFiring.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Gameplay Tag missing: Ability.Weapon.NoFiring"));
+		}
+		if (!Tag_AbilityActivateFail_MagazineFull.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Gameplay Tag missing: Ability.ActivateFail.MagazineFull"));
+		}
+		if (!Tag_AbilityActivateFail_NoSpareAmmo.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Gameplay Tag missing: Ability.ActivateFail.NoSpareAmmo"));
+		}
+		if (!Tag_GameplayEvent_ReloadDone.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Gameplay Tag missing: GameplayEvent.ReloadDone"));
+		}
+#endif
+	}
+}
+
+bool UShootGameplayAbility_ReloadMagazine::CanActivateAbility(
+	const FGameplayAbilitySpecHandle Handle,
+	const FGameplayAbilityActorInfo* ActorInfo,
+	const FGameplayTagContainer* SourceTags,
+	const FGameplayTagContainer* TargetTags,
+	FGameplayTagContainer* OptionalRelevantTags) const
+{
+	// 先检查父类条件
+	if (!Super::CanActivateAbility(Handle, ActorInfo, SourceTags, TargetTags, OptionalRelevantTags))
+	{
+		return false;
+	}
+
+	// 获取武器实例
+	const ARangedWeaponInstance* Weapon = GetWeaponInstance();
+	if (!Weapon)
+	{
+		return false;
+	}
+
+	// 检查是否需要换弹
+	const bool bNeedsReload = Weapon->GetCurrentAmmo() < Weapon->Definition->MagazineSize;
+	const bool bHasReserveAmmo = Weapon->GetCurrentReserve() > 0;
+
+	// 只有在弹夹未满且有备弹时才能换弹
+	if (!bNeedsReload || !bHasReserveAmmo)
+	{
+		if (OptionalRelevantTags)
+		{
+			if (!bNeedsReload && Tag_AbilityActivateFail_MagazineFull.IsValid())
+			{
+				OptionalRelevantTags->AddTag(Tag_AbilityActivateFail_MagazineFull);
+			}
+			if (!bHasReserveAmmo && Tag_AbilityActivateFail_NoSpareAmmo.IsValid())
+			{
+				OptionalRelevantTags->AddTag(Tag_AbilityActivateFail_NoSpareAmmo);
+			}
+		}
+		return false;
+	}
+
+	return true;
+}
+
+void UShootGameplayAbility_ReloadMagazine::ActivateAbility(
+	const FGameplayAbilitySpecHandle Handle,
+	const FGameplayAbilityActorInfo* ActorInfo,
+	const FGameplayAbilityActivationInfo ActivationInfo,
+	const FGameplayEventData* TriggerEventData)
+{
+	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+
+	// 获取武器实例
+	const ARangedWeaponInstance* Weapon = GetWeaponInstance();
+	if (!Weapon)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Reload Ability: No valid weapon instance."));
+		EndAbility(Handle, ActorInfo, ActivationInfo, true, true);
+		return;
+	}
+
+	DidBlockFiring = Weapon->GetCurrentAmmo() == 0;
+	if (DidBlockFiring && Tag_AbilityWeaponNoFiring.IsValid())
+	{
+		UAbilitySystemBlueprintLibrary::AddLooseGameplayTags(
+			GetOwningActorFromActorInfo(),
+			UBlueprintGameplayTagLibrary::MakeLiteralGameplayTagContainer(
+				FGameplayTagContainer(Tag_AbilityWeaponNoFiring)),
+			false
+		);
+	}
+
+	if (CharacterReloadMontage)
+	{
+		MontageTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(
+			this,
+			NAME_None,
+			CharacterReloadMontage,
+			1.0f, // PlayRate
+			NAME_None,
+			true, // bStopWhenAbilityEnds = true（如果 Ability 被取消，停止动画）
+			1.0f, // AnimRootMotionTranslationScale
+			0.0f, // StartTimeSeconds
+			false // bIgnoreIfAlreadyPlaying
+		);
+
+		// 绑定蒙太奇结束回调
+		MontageTask->OnCompleted.AddDynamic(this, &UShootGameplayAbility_ReloadMagazine::K2_EndAbilityLocally);
+		MontageTask->OnInterrupted.AddDynamic(this, &UShootGameplayAbility_ReloadMagazine::K2_EndAbility);
+		MontageTask->OnCancelled.AddDynamic(this, &UShootGameplayAbility_ReloadMagazine::K2_EndAbility);
+
+		MontageTask->ReadyForActivation();
+	}
+
+	// 2. 监听换弹事件（由 AnimNotify_GameplayEvent 触发）
+	WaitEventTask = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(
+		this,
+		Tag_GameplayEvent_ReloadDone,
+		nullptr, // OptionalExternalTarget（监听自己）
+		true, // OnlyTriggerOnce = true 只触发一次
+		true // OnlyMatchExact = true（精确匹配 Tag）
+	);
+
+	if (WaitEventTask)
+	{
+		WaitEventTask->EventReceived.AddDynamic(this, &UShootGameplayAbility_ReloadMagazine::OnReloadEventReceived);
+		WaitEventTask->ReadyForActivation();
+	}
+}
+
+void UShootGameplayAbility_ReloadMagazine::EndAbility(
+	const FGameplayAbilitySpecHandle Handle,
+	const FGameplayAbilityActorInfo* ActorInfo,
+	const FGameplayAbilityActivationInfo ActivationInfo,
+	bool bReplicateEndAbility,
+	bool bWasCancelled)
+{
+	//Restore ability to fire weapon if we blocked it during reloading
+	if (DidBlockFiring && Tag_AbilityWeaponNoFiring.IsValid())
+	{
+		UAbilitySystemBlueprintLibrary::RemoveLooseGameplayTags(
+			GetOwningActorFromActorInfo(),
+			UBlueprintGameplayTagLibrary::MakeLiteralGameplayTagContainer(
+				FGameplayTagContainer(Tag_AbilityWeaponNoFiring)),
+			false
+		);
+	}
+
+	// 清理任务（如果还在运行）
+	if (WaitEventTask)
+	{
+		WaitEventTask->EndTask();
+		WaitEventTask = nullptr;
+	}
+
+	if (MontageTask)
+	{
+		MontageTask->EndTask();
+		MontageTask = nullptr;
+	}
+
+	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
+}
+
+
+void UShootGameplayAbility_ReloadMagazine::OnReloadEventReceived(FGameplayEventData Payload)
+{
+	if (K2_HasAuthority())
+	{
+		// 执行实际换弹逻辑
+		ReloadAmmoIntoMagazine();
+	}
+	K2_EndAbility();
+}
+
+void UShootGameplayAbility_ReloadMagazine::ReloadAmmoIntoMagazine()
+{
+	ARangedWeaponInstance* Weapon = GetWeaponInstance();
+	if (!Weapon || !Weapon->Definition)
+	{
+		return;
+	}
+	const int32 MagazineSize = Weapon->Definition->MagazineSize;
+	const int32 CurrentAmmo = Weapon->GetCurrentAmmo();
+	// 需要填充的数量 = 弹夹容量 - 当前弹药
+	const int32 AmmoNeeded = MagazineSize - CurrentAmmo;
+	Weapon->ReloadAmmo(AmmoNeeded);
+}
+
+ARangedWeaponInstance* UShootGameplayAbility_ReloadMagazine::GetWeaponInstance() const
+{
+	if (FGameplayAbilitySpec* Spec = GetCurrentAbilitySpec())
+	{
+		return Cast<ARangedWeaponInstance>(Spec->SourceObject.Get());
+	}
+
+	return nullptr;
+}
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "ShootGameplayAbility.h"
+#include "Abilities/GameplayAbility.h"
+#include "ShootGameplayAbility_Weapon_Fire.generated.h"
+
+class ARangedWeaponInstance;
+class UAnimMontage;
+/**
+ * UShootGameplayAbility_Weapon_Fire
+ * 
+ * 武器射击能力的 C++ 基类，提供核心射线检测逻辑。
+ * 子类（蓝图或 C++）负责实现具体的开火流程：
+ * - 播放动画蒙太奇
+ * - 应用伤害 GE
+ * - 触发 GameplayCue（枪口特效、音效、弹壳抛出等）
+ * 
+ * 设计思路参考 Lyra 的 ULyraGameplayAbility_RangedWeapon。
+ */
+UCLASS()
+class UShootGameplayAbility_Weapon_Fire : public UShootGameplayAbility
+{
+	GENERATED_BODY()
+
+public:
+	UShootGameplayAbility_Weapon_Fire();
+	
+	//~UGameplayAbility interface
+	virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags = nullptr, const FGameplayTagContainer* TargetTags = nullptr, OUT FGameplayTagContainer* OptionalRelevantTags = nullptr) const override;
+	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
+	//~End of UGameplayAbility interface
+	
+protected:
+
+	// ========== 核心函数：启动射击目标检测 ==========
+	
+	/**
+	 * 开始武器射击的目标检测流程（Lyra 的 StartRangedWeaponTargeting）
+	 * 
+	 * 流程：
+	 * 1. 执行本地射线检测（PerformLocalTargeting）
+	 * 2. 生成 TargetData（包含所有命中信息）
+	 * 3. 如果是客户端：发送到服务器验证
+	 * 4. 触发回调 OnTargetDataReadyCallback（服务器或单机）
+	 * 
+	 * 注意：这个函数应该在子类的 ActivateAbility 中调用，
+	 * 通常在播放开火动画之后立即调用。
+	 */
+	UFUNCTION(BlueprintCallable, Category="Shoot|Ability")
+	void StartRangedWeaponTargeting();
+
+	/**
+	 * 当 TargetData 准备好时的回调（Lyra 的 OnTargetDataReadyCallback）
+	 * 
+	 * 这个函数会在以下情况被调用：
+	 * - 服务器：本地射线检测完成后立即调用
+	 * - 客户端：收到服务器验证后的数据时调用（如果启用了预测）
+	 * 
+	 * 子类应该重写 OnRangedWeaponTargetDataReady 来处理命中结果，
+	 * 而不是直接重写这个函数。
+	 */
+	void OnTargetDataReadyCallback(const FGameplayAbilityTargetDataHandle& InData, FGameplayTag ApplicationTag);
+
+	/**
+	 * 蓝图事件：当武器目标数据准备好时触发（Lyra 的 OnRangedWeaponTargetDataReady）
+	 * 
+	 * 在这里做：
+	 * - 应用伤害 GE（BP_ApplyGameplayEffectToTarget）
+	 * - 触发 GameplayCue（枪口火光、音效、弹壳等）
+	 * - 播放命中特效（血花、弹孔等）
+	 */
+	UFUNCTION(BlueprintImplementableEvent, Category="Shoot|Ability", meta=(DisplayName="On Weapon Target Data Ready"))
+	void OnRangedWeaponTargetDataReady(const FGameplayAbilityTargetDataHandle& TargetData);
+	
+	// ========== 内部函数：射线检测逻辑 ==========
+	
+	/**
+	 * 执行本地射线检测（Lyra 的 PerformLocalTargeting）
+	 * 
+	 * 这个函数只在本地执行（客户端或服务器），用于：
+	 * - 玩家：提供即时反馈（不等服务器）
+	 * - 服务器：权威检测（最终伤害判定）
+	 */
+	void PerformLocalTargeting(OUT TArray<FHitResult>& OutHits);
+
+	/**
+	 * 射击一个弹壳内的所有子弹（Lyra 的 TraceBulletsInCartridge）
+	 * 
+	 * 这是核心算法，支持：
+	 * - 步枪/手枪：BulletsPerCartridge = 1
+	 * - 霰弹枪：BulletsPerCartridge = 8（每颗子弹独立扩散）
+	 * - 后坐力系统：扩散角度随连续射击增加
+	 */
+	void TraceBulletsInCartridge(ARangedWeaponInstance* WeaponData, const FVector& StartTrace,
+	                             const FVector& AimDir, TArray<FHitResult>& OutHits);
+
+	/**
+	 * 单颗子弹的射线检测（Lyra 的 DoSingleBulletTrace）
+	 * 
+	 * 智能检测策略：
+	 * 1. 先用线性射线（精确）
+	 * 2. 如果没命中 Pawn 且支持扫描半径，再用球体扫描（宽松）
+	 * 3. 验证扫描结果不会穿透阻挡物
+	 */
+	FHitResult DoSingleBulletTrace(const FVector& StartTrace, const FVector& EndTrace, float SweepRadius,
+	                               bool bIsSimulated, OUT TArray<FHitResult>& OutHits) const;
+
+	/**
+	 * 执行实际的射线检测（Lyra 的 WeaponTrace）
+	 * 
+	 * 根据 SweepRadius 参数选择检测方式：
+	 * - SweepRadius = 0：LineTraceMulti（精确射线）
+	 * - SweepRadius > 0：SweepMulti（球体扫描，用于霰弹枪等）
+	 */
+	FHitResult WeaponTrace(const FVector& StartTrace, const FVector& EndTrace, float SweepRadius, bool bIsSimulated,
+	                       OUT TArray<FHitResult>& OutHitResults) const;
+
+	// ========== 辅助函数 ==========
+	
+	/**
+	 * 查找第一个命中 Pawn 的索引（Lyra 的 FindFirstPawnHitResult）
+	 * 
+	 * 用于判断是否命中了角色或其附属物（武器、装备等）。
+	 * 返回 INDEX_NONE 表示没有命中任何 Pawn。
+	 */
+	static int32 FindFirstPawnHitResult(const TArray<FHitResult>& HitResults);
+
+	/**
+	 * 添加需要忽略的 Actor（Lyra 的 AddAdditionalTraceIgnoreActors）
+	 * 
+	 * 默认忽略：
+	 * - 射击者自己
+	 * - 射击者的附属物（武器、装备等）
+	 */
+	virtual void AddAdditionalTraceIgnoreActors(FCollisionQueryParams& TraceParams) const;
+
+	/**
+	 * 确定使用的碰撞通道（Lyra 的 DetermineTraceChannel）
+	 * 
+	 * 默认使用 Lyra_TraceChannel_Weapon，可以在子类中重写。
+	 */
+	virtual ECollisionChannel DetermineTraceChannel(FCollisionQueryParams& TraceParams, bool bIsSimulated) const;
+
+	/**
+	 * 获取射击起始点（Lyra 的 GetWeaponTargetingSourceLocation）
+	 * 
+	 * 对于玩家：
+	 * - 第三人称：相机位置
+	 * - 第一人称：枪口位置
+	 * 
+	 * 对于 AI：
+	 * - Pawn 位置 + 眼睛高度
+	 */
+	FVector GetWeaponTargetingSourceLocation() const;
+
+	/**
+	 * 获取瞄准方向（Lyra 的 GetTargetingTransform 简化版）
+	 * 
+	 * 对于玩家：
+	 * - 使用 PlayerController->GetPlayerViewPoint 获取相机朝向
+	 * - 这样射击方向会与准星对齐
+	 * 
+	 * 对于 AI：
+	 * - 使用 Pawn->GetActorForwardVector
+	 */
+	FVector GetAimDirection() const;
+
+	/**
+	 * 获取当前武器实例（从 AbilitySpec 的 SourceObject）
+	 */
+	UFUNCTION(BlueprintCallable, Category="Shoot|Ability")
+	ARangedWeaponInstance* GetWeaponInstance() const;
+	
+public:
+
+	// ========== 配置属性（子类可覆盖） ==========
+	
+	/** 最大射程（厘米） */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Shoot|Weapon|Fire")
+	float TraceMaxDistance = 10000.0f;
+	
+private:
+	/** Target Data 回调的委托句柄（用于清理） */
+	FDelegateHandle OnTargetDataReadyCallbackDelegateHandle;
+};
+// Copyright ZhaoYiJie
+
+
+#include "AbilitySystem/Abilities/ShootGameplayAbility_Weapon_Fire.h"
+
+#include "Components/SkeletalMeshComponent.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "CollisionQueryParams.h"
+
+#include "AbilitySystemBlueprintLibrary.h"
+#include "AbilitySystemComponent.h"
+#include "AbilitySystemGlobals.h"
+#include "GameFramework/PlayerController.h"
+#include "GameFramework/Pawn.h"
+#include "Engine/World.h"
+#include "DrawDebugHelpers.h"
+#include "Physics/LyraCollisionChannels.h"
+#include "Weapons/RangedWeaponInstance.h"
+#include "Animation/AnimMontage.h"
+
+/**
+
+ * 生成在以 Dir 为中心、半角为 ConeHalfAngleRad 的圆锥内的随机方向，使用指数分布控制偏离中心的聚集程度。
+ * Generate a random direction inside a cone centered on Dir with half-angle ConeHalfAngleRad,
+ *      using an exponent to bias samples toward the cone center.
+ *
+ * 参数 / Parameters:
+ * - Dir: 中心方向向量（可非单位向量），函数会在必要时归一化。 
+ *        / Center direction vector (may be non-unit; normalized as needed).
+ * - ConeHalfAngleRad: 圆锥半角，单位为弧度。若 <= 0，将直接返回归一化的 Dir。
+ *        / Cone half-angle in radians. If <= 0, the function returns the normalized Dir.
+ * - Exponent: 控制从中心线偏移分布的指数。Exponent 越大，生成的方向越集中于中心线；Exponent == 1 表示均匀分布。
+ *        / Exponent controls bias from the center line. Larger Exponent -> more clustering near center;
+ *          Exponent == 1 gives a uniform distribution.
+ *
+ * 返回 / Returns:
+ * - 随机方向（单位向量）。
+ *   / A random unit direction vector within the cone.
+ *
+ * 说明 / Notes:
+ * - 使用 FMath::FRand() 生成 [0,1) 随机数，再用 Pow 调整到期望分布。
+ * - 先将 Dir 转为旋转（FRotator）并构造四元数，然后围绕该轴旋转以生成最终方向。
+ */
+/**
+ * 在圆锥内生成随机方向，使用指数分布控制聚集程度。
+ * 
+ * 这是 Lyra 的核心算法，支持所有枪械类型：
+ * - 步枪：小扩散角 + 高指数 = 集中射击
+ * - 霰弹枪：大扩散角 + 低指数 = 均匀分布
+ * - 狙击枪：极小扩散角 + 极高指数 = 几乎无扩散
+ * 
+ * 数学原理：
+ * 1. 用 Pow(Rand, Exponent) 生成偏向中心的分布
+ *    - Exponent = 1.0：均匀分布
+ *    - Exponent > 1.0：越来越集中于中心
+ * 2. 用四元数组合三个旋转：
+ *    - DirQuat：基准方向
+ *    - AroundQuat：绕中心线旋转（0-360度随机）
+ *    - FromCenterQuat：偏离中心线（0-ConeHalfAngle）
+ */
+FVector VRandConeNormalDistribution(const FVector& Dir, const float ConeHalfAngleRad, const float Exponent)
+{
+	// 如果锥体半角大于0，才进行随机方向计算
+	if (ConeHalfAngleRad > 0.f)
+	{
+		// 将弧度转换为角度，方便后续旋转计算
+		const float ConeHalfAngleDegrees = FMath::RadiansToDegrees(ConeHalfAngleRad);
+
+		// consider the cone a concatenation of two rotations. one "away" from the center line, and another "around" the circle
+		// apply the exponent to the away-from-center rotation. a larger exponent will cluster points more tightly around the center
+		// 生成一个0~1之间的随机数，并用指数Exponent调整分布，Exponent越大，越集中在中心
+		const float FromCenter = FMath::Pow(FMath::FRand(), Exponent);
+
+		// 计算离中心线的角度，越靠近中心概率越大
+		const float AngleFromCenter = FromCenter * ConeHalfAngleDegrees;
+
+		// 在圆周上随机一个角度（0~360度），用于绕中心线旋转
+		const float AngleAround = FMath::FRand() * 360.0f;
+
+		// 将输入方向向量Dir转换为旋转（FRotator）
+		FRotator Rot = Dir.Rotation();
+
+		// 用旋转构造一个四元数，表示中心线方向
+		FQuat DirQuat(Rot);
+
+		// 构造一个四元数，表示离中心线AngleFromCenter度的旋转（在Pitch方向上偏移）
+		FQuat FromCenterQuat(FRotator(0.0f, AngleFromCenter, 0.0f));
+
+		// 构造一个四元数，表示绕中心线AngleAround度的旋转（在Yaw方向上偏移）
+		FQuat AroundQuat(FRotator(0.0f, 0.0, AngleAround));
+
+		// 组合三个旋转，得到最终的方向
+		FQuat FinalDirectionQuat = DirQuat * AroundQuat * FromCenterQuat;
+
+		// 归一化四元数，确保方向有效
+		FinalDirectionQuat.Normalize();
+
+		// 用最终四元数旋转一个单位向前向量，得到随机方向
+		return FinalDirectionQuat.RotateVector(FVector::ForwardVector);
+	}
+	else
+	{
+		// 如果锥体半角为0，直接返回归一化的输入方向
+		return Dir.GetSafeNormal();
+	}
+}
+
+UShootGameplayAbility_Weapon_Fire::UShootGameplayAbility_Weapon_Fire()
+{
+	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
+	TraceMaxDistance = 10000.0f;
+	// optionally set other flags, e.g., NetworkExecutionPolicy
+	// 设置实例化策略
+	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
+	ReplicationPolicy = EGameplayAbilityReplicationPolicy::ReplicateYes;
+	bServerRespectsRemoteAbilityCancellation = true;
+	bRetriggerInstancedAbility = false;
+	NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::LocalPredicted;
+	NetSecurityPolicy = EGameplayAbilityNetSecurityPolicy::ClientOrServer;
+}
+
+ARangedWeaponInstance* UShootGameplayAbility_Weapon_Fire::GetWeaponInstance() const
+{
+	if (FGameplayAbilitySpec* Spec = GetCurrentAbilitySpec())
+	{
+		return Cast<ARangedWeaponInstance>(Spec->SourceObject.Get());
+	}
+
+	return nullptr;
+}
+
+void UShootGameplayAbility_Weapon_Fire::AddAdditionalTraceIgnoreActors(FCollisionQueryParams& TraceParams) const
+{
+	if (AActor* Avatar = GetAvatarActorFromActorInfo())
+	{
+		// Ignore any actors attached to the avatar doing the shooting
+		TArray<AActor*> AttachedActors;
+		Avatar->GetAttachedActors(/*out*/ AttachedActors);
+		TraceParams.AddIgnoredActors(AttachedActors);
+	}
+}
+
+/**
+ * 在命中结果列表中查找第一个命中到APawn（角色）或其附属物体的命中结果，常用于射击类游戏的武器命中判定。
+ */
+int32 UShootGameplayAbility_Weapon_Fire::FindFirstPawnHitResult(const TArray<FHitResult>& HitResults)
+{
+	for (int32 Idx = 0; Idx < HitResults.Num(); ++Idx)
+	{
+		const FHitResult& CurHitResult = HitResults[Idx];
+		//判断当前命中的对象句柄（HitObjectHandle）是否代表APawn类
+		//HitObjectHandle是Unreal的通用对象引用，可以指向Actor或Component。这个方法用于快速判断命中对象是不是角色本身。
+		//Represent代表；为……代言（辩护）；等于，相当于；（符号或象征）代表
+		if (CurHitResult.HitObjectHandle.DoesRepresentClass(APawn::StaticClass()))
+		{
+			// If we hit a pawn, we're good
+			//如果我们击中了一个角色（Pawn），就可以了
+			return Idx;
+		}
+		else
+		{
+			//CurHitResult.HitObjectHandle.FetchActor(), 从命中对象句柄中获取实际的AActor指针。如果命中的是Actor，
+			//这里会返回对应的Actor对象；如果是Component，则返回其所属Actor。常用于需要进一步操作命中对象时。
+			AActor* HitActor = CurHitResult.HitObjectHandle.FetchActor();
+			//HitActor->GetAttachParentActor() 获取当前Actor的父级挂载Actor。比如武器、装备、饰品等通常会挂载在角色身上，
+			//这时它们的父Actor就是角色。这个方法用于判断命中的物体是否是角色的附属物。
+			if ((HitActor != nullptr) && (HitActor->GetAttachParentActor() != nullptr) && (Cast<APawn>(
+				HitActor->GetAttachParentActor()) != nullptr))
+			{
+				// If we hit something attached to a pawn, we're good
+				//如果我们击中了附着在角色上的物体，也可以了。
+				return Idx;
+			}
+		}
+	}
+
+	return INDEX_NONE;
+}
+
+ECollisionChannel UShootGameplayAbility_Weapon_Fire::DetermineTraceChannel(FCollisionQueryParams& TraceParams,
+                                                                           bool bIsSimulated) const
+{
+	return Lyra_TraceChannel_Weapon;
+}
+
+FVector UShootGameplayAbility_Weapon_Fire::GetWeaponTargetingSourceLocation() const
+{
+	APawn* AvatarPawn = Cast<APawn>(GetAvatarActorFromActorInfo());
+	if (!AvatarPawn) return FVector::ZeroVector;
+
+	AController* Controller = AvatarPawn->GetController();
+	if (!Controller) return AvatarPawn->GetActorLocation();
+
+	// 玩家：使用相机位置
+	if (APlayerController* PC = Cast<APlayerController>(Controller))
+	{
+		FVector CamLoc;
+		FRotator CamRot;
+		PC->GetPlayerViewPoint(/*out*/ CamLoc, /*out*/ CamRot);
+		return CamLoc;
+	}
+
+	// AI：使用 Pawn 位置 + 眼睛高度
+	return AvatarPawn->GetActorLocation() + FVector(0, 0, AvatarPawn->BaseEyeHeight);
+}
+
+
+FVector UShootGameplayAbility_Weapon_Fire::GetAimDirection() const
+{
+	APawn* AvatarPawn = Cast<APawn>(GetAvatarActorFromActorInfo());
+	if (!AvatarPawn) return FVector::ForwardVector;
+
+	AController* Controller = AvatarPawn->GetController();
+	if (!Controller) return AvatarPawn->GetActorForwardVector();
+
+	// 玩家：使用相机朝向（与准星对齐）
+	if (APlayerController* PC = Cast<APlayerController>(Controller))
+	{
+		FVector CamLoc;
+		FRotator CamRot;
+		PC->GetPlayerViewPoint(/*out*/ CamLoc, /*out*/ CamRot);
+		return CamRot.Vector();
+	}
+
+	// AI：使用控制器朝向
+	return Controller->GetControlRotation().Vector();
+}
+
+bool UShootGameplayAbility_Weapon_Fire::CanActivateAbility(const FGameplayAbilitySpecHandle Handle,
+                                                           const FGameplayAbilityActorInfo* ActorInfo,
+                                                           const FGameplayTagContainer* SourceTags,
+                                                           const FGameplayTagContainer* TargetTags,
+                                                           FGameplayTagContainer* OptionalRelevantTags) const
+{
+	bool bResult = Super::CanActivateAbility(Handle, ActorInfo, SourceTags, TargetTags, OptionalRelevantTags);
+
+	if (bResult)
+	{
+		// 必须有武器实例才能激活
+		if (GetWeaponInstance() == nullptr)
+		{
+			UE_LOG(LogTemp, Error, TEXT("Weapon ability %s cannot be activated because there is no weapon instance)"),
+			       *GetPathName());
+			bResult = false;
+		}
+	}
+
+	return bResult;
+}
+
+void UShootGameplayAbility_Weapon_Fire::ActivateAbility(const FGameplayAbilitySpecHandle Handle,
+                                                        const FGameplayAbilityActorInfo* ActorInfo,
+                                                        const FGameplayAbilityActivationInfo ActivationInfo,
+                                                        const FGameplayEventData* TriggerEventData)
+{
+	// 绑定 TargetData 回调（Lyra 的做法）
+	UAbilitySystemComponent* MyAbilityComponent = CurrentActorInfo->AbilitySystemComponent.Get();
+	check(MyAbilityComponent);
+
+	OnTargetDataReadyCallbackDelegateHandle = MyAbilityComponent->AbilityTargetDataSetDelegate(
+		CurrentSpecHandle,
+		CurrentActivationInfo.GetActivationPredictionKey()
+	).AddUObject(this, &ThisClass::OnTargetDataReadyCallback);
+
+	// 更新开火时间（用于扩散恢复计算）
+	ARangedWeaponInstance* WeaponData = GetWeaponInstance();
+	check(WeaponData);
+	WeaponData->UpdateFiringTime();
+
+	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+}
+
+void UShootGameplayAbility_Weapon_Fire::EndAbility(const FGameplayAbilitySpecHandle Handle,
+                                                   const FGameplayAbilityActorInfo* ActorInfo,
+                                                   const FGameplayAbilityActivationInfo ActivationInfo,
+                                                   bool bReplicateEndAbility, bool bWasCancelled)
+{
+	if (IsEndAbilityValid(Handle, ActorInfo))
+	{
+		// 如果当前有锁（ScopeLock），延迟结束
+		if (ScopeLockCount > 0)
+		{
+			WaitingToExecute.Add(FPostLockDelegate::CreateUObject(
+				this, &ThisClass::EndAbility,
+				Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled
+			));
+			return;
+		}
+
+		UAbilitySystemComponent* MyAbilityComponent = CurrentActorInfo->AbilitySystemComponent.Get();
+		check(MyAbilityComponent);
+
+		// 清理 TargetData 回调和数据
+		MyAbilityComponent->AbilityTargetDataSetDelegate(
+			CurrentSpecHandle,
+			CurrentActivationInfo.GetActivationPredictionKey()
+		).Remove(OnTargetDataReadyCallbackDelegateHandle);
+
+		MyAbilityComponent->ConsumeClientReplicatedTargetData(
+			CurrentSpecHandle,
+			CurrentActivationInfo.GetActivationPredictionKey()
+		);
+
+		Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
+	}
+}
+
+// ========== 核心函数：目标检测流程 ==========
+
+void UShootGameplayAbility_Weapon_Fire::StartRangedWeaponTargeting()
+{
+	check(CurrentActorInfo);
+
+	AActor* AvatarActor = CurrentActorInfo->AvatarActor.Get();
+	check(AvatarActor);
+
+	UAbilitySystemComponent* MyAbilityComponent = CurrentActorInfo->AbilitySystemComponent.Get();
+	check(MyAbilityComponent);
+
+	// 创建预测窗口（用于客户端预测）
+	FScopedPredictionWindow ScopedPrediction(MyAbilityComponent, CurrentActivationInfo.GetActivationPredictionKey());
+
+	// 1. 执行本地射线检测
+	TArray<FHitResult> FoundHits;
+	PerformLocalTargeting(/*out*/ FoundHits);
+
+	// 2. 将命中结果打包成 TargetData
+	FGameplayAbilityTargetDataHandle TargetData;
+	// UniqueId 用于服务器验证（Lyra 用 WeaponStateComponent 生成，我们简化为 0）
+	TargetData.UniqueId = 0;
+
+	if (FoundHits.Num() > 0)
+	{
+		// 为每个命中创建一个 TargetData 条目
+		for (const FHitResult& FoundHit : FoundHits)
+		{
+			FGameplayAbilityTargetData_SingleTargetHit* NewTargetData = new
+				FGameplayAbilityTargetData_SingleTargetHit();
+			NewTargetData->HitResult = FoundHit;
+			TargetData.Add(NewTargetData);
+		}
+	}
+
+	// 3. 触发回调（会调用 OnTargetDataReadyCallback）
+	OnTargetDataReadyCallback(TargetData, FGameplayTag());
+}
+
+void UShootGameplayAbility_Weapon_Fire::OnTargetDataReadyCallback(
+	const FGameplayAbilityTargetDataHandle& InData,
+	FGameplayTag ApplicationTag)
+{
+	UAbilitySystemComponent* MyAbilityComponent = CurrentActorInfo->AbilitySystemComponent.Get();
+	check(MyAbilityComponent);
+
+	// 确保 Ability 还在运行
+	if (const FGameplayAbilitySpec* AbilitySpec = MyAbilityComponent->FindAbilitySpecFromHandle(CurrentSpecHandle))
+	{
+		FScopedPredictionWindow ScopedPrediction(MyAbilityComponent);
+
+		// 接管 TargetData 的所有权（防止回调中被修改）
+		FGameplayAbilityTargetDataHandle LocalTargetDataHandle(
+			MoveTemp(const_cast<FGameplayAbilityTargetDataHandle&>(InData)));
+
+		// 如果是客户端，发送到服务器验证
+		const bool bShouldNotifyServer = CurrentActorInfo->IsLocallyControlled() && !CurrentActorInfo->IsNetAuthority();
+		if (bShouldNotifyServer)
+		{
+			MyAbilityComponent->CallServerSetReplicatedTargetData(
+				CurrentSpecHandle,
+				CurrentActivationInfo.GetActivationPredictionKey(),
+				LocalTargetDataHandle,
+				ApplicationTag,
+				MyAbilityComponent->ScopedPredictionKey
+			);
+		}
+
+		// 尝试消耗成本（弹药、Mana 等）
+		if (CommitAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo))
+		{
+			// 成功消耗成本，增加后坐力
+			ARangedWeaponInstance* WeaponData = GetWeaponInstance();
+			check(WeaponData);
+			WeaponData->AddSpread();
+
+			// 触发蓝图事件（子类在这里应用伤害 GE 和 GameplayCue）
+			OnRangedWeaponTargetDataReady(LocalTargetDataHandle);
+		}
+		else
+		{
+			// 无法消耗成本（比如没弹药了），结束 Ability
+			UE_LOG(LogTemp, Warning,
+			       TEXT("Weapon ability %s failed to commit (no ammo or cost not met)"),
+			       *GetPathName());
+			K2_EndAbility();
+		}
+	}
+
+	// 消耗客户端复制的 TargetData
+	MyAbilityComponent->ConsumeClientReplicatedTargetData(
+		CurrentSpecHandle,
+		CurrentActivationInfo.GetActivationPredictionKey()
+	);
+}
+
+// ========== 射线检测实现 ==========
+
+void UShootGameplayAbility_Weapon_Fire::PerformLocalTargeting(TArray<FHitResult>& OutHits)
+{
+	APawn* const AvatarPawn = Cast<APawn>(GetAvatarActorFromActorInfo());
+	ARangedWeaponInstance* WeaponData = GetWeaponInstance();
+
+	if (!AvatarPawn || !WeaponData)
+	{
+		return;
+	}
+
+	// 只在本地控制端执行（玩家客户端或服务器）
+	if (AvatarPawn->IsLocallyControlled())
+	{
+		const FVector StartTrace = GetWeaponTargetingSourceLocation();
+		const FVector AimDir = GetAimDirection();
+
+		// 执行所有子弹的射线检测
+		TraceBulletsInCartridge(WeaponData, StartTrace, AimDir, /*out*/ OutHits);
+	}
+}
+
+
+void UShootGameplayAbility_Weapon_Fire::TraceBulletsInCartridge(
+	ARangedWeaponInstance* WeaponData,
+	const FVector& StartTrace,
+	const FVector& AimDir,
+	TArray<FHitResult>& OutHits)
+{
+	check(WeaponData);
+
+	const int32 BulletsPerCartridge = WeaponData->GetBulletsPerCartridge();
+	const float BaseSpreadAngle = WeaponData->GetCalculatedSpreadAngle();
+	const float SpreadAngleMultiplier = WeaponData->GetCalculatedSpreadAngleMultiplier();
+	const float ActualSpreadAngle = BaseSpreadAngle * SpreadAngleMultiplier;
+	const float HalfSpreadAngleInRadians = FMath::DegreesToRadians(ActualSpreadAngle * 0.5f);
+	const float SpreadExponent = WeaponData->GetSpreadExponent();
+	const float SweepRadius = WeaponData->GetBulletTraceSweepRadius();
+
+	// 射击多颗子弹（霰弹枪 = 8，步枪 = 1）
+	for (int32 BulletIndex = 0; BulletIndex < BulletsPerCartridge; ++BulletIndex)
+	{
+		// 每颗子弹独立计算扩散方向
+		const FVector BulletDir = VRandConeNormalDistribution(AimDir, HalfSpreadAngleInRadians, SpreadExponent);
+
+		// 计算射线终点
+		const FVector EndTrace = StartTrace + (BulletDir * TraceMaxDistance);
+
+		// 执行单颗子弹的射线检测
+		TArray<FHitResult> SingleBulletHits;
+		const FHitResult Impact = DoSingleBulletTrace(StartTrace, EndTrace, SweepRadius, /*bIsSimulated=*/ false,
+		                                              /*out*/ SingleBulletHits);
+
+		// 添加到总命中列表
+		if (SingleBulletHits.Num() > 0)
+		{
+			OutHits.Append(SingleBulletHits);
+		}
+		else if (!Impact.bBlockingHit)
+		{
+			// 如果没命中任何东西，添加一个虚拟命中点（用于轨迹特效）
+			FHitResult VirtualHit = Impact;
+			VirtualHit.Location = EndTrace;
+			VirtualHit.ImpactPoint = EndTrace;
+			OutHits.Add(VirtualHit);
+		}
+	}
+}
+
+FHitResult UShootGameplayAbility_Weapon_Fire::WeaponTrace(const FVector& StartTrace, const FVector& EndTrace,
+                                                          float SweepRadius, bool bIsSimulated,
+                                                          TArray<FHitResult>& OutHitResults) const
+{
+	TArray<FHitResult> HitResults;
+
+	// 设置射线检测参数
+	FCollisionQueryParams TraceParams(
+		SCENE_QUERY_STAT(WeaponTrace),
+		/*bTraceComplex=*/ true, // 使用复杂碰撞（精确网格）
+		/*IgnoreActor=*/ GetAvatarActorFromActorInfo()
+	);
+	TraceParams.bReturnPhysicalMaterial = true; // 需要物理材质来计算爆头等
+	AddAdditionalTraceIgnoreActors(TraceParams);
+	//TraceParams.bDebugQuery = true;
+
+	const ECollisionChannel TraceChannel = DetermineTraceChannel(TraceParams, bIsSimulated);
+
+	// 根据是否有扫描半径选择检测方式
+	if (SweepRadius > 0.0f)
+	{
+		// 球体扫描（霰弹枪等）
+		GetWorld()->SweepMultiByChannel(
+			HitResults,
+			StartTrace,
+			EndTrace,
+			FQuat::Identity,
+			TraceChannel,
+			FCollisionShape::MakeSphere(SweepRadius),
+			TraceParams
+		);
+	}
+	else
+	{
+		// 线性射线（步枪、狙击枪等）
+		GetWorld()->LineTraceMultiByChannel(
+			HitResults,
+			StartTrace,
+			EndTrace,
+			TraceChannel,
+			TraceParams
+		);
+	}
+
+	// 过滤重复命中（同一个 Actor 只记录一次）
+	FHitResult Hit(ForceInit);
+	if (HitResults.Num() > 0)
+	{
+		for (FHitResult& CurHitResult : HitResults)
+		{
+			// 检查是否已经记录过这个 Actor
+			if (!OutHitResults.ContainsByPredicate(
+				[&](const FHitResult& Other) { return Other.HitObjectHandle == CurHitResult.HitObjectHandle; }))
+			{
+				OutHitResults.Add(CurHitResult);
+			}
+		}
+		Hit = OutHitResults.Last();
+	}
+	else
+	{
+		// 没有命中任何东西，记录射线起点和终点
+		Hit.TraceStart = StartTrace;
+		Hit.TraceEnd = EndTrace;
+	}
+
+	return Hit;
+}
+
+FHitResult UShootGameplayAbility_Weapon_Fire::DoSingleBulletTrace(
+	const FVector& StartTrace,
+	const FVector& EndTrace,
+	float SweepRadius,
+	bool bIsSimulated,
+	TArray<FHitResult>& OutHits) const
+{
+	FHitResult Impact;
+
+	// 第一步：尝试精确的线性射线检测
+	if (FindFirstPawnHitResult(OutHits) == INDEX_NONE)
+	{
+		Impact = WeaponTrace(StartTrace, EndTrace, /*SweepRadius=*/ 0.0f, bIsSimulated, /*out*/ OutHits);
+	}
+
+	// 第二步：如果没命中 Pawn 且支持扫描半径，尝试球体扫描
+	if (FindFirstPawnHitResult(OutHits) == INDEX_NONE && SweepRadius > 0.0f)
+	{
+		TArray<FHitResult> SweepHits;
+		Impact = WeaponTrace(StartTrace, EndTrace, SweepRadius, bIsSimulated, /*out*/ SweepHits);
+
+		// 检查扫描是否命中了 Pawn
+		const int32 FirstPawnIdx = FindFirstPawnHitResult(SweepHits);
+		if (SweepHits.IsValidIndex(FirstPawnIdx))
+		{
+			// 验证：如果线性检测已经有阻挡物在 Pawn 前面，就不使用扫描结果
+			bool bUseSweepHits = true;
+			for (int32 Idx = 0; Idx < FirstPawnIdx; ++Idx)
+			{
+				const FHitResult& CurHitResult = SweepHits[Idx];
+				if (CurHitResult.bBlockingHit && OutHits.ContainsByPredicate(
+					[&](const FHitResult& Other) { return Other.HitObjectHandle == CurHitResult.HitObjectHandle; }))
+				{
+					bUseSweepHits = false;
+					break;
+				}
+			}
+
+			if (bUseSweepHits)
+			{
+				OutHits = SweepHits;
+			}
+		}
+	}
+
+	return Impact;
+}
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#include "UObject/Interface.h"
+
+#include "LyraAbilitySourceInterface.generated.h"
+
+class UObject;
+class UPhysicalMaterial;
+struct FGameplayTagContainer;
+
+/** Base interface for anything acting as a ability calculation source */
+UINTERFACE()
+class ULyraAbilitySourceInterface : public UInterface
+{
+	GENERATED_UINTERFACE_BODY()
+};
+
+class ILyraAbilitySourceInterface
+{
+	GENERATED_IINTERFACE_BODY()
+
+	/**
+	 * Compute the multiplier for effect falloff with distance
+	 * 
+	 * @param Distance			Distance from source to target for ability calculations (distance bullet traveled for a gun, etc...)
+	 * @param SourceTags		Aggregated Tags from the source
+	 * @param TargetTags		Aggregated Tags currently on the target
+	 * 
+	 * @return Multiplier to apply to the base attribute value due to distance
+	 */
+	virtual float GetDistanceAttenuation(float Distance, const FGameplayTagContainer* SourceTags = nullptr, const FGameplayTagContainer* TargetTags = nullptr) const = 0;
+
+	virtual float GetPhysicalMaterialAttenuation(const UPhysicalMaterial* PhysicalMaterial, const FGameplayTagContainer* SourceTags = nullptr, const FGameplayTagContainer* TargetTags = nullptr) const = 0;
+};
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Engine/DataAsset.h"
+#include "Styling/SlateBrush.h"
+#include "GameplayTagContainer.h"
+#include "WeaponDefinition.generated.h"
+
+class UGameplayAbility;
+class UGameplayEffect;
+class UAttributeSet;
+class UParticleSystem;
+class USoundBase;
+
+UENUM(BlueprintType)
+enum class EWeaponType : uint8
+{
+	Rifle,
+	Sniper,
+	Shotgun,
+	RocketLauncher,
+	GrenadeLauncher
+};
+
+/**
+ * 武器定义基类：仅保存配置数据，不包含运行时状态。
+ * 每种枪的子类（步枪/狙击/霰弹等）继承自此类。
+ */
+UCLASS(BlueprintType)
+class UWeaponDefinition : public UPrimaryDataAsset
+{
+	GENERATED_BODY()
+
+public:
+	/** 唯一标识，用于保存与加载 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|General")
+	FName WeaponId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|General")
+	FText DisplayName;
+
+	/** UI图标, 武器在UI的Quick Bar中显示的图标*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|UI")
+	FSlateBrush Icon;
+
+	/*武器在UI的Quick Bar中显示的弹药图标*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|UI")
+	FSlateBrush AmmoIcon;
+
+	/** 武器类型（枚举） */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|General")
+	EWeaponType WeaponType = EWeaponType::Rifle;
+
+	/** 枪口插槽 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Socket")
+	FName MuzzleSocketName = TEXT("MuzzleFlash");
+
+	/** 挂载插槽 */
+	//默认挂在角色左手，挂在hand_r
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Socket")
+	FName AttachSocketHand = TEXT("weapon_socket_hand_r");
+
+	// 默认挂在角色背后的左插槽(枪托朝左)，挂在spine_05
+	// 手持武器(右边)：weapon_socket_hand_r
+	// 手持武器(左边)：weapon_socket_hand_l
+	// 背后武器（枪托朝右）：weapon_socket_spine_back_r
+	// 背后武器（枪托朝左）：weapon_socket_spine_back_l
+	// 大腿右挂枪（手枪）：weapon_socket_thigh_r
+	// 近战挂腰间：weapon_socket_pelvis_melee
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Socket")
+	FName AttachSocketHolster = TEXT("weapon_socket_spine_back_r");
+
+	// ========== 基础数值 ==========
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Stats")
+	float BaseDamage = 30.f;
+
+	//弹夹大小
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Stats")
+	int32 MagazineSize = 30;
+
+	//每次开火消耗的弹药数
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Stats")
+	int32 AmmoPerShot = 1;
+	
+	// 每分钟发射数
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Stats")
+	float FireRateRPM = 600.f;
+	
+	//最大伤害范围
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Stats")
+	float MaxRange = 8000.f;
+
+	// ========== 扩散参数 ==========
+	/** 基础扩散角度（度数），开火时的最小扩散 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Spread")
+	float BaseSpreadAngle = 1.0f;
+
+	/** 每次射击增加的扩散角度 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Spread")
+	float SpreadAnglePerShot = 0.5f;
+
+	/** 扩散角度的最大值（连续射击时的上限） */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Spread")
+	float MaxSpreadAngle = 5.0f;
+
+	/** 扩散恢复速度（每秒减少的角度） */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Spread")
+	float SpreadRecoveryRate = 2.0f;
+
+	/** 扩散指数（控制子弹聚集程度，1.0=均匀分布，越大越集中） */
+	// Spread exponent, affects how tightly shots will cluster around the center line 扩散指数，影响射击在中心线周围聚集的紧密程度
+	// when the weapon has spread (non-perfect accuracy). Higher values will cause shots 当武器扩散时（非完美精度）。较高的值将导致镜头
+	// to be closer to the center (default is 1.0 which means uniformly within the spread range) 更接近中心（默认值是1.0，这意味着均匀地在扩展范围内）
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Spread", meta=(ClampMin=0.1))
+	float SpreadExponent = 1.0f;
+	
+	/** 子弹轨迹的扫描半径（用于"宽松"命中判定，霰弹枪可能用到） */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Trace")
+	float BulletTraceSweepRadius = 0.0f;
+	
+	// Number of bullets to fire in a single cartridge (typically 1, but may be more for shotguns)
+	//一个弹壳可以发射的子弹数（通常是1颗，但散弹枪可能更多）
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon Config")
+	int32 BulletsPerCartridge = 1;
+	
+	// ========== 伤害衰减 ==========
+	//距离衰减曲线：输入距离(cm) -> multiplier
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Damage")
+	FRuntimeFloatCurve DistanceFalloff;
+
+	// Multi -> multiplicative 根据物理材质 tag 的伤害倍数（乘法组合）
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Damage")
+	TMap<FGameplayTag, float> MaterialDamageMultiplier;
+
+	// ========== GAS 绑定 ==========
+	//GAS: abilities / effects / attribute sets that this weapon provides while equipped
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|GAS")
+	TArray<TSubclassOf<UGameplayAbility>> GrantedAbilities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|GAS")
+	TArray<TSubclassOf<UGameplayEffect>> GrantedEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|GAS")
+	TArray<TSubclassOf<UAttributeSet>> GrantedAttributeSets;
+
+	// ========== 特效与投射物 ==========
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Visual")
+	UParticleSystem* MuzzleFlashFX;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Visual")
+	USoundBase* FireSound;
+	
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon|Projectile")
+	//SubclassOf<class AWeaponProjectile> ProjectileClass;
+};
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameplayAbilitySpec.h"
+#include "ActiveGameplayEffectHandle.h"
+#include "AttributeSet.h"
+#include "ShootGrantedHandles.generated.h"
+
+class UGameplayEffect;
+class UGameplayAbility;
+class UAbilitySystemComponent;
+
+/**
+ * FShootGrantedHandles
+ * 记录授予给某个 AbilitySystemComponent 的能力、效果和属性集句柄 / 对象
+ * 并提供授予/移除的工具方法。
+ */
+USTRUCT(BlueprintType)
+struct FShootGrantedHandles
+{
+    GENERATED_BODY()
+
+public:
+    // 存放授予的能力规范句柄（Ability Spec Handles）
+    UPROPERTY()
+    TArray<FGameplayAbilitySpecHandle> AbilitySpecHandles;
+
+    // 存放授予的游戏玩法效果句柄（Active Gameplay Effect Handles）
+    UPROPERTY()
+    TArray<FActiveGameplayEffectHandle> GameplayEffectHandles;
+
+    // 存放通过 NewObject 创建并添加到 ASC 的属性集对象指针（Spawned attribute set instances）
+    UPROPERTY()
+    TArray<TObjectPtr<UAttributeSet>> SpawnedAttributeSets;
+
+    // 添加能力句柄（只有有效句柄才会被加入）
+    void AddAbilitySpecHandle(const FGameplayAbilitySpecHandle& Handle);
+
+    // 添加效果句柄（只有有效句柄才会被加入）
+    void AddGameplayEffectHandle(const FActiveGameplayEffectHandle& Handle);
+
+    // 记录已创建并加入 ASC 的属性集对象
+    void AddSpawnedAttributeSet(UAttributeSet* Set);
+	
+	// 从指定的 AbilitySystemComponent 中移除之前记录的能力、效果、属性集（仅在拥有服务器权限时执行）
+	void TakeFromAbilitySystem(UAbilitySystemComponent* ASC);
+	
+    // 将一组能力授予到 ASC。如果 bClearPreviousGrants 为 true，会先移除之前记录的能力（仅能力）
+	// NewSourceObject
+    void GiveAbilitiesToAbilitySystem(UAbilitySystemComponent* ASC,
+                                      const TArray<TSubclassOf<UGameplayAbility>>& GrantedAbilities,
+                                      UObject* NewSourceObject,
+                                      bool bClearPreviousGrants = true);
+
+    // 将一组 GameplayEffects 应用到 ASC。NewSourceObject 会被加入到 EffectContext。
+    // 如果 bClearPreviousGrants 为 true，会先移除之前记录的效果（仅效果）
+    void ApplyEffectsToAbilitySystem(UAbilitySystemComponent* ASC,
+                                     const TArray<TSubclassOf<UGameplayEffect>>& GrantedEffects,
+                                     UObject* NewSourceObject,
+                                     bool bClearPreviousGrants = true);
+
+    // 将一组 AttributeSet 授予到 ASC（通过 NewObject 创建并 AddAttributeSetSubobject）
+    // 如果 bClearPreviousGrants 为 true，会先移除之前记录的属性集（仅属性集）
+    void AddAttributeSetsToAbilitySystem(UAbilitySystemComponent* ASC,
+                                         const TArray<TSubclassOf<UAttributeSet>>& GrantedAttributeSetClasses,
+                                         bool bClearPreviousGrants = true);
+};
+
+#include "Weapons/ShootGrantedHandles.h"
+
+#include "AbilitySystemComponent.h"
+#include "GameplayEffect.h"
+
+void FShootGrantedHandles::AddAbilitySpecHandle(const FGameplayAbilitySpecHandle& Handle)
+{
+	if (Handle.IsValid())
+	{
+		AbilitySpecHandles.Add(Handle);
+	}
+}
+
+void FShootGrantedHandles::AddGameplayEffectHandle(const FActiveGameplayEffectHandle& Handle)
+{
+	if (Handle.IsValid())
+	{
+		GameplayEffectHandles.Add(Handle);
+	}
+}
+
+void FShootGrantedHandles::AddSpawnedAttributeSet(UAttributeSet* Set)
+{
+	if (Set)
+	{
+		SpawnedAttributeSets.Add(Set);
+	}
+}
+
+void FShootGrantedHandles::TakeFromAbilitySystem(UAbilitySystemComponent* ASC)
+{
+	if (!ASC) return;
+
+	// 仅在服务器端移除已授予项，避免客户端直接操作导致不一致
+	if (!ASC->IsOwnerActorAuthoritative())
+	{
+		return;
+	}
+
+	// 移除能力
+	for (const FGameplayAbilitySpecHandle& Handle : AbilitySpecHandles)
+	{
+		if (Handle.IsValid())
+		{
+			ASC->ClearAbility(Handle);
+		}
+	}
+	AbilitySpecHandles.Reset();
+
+	// 移除效果
+	for (const FActiveGameplayEffectHandle& Handle : GameplayEffectHandles)
+	{
+		if (Handle.IsValid())
+		{
+			ASC->RemoveActiveGameplayEffect(Handle);
+		}
+	}
+	GameplayEffectHandles.Reset();
+
+	// 移除属性集实例
+	for (UAttributeSet* Set : SpawnedAttributeSets)
+	{
+		if (Set)
+		{
+			ASC->RemoveSpawnedAttribute(Set);
+		}
+	}
+	SpawnedAttributeSets.Reset();
+}
+
+void FShootGrantedHandles::GiveAbilitiesToAbilitySystem(UAbilitySystemComponent* ASC,
+                                                        const TArray<TSubclassOf<UGameplayAbility>>& GrantedAbilities,
+                                                        UObject* NewSourceObject,
+                                                        bool bClearPreviousGrants)
+{
+	if (!ASC) return;
+
+	// 仅服务器执行授予能力
+	if (!ASC->IsOwnerActorAuthoritative())
+	{
+		return;
+	}
+
+	// 可选清除之前的能力（只清除本结构记录的句柄）
+	if (bClearPreviousGrants)
+	{
+		for (const FGameplayAbilitySpecHandle& Handle : AbilitySpecHandles)
+		{
+			if (Handle.IsValid())
+			{
+				ASC->ClearAbility(Handle);
+			}
+		}
+		AbilitySpecHandles.Reset();
+	}
+
+	// 授予能力并记录句柄
+	for (const TSubclassOf<UGameplayAbility>& AbilityClass : GrantedAbilities)
+	{
+		if (AbilityClass)
+		{
+			FGameplayAbilitySpec Spec(AbilityClass, 1, INDEX_NONE);
+			//这里NewSourceObject是WeaponInstance且必须指定，不然在ShootGameplayAbility_Weapon_Fire的GetWeaponInstance无法拿到WeaponInstance
+			Spec.SourceObject = NewSourceObject;
+			FGameplayAbilitySpecHandle Handle = ASC->GiveAbility(Spec);
+			AddAbilitySpecHandle(Handle);
+		}
+	}
+}
+
+void FShootGrantedHandles::ApplyEffectsToAbilitySystem(UAbilitySystemComponent* ASC,
+                                                       const TArray<TSubclassOf<UGameplayEffect>>& GrantedEffects,
+                                                       UObject* NewSourceObject, bool bClearPreviousGrants)
+{
+	if (!ASC) return;
+
+	// 仅服务器执行效果添加/移除
+	if (!ASC->IsOwnerActorAuthoritative())
+	{
+		return;
+	}
+
+	// 可选清除之前的效果
+	if (bClearPreviousGrants)
+	{
+		for (const FActiveGameplayEffectHandle& Handle : GameplayEffectHandles)
+		{
+			if (Handle.IsValid())
+			{
+				ASC->RemoveActiveGameplayEffect(Handle);
+			}
+		}
+		GameplayEffectHandles.Reset();
+	}
+
+	// 授予新的效果并记录句柄
+	for (const TSubclassOf<UGameplayEffect>& EffectClass : GrantedEffects)
+	{
+		if (EffectClass)
+		{
+			FGameplayEffectContextHandle ContextHandle = ASC->MakeEffectContext();
+			if (NewSourceObject)
+			{
+				ContextHandle.AddSourceObject(NewSourceObject);
+			}
+
+			FGameplayEffectSpecHandle SpecHandle = ASC->MakeOutgoingSpec(EffectClass, 1.0f, ContextHandle);
+			FActiveGameplayEffectHandle ActiveHandle = ASC->ApplyGameplayEffectSpecToSelf(*SpecHandle.Data.Get());
+			AddGameplayEffectHandle(ActiveHandle);
+		}
+	}
+}
+
+void FShootGrantedHandles::AddAttributeSetsToAbilitySystem(UAbilitySystemComponent* ASC,
+                                                           const TArray<TSubclassOf<UAttributeSet>>&
+                                                           GrantedAttributeSetClasses,
+                                                           bool bClearPreviousGrants)
+{
+	if (!ASC) return;
+
+	// 仅服务器执行属性集添加/移除
+	if (!ASC->IsOwnerActorAuthoritative())
+	{
+		return;
+	}
+
+	// 可选清除之前的属性集实例
+	if (bClearPreviousGrants)
+	{
+		for (UAttributeSet* Set : SpawnedAttributeSets)
+		{
+			if (Set)
+			{
+				ASC->RemoveSpawnedAttribute(Set);
+			}
+		}
+		SpawnedAttributeSets.Reset();
+	}
+
+	// 授予新的属性集实例并记录
+	for (const TSubclassOf<UAttributeSet>& SetClass : GrantedAttributeSetClasses)
+	{
+		if (SetClass)
+		{
+			UAttributeSet* NewSet = NewObject<UAttributeSet>(ASC->GetOwner(), SetClass);
+			if (NewSet)
+			{
+				ASC->AddAttributeSetSubobject(NewSet);
+				AddSpawnedAttributeSet(NewSet);
+			}
+		}
+	}
+}
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "ShootGrantedHandles.h"
+#include "WeaponDefinition.h"
+#include "AbilitySystem/LyraAbilitySourceInterface.h"
+#include "GameFramework/Actor.h"
+#include "RangedWeaponInstance.generated.h"
+
+class UAbilitySystemComponent;
+
+/**
+ * AWeaponInstance
+ * 
+ * 武器运行时实例，管理：
+ * - 弹药状态（私有 + 受控接口）
+ * - GAS 能力授予/移除
+ * - 扩散/后坐力状态
+ * - 网络复制
+ * 
+ * 设计原则：
+ * - 状态封装：所有状态通过接口访问
+ * - GAS 集成：实现 ILyraAbilitySourceInterface
+ * - 网络安全：关键操作仅在服务器执行
+ */
+UCLASS()
+class ARangedWeaponInstance : public AActor, public ILyraAbilitySourceInterface
+{
+	GENERATED_BODY()
+
+public:
+	ARangedWeaponInstance();
+
+	// ========== 网格组件 ==========
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weapon")
+	USkeletalMeshComponent* WeaponMesh;
+
+	// ========== 武器定义（数据驱动） ==========
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Weapon")
+	TObjectPtr<UWeaponDefinition> Definition;
+
+	// ========== 生命周期管理 ==========
+	
+	/** 捡起武器（挂载到角色背部插槽） */
+	UFUNCTION(BlueprintCallable, Category="Weapon")
+	virtual void OnPickedUp(ACharacter* Picker);
+
+	/** 丢弃武器（启用物理） */
+	UFUNCTION(BlueprintCallable, Category="Weapon")
+	virtual void OnDropped();
+
+	/** 装备武器（从背部取出到手部） */
+	UFUNCTION(BlueprintCallable, Category="Weapon")
+	virtual void OnEquipped();
+
+	/** 卸载武器（从手部收回背部） */
+	UFUNCTION(BlueprintCallable, Category="Weapon")
+	virtual void OnUnequipped();
+
+	// ========== 弹药管理（受控接口） ==========
+	
+	/** 检查是否有足够弹药 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Ammo")
+	bool HasEnoughAmmo(int32 Amount = 1) const;
+
+	/** 消耗弹药（仅服务器） */
+	UFUNCTION(BlueprintCallable, Category="Weapon|Ammo")
+	void ConsumeAmmo(int32 Amount = 1);
+
+	/** 填充弹药（仅服务器，换弹时调用） Amount 是想要装的数量。*/
+	UFUNCTION(BlueprintCallable, Category="Weapon|Ammo")
+	void ReloadAmmo(int32 Amount);
+
+	/** 获取当前弹药 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Ammo")
+	int32 GetCurrentAmmo() const { return CurrentAmmo; }
+
+	/** 获取备弹 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Ammo")
+	int32 GetCurrentReserve() const { return CurrentReserve; }
+
+	/** 弹夹是否已满 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Ammo")
+	bool IsMagazineFull() const;
+
+	/** 弹夹是否为空 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Ammo")
+	bool IsMagazineEmpty() const;
+
+	// ========== 扩散/后坐力管理 ==========
+	
+	/** 获取计算后的扩散角度（基础 * 倍增器） */
+	UFUNCTION(BlueprintPure, Category="Weapon|Spread")
+	float GetCalculatedSpreadAngle() const;
+
+	/** 获取扩散倍增器 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Spread")
+	float GetCalculatedSpreadAngleMultiplier() const;
+
+	/** 获取扩散指数 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Spread")
+	float GetSpreadExponent() const;
+
+	/** 获取子弹轨迹扫描半径 */
+	UFUNCTION(BlueprintPure, Category="Weapon|Spread")
+	float GetBulletTraceSweepRadius() const;
+
+	/** 每次射击后增加扩散（后坐力） */
+	void AddSpread();
+
+	/** 更新开火时间并触发扩散计算 */
+	void UpdateFiringTime();
+
+	// ========== 辅助接口 ==========
+	
+	/** 获取枪口位置 */
+	UFUNCTION(BlueprintPure, Category="Weapon")
+	FVector GetMuzzleLocation() const;
+
+	/** 获取每个弹壳的子弹数（霰弹枪 > 1） */
+	UFUNCTION(BlueprintPure, Category="Weapon")
+	int32 GetBulletsPerCartridge() const;
+
+	/** 获取基础伤害 */
+	UFUNCTION(BlueprintPure, Category="Weapon")
+	float GetBaseDamage() const;
+
+	/** 获取每次射击消耗的弹药数 */
+	UFUNCTION(BlueprintPure, Category="Weapon")
+	int32 GetAmmoPerShot() const;
+
+	// ========== ILyraAbilitySourceInterface 实现 ==========
+	
+	virtual float GetDistanceAttenuation(float Distance, const FGameplayTagContainer* SourceTags = nullptr,
+	                                     const FGameplayTagContainer* TargetTags = nullptr) const override;
+	
+	virtual float GetPhysicalMaterialAttenuation(const UPhysicalMaterial* PhysMat,
+	                                             const FGameplayTagContainer* SourceTags = nullptr,
+	                                             const FGameplayTagContainer* TargetTags = nullptr) const override;
+
+	// ========== 网络复制 ==========
+	
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	virtual void Tick(float DeltaTime) override;
+
+	// ========== GAS 句柄管理 ==========
+	
+	UAbilitySystemComponent* GetOwnerAbilitySystemComponent();
+
+protected:
+	virtual void BeginPlay() override;
+
+	// ========== 网络复制回调 ==========
+	
+	UFUNCTION()
+	void OnRep_CurrentAmmo();
+
+	UFUNCTION()
+	void OnRep_CurrentReserve();
+
+	UFUNCTION()
+	void OnRep_LastFiredTime();
+
+private:
+	// ========== GAS 授予的句柄（自动管理） ==========
+	
+	UPROPERTY()
+	FShootGrantedHandles GrantedHandles;
+
+	// ========== 弹药状态（私有 + 网络复制） ==========
+	
+	/** 当前弹夹弹药 */
+	UPROPERTY(ReplicatedUsing=OnRep_CurrentAmmo)
+	int32 CurrentAmmo;
+
+	/** 当前备弹 */
+	UPROPERTY(ReplicatedUsing=OnRep_CurrentReserve)
+	int32 CurrentReserve;
+
+	/** 上次开火时间（用于扩散恢复计算） */
+	UPROPERTY(ReplicatedUsing=OnRep_LastFiredTime)
+	float LastFiredTime;
+
+	/** 当前的扩散角度倍增器（随连续射击增加，停火后恢复） */
+	UPROPERTY(Replicated)
+	float CurrentSpreadAngleMultiplier;
+
+	// ========== 内部辅助函数 ==========
+	
+	/** 更新扩散倍增器（Tick 时调用） */
+	void UpdateSpreadRecovery(float DeltaTime);
+
+	/** 授予 GAS 能力/效果/属性集 */
+	void GrantAbilitiesToOwner();
+
+	/** 移除 GAS 能力/效果/属性集 */
+	void RemoveAbilitiesFromOwner();
+
+	void NotifyAmmoChanged();
+};
+
+// Copyright ZhaoYiJie
+
+#include "Weapons/RangedWeaponInstance.h"
+#include "AbilitySystemBlueprintLibrary.h"
+#include "Net/UnrealNetwork.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
+#include "GameFramework/PlayerState.h"
+#include "AbilitySystemInterface.h"
+#include "AbilitySystemComponent.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "Physics/PhysicalMaterialWithTags.h"
+#include "Weapons/WeaponDefinition.h"
+
+ARangedWeaponInstance::ARangedWeaponInstance()
+{
+	PrimaryActorTick.bCanEverTick = true;
+	bReplicates = true;
+
+	WeaponMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WeaponMesh"));
+	SetRootComponent(WeaponMesh);
+
+	// 初始化状态
+	CurrentAmmo = 0;
+	CurrentReserve = 0;
+	CurrentSpreadAngleMultiplier = 1.0f;
+	LastFiredTime = 0.f;
+}
+
+void ARangedWeaponInstance::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ARangedWeaponInstance, CurrentAmmo);
+	DOREPLIFETIME(ARangedWeaponInstance, CurrentReserve);
+	DOREPLIFETIME(ARangedWeaponInstance, LastFiredTime);
+	DOREPLIFETIME(ARangedWeaponInstance, CurrentSpreadAngleMultiplier);
+}
+
+void ARangedWeaponInstance::BeginPlay()
+{
+	Super::BeginPlay();
+
+	// 服务器初始化弹药
+	if (HasAuthority() && Definition)
+	{
+		CurrentAmmo = Definition->MagazineSize;
+		CurrentReserve = 0; // 由库存系统管理
+	}
+}
+
+void ARangedWeaponInstance::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	// 只在服务器恢复扩散（客户端通过复制同步）
+	if (HasAuthority())
+	{
+		UpdateSpreadRecovery(DeltaTime);
+	}
+}
+
+// ========== 生命周期管理 ==========
+
+void ARangedWeaponInstance::OnPickedUp(ACharacter* Picker)
+{
+	if (!HasAuthority() || !Picker) return;
+
+	SetOwner(Picker);
+
+	// 禁用物理（捡起后不应继续物理掉落）
+	WeaponMesh->SetSimulatePhysics(false);
+	WeaponMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	// 挂载到背部插槽
+	if (USkeletalMeshComponent* Mesh = Picker->GetMesh())
+	{
+		FAttachmentTransformRules Rules(EAttachmentRule::SnapToTarget, false);
+		AttachToComponent(Mesh, Rules,
+		                  Definition ? Definition->AttachSocketHolster : FName("weapon_socket_spine_back_r"));
+	}
+}
+
+void ARangedWeaponInstance::OnDropped()
+{
+	if (!HasAuthority()) return;
+
+	// 移除 GAS 能力
+	RemoveAbilitiesFromOwner();
+
+	// 与角色分离
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	SetOwner(nullptr);
+
+	// 启用物理
+	WeaponMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	WeaponMesh->SetSimulatePhysics(true);
+}
+
+void ARangedWeaponInstance::OnEquipped()
+{
+	ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
+	if (!OwnerCharacter) return;
+
+	// 挂载到手部插槽
+	if (USkeletalMeshComponent* Mesh = OwnerCharacter->GetMesh())
+	{
+		FAttachmentTransformRules Rules(EAttachmentRule::SnapToTarget, true);
+		AttachToComponent(Mesh, Rules, Definition ? Definition->AttachSocketHand : FName("weapon_socket_hand_r"));
+	}
+
+	// 禁用物理和碰撞
+	WeaponMesh->SetSimulatePhysics(false);
+	WeaponMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	// 授予 GAS 能力
+	if (HasAuthority())
+	{
+		GrantAbilitiesToOwner();
+	}
+}
+
+void ARangedWeaponInstance::OnUnequipped()
+{
+	ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
+	if (!OwnerCharacter) return;
+
+	// 移回背部插槽
+	if (USkeletalMeshComponent* Mesh = OwnerCharacter->GetMesh())
+	{
+		FAttachmentTransformRules Rules(EAttachmentRule::SnapToTarget, true);
+		AttachToComponent(Mesh, Rules,
+		                  Definition ? Definition->AttachSocketHolster : FName("weapon_socket_spine_back_r"));
+	}
+
+	// 移除 GAS 能力
+	if (HasAuthority())
+	{
+		RemoveAbilitiesFromOwner();
+	}
+}
+
+// ========== 弹药管理（受控接口） ==========
+
+bool ARangedWeaponInstance::HasEnoughAmmo(int32 Amount) const
+{
+	return CurrentAmmo >= Amount;
+}
+
+void ARangedWeaponInstance::ConsumeAmmo(int32 Amount)
+{
+	if (!HasAuthority()) return;
+
+	CurrentAmmo = FMath::Clamp(CurrentAmmo - Amount, 0, Definition->MagazineSize);
+}
+
+/**
+ * 
+* @param Amount 想要装的数量
+* 支持两种装填方式：
+* 整匣装填（一次性填满）
+* 逐发装填（单发循环调用）
+ */
+void ARangedWeaponInstance::ReloadAmmo(int32 Amount)
+{
+	if (!HasAuthority()) return;
+	// 确保只有服务器（权威端）能修改弹药数量，防止作弊或网络不同步。
+
+	const int32 MagCapacity = Definition->MagazineSize;
+	// 武器弹匣容量，从武器定义（DataAsset）里读取。
+
+	const int32 RoomInMag = MagCapacity - CurrentAmmo;
+	// 当前弹匣中还剩多少“空间”可以填装子弹。
+
+	const int32 AmountToReload = FMath::Min(RoomInMag, FMath::Min(Amount, CurrentReserve));
+	// 取三者中最小值：
+	//  - RoomInMag（弹匣空位）
+	//  - Amount（要装填的数量）
+	//  - CurrentReserve（剩余备用弹药）
+	// 表示实际能填进去的子弹数。
+
+	// 更新当前弹匣与备用弹药数。
+	CurrentAmmo += AmountToReload;
+	CurrentReserve -= AmountToReload;
+	// 日志（调试用）
+	UE_LOG(LogTemp, Log, TEXT("Reload: Filled %d ammo. Current: %d/%d, Reserve: %d"),
+		   AmountToReload, CurrentAmmo, MagCapacity, CurrentReserve);
+}
+
+bool ARangedWeaponInstance::IsMagazineFull() const
+{
+	return Definition && (CurrentAmmo >= Definition->MagazineSize);
+}
+
+bool ARangedWeaponInstance::IsMagazineEmpty() const
+{
+	return CurrentAmmo <= 0;
+}
+
+// ========== 扩散/后坐力管理 ==========
+
+float ARangedWeaponInstance::GetCalculatedSpreadAngle() const
+{
+	if (!Definition) return 0.0f;
+	return Definition->BaseSpreadAngle * CurrentSpreadAngleMultiplier;
+}
+
+float ARangedWeaponInstance::GetCalculatedSpreadAngleMultiplier() const
+{
+	return CurrentSpreadAngleMultiplier;
+}
+
+float ARangedWeaponInstance::GetSpreadExponent() const
+{
+	return Definition ? Definition->SpreadExponent : 1.0f;
+}
+
+float ARangedWeaponInstance::GetBulletTraceSweepRadius() const
+{
+	return Definition ? Definition->BulletTraceSweepRadius : 0.0f;
+}
+
+void ARangedWeaponInstance::AddSpread()
+{
+	if (!Definition || !HasAuthority()) return;
+
+	// 增加扩散倍增器，但不超过最大值
+	const float MaxMultiplier = Definition->MaxSpreadAngle / FMath::Max(0.01f, Definition->BaseSpreadAngle);
+	const float SpreadIncrement = Definition->SpreadAnglePerShot / FMath::Max(0.01f, Definition->BaseSpreadAngle);
+
+	CurrentSpreadAngleMultiplier = FMath::Min(MaxMultiplier, CurrentSpreadAngleMultiplier + SpreadIncrement);
+}
+
+void ARangedWeaponInstance::UpdateFiringTime()
+{
+	if (HasAuthority())
+	{
+		LastFiredTime = GetWorld()->GetTimeSeconds();
+	}
+}
+
+void ARangedWeaponInstance::UpdateSpreadRecovery(float DeltaTime)
+{
+	if (!Definition) return;
+
+	const float TimeSinceLastFired = GetWorld()->GetTimeSeconds() - LastFiredTime;
+
+	// 延迟后开始恢复
+	if (TimeSinceLastFired > 0.0f && CurrentSpreadAngleMultiplier > 1.0f)
+	{
+		const float RecoveryAmount = (Definition->SpreadRecoveryRate / Definition->BaseSpreadAngle) * DeltaTime;
+		CurrentSpreadAngleMultiplier = FMath::Max(1.0f, CurrentSpreadAngleMultiplier - RecoveryAmount);
+	}
+}
+
+// ========== 辅助接口 ==========
+
+FVector ARangedWeaponInstance::GetMuzzleLocation() const
+{
+	if (WeaponMesh && Definition && WeaponMesh->DoesSocketExist(Definition->MuzzleSocketName))
+	{
+		return WeaponMesh->GetSocketLocation(Definition->MuzzleSocketName);
+	}
+	return GetActorLocation();
+}
+
+int32 ARangedWeaponInstance::GetBulletsPerCartridge() const
+{
+	return Definition ? Definition->BulletsPerCartridge : 1;
+}
+
+float ARangedWeaponInstance::GetBaseDamage() const
+{
+	return Definition ? Definition->BaseDamage : 10.f;
+}
+
+int32 ARangedWeaponInstance::GetAmmoPerShot() const
+{
+	return Definition ? Definition->AmmoPerShot : 1;
+}
+
+// ========== ILyraAbilitySourceInterface 实现 ==========
+
+float ARangedWeaponInstance::GetDistanceAttenuation(float Distance, const FGameplayTagContainer* SourceTags,
+                                              const FGameplayTagContainer* TargetTags) const
+{
+	if (!Definition) return 1.f;
+	if (Definition->DistanceFalloff.GetRichCurve()->GetNumKeys() == 0) return 1.f;
+	return Definition->DistanceFalloff.GetRichCurve()->Eval(Distance, 1.f);
+}
+
+float ARangedWeaponInstance::GetPhysicalMaterialAttenuation(const UPhysicalMaterial* PhysMat,
+                                                      const FGameplayTagContainer* SourceTags,
+                                                      const FGameplayTagContainer* TargetTags) const
+{
+	if (!Definition || !PhysMat) return 1.f;
+
+	if (const UPhysicalMaterialWithTags* PM = Cast<const UPhysicalMaterialWithTags>(PhysMat))
+	{
+		float Mult = 1.f;
+		for (const auto& Pair : Definition->MaterialDamageMultiplier)
+		{
+			if (PM->Tags.HasTag(Pair.Key))
+			{
+				Mult *= Pair.Value;
+			}
+		}
+		return Mult;
+	}
+
+	return 1.f;
+}
+
+// ========== GAS 管理 ==========
+
+UAbilitySystemComponent* ARangedWeaponInstance::GetOwnerAbilitySystemComponent()
+{
+	ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
+	if (!OwnerCharacter) return nullptr;
+
+	// 玩家：ASC 在 PlayerState
+	if (APlayerState* PS = OwnerCharacter->GetPlayerState())
+	{
+		if (IAbilitySystemInterface* ASI = Cast<IAbilitySystemInterface>(PS))
+		{
+			return ASI->GetAbilitySystemComponent();
+		}
+	}
+
+	// AI：ASC 在 Character
+	if (IAbilitySystemInterface* ASI = Cast<IAbilitySystemInterface>(OwnerCharacter))
+	{
+		return ASI->GetAbilitySystemComponent();
+	}
+
+	return nullptr;
+}
+
+void ARangedWeaponInstance::GrantAbilitiesToOwner()
+{
+	if (!Definition || !HasAuthority()) return;
+
+	UAbilitySystemComponent* ASC = GetOwnerAbilitySystemComponent();
+	if (!ASC) return;
+
+	// 授予能力/效果/属性集（SourceObject = this，GA 中才能获取武器实例）
+	GrantedHandles.GiveAbilitiesToAbilitySystem(ASC, Definition->GrantedAbilities, this, true);
+	GrantedHandles.ApplyEffectsToAbilitySystem(ASC, Definition->GrantedEffects, this, true);
+	GrantedHandles.AddAttributeSetsToAbilitySystem(ASC, Definition->GrantedAttributeSets, true);
+}
+
+void ARangedWeaponInstance::RemoveAbilitiesFromOwner()
+{
+	if (!HasAuthority()) return;
+
+	UAbilitySystemComponent* ASC = GetOwnerAbilitySystemComponent();
+	if (ASC)
+	{
+		GrantedHandles.TakeFromAbilitySystem(ASC);
+	}
+}
+
+// ========== 网络复制回调 ==========
+
+void ARangedWeaponInstance::OnRep_CurrentAmmo()
+{
+	// 触发 UI 更新（通过 ViewModel 广播）
+	NotifyAmmoChanged();
+}
+
+void ARangedWeaponInstance::OnRep_CurrentReserve()
+{
+	// 触发 UI 更新
+	NotifyAmmoChanged();
+}
+
+void ARangedWeaponInstance::NotifyAmmoChanged()
+{
+	// 获取 ViewModel（通过接口从 LocalPlayer 获取）
+	ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
+	if (!OwnerCharacter) return;
+	APlayerController* PC = Cast<APlayerController>(OwnerCharacter->GetController());
+	if (!PC) return;
+
+	ULocalPlayer* LP = PC->GetLocalPlayer();
+	if (!LP) return;
+
+	// 通过接口获取 ViewModel
+	/*if (LP->Implements<UICombatViewModelInterface>())
+	{
+		if (UCombatViewModel* CombatVM = IICombatViewModelInterface::Execute_GetCombatViewModel(LP))
+		{
+			CombatVM->UpdateAmmoOnly(CurrentAmmo, CurrentReserve);
+		}
+	}*/
+}
+
+void ARangedWeaponInstance::OnRep_LastFiredTime()
+{
+	// 客户端同步后可用于预测性反馈
+}
+// Copyright ZhaoYiJie
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
+#include "CombatComponent.generated.h"
+
+class ARangedWeaponInstance;
+
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+class NEWWORLDORDER_API UCombatComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
+public:
+	UCombatComponent();
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
+	                           FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+	UFUNCTION(BlueprintCallable, Category="Lyra")
+	void CycleActiveSlotForward();
+
+	UFUNCTION(BlueprintCallable, Category="Lyra")
+	void CycleActiveSlotBackward();
+
+	UFUNCTION(Server, Reliable, BlueprintCallable, Category="Lyra")
+	void SetActiveSlotIndex(int32 NewIndex);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure=false)
+	TArray<ARangedWeaponInstance*> GetSlots() const
+	{
+		return Slots;
+	}
+
+	UFUNCTION(BlueprintCallable, BlueprintPure=false)
+	int32 GetActiveSlotIndex() const { return ActiveSlotIndex; }
+
+	UFUNCTION(BlueprintCallable, BlueprintPure = false)
+	ARangedWeaponInstance* GetActiveSlotItem() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure=false)
+	int32 GetNextFreeItemSlot() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
+	void AddItemToSlot(int32 SlotIndex, ARangedWeaponInstance* Item);
+
+	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
+	ARangedWeaponInstance* RemoveItemFromSlot(int32 SlotIndex);
+
+protected:
+	// Called when the game starts
+	virtual void BeginPlay() override;
+
+private:
+	UPROPERTY(ReplicatedUsing=OnRep_Slots)
+	TArray<TObjectPtr<ARangedWeaponInstance>> Slots;
+
+	UPROPERTY(ReplicatedUsing=OnRep_ActiveSlotIndex)
+	int32 ActiveSlotIndex = -1;
+
+	UPROPERTY()
+	TObjectPtr<ARangedWeaponInstance> EquippedItem;
+
+	void UnequipItemInSlot();
+	void EquipItemInSlot();
+
+	UPROPERTY()
+	int32 NumSlots = 3;
+
+	UFUNCTION()
+	void OnRep_Slots();
+
+	UFUNCTION()
+	void OnRep_ActiveSlotIndex();
+};
+// Copyright ZhaoYiJie
+
+
+#include "Character/CombatComponent.h"
+
+#include "Net/UnrealNetwork.h"
+
+// Sets default values for this component's properties
+UCombatComponent::UCombatComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
+	SetIsReplicatedByDefault(true);
+	// ...
+}
+
+
+// Called when the game starts
+void UCombatComponent::BeginPlay()
+{
+	if (Slots.Num() < NumSlots)
+	{
+		Slots.AddDefaulted(NumSlots - Slots.Num());
+	}
+
+	Super::BeginPlay();
+}
+
+void UCombatComponent::UnequipItemInSlot()
+{
+
+}
+
+void UCombatComponent::EquipItemInSlot()
+{
+	check(Slots.IsValidIndex(ActiveSlotIndex));
+	check(EquippedItem == nullptr);
+
+
+}
+
+void UCombatComponent::OnRep_Slots()
+{
+	
+}
+
+void UCombatComponent::OnRep_ActiveSlotIndex()
+{
+	
+}
+
+
+// Called every frame
+void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType,
+                                     FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	// ...
+}
+
+void UCombatComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ThisClass, Slots);
+	DOREPLIFETIME(ThisClass, ActiveSlotIndex);
+}
+
+void UCombatComponent::CycleActiveSlotForward()
+{
+	if (Slots.Num() < 2)
+	{
+		return;
+	}
+
+	const int32 OldIndex = (ActiveSlotIndex < 0 ? Slots.Num() - 1 : ActiveSlotIndex);
+	int32 NewIndex = ActiveSlotIndex;
+	do
+	{
+		NewIndex = (NewIndex + 1) % Slots.Num();
+		if (Slots[NewIndex] != nullptr)
+		{
+			SetActiveSlotIndex(NewIndex);
+			return;
+		}
+	}
+	while (NewIndex != OldIndex);
+}
+
+void UCombatComponent::CycleActiveSlotBackward()
+{
+	if (Slots.Num() < 2)
+	{
+		return;
+	}
+
+	const int32 OldIndex = (ActiveSlotIndex < 0 ? Slots.Num() - 1 : ActiveSlotIndex);
+	int32 NewIndex = ActiveSlotIndex;
+	do
+	{
+		NewIndex = (NewIndex - 1 + Slots.Num()) % Slots.Num();
+		if (Slots[NewIndex] != nullptr)
+		{
+			SetActiveSlotIndex(NewIndex);
+			return;
+		}
+	}
+	while (NewIndex != OldIndex);
+}
+
+ARangedWeaponInstance* UCombatComponent::GetActiveSlotItem() const
+{
+	return Slots.IsValidIndex(ActiveSlotIndex) ? Slots[ActiveSlotIndex] : nullptr;
+}
+
+int32 UCombatComponent::GetNextFreeItemSlot() const
+{
+	int32 SlotIndex = 0;
+	for (const TObjectPtr<ARangedWeaponInstance>& ItemPtr : Slots)
+	{
+		if (ItemPtr == nullptr)
+		{
+			return SlotIndex;
+		}
+		++SlotIndex;
+	}
+
+	return INDEX_NONE;
+}
+
+void UCombatComponent::AddItemToSlot(int32 SlotIndex, ARangedWeaponInstance* Item)
+{
+	if (Slots.IsValidIndex(SlotIndex) && (Item != nullptr))
+	{
+		if (Slots[SlotIndex] == nullptr)
+		{
+			Slots[SlotIndex] = Item;
+			OnRep_Slots();
+		}
+	}
+}
+
+ARangedWeaponInstance* UCombatComponent::RemoveItemFromSlot(int32 SlotIndex)
+{
+	ARangedWeaponInstance* Result = nullptr;
+
+	if (ActiveSlotIndex == SlotIndex)
+	{
+		UnequipItemInSlot();
+		ActiveSlotIndex = -1;
+	}
+
+	if (Slots.IsValidIndex(SlotIndex))
+	{
+		Result = Slots[SlotIndex];
+
+		if (Result != nullptr)
+		{
+			Slots[SlotIndex] = nullptr;
+			OnRep_Slots();
+		}
+	}
+
+	return Result;
+}
+
+void UCombatComponent::SetActiveSlotIndex_Implementation(int32 NewIndex)
+{
+	if (Slots.IsValidIndex(NewIndex) && (ActiveSlotIndex != NewIndex))
+	{
+		UnequipItemInSlot();
+
+		ActiveSlotIndex = NewIndex;
+
+		EquipItemInSlot();
+
+		OnRep_ActiveSlotIndex();
+	}
+}
+
+
+由于代码限制，我只能告诉你UCombatComponent挂在AShootCharacter上
+AShootCharacter::AShootCharacter(const FObjectInitializer& ObjectInitializer): Super(ObjectInitializer)
+{
+
+	Combat = CreateDefaultSubobject<UCombatComponent>(TEXT("Combat"));
+	Combat->SetIsReplicated(true);
+}

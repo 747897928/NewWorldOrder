@@ -1,0 +1,12 @@
+{
+  "exporter": "Blender built-in FBX",
+  "axis_forward": "-Z",
+  "axis_up": "Y",
+  "units": "meters",
+  "pivot": "root",
+  "triangles": 32304,
+  "materials": [
+    "island_tree_01",
+    "island_tree_01_leaves"
+  ]
+}

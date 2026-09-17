@@ -1,0 +1,249 @@
+[
+  {
+    "mesh": "SM_HM_StairSideEnvelope",
+    "triangles": 2268,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_StairSideEnvelope",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_StairSideGlass",
+    "triangles": 24,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Architectural_Glass"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_StairSideGlass",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_GalleryGuardEndPosts",
+    "triangles": 2160,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_GalleryGuardEndPosts",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_RooftopStairStructure",
+    "triangles": 3672,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_RooftopStairStructure",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_RooftopStairGuard",
+    "triangles": 5184,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_RooftopStairGuard",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_RooftopDeck",
+    "triangles": 2916,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood",
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black",
+      "/Game/Environment/HomeMap/Materials/Hub/M_Bronze"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_RooftopDeck",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_RooftopDeckGuard",
+    "triangles": 9720,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/M_Metall_Black"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_RooftopDeckGuard",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "mesh": "SM_HM_RooftopLounge",
+    "triangles": 864,
+    "materials": [
+      "/Game/Environment/HomeMap/Materials/Hub/M_Limestone",
+      "/Game/Environment/HomeMap/Materials/M_Wall_Wood"
+    ],
+    "nanite": false,
+    "collision": true,
+    "rebuild_material_slots": true,
+    "instances": [
+      {
+        "label": "HM_RooftopLounge",
+        "location_cm": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+]

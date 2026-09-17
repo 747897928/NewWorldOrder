@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-12",
+  "map": "/Game/Environment/HomeMap/Maps/HomeMap_Courtyard",
+  "material": "/Game/Environment/HomeMap/Materials/Hub/M_Mirror",
+  "affected_actors": [
+    "HM_Gym_Mirror",
+    "HM_Bath_Mirror"
+  ],
+  "root_cause": "The original mirror was a fully metallic opaque material with no low-quality reflection fallback. With Lumen reflections disabled, the surface sampled the sky environment and looked like an opening to the sky.",
+  "quality_switch": {
+    "default_high_medium": {
+      "base_color": [0.72, 0.76, 0.78, 1.0],
+      "roughness": 0.025,
+      "metallic": 1.0
+    },
+    "low": {
+      "base_color": [0.16, 0.18, 0.19, 1.0],
+      "roughness": 0.32,
+      "metallic": 0.0
+    }
+  },
+  "verification": {
+    "camera": "CameraActor_9",
+    "map_default_time_of_day": "DAY",
+    "legacy_low": {
+      "material_quality_level": 0,
+      "nanite": 0,
+      "virtual_shadow_maps": 0,
+      "lumen_diffuse_indirect": 0,
+      "lumen_reflections": 0,
+      "anti_aliasing": "TAA",
+      "result": "pass: mirror is a neutral opaque smoked-mirror surface; no sky-colored opening",
+      "screenshot": "Review/LegacyLow_GymMirror_20260912.png"
+    },
+    "high": {
+      "material_quality_level": 1,
+      "nanite": 1,
+      "virtual_shadow_maps": 1,
+      "lumen_diffuse_indirect": 1,
+      "lumen_reflections": 1,
+      "anti_aliasing": "TSR",
+      "result": "pass: original indoor/courtyard reflection remains visible",
+      "screenshot": "Review/Gym_High_20260912.png"
+    },
+    "medium": {
+      "material_quality_level": 2,
+      "result": "not rerun; uses the same Default branch as High unless a future material-quality regression is observed"
+    }
+  },
+  "scope": [
+    "No PlanarReflection",
+    "No reflection-capture actor added",
+    "No global Lumen enablement",
+    "No gameplay, character, camera, swimming, UI, or animation changes",
+    "The three-tier eleven-view performance archives were not rerun"
+  ]
+}
