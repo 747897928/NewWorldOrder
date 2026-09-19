@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 
+#include "Character/CharacterGender.h"
 #include "CommonGameInstance.h"
 #include "ShootGameInstance.generated.h"
 
@@ -37,6 +38,11 @@ public:
 	 * 因为 PIE 复制世界不会稳定触发 PostLoadMapWithWorld。函数可重复调用且结果幂等。
 	 */
 	void ApplyLocalPlayerMapPolicy(UWorld* LoadedWorld);
+
+	/** 本地双人选择页写入的一次性主角分配；只供下一张 SplitProtagonists 地图读取。 */
+	void SetPendingLocalCoopProtagonists(ECharacterGender Player01Gender, ECharacterGender Player02Gender);
+	bool GetPendingLocalCoopProtagonist(int32 LocalPlayerIndex, ECharacterGender& OutGender) const;
+	void ClearPendingLocalCoopProtagonists();
 	
 protected:
 	virtual void Init() override;
@@ -64,4 +70,7 @@ private:
 	FDelegateHandle PostLoadMapHandle;
 	FDelegateHandle NetworkFailureHandle;
 	FTimerHandle JoinRequestedSessionRetryTimer;
+	ECharacterGender PendingPlayer01Gender = ECharacterGender::UNKNOWN;
+	ECharacterGender PendingPlayer02Gender = ECharacterGender::UNKNOWN;
+	bool bHasPendingLocalCoopProtagonists = false;
 };

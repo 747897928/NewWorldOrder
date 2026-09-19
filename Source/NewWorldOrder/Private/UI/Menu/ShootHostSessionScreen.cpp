@@ -9,6 +9,7 @@
 #include "Online/ShootSessionCoordinatorSubsystem.h"
 #include "PrimaryGameLayout.h"
 #include "UI/Foundation/ShootObjectEntryButtonBase.h"
+#include "UI/Menu/ShootLocalCoopSetupScreen.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(ShootHostSessionScreen)
 
@@ -84,7 +85,7 @@ void UShootHostSessionScreen::RefreshExperienceCatalogForSelectedMode()
 	{
 		for (ULyraUserFacingExperienceDefinition* Definition : AllExperienceCatalog)
 		{
-			if (Definition && Definition->SupportedModes.HasTag(SelectedModeTag))
+			if (Definition && Definition->SupportedParticipationModes.HasTag(SelectedModeTag))
 			{
 				ExperienceCatalog.Add(Definition);
 			}
@@ -301,6 +302,60 @@ bool UShootHostSessionScreen::HostSelectedExperience()
 		this, SelectedOnlineMode, RequestedMaxPlayers, LocalPlayerCount, bAllowJoinInProgress,
 		bFillEmptySlotsWithBots);
 	return Coordinator->HostSessionRequest(GetOwningSessionPlayer(), Request);
+}
+
+bool UShootHostSessionScreen::StartSinglePlayerExperience()
+{
+	return HostSelectedExperienceWithOptions(ECommonSessionOnlineMode::Offline, 1, 1, false);
+}
+
+void UShootHostSessionScreen::OpenLocalCoopSetup()
+{
+	if (!SelectedDefinition || LocalCoopSetupClass.IsNull())
+	{
+		return;
+	}
+
+	if (ULocalPlayer* LocalPlayer = GetOwningLocalPlayer())
+	{
+		if (UPrimaryGameLayout* RootLayout = UPrimaryGameLayout::GetPrimaryGameLayout(LocalPlayer))
+		{
+			TWeakObjectPtr<ULyraUserFacingExperienceDefinition> SelectedExperience = SelectedDefinition;
+			RootLayout->PushWidgetToLayerStackAsync<UShootLocalCoopSetupScreen>(
+				ShootHostSessionScreenTags::TAG_UI_LAYER_GAME_MENU, true, LocalCoopSetupClass,
+				[SelectedExperience](EAsyncWidgetLayerState State, UShootLocalCoopSetupScreen* Screen)
+				{
+					if (State == EAsyncWidgetLayerState::Initialize && Screen)
+					{
+						Screen->InitializeForExperience(SelectedExperience.Get());
+					}
+				});
+		}
+	}
+}
+
+bool UShootHostSessionScreen::CreateOnlineSquad()
+{
+	const int32 MaxPlayers = SelectedDefinition
+		? FMath::Clamp(SelectedDefinition->MaxPlayerCount, 1, 4)
+		: 4;
+	return HostSelectedExperienceWithOptions(
+		ECommonSessionOnlineMode::Online, MaxPlayers, 1, true);
+}
+
+bool UShootHostSessionScreen::HostSelectedExperienceWithOptions(
+	ECommonSessionOnlineMode OnlineMode, int32 MaxPlayers, int32 LocalPlayers,
+	bool bInAllowJoinInProgress)
+{
+	if (!SelectedDefinition || !Coordinator ||
+		(OnlineMode == ECommonSessionOnlineMode::Online && !SelectedDefinition->bSupportsOnline))
+	{
+		return false;
+	}
+
+	UCommonSession_HostSessionRequest* Request = SelectedDefinition->CreateHostingRequestWithOptions(
+		this, OnlineMode, MaxPlayers, LocalPlayers, bInAllowJoinInProgress, false);
+	return Request && Coordinator->HostSessionRequest(GetOwningSessionPlayer(), Request);
 }
 
 void UShootHostSessionScreen::FindOnlineSessions()

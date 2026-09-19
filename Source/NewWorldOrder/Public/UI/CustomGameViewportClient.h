@@ -8,7 +8,9 @@
 //#include "CommonInputTypeEnum.h"
 #include "CustomGameViewportClient.generated.h"
 
-//DECLARE_MULTICAST_DELEGATE_ThreeParams(FRemapInputKeyDelegate, ECommonInputType CommonInputType, int32 DeviceId,int32 ControllerId);
+DECLARE_MULTICAST_DELEGATE_OneParam(FShootViewportInputKeyDelegate, const FInputKeyEventArgs&);
+DECLARE_MULTICAST_DELEGATE_ThreeParams(FShootInputDeviceConnectionDelegate,
+	EInputDeviceConnectionState, FPlatformUserId, FInputDeviceId);
 /**
  * 
  */
@@ -21,6 +23,7 @@ public:
 	UCustomGameViewportClient();
 
 	virtual void UpdateActiveSplitscreenType() override;
+	virtual bool InputKey(const FInputKeyEventArgs& EventArgs) override;
 
 	virtual void RemapControllerInput(FInputKeyEventArgs& InOutKeyEvent) override;
 
@@ -29,9 +32,17 @@ public:
 
 	void SetDisableSplitScreen(bool bDisableSplitScreen);
 
-	virtual void Init(struct FWorldContext& WorldContext, UGameInstance* OwningGameInstance, bool bCreateNewAudioDevice = true) override;
-	
-	//ECommonInputType GetInputTypeFromKey(const FKey& Key) const;
+	/**
+	 * 同屏多设备配置页需要在第二位 LocalPlayer 创建前识别输入设备。
+	 * 这里只广播原始设备身份；具体按键语义仍由页面配置的 InputAction/IMC 解析，
+	 * 禁止在 ViewportClient 中写死键盘或手柄按键。
+	 */
+	FShootViewportInputKeyDelegate& OnViewportInputKey() { return ViewportInputKeyDelegate; }
+	FShootInputDeviceConnectionDelegate& OnInputDeviceConnectionChanged() { return InputDeviceConnectionDelegate; }
 
-	//FRemapInputKeyDelegate RemapInputKeyDelegate;
+	virtual void Init(struct FWorldContext& WorldContext, UGameInstance* OwningGameInstance, bool bCreateNewAudioDevice = true) override;
+
+private:
+	FShootViewportInputKeyDelegate ViewportInputKeyDelegate;
+	FShootInputDeviceConnectionDelegate InputDeviceConnectionDelegate;
 };

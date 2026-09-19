@@ -25,6 +25,13 @@ void UCustomGameViewportClient::UpdateActiveSplitscreenType()
 	Super::UpdateActiveSplitscreenType();
 }
 
+bool UCustomGameViewportClient::InputKey(const FInputKeyEventArgs& EventArgs)
+{
+	// 在 Super 处理并可能改写映射前广播设备身份。监听者只在本地双人配置页激活期间存在。
+	ViewportInputKeyDelegate.Broadcast(EventArgs);
+	return Super::InputKey(EventArgs);
+}
+
 void UCustomGameViewportClient::RemapControllerInput(FInputKeyEventArgs& InOutKeyEvent)
 {
 	Super::RemapControllerInput(InOutKeyEvent);
@@ -79,7 +86,7 @@ void UCustomGameViewportClient::HandleInputDeviceConnectionChange(EInputDeviceCo
                                                                   FPlatformUserId PlatformUserId,
                                                                   FInputDeviceId InputDeviceId)
 {
-
+	InputDeviceConnectionDelegate.Broadcast(NewConnectionState, PlatformUserId, InputDeviceId);
 }
 
 void UCustomGameViewportClient::SetDisableSplitScreen(bool bDisableSplitScreen)

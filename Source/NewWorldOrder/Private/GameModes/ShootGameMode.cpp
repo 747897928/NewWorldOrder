@@ -8,6 +8,7 @@
 #include "GameFramework/PlayerController.h"
 #include "Player/ShootPlayerState.h"
 #include "System/SaveGameSubsystem.h"
+#include "System/ShootGameInstance.h"
 
 namespace
 {
@@ -58,7 +59,16 @@ ECharacterGender AShootGameMode::ResolveInitialCharacterGender_Implementation(
 		return SavedGender;
 	}
 
-	// 选择页尚未完成时从 GameMode 可配置默认值取 Player01，Player02 取相反性别。
+	if (const UShootGameInstance* ShootGameInstance = GetGameInstance<UShootGameInstance>())
+	{
+		ECharacterGender SelectedGender = ECharacterGender::UNKNOWN;
+		if (ShootGameInstance->GetPendingLocalCoopProtagonist(LocalPlayerIndex, SelectedGender))
+		{
+			return SelectedGender;
+		}
+	}
+
+	// 直接打开测试图或自动化没有经过选择页时，才使用 GameMode 的可配置默认值。
 	// UNKNOWN 不适合作为可玩的主角，资产误配时只在这里回退为男主，不污染 PlayerState。
 	const ECharacterGender Player01Gender =
 		SplitPlayer01DefaultGender == ECharacterGender::FEMALE

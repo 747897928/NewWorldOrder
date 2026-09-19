@@ -39,6 +39,35 @@ void UShootGameInstance::SetDisableSplitScreen(bool bDisableSplitScreen)
 	}
 }
 
+void UShootGameInstance::SetPendingLocalCoopProtagonists(
+	ECharacterGender Player01Gender, ECharacterGender Player02Gender)
+{
+	const bool bValidPair = Player01Gender != ECharacterGender::UNKNOWN &&
+		Player02Gender != ECharacterGender::UNKNOWN && Player01Gender != Player02Gender;
+	PendingPlayer01Gender = bValidPair ? Player01Gender : ECharacterGender::UNKNOWN;
+	PendingPlayer02Gender = bValidPair ? Player02Gender : ECharacterGender::UNKNOWN;
+	bHasPendingLocalCoopProtagonists = bValidPair;
+}
+
+bool UShootGameInstance::GetPendingLocalCoopProtagonist(
+	int32 LocalPlayerIndex, ECharacterGender& OutGender) const
+{
+	if (!bHasPendingLocalCoopProtagonists || !FMath::IsWithinInclusive(LocalPlayerIndex, 0, 1))
+	{
+		return false;
+	}
+
+	OutGender = LocalPlayerIndex == 0 ? PendingPlayer01Gender : PendingPlayer02Gender;
+	return OutGender != ECharacterGender::UNKNOWN;
+}
+
+void UShootGameInstance::ClearPendingLocalCoopProtagonists()
+{
+	PendingPlayer01Gender = ECharacterGender::UNKNOWN;
+	PendingPlayer02Gender = ECharacterGender::UNKNOWN;
+	bHasPendingLocalCoopProtagonists = false;
+}
+
 void UShootGameInstance::Init()
 {
 	Super::Init();
@@ -255,6 +284,11 @@ void UShootGameInstance::ApplyLocalPlayerMapPolicy(UWorld* LoadedWorld)
 	const bool bSplitProtagonists =
 		LocalPlayerPolicy == EShootLocalPlayerMapPolicy::SplitProtagonists;
 	SetDisableSplitScreen(!bSplitProtagonists);
+	if (bPrimaryOnly)
+	{
+		// 返回 HomeMap 后不允许旧的双人选角结果泄漏到下一次本地合作启动。
+		ClearPendingLocalCoopProtagonists();
+	}
 
 	if (bSplitProtagonists && GetNumLocalPlayers() < 2)
 	{

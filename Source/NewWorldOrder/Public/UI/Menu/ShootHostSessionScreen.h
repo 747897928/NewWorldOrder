@@ -14,6 +14,7 @@ class UCommonActivatableWidget;
 class UCommonSession_SearchResult;
 class UDynamicEntryBox;
 class UShootObjectEntryButtonBase;
+class UShootLocalCoopSetupScreen;
 class UShootSessionCoordinatorSubsystem;
 
 /**
@@ -33,8 +34,8 @@ public:
 	void SelectExperience(ULyraUserFacingExperienceDefinition* Experience);
 
 	/**
-	 * 设置当前副本选择页模式并刷新目录条目。
-	 * ModeId 必须与模式 Tab 的稳定 Name ID 一致，例如 Expedition.Mode.Local。
+	 * 设置当前游玩方式并刷新目录条目。
+	 * ModeId 必须与 Tab 的稳定 Name ID 一致，例如 Experience.Participation.LocalCoop。
 	 */
 	UFUNCTION(BlueprintCallable, Category="Expedition|Selection")
 	void SetExpeditionMode(FName ModeId);
@@ -117,6 +118,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Expedition|Actions")
 	bool HostSelectedExperience();
 
+	/** 单人入口的完整语义动作；蓝图不再先拼装 OnlineMode、人数等内部选项。 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Actions")
+	bool StartSinglePlayerExperience();
+
+	/** 打开独立的本地双人设备与主角分配页面。 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Actions")
+	void OpenLocalCoopSetup();
+
+	/** 在线入口直接创建 1–4 人 Listen Server 等待大厅。 */
+	UFUNCTION(BlueprintCallable, Category="Expedition|Actions")
+	bool CreateOnlineSquad();
+
 	UFUNCTION(BlueprintCallable, Category="Expedition|Actions")
 	void FindOnlineSessions();
 
@@ -152,6 +165,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Expedition|Navigation")
 	TSoftClassPtr<UCommonActivatableWidget> SessionBrowserClass;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Expedition|Navigation")
+	TSoftClassPtr<UCommonActivatableWidget> LocalCoopSetupClass;
+
 private:
 	void RefreshExperienceCatalog();
 	void RefreshExperienceCatalogForSelectedMode();
@@ -160,6 +176,8 @@ private:
 	void HandleExperienceEntryClicked(UShootObjectEntryButtonBase* Entry, UObject* EntryObject);
 	void HandleExperienceEntryHovered(UShootObjectEntryButtonBase* Entry, UObject* EntryObject);
 	void RefreshExperienceEntrySelection();
+	bool HostSelectedExperienceWithOptions(ECommonSessionOnlineMode OnlineMode,
+		int32 MaxPlayers, int32 LocalPlayers, bool bAllowJoinInProgress);
 	APlayerController* GetOwningSessionPlayer() const;
 
 	UPROPERTY(Transient)
@@ -180,7 +198,7 @@ private:
 	TObjectPtr<UDynamicEntryBox> ExperienceEntryBox;
 
 	ECommonSessionOnlineMode SelectedOnlineMode = ECommonSessionOnlineMode::Offline;
-	FName SelectedExpeditionMode = TEXT("Expedition.Mode.Single");
+	FName SelectedExpeditionMode = TEXT("Experience.Participation.SinglePlayer");
 	int32 RequestedMaxPlayers = 4;
 	int32 LocalPlayerCount = 1;
 	bool bAllowJoinInProgress = true;

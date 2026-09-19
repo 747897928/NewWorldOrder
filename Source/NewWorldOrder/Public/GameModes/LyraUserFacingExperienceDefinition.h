@@ -50,7 +50,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience)
 	FText TileDescription;
 
-	/** Icon used in the UI */
+	/** 目录卡片与详情 Hero 使用的主图；具体裁切方式由 Widget Blueprint 决定。 */
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience)
 	TObjectPtr<UTexture2D> TileIcon;
 
@@ -67,14 +67,23 @@ public:
 	bool bShowInFrontEnd = true;
 
 	/**
-	 * 该副本出现在副本选择页哪些模式 Tab 中。
+	 * 该可启动 Experience 支持哪些游玩方式。
 	 *
-	 * 这是目录归属而不是运行时 Online/Local 能力：同一个 UFE 可以同时配置
-	 * Expedition.Mode.Single、Expedition.Mode.Local 和 Expedition.Mode.Online。
-	 * 选择页只从当前 UFE 目录按这个容器筛选，不复制第二套副本列表。
+	 * Single Player、Local Co-op、Online Co-op 描述玩家如何参与，不是大灾变、生化感染等
+	 * 玩法模式。一个 UFE 可以支持多种参与方式，选择页只过滤同一份目录。
 	 */
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience, meta=(Categories="Expedition.Mode"))
-	FGameplayTagContainer SupportedModes;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience,
+		meta=(Categories="Experience.Participation"))
+	FGameplayTagContainer SupportedParticipationModes;
+
+	/**
+	 * 该 Experience 使用的玩法规则，例如大灾变或生化感染。
+	 * 地图、玩法模式和 Experience 是三层概念：同名地图的不同玩法变体应使用独立 UFE，
+	 * 它们可以指向不同 MapID，也可以复用场景并由不同 ExperienceID 装配规则。
+	 */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Experience,
+		meta=(Categories="Experience.GameMode"))
+	FGameplayTag GameplayMode;
 
 	/**
 	 * 是否允许把该副本创建为 Listen Server。
